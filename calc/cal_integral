@@ -1,0 +1,83 @@
+* La integral
+El concepto fundamental de la integral es el cálculo de un área.
+Según lo usual, la definiciones de conceptos tan intuitivos presentan
+problemas en su formalización. Por ejemplo, desde una perspectiva
+geométrica, el área se define como el número de cuadrados con
+longtidud 1 que que pueden incluirse en la región (spivak).
+Esto claramente se rompe al considear el area de un círculo de radio uno,
+pues tendriamos que incluir pi cuadrados en su región.
+
+** 1. área de regiones especiales
+Con estas características:
+
+1) delimitada por eje horizontal.
+2) las lineas horizontales en los puntos (a,0), (b,0).
+3) y para la función f donde f(x) >= 0 para todo x en [a,b].
+
+Tal área se denotará como R(f,a,b). El número asignado al area de R es
+la integral de la función  f en a a b.
+
+El area d R(f,a,b) también se podrá calcular para f que no satisfacen
+3). Eso se llama "área algebráica"
+
+
+*** procedimiento
+
+Si dividimos [a,b] en partes iguales tendriamos n intervalos
+dispuestos así
+
+a= T_[0] T_[1] T_[2] T_[3] T_[4] T_[..n] = b
+
+En cada uno de estos intervalos la función f puede alcanzar un
+valor máximo y un valor mínimo notados asi:
+
+m = minimo
+M = maximo
+
+Si hacemos una sumatoria del área en cada intervalo. Tenemos
+dos hareas (una con m y otra M)
+
+s = mT_[0] + mT_[2] + mT_[n]
+S = MmT_[0] + MT_[2] + MT_[n]
+
+Esta observación conduce a la primera pista para definir la integral.
+
+
+     		 s<A y A<S, independientemente de cómo se subdivida el intervalo
+		 [a,b]
+
+
+*** abandono del concepto geométrico
+Spivak define s y S de forma no  geométrica con notación sigma.
+
+       	 L(f,P) = suma inferior (lower)  f respecto a P
+       	 U(f,P) = suma superior de f (upper) respeco a P
+
+entonces
+
+
+	L(f,P) <= U(f,P)
+
+Ahora, una desigualdad menos obvia es
+
+       	   L(f,P1) <= U(f,P2)
+
+Si P1 y P2 son dos particiones cualesquiera de [a, b],
+
+ya que que L(f, P1) debe ser < área R(f, a, b), y U(f, P2) debe ser > área R(f,a,b).
+
+** comportamiento de las sumas inferiores y superiores
+a medida que van introduciéndose más puntos en la partición empiezan a pasar
+cosas interesantes con respecto a una particion con menos puntos. Esto genera
+más desigualdades:
+
+Lema. Si Q contiene a P (es decir, si todos los puntos de P pertenecen a Q), entonces:
+
+      	 L(f,P) <L(f,Q),
+	 U(f,P) >U(f,Q)			// parece que L(f,Q) y U(f,Q) siempre serán mayores
+
+
+%%% Necisto entender lo de las cotas
+
+
+		 
