@@ -1,0 +1,387 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+<head>
+<title>Recursivad, segunda parte</title>
+<!-- 2019-02-06 Wed 23:24 -->
+<meta  http-equiv="Content-Type" content="text/html;charset=utf-8" />
+<meta  name="generator" content="Org-mode" />
+<meta  name="author" content="Jonathan Ahumada" />
+<style type="text/css">
+ <!--/*--><![CDATA[/*><!--*/
+  .title  { text-align: center; }
+  .todo   { font-family: monospace; color: red; }
+  .done   { color: green; }
+  .tag    { background-color: #eee; font-family: monospace;
+            padding: 2px; font-size: 80%; font-weight: normal; }
+  .timestamp { color: #bebebe; }
+  .timestamp-kwd { color: #5f9ea0; }
+  .right  { margin-left: auto; margin-right: 0px;  text-align: right; }
+  .left   { margin-left: 0px;  margin-right: auto; text-align: left; }
+  .center { margin-left: auto; margin-right: auto; text-align: center; }
+  .underline { text-decoration: underline; }
+  #postamble p, #preamble p { font-size: 90%; margin: .2em; }
+  p.verse { margin-left: 3%; }
+  pre {
+    border: 1px solid #ccc;
+    box-shadow: 3px 3px 3px #eee;
+    padding: 8pt;
+    font-family: monospace;
+    overflow: auto;
+    margin: 1.2em;
+  }
+  pre.src {
+    position: relative;
+    overflow: visible;
+    padding-top: 1.2em;
+  }
+  pre.src:before {
+    display: none;
+    position: absolute;
+    background-color: white;
+    top: -10px;
+    right: 10px;
+    padding: 3px;
+    border: 1px solid black;
+  }
+  pre.src:hover:before { display: inline;}
+  pre.src-sh:before    { content: 'sh'; }
+  pre.src-bash:before  { content: 'sh'; }
+  pre.src-emacs-lisp:before { content: 'Emacs Lisp'; }
+  pre.src-R:before     { content: 'R'; }
+  pre.src-perl:before  { content: 'Perl'; }
+  pre.src-java:before  { content: 'Java'; }
+  pre.src-sql:before   { content: 'SQL'; }
+
+  table { border-collapse:collapse; }
+  caption.t-above { caption-side: top; }
+  caption.t-bottom { caption-side: bottom; }
+  td, th { vertical-align:top;  }
+  th.right  { text-align: center;  }
+  th.left   { text-align: center;   }
+  th.center { text-align: center; }
+  td.right  { text-align: right;  }
+  td.left   { text-align: left;   }
+  td.center { text-align: center; }
+  dt { font-weight: bold; }
+  .footpara:nth-child(2) { display: inline; }
+  .footpara { display: block; }
+  .footdef  { margin-bottom: 1em; }
+  .figure { padding: 1em; }
+  .figure p { text-align: center; }
+  .inlinetask {
+    padding: 10px;
+    border: 2px solid gray;
+    margin: 10px;
+    background: #ffffcc;
+  }
+  #org-div-home-and-up
+   { text-align: right; font-size: 70%; white-space: nowrap; }
+  textarea { overflow-x: auto; }
+  .linenr { font-size: smaller }
+  .code-highlighted { background-color: #ffff00; }
+  .org-info-js_info-navigation { border-style: none; }
+  #org-info-js_console-label
+    { font-size: 10px; font-weight: bold; white-space: nowrap; }
+  .org-info-js_search-highlight
+    { background-color: #ffff00; color: #000000; font-weight: bold; }
+  /*]]>*/-->
+</style>
+<script type="text/javascript">
+/*
+@licstart  The following is the entire license notice for the
+JavaScript code in this tag.
+
+Copyright (C) 2012-2013 Free Software Foundation, Inc.
+
+The JavaScript code in this tag is free software: you can
+redistribute it and/or modify it under the terms of the GNU
+General Public License (GNU GPL) as published by the Free Software
+Foundation, either version 3 of the License, or (at your option)
+any later version.  The code is distributed WITHOUT ANY WARRANTY;
+without even the implied warranty of MERCHANTABILITY or FITNESS
+FOR A PARTICULAR PURPOSE.  See the GNU GPL for more details.
+
+As additional permission under GNU GPL version 3 section 7, you
+may distribute non-source (e.g., minimized or compacted) forms of
+that code without the copy of the GNU GPL normally required by
+section 4, provided you include this license notice and a URL
+through which recipients can access the Corresponding Source.
+
+
+@licend  The above is the entire license notice
+for the JavaScript code in this tag.
+*/
+<!--/*--><![CDATA[/*><!--*/
+ function CodeHighlightOn(elem, id)
+ {
+   var target = document.getElementById(id);
+   if(null != target) {
+     elem.cacheClassElem = elem.className;
+     elem.cacheClassTarget = target.className;
+     target.className = "code-highlighted";
+     elem.className   = "code-highlighted";
+   }
+ }
+ function CodeHighlightOff(elem, id)
+ {
+   var target = document.getElementById(id);
+   if(elem.cacheClassElem)
+     elem.className = elem.cacheClassElem;
+   if(elem.cacheClassTarget)
+     target.className = elem.cacheClassTarget;
+ }
+/*]]>*///-->
+</script>
+</head>
+<body>
+<div id="content">
+<h1 class="title">Recursivad, segunda parte</h1>
+<div id="table-of-contents">
+<h2>Table of Contents</h2>
+<div id="text-table-of-contents">
+<ul>
+<li><a href="#sec-1">1. lenguajes funcionales</a></li>
+<li><a href="#sec-2">2. Sobre la ejecución en la máquina</a></li>
+<li><a href="#sec-3">3. Ordenamientos</a></li>
+<li><a href="#sec-4">4. Ejemplo</a>
+<ul>
+<li><a href="#sec-4-1">4.1. Procedimiento</a></li>
+<li><a href="#sec-4-2">4.2. Solucion</a></li>
+</ul>
+</li>
+<li><a href="#sec-5">5. Combinaciónes</a>
+<ul>
+<li><a href="#sec-5-1">5.1. Ejemplo</a></li>
+<li><a href="#sec-5-2">5.2. Prodecimiento</a></li>
+<li><a href="#sec-5-3">5.3. Solución</a></li>
+</ul>
+</li>
+</ul>
+</div>
+</div>
+
+
+<div id="outline-container-sec-1" class="outline-2">
+<h2 id="sec-1"><span class="section-number-2">1</span> lenguajes funcionales</h2>
+<div class="outline-text-2" id="text-1">
+<p>
+"Más fácil de interpretar por las máquinas." 
+//Se supone que la definción fuerte de recursividad es comprensible así como están.
+</p>
+
+<p>
+//Hay una conexión entre la notación funcional y la sintaxis de Lisp que no logro hacer consciente. 
+</p>
+</div>
+</div>
+
+<div id="outline-container-sec-2" class="outline-2">
+<h2 id="sec-2"><span class="section-number-2">2</span> Sobre la ejecución en la máquina</h2>
+<div class="outline-text-2" id="text-2">
+<p>
+La máquina siempre evalúa de izquierda a derecha (según la precedencia usual).
+En las combinaciónes, es interesante notar que primero el término izquierdo de la 
+expresión se evalúa recursivamente hasta llegar al caso base y luego pasa al derecho: 
+</p>
+
+<pre class="example">
+C(4,2)= C(3,1) + C(3,2)
+     =  (C()+ C() ) + C(3,2)
+     = (1 + C()) + C(3,2)   //etc.
+</pre>
+</div>
+</div>
+<div id="outline-container-sec-3" class="outline-2">
+<h2 id="sec-3"><span class="section-number-2">3</span> Ordenamientos</h2>
+<div class="outline-text-2" id="text-3">
+<p>
+La estrategía general de los ordenamientos
+es escoger uno de los elementos del conjunto.
+Luego, dibujar un árbol de posibilidades de
+ordenamiento.
+Nótese que:
+</p>
+
+<ol class="org-ol">
+<li>solo un llamado recursivo (producto)
+</li>
+<li>no es un árbol "per se", aunque se representa como àrbol // Aclarar esto
+</li>
+</ol>
+</div>
+</div>
+
+<div id="outline-container-sec-4" class="outline-2">
+<h2 id="sec-4"><span class="section-number-2">4</span> Ejemplo</h2>
+<div class="outline-text-2" id="text-4">
+<p>
+Suponga que selecciona cuatro cartas distintas de una baraja de póker, que se van a
+representar por los símboloes (T,D,C,P). ¿De cuántas formas puedo ordenar estas 4 cartas?
+</p>
+</div>
+
+<div id="outline-container-sec-4-1" class="outline-3">
+<h3 id="sec-4-1"><span class="section-number-3">4.1</span> Procedimiento</h3>
+<div class="outline-text-3" id="text-4-1">
+<ol class="org-ol">
+<li>selecciona un elemento
+</li>
+
+<li>Dibuja ur arbol de posibilidades a partir de ese elemento.
+<div class="org-src-container">
+
+<pre class="src src-ditaa">		C------P  
+      D+--------|     
+      |         P------C
+      |          D------P  
+T ----C+--------|      
+      |         P------D   
+      |               
+      |         D-----C 
+      P+--------|  
+		C-----D
+</pre>
+</div>
+</li>
+
+<li>Repite el arbol de posibidades  por cada elemento
+
+<div class="org-src-container">
+
+<pre class="src src-ditaa">		C------P  
+      D+--------|     
+      |         P------C
+      |         D------P  
+T ----C+--------|      
+      |         P------D   
+      |               
+      |         D-----C 
+      P+--------|  
+		C-----D          x n veces, donde n es la norma del conjunto
+</pre>
+</div>
+</li>
+</ol>
+
+
+
+<ol class="org-ol">
+<li>Expresion matemática = n!
+</li>
+</ol>
+</div>
+</div>
+
+
+<div id="outline-container-sec-4-2" class="outline-3">
+<h3 id="sec-4-2"><span class="section-number-3">4.2</span> Solucion</h3>
+<div class="outline-text-3" id="text-4-2">
+<p>
+hay 24 ordenamientos 4!.
+</p>
+
+
+<pre class="example">
+ordenar(x) = x ordenar(x-1)
+</pre>
+</div>
+</div>
+</div>
+
+<div id="outline-container-sec-5" class="outline-2">
+<h2 id="sec-5"><span class="section-number-2">5</span> Combinaciónes</h2>
+<div class="outline-text-2" id="text-5">
+<p>
+La estrategia general de las combinaciones es similar al de las listas, 
+pero como el orden no importa habrá menos. Nótese lo siguiente:
+</p>
+
+<ol class="org-ol">
+<li>Solo habrá un árbol.
+</li>
+<li>recursivamente, una combinación implica una suma (ver ejemplo)
+</li>
+<li>Hay que saber de qué tamaño sera el subconjunto que se debe formar.
+</li>
+<li>Cada nodo del árbol se divide en si sí o no usar un elemento dentro de los subconjuntos.
+</li>
+<li>ordenar elementos es a factorial, como escoger subconjuntos a combinatorias
+</li>
+</ol>
+</div>
+
+<div id="outline-container-sec-5-1" class="outline-3">
+<h3 id="sec-5-1"><span class="section-number-3">5.1</span> Ejemplo</h3>
+<div class="outline-text-3" id="text-5-1">
+<p>
+¿De cuantas formas se pueden formar parejas de la familia
+Simpson para que suban al vag´on de la montaña rusa?
+</p>
+</div>
+</div>
+
+
+<div id="outline-container-sec-5-2" class="outline-3">
+<h3 id="sec-5-2"><span class="section-number-3">5.2</span> Prodecimiento</h3>
+<div class="outline-text-3" id="text-5-2">
+<ol class="org-ol">
+<li>Se escoge un elemento arbitrario del conjunto.
+</li>
+<li>Se bifurcan dos ramas de esa escogencia, dependiendo de si se escogió o no.
+</li>
+<li>En un lado el numero de elementos del subconjunto disminuye.
+</li>
+<li>En cada fila el número de elementos del conjunto disminuye. 
+</li>
+</ol>
+
+
+
+<div class="org-src-container">
+
+<pre class="src src-ditaa">		C(4,2)
+	       /  \
+	      /    \
+	     /      \
+	    /        \
+	   /          \
+	  /            \
+	 /              \
+	C(3,1)           C(3,2)
+ +-----------+     +------------+
+ |           |     |            |
+ |           |     |            |
+ |           |     |            |
+ |           |     |            |
+C(2,0)  C(2,1)    C(2,1)       C(2,2)|
+	  +---+   +--+
+	  |   |   |  |
+	  |   |C(1,0)C(1,1) 
+     C(1,0) C(1,1)
+</pre>
+</div>
+</div>
+</div>
+
+
+<div id="outline-container-sec-5-3" class="outline-3">
+<h3 id="sec-5-3"><span class="section-number-3">5.3</span> Solución</h3>
+<div class="outline-text-3" id="text-5-3">
+<p>
+Son 6 combinaciónes. 
+</p>
+</div>
+</div>
+</div>
+</div>
+<div id="postamble" class="status">
+<p class="date">Date: <span class="timestamp-wrapper"><span class="timestamp">&lt;2019-02-05 Tue&gt;</span></span></p>
+<p class="author">Author: Jonathan Ahumada</p>
+<p class="date">Created: 2019-02-06 Wed 23:24</p>
+<p class="creator"><a href="http://www.gnu.org/software/emacs/">Emacs</a> 25.3.1 (<a href="http://orgmode.org">Org</a> mode 8.2.10)</p>
+<p class="validation"><a href="http://validator.w3.org/check?uri=referer">Validate</a></p>
+</div>
+</body>
+</html>
