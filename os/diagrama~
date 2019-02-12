@@ -1,0 +1,9 @@
+graph SistemaOperativo{
+ sistema operativo -- interfaz;
+ interfaz -- doble -- tipos;
+ doble -- usuario -- hardware;
+ sistema operativo -- funciones principales;
+ funciones principales -- creación programas -- ejecución programaas -- acceso a I/O --  acceso controlado a los archivos -- acceso al sistema -- respuesta a errores;
+
+
+}

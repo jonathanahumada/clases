@@ -1,0 +1,64 @@
+
+
+graph SistemaOperativo{
+      rankdir = TB;
+      label= "Sistemas operativos: Mapa Conceptual."
+    
+      fontsize= 32;
+ "sistemas operativos" -- "visto como interfaz";
+ "sistemas operativos" -- conceptos;
+ conceptos -- {Kernel Shell};
+
+
+ //Kernel
+ Kernel -- "administra recursos" ;
+ "administra recursos" -- "Descripción y control de procesos";
+ "Descripción y control de procesos" -- {"darles un ID" "asignar contexto de ejecución" , "hardware: procesador"};
+   "administra recursos" -- "Gestión de memoria";
+   "Gestión de memoria" -- {"Des/cargar almacenamiento secundario" "Paginación"};
+   "administra recursos" -- {"Repartir recursos dependiendo de prioridad y plazos" "inicio y terminación de procesos"};
+   "administra recursos" -- {"Control de concurrencia"} -- "garantiza intercalamiento de procesos";
+   "administra recursos" -- "Gestión de I/O" -- drivers;
+   "administra recursos" -- {"Gestión de archivos" "Seguridad" };
+   "Seguridad" -- {"Privilegios de usuario" "Privilegios de usuario en lectura/escritura"}
+   "Gestión de archivos" -- "proporciona la estructura de archivos (carpetas, subcarpetas, etc.)"; 
+
+//Interfaz 
+ "visto como interfaz" --{ doble "tipos de interfaz"};	
+ doble -- {usuario hardware} -- "Oculta las detalles del hardware al usuario";
+ "visto como interfaz" -- "funciones principales";
+ 
+// Tipos Interfaz
+  "tipos de interfaz" -- {CLI GUI};
+   CLI -- {Unix "distros 'headless'" DOS};
+   GUI -- {GNOME, KDE, X, Windows, Aqua};
+ 
+
+// Funciones Principales
+ "funciones principales" --{ "creación programas"  "ejecución programas"  "acceso a I/O"   "acceso controlado a los archivos" "acceso al sistema" "respuesta a errores"  "estadísticas de utilización de recursos"};
+
+
+// funciones secundarias
+   "visto como interfaz" -- "funciones secundarias" -- {seguridad, redes};
+
+
+
+//Shell
+ "Shell" -- "Expone funcionalidad al usuario" -- "llamadas al sistema" -- {"admin. dispositivos" "Manten. información" "Comunicacion"};
+
+// Historia
+ "sistemas operativos" -- "evolución histórica";
+ "evolución histórica" -- "procesos en serie (no hay S.O)" -- "procesos en lote (batch programming)" -- "multiprogramación (intercalamiento)" -- "multiprocesamiento (procesos simultáneos)";
+ 
+// Funcionalidades secundarios
+
+
+
+// Objetivos
+ "sistemas operativos" -- "objetivos" -- {"comodidad" "eficiencia" "capacidad de evolución"}
+
+   
+
+
+
+}

@@ -1,0 +1,59 @@
+
+* OS
+** Como interfaz
+*** Interfaces 
+1) linea de comandos
+2) gráfico
+*** Tareas principales
+1) Creación programas
+2) Ejecucion Prog
+3) Acceso a disp. de entradas y salidas
+4) Acceso controlado a los archivos
+5) Acceso al sistema (usuario, privilegios, etc)
+6) Detecci{on y respuesta a errores
+7) Estad{isticias de utilización de recursos 
+** Como administrador de recursos
+Ofrece una distribucion ordenada y controlado de los procesadores, emorias, disp de i/o entre los diversos
+programas que compiten entre ellos. 
+*** Kernel : programa más importante
+
+* TODO diagrama
+
+* Operaciones del SO
+** Descripción y control de procesos 
+asignar recursos a procesos, permitir el intercambio de inf. entre ellos. , proteger los recursos y sincronizarlos.
+Y describirlos :
+1) darles un id
+2) contexto de ejecución. 
+hardware asociado: procesador
+** Control de concurrencia
+asegurar los procesos se intercalen exitosamente en el tiempo dando la apariencia  de una ejecución simultánea. 
+Los que concurren son los procesos. Existen : algoritmos de control de concrureencia
+** Gestión de Memoria
+1) Des/cargar hacia el almacenamiento secundario.
+2) Paginación (bloques de)= recursos memoria a diferentes aplicaciones.
+** Planificación
+Repartir los recursos del sistema entre  necesidades potencialmente competitiva teniendo en cuenta niveles de prioridad y plazos.
+Ejemplo: 'programa no responde'.  
+para inicio y terminación de procesos.  
+** Gestión de entrada y salida 
+Puertos
+** Gestion de archivos
+** Seguridad 
+Firewall
+Privilegios de usuario / lectura /escritura
+** Gestion de redes
+todo os moderno debe tener esto. 
+la ´nube'' = red de servidores de topología indefinida.
+
+* Llamadas al sistema
+* Evolución del OS
+1) Hombre-máquina = no había OS. Solo procesos en serie. 
+2) Procesos por lotes = procesos en serie, monitor del sistema  (cargabas los programas y luego se ejecutaban en serie)
+3) Proceos por lotes con multiprogramación
+4) Sistemas de tiempo compartido = multiprocesamiento
+			multiprogramacion (intercalaba el uso del procesador) != multiprocesamiento (al mismo tiempo) 
+
+* Tarea : hacer mapa conceptual de todo lo visto hasta hora
+Mindomo 
+Cmaptools
