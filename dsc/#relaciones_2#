@@ -1,0 +1,213 @@
+* Relacion Binaria
+
+Una relación binaria en AxB es un subconjunto de AxB.
+
+* Conceptos
+** Producto cartesiano
+Opercion entre dos conjuntos para obtener parejas ordenadas, 
+donde el primer elemento corresponde al conjunto A y el segundo, a B.
+El resultado de esto es un conjunto.
+** Relación
+La relación es un subconjunto de un producto cartesiano.
+** Función
+Relación donde a cada elemento de A, le corresponde uno y solo un elemento
+de B.
+
+* Propiedades
+** Reflexiva
+si el dominio y el rango son iguales.
+** Simetricas 
+Para todo (a,b) tiene que haber un (b,a);
+** Transitiva
+esta es la dificil de comprobar.
+La orma facil es dibujar un diagrama y ver si se duplica exactamente igual al otro lado. 
+
+** Asimetrica
+La OPUESTA a simetrica. Ningun elemento puede tener su contraimagen
+** Antisimetrica
+Siempre que se verifique simetría es porque es un elemento con el mismo
+
+
+
+
+* Representaciones
+** Gráfica
+
+
+
+*** Una relacion de un A en B.
+
+\begin{equation}
+A = \{c,d,e\}  B = \{1,2,3,4,5\}
+
+
+\end{equation}
+
+\begin{equation}
+
+R = \{(c,1)(c,3)(c,4)(e,1)(e,2)(e,3)\} \subset AxB
+\end{equation}
+
+
+
+Las flechas son importantes, porque son pares ordenados.
+
+Este ejemplo va para solo los 3 primeros elementos de 3.
+#+BEGIN_SRC ditaa:file rep_grafica.png
+
+
+
+                      /-->o 1
+               /------
+        /------           o 2
+ a  o------
+     -     \---------
+     \--            \---->o 3
+        \--
+	   \---
+      	       \--   	  o 4
+     		  \--
+     		     \--
+     			\->o 5
+
+#+END_SRC
+
+
+
+*** Una relación de A en A.
+Nótese que no se escribe A dos veces.
+
+las representacion aquí seria.
+
+
+\begin{equation}
+A = \{c,d,e\}
+
+
+\end{equation}
+
+\begin{equation}
+
+S = \{(a,a)(a,c)(b,c)(c,a)(c,b)\} \subset AxA
+\end{equation}
+
+
+
+
+Las flechas son importantes, porque son pares ordenados.
+#+BEGIN_SRC ditaa:file rep_grafica.png
+
+
+	----+
+	|   |
+	|   v a				 b
+	+---o|<----------+	 ----->	o
+	     |		 |      /     	|
+	     |		 |     /    	|
+	     |		 |    /   	|
+	     |		 |   /  	|
+	     |		 |  /  		|
+	     |	       c | / 		|
+	     +---------->o/-------------+
+#+END_SRC
+
+*** Rando y dominio
+Con un diagrama de flechas es fácil ver el rango y el dominio de una relación. Estos 
+son conjuntos y se notan como.
+
+\begin{equation}
+ ran\{R\} = \{[elementos]\}
+
+\end{equation}
+
+
+\begin{equation}
+ dom\{R\} = \{[elementos]\}
+
+\end{equation}
+
+** Sagital
+Con diagramas ovaloides clásicos (diagramas de Venn).
+
+** Forma implicita
+En vez de decir cuáles son los pares. Decir una propiedad si el par ij esta en el subconjunto.
+
+\begin{equation}
+Sea a A = \{fresa, manzana, sandía , pera, uva\}
+
+\end{equation}
+
+Se define la siguiente relacion en AxA.
+
+\begin{equation}
+\forall i,j \in A   i\ R\ j\ \iff aparece\ antes\ que\ j en\ el\ diccionario.
+
+\end{equation}
+
+
+** Matriz de relación
+
+Si A = {1,4,5}
+
+\begin{equation}
+Sea  R = \{(1,4), (1,5), (4,1) ,(4,4), (5,4), (5,5)\}\ \subset AxA
+
+
+
+\end{equation}
+
+La matriz de relaciones tiene en su primera columna el primer operando
+del producto cartesiano y en la primera fila el segundo. 
+ 
+\begin{equation}
+
+  M_{r} = 
+\begin{bmatrix}
+     &1 &4 &5 \\
+   1  & 0 & 1 & 1 \\
+   
+   4  & 1 & 1 & 0  \\
+   5  &0  & 1 & 1 
+
+\end{bmatrix}
+
+
+
+\end{equation}
+
+
+* Operaciones entre relaciones
+*** Union (\cup)
+Se suman las matrices de relaciones.  Como son matrices
+de relaciones. La suma de dos 1 da 1 (suma booleana).
+*** Interseccion (\cap)
+Producto booleano (\otimes) elemento a elemento.
+Solamennte quedan los 1 que estan en la misma posición.
+*** Diferencia (-)
+Se restan elemento a elemento. En la resta
+booleana 0-1 = 0. Luego, se quitan los unos que estén 
+en ambos. 
+*** Complementario (^{c})
+Los que no están en la relación.
+Es lo mismo que cambiar los 1 por 0 y viceversa.
+Se puede hacer restandole a todo el producto cartesiano la relacion (R^{c}=AxB-R). 
+
+* Composición de relaciones
+
+Primero, recordar que 
+
+\begin{equation}
+(SoR)(x)\ = S(R(x))
+\end{equation}
+** Solucion
+1) Calcular primero la función interna (R(x)).
+Sacar dom(R), luego ran(R);
+2) Hacer lo mismo con S(x)
+
+3) armar los pares que saliendo desde el dom(R), lleguen al ran(S). Gráficamente,
+esto se ve como una linea continua desde el primer conjutno hasta el tercero. Si
+hay intrrupciones o similares, no pertenece a la composición.
+
+* Relaciones n-arias
+Son relaciones entre más de dos conjuntos.
+
