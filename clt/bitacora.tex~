@@ -1,54 +1,106 @@
-#+TITLE: Bitácora: Bogotá y sus historias
-#+AUTHOR: Jonatan A. Ahumada Fernández
-#+DATE: 2019-1
-#+HTML_HEAD: <link rel="stylesheet" type="text/css" href="clean-blog.css" />
-#+HTML_HEAD: <link href="https://fonts.googleapis.com/css?family=Cinzel|Crimson+Text" rel="stylesheet">
+% Created 2019-02-12 Tue 18:30
+\documentclass[11pt]{article}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{fixltx2e}
+\usepackage{graphicx}
+\usepackage{longtable}
+\usepackage{float}
+\usepackage{wrapfig}
+\usepackage{rotating}
+\usepackage[normalem]{ulem}
+\usepackage{amsmath}
+\usepackage{textcomp}
+\usepackage{marvosym}
+\usepackage{wasysym}
+\usepackage{amssymb}
+\usepackage{hyperref}
+\tolerance=1000
+\author{Jonatan A. Ahumada Fernández}
+\date{2019-1}
+\title{Bitácora: Bogotá y sus historias}
+\hypersetup{
+  pdfkeywords={},
+  pdfsubject={},
+  pdfcreator={Emacs 25.3.1 (Org mode 8.2.10)}}
+\begin{document}
+
+\maketitle
+\tableofcontents
 
 
-#+EMAIL: jonatana.ahumadaf@konradlorenz.edu.co
-
-* Introducción
+\section{Introducción}
+\label{sec-1}
 Esta página constituirá la bitácora para el curso "Bogotá y sus Historias", cursado en la Fundación Universitaria Konrad Lorenz.
 
- ------------------------------------
-|Estudiante: Jonatan Adolfo Ahumada  |
- ------------------------------------
- -----------------------------
-|Docente: Estefanía Vanegas   |
- -----------------------------
+\rule{\linewidth}{0.5pt}
+\begin{center}
+\begin{tabular}{l}
+Estudiante: Jonatan Adolfo Ahumada\\
+\end{tabular}
+\end{center}
 
-* Entradas
-** <2019-02-02 Sat>
+\rule{\linewidth}{0.5pt}
+
+\rule{\linewidth}{0.5pt}
+\begin{center}
+\begin{tabular}{l}
+Docente: Estefanía Vanegas\\
+\end{tabular}
+\end{center}
+
+\rule{\linewidth}{0.5pt}
+
+\section{Entradas}
+\label{sec-2}
+\subsection{\textit{<2019-02-02 Sat>}}
+\label{sec-2-1}
 
 Visité el centro de la ciudad por ir a la librería Lerner. Me parece auspicioso que esta Libreria esté
 en esa zona, pues a pocas cuadras hay una estatua de José Rufino Cuervo y, además, está rodeada de 
 universidades. Contrario a lo que uno está acostumbrado, la Libreria es buena. Con esto me refiero a
-que es bueno su catálogo, cosa que no cabría explicar aquí. Pero, por ejemplo, si se compara con un Barnes & Nobles, 
+que es bueno su catálogo, cosa que no cabría explicar aquí. Pero, por ejemplo, si se compara con un Barnes \& Nobles, 
 se notará la diferencia en su catálogo. Supongo que tendrá que ver con las segmentación del mercado editorial según las 
 lenguas. Es decir, el busto de Cuervo efectivamente ha tenido su influencia sobre el quehacer de esos libreros. Lamentablemente, a esa hora estaba vacío.
 Además, los sábados cierran temprano. Para ellos no debe ser rentable una tarde de sábado.  Había poca gente. Una profesora de unos 60 años con su amiga preguntaban
 por bibliografía sobre los judíos. Todo, lo que hubiere. Parece que preparaban una clase, pero se distrarían al mismo tiempo. Eran 'godas', así como lo pintan 
 en las nóvelas de RCN. Recordé algunas clases en los Andes. Luego, también entró un gringo. Preguntó por 'books in English' y lo dirigieron a una sección al lado 
 del salón de literatura colombiana. Es curioso estar rodeado de íconos nacionales y al mismo tiempo sentirse extrañado y expatriado.  
- 
+
 Caminé el eje ambiental hasta llegar al Claustro del Rosario y luego tomé la séptima hasta 
 el cruce con la 26. 
 
-#+CAPTION: Eje ambiental
-[[./img/eje-ambiental.jpg]]
+\begin{figure}[htb]
+\centering
+\includegraphics[width=.9\linewidth]{./img/eje-ambiental.jpg}
+\caption{Eje ambiental}
+\end{figure}
 
-#+CAPTION: A la salida de la Librería Lerner
-[[./img/salida-lerner.jpg]]
+\begin{figure}[htb]
+\centering
+\includegraphics[width=.9\linewidth]{./img/salida-lerner.jpg}
+\caption{A la salida de la Librería Lerner}
+\end{figure}
 
-#+CAPTION: En una de tantas iglesias del área
-[[./img/iglesia.jpg]]
+\begin{figure}[htb]
+\centering
+\includegraphics[width=.9\linewidth]{./img/iglesia.jpg}
+\caption{En una de tantas iglesias del área}
+\end{figure}
 
-#+CAPTION: La séptima, tramo relativamente nuevo
-[[./img/septima-peatonal.jpg]]
+\begin{figure}[htb]
+\centering
+\includegraphics[width=.9\linewidth]{./img/septima-peatonal.jpg}
+\caption{La séptima, tramo relativamente nuevo}
+\end{figure}
 
-#+CAPTION: Fin del recorrido, al pie del Observatorio
-[[./img/septima-26.jpg]]
-** <2019-02-07 Thu>
+\begin{figure}[htb]
+\centering
+\includegraphics[width=.9\linewidth]{./img/septima-26.jpg}
+\caption{Fin del recorrido, al pie del Observatorio}
+\end{figure}
+\subsection{\textit{<2019-02-07 Thu>}}
+\label{sec-2-2}
 Hoy pude levantarme "tarde" porque contaba con el carro para ir a la Universidad, o eso creía.
 Resulta que mi trayecto fue bastante fácil y el parqueadero estaba vacío, pero por efecto de la somnolencia nunca
  me detuve a pensar por qué. Jamás se me ocurrió. Lamentablemente, era
@@ -80,66 +132,49 @@ La 'ola verde' ataca nuevamente. Su voz es legión, y es ley.
 
 
 
-** <2019-02-10 Sun>
+\subsection{\textit{<2019-02-10 Sun>}}
+\label{sec-2-3}
 Visité el Parque Sauzalito, al lado de la Teminal de Transporte. Este tipo de espacio es muy interesante por dos motivos.
-1) Conserva recursos naturales en medio del cemento de la ciudad.
-2) Es un espacio recreativo para diversos segmentos poblacionales.
+\begin{enumerate}
+\item Conserva recursos naturales en medio del cemento de la ciudad.
+\item Es un espacio recreativo para diversos segmentos poblacionales.
+\end{enumerate}
 
 Por lo general, voy al Parque a tomar fotos. No obstante, como era domingo, me llamó la atención la gente. Estaba bastante lleno.
 Hagamos un breve inventario.
 
-*** ancianos
+\subsubsection{ancianos}
+\label{sec-2-3-1}
 
 Montados en las "máquinas de ejercicio" que la gobernación ha venido
 poniendo en este tipo de espacios. Recuerdo que hace años eso no estaba ahí. Es un poco ridículo ver 
-cómo los ancianos usan estas máquinas porque no es un tipo de ejercicio apropiado para ellos. No es 
+cómo los ancianos usas estas máquinas porque no es un tipo de ejercicio apropiado para ellos. No es 
 ni cardiovascular, ni de fueza (porque las máquinas no están bien diseñadas). En mi concepto, estas máquinas
 ejemplifican la pésima idea de gobierno que rige la ciudad y que llega a su epítome en Peñalosa. Invertir en 
 lo mínimo posible en dádivas "democráticas" que la gente toma por grandes lujos, cuando su utilidad o beneficio en 
 realidad es nulo. 
 
-***  niños 
+\subsubsection{niños}
+\label{sec-2-3-2}
 El parque está lleno de cursos de natación, patinaje, artes marciales, tenis, basketbol, etc. No me es muy claro 
-cómo funciona el asunto. Es decir, si las clases las ofrece el parque, o hay empresas privadas que alquilan el parque, o 
+cómo funciona el asunto. Es decir, si las clases las ofrece el parque o hay empresas privadas que alquilan el parque o 
 si lo usan gratis. Había varios quiscos, pero no pregunté nada, pues no hay nada más mediocre que la mirada ausente de quien
 supervisa los hijos de otras personas por dinero. 
 
-***  deportistas
-     En Bogotá hay una cultura de calistenia. Hoy había algunos tipos utilizando las barras del Sauzalito, pero  no es mucho en comparación con el parque Simón Bolívar.
+\subsubsection{deportistas}
+\label{sec-2-3-3}
+En Bogotá hay una cultura de calistenia. Hoy había algunos tipos utilizando las barras del Sauzalito, pero  no es mucho en comparación con el parque Simón Bolívar.
 
-*** chica de 'libros al viento'
+\subsubsection{La chica del quisquito de 'libros al viento'}
+\label{sec-2-3-4}
 Me gusta esta idea, pero creo que nadie la usa. También noto ahí un problema y es que, si eres lector, no vas a recurrir a un quisco arbitrariamente
 colocada para hacer tu lectura. Por otro lado, los libros que ponían no eran malos (salvo los del Centro de Memoria Histórica). Voy a poner fotos abajo.
 La chica que atendía procuraba tener buena actitud, pero también le aburría, porque había muy poca interacción. Es probable que tuviera una carrera universitaria, porque
 he visto que esas cosas pasen. 
-  
 
-*** vendedores
+
+\subsubsection{vendedores}
+\label{sec-2-3-5}
 La mayoría de vendedores ambulantes se postran en el suelo a disfrutar el ambiente. Dan una aura de pasividad.  
-
-** <2019-02-15 Fri>
-Hoy declararon que el pico y placa se extiende hasta el fin de semana y durante todo el día. Lo hacen para "preservar la
-salud de los ciudadadanos", dice el secretario de movilidad. La situación supuestamente se origina por condiciones ambientales atípicas. Bosa, Kennedy, Tunjuelito y 
-Puente Aranda tienen alerta naranja. 
-
-La Secretaría de Movilidad admite que cerca del 40% de material particulado lo emiten los camiones. Es decir, el sector industrial. Sospecho que los ciudadanos comunes 
-poco tendrían que ver con el otro 60%. ¿Quién permite que su carro bote humo tan negro como el de los colectivos, las tractomulas, los transmilenios? Por supuesto, la cifra asignada al Transmilenio milagrosamente tiene un solo dígito. Además, los sectores más contaminados 
-son los que tienen menos poseedores de carros partículares. ¿Será que Kennedy y Puente Aranda concentran la mayoría de los carros particulares? ¿El norte se verá
-afectado con la misma severidad que este sector? 
-
-Este episodio es la repetición de "el de las motos", en el año pasado. El estado siempre velando por la seguridad de los ciudadanos. ¿Quién podrá 
-ser el beneficiado de tal medida? ¿Están probando a ver qué tan pusilánimes somos?
-
-
-
- 
-** <2019-02-17 Sun>
-
-Según las noticias, tendríamos que usar tapabocas al salir a la calle. La crisis ambiental es demasiado crítica. No obstante, salgo a la calle un domingo, el único día 
-en que me han permitido usar mi vehículo, y veo que hay cicloruta en la Boyacá y en la 26. Es lo usual. El trancón perenne, como de costumbre. Las caras felices de los ciclistas, en las cuales hace falta un
-tapabocas, me repugnan. No son en lo más mínimo conscientes de la contradicción que entrañan. ¿Ese es realmente el comportamiento de alguien preocupado por el medioambiente?
-¿No sería lo más lógico evitar en la mayor medida posible el aire viciado contenido en el Valle de Aburrá? (Y qué tiene que ver el Valle  con el centro urbano de Bogotá?)
-
-Me convenzo más de que la medida es solo para comodidad de quienes pueden financiar dos carros. Algo había que hacer para disminuir el trancón.
-
- 
+% Emacs 25.3.1 (Org mode 8.2.10)
+\end{document}

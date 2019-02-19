@@ -1,0 +1,8 @@
+* Teorema del binomio
+Para el binomio \( (a + b)^n\), su expansión tiene las sigientes características
+1) En total habrá n+1 términos
+2) Por cada término, el poder de a decremente y el de a incrementa. 
+3) Cada término tiene la forma \((c)a^{n-k}{b^k}\), donde c es un entero y \(k = 0,1,2, \dots n\)
+4) La siguiente fórmula se cumple para cada uno de los n términos de la expansión se cumple que: \(\frac{coeficiente\ de\ término\ x\ potencia\ de\ término}{número\ término} = coeficiente\ del\ siguiente\ término\)
+
+

@@ -1,0 +1,12 @@
+** Cuándo se usa?
+*** cociente
+    el numerador debe ser la derivada del denominador: \int  \frac{du}{u} 
+*** procedimiento
+// Puede pensarse como lo inverso a la 'chain rule'
+1) reemplazar el denomidar por u. Puede tomar cualquier valor. por ejemplo \[u = 3^2 + 2x\];
+2) calcular \[du\]
+3) reemplazar la variable desconocida en la exuación por \[u\]
+\begin{equation}
+\int \ƒrac{6x+2}{3x^2+2x}\ =\ \int\ƒrac{du}{u}\ =\ \ln{3x^2 -2x}
+\end{equation}
+

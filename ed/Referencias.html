@@ -1,0 +1,423 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+<head>
+<title>Referencias</title>
+<!-- 2019-02-17 Sun 18:25 -->
+<meta  http-equiv="Content-Type" content="text/html;charset=utf-8" />
+<meta  name="generator" content="Org-mode" />
+<meta  name="author" content="Jonathan Ahumada" />
+<style type="text/css">
+ <!--/*--><![CDATA[/*><!--*/
+  .title  { text-align: center; }
+  .todo   { font-family: monospace; color: red; }
+  .done   { color: green; }
+  .tag    { background-color: #eee; font-family: monospace;
+            padding: 2px; font-size: 80%; font-weight: normal; }
+  .timestamp { color: #bebebe; }
+  .timestamp-kwd { color: #5f9ea0; }
+  .right  { margin-left: auto; margin-right: 0px;  text-align: right; }
+  .left   { margin-left: 0px;  margin-right: auto; text-align: left; }
+  .center { margin-left: auto; margin-right: auto; text-align: center; }
+  .underline { text-decoration: underline; }
+  #postamble p, #preamble p { font-size: 90%; margin: .2em; }
+  p.verse { margin-left: 3%; }
+  pre {
+    border: 1px solid #ccc;
+    box-shadow: 3px 3px 3px #eee;
+    padding: 8pt;
+    font-family: monospace;
+    overflow: auto;
+    margin: 1.2em;
+  }
+  pre.src {
+    position: relative;
+    overflow: visible;
+    padding-top: 1.2em;
+  }
+  pre.src:before {
+    display: none;
+    position: absolute;
+    background-color: white;
+    top: -10px;
+    right: 10px;
+    padding: 3px;
+    border: 1px solid black;
+  }
+  pre.src:hover:before { display: inline;}
+  pre.src-sh:before    { content: 'sh'; }
+  pre.src-bash:before  { content: 'sh'; }
+  pre.src-emacs-lisp:before { content: 'Emacs Lisp'; }
+  pre.src-R:before     { content: 'R'; }
+  pre.src-perl:before  { content: 'Perl'; }
+  pre.src-java:before  { content: 'Java'; }
+  pre.src-sql:before   { content: 'SQL'; }
+
+  table { border-collapse:collapse; }
+  caption.t-above { caption-side: top; }
+  caption.t-bottom { caption-side: bottom; }
+  td, th { vertical-align:top;  }
+  th.right  { text-align: center;  }
+  th.left   { text-align: center;   }
+  th.center { text-align: center; }
+  td.right  { text-align: right;  }
+  td.left   { text-align: left;   }
+  td.center { text-align: center; }
+  dt { font-weight: bold; }
+  .footpara:nth-child(2) { display: inline; }
+  .footpara { display: block; }
+  .footdef  { margin-bottom: 1em; }
+  .figure { padding: 1em; }
+  .figure p { text-align: center; }
+  .inlinetask {
+    padding: 10px;
+    border: 2px solid gray;
+    margin: 10px;
+    background: #ffffcc;
+  }
+  #org-div-home-and-up
+   { text-align: right; font-size: 70%; white-space: nowrap; }
+  textarea { overflow-x: auto; }
+  .linenr { font-size: smaller }
+  .code-highlighted { background-color: #ffff00; }
+  .org-info-js_info-navigation { border-style: none; }
+  #org-info-js_console-label
+    { font-size: 10px; font-weight: bold; white-space: nowrap; }
+  .org-info-js_search-highlight
+    { background-color: #ffff00; color: #000000; font-weight: bold; }
+  /*]]>*/-->
+</style>
+<script type="text/javascript">
+/*
+@licstart  The following is the entire license notice for the
+JavaScript code in this tag.
+
+Copyright (C) 2012-2013 Free Software Foundation, Inc.
+
+The JavaScript code in this tag is free software: you can
+redistribute it and/or modify it under the terms of the GNU
+General Public License (GNU GPL) as published by the Free Software
+Foundation, either version 3 of the License, or (at your option)
+any later version.  The code is distributed WITHOUT ANY WARRANTY;
+without even the implied warranty of MERCHANTABILITY or FITNESS
+FOR A PARTICULAR PURPOSE.  See the GNU GPL for more details.
+
+As additional permission under GNU GPL version 3 section 7, you
+may distribute non-source (e.g., minimized or compacted) forms of
+that code without the copy of the GNU GPL normally required by
+section 4, provided you include this license notice and a URL
+through which recipients can access the Corresponding Source.
+
+
+@licend  The above is the entire license notice
+for the JavaScript code in this tag.
+*/
+<!--/*--><![CDATA[/*><!--*/
+ function CodeHighlightOn(elem, id)
+ {
+   var target = document.getElementById(id);
+   if(null != target) {
+     elem.cacheClassElem = elem.className;
+     elem.cacheClassTarget = target.className;
+     target.className = "code-highlighted";
+     elem.className   = "code-highlighted";
+   }
+ }
+ function CodeHighlightOff(elem, id)
+ {
+   var target = document.getElementById(id);
+   if(elem.cacheClassElem)
+     elem.className = elem.cacheClassElem;
+   if(elem.cacheClassTarget)
+     target.className = elem.cacheClassTarget;
+ }
+/*]]>*///-->
+</script>
+</head>
+<body>
+<div id="content">
+<h1 class="title">Referencias</h1>
+<div id="table-of-contents">
+<h2>Table of Contents</h2>
+<div id="text-table-of-contents">
+<ul>
+<li><a href="#sec-1">1. Repaso: Paso de parámetros</a>
+<ul>
+<li><a href="#sec-1-1">1.1. Los valores son referencias</a>
+<ul>
+<li><a href="#sec-1-1-1">1.1.1. ¿Qué son referencias?</a></li>
+</ul>
+</li>
+<li><a href="#sec-1-2">1.2. Ejemplo</a>
+<ul>
+<li><a href="#sec-1-2-1">1.2.1. Primitivos</a></li>
+<li><a href="#sec-1-2-2">1.2.2. Con los wrappers Integer()</a></li>
+<li><a href="#sec-1-2-3">1.2.3. <span class="todo TODO">TODO</span> preguntar</a></li>
+<li><a href="#sec-1-2-4">1.2.4. Este sí sirve</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a href="#sec-2">2. <span class="todo TODO">TODO</span> Respuesta a ejercicio de Adivina!</a></li>
+<li><a href="#sec-3">3. Explicación de una lista con clases</a></li>
+<li><a href="#sec-4">4. Objetos</a>
+<ul>
+<li>
+<ul>
+<li><a href="#sec-4-0-1">4.0.1. herencia: repaso</a></li>
+<li><a href="#sec-4-0-2">4.0.2. abstract: repaso</a></li>
+<li><a href="#sec-4-0-3">4.0.3. Polimorfismo</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a href="#sec-5">5. Error de netbeans</a></li>
+</ul>
+</div>
+</div>
+<div id="outline-container-sec-1" class="outline-2">
+<h2 id="sec-1"><span class="section-number-2">1</span> Repaso: Paso de parámetros</h2>
+<div class="outline-text-2" id="text-1">
+<p>
+En Java, el paso de parámetros SIEMPRE es por valor, a menos de que se esté tratando con tipos de datos primitivos.
+Por eso, los data types se dividen en:
+</p>
+<ol class="org-ol">
+<li>Primitive types;
+</li>
+<li>Reference types;
+</li>
+</ol>
+</div>
+
+<div id="outline-container-sec-1-1" class="outline-3">
+<h3 id="sec-1-1"><span class="section-number-3">1.1</span> Los valores son referencias</h3>
+<div class="outline-text-3" id="text-1-1">
+<p>
+El valor de un reference type <b>es</b> la referencia. Por eso, <b>aunque se pasa por valor, lo que se pasa es la referencia</b>.
+</p>
+</div>
+<div id="outline-container-sec-1-1-1" class="outline-4">
+<h4 id="sec-1-1-1"><span class="section-number-4">1.1.1</span> ¿Qué son referencias?</h4>
+<div class="outline-text-4" id="text-1-1-1">
+<p>
+Q. ¿Qué se entiende pr referencia?
+</p>
+
+<p>
+A. La referencia siempre denota la posición en memoria.
+</p>
+</div>
+</div>
+</div>
+<div id="outline-container-sec-1-2" class="outline-3">
+<h3 id="sec-1-2"><span class="section-number-3">1.2</span> Ejemplo</h3>
+<div class="outline-text-3" id="text-1-2">
+<p>
+Para ilustrar el paso de referencias por valores, Arles nos muestra varios casos de un swap.
+Primero con primitivos y luego con objetos. 
+</p>
+</div>
+
+
+
+<div id="outline-container-sec-1-2-1" class="outline-4">
+<h4 id="sec-1-2-1"><span class="section-number-4">1.2.1</span> Primitivos</h4>
+<div class="outline-text-4" id="text-1-2-1">
+<pre class="example">
+/**
+ * This example pretends to show that Arguments passed to Java methods are passed by value. 
+ * That is, a copy of the arguments is made and passed to the corresponding parameters.
+ * @author Arles
+ */
+public class TestSwap {
+    
+    public static void swap(int x, int y) {
+        int temp; 
+        temp = x;
+        x = y;
+        y = temp;
+    }
+
+public static void main(String[] args) {
+        int a=4;
+        int b=5;
+        swap(a, b);
+        System.out.println("a=" + a); // 4
+        System.out.println("b=" + b); // 5
+    }
+</pre>
+
+<p>
+Como se pasan parámetros por valor, los enteros 4 y 5 se copian y luego se asignan a variables temporales, solo existentes
+dentro del bloque del método. Las variables `a`y `b` permanecen con su valor original.
+</p>
+</div>
+</div>
+
+<div id="outline-container-sec-1-2-2" class="outline-4">
+<h4 id="sec-1-2-2"><span class="section-number-4">1.2.2</span> Con los wrappers Integer()</h4>
+<div class="outline-text-4" id="text-1-2-2">
+<p>
+No entendí muy bien por qué esto no funciona. 
+</p>
+</div>
+</div>
+<div id="outline-container-sec-1-2-3" class="outline-4">
+<h4 id="sec-1-2-3"><span class="section-number-4">1.2.3</span> <span class="todo TODO">TODO</span> preguntar</h4>
+<div class="outline-text-4" id="text-1-2-3">
+<pre class="example">
+public class TestSwap2 {
+
+    public static void swap(Object x, Object y) {
+        Object temp;
+        temp = x; // entra referencia a `a`
+        x = y; // entra referencia a `y`
+        y = temp; // pasa referencia a `a`
+
+    }
+
+    public static void main(String[] args) {
+        Integer a = new Integer(4);
+        Integer b = new Integer(5);
+        swap(a, b);
+        System.out.println("a=" + a); // 4
+        System.out.println("b=" + b); // 5
+    }
+}
+</pre>
+</div>
+</div>
+
+<div id="outline-container-sec-1-2-4" class="outline-4">
+<h4 id="sec-1-2-4"><span class="section-number-4">1.2.4</span> Este sí sirve</h4>
+<div class="outline-text-4" id="text-1-2-4">
+<p>
+Puedo crear estructuras de dato de clase objeto.
+Si pasamos propiedades de objetos, estamos pasando referencias. Por lo tanto,
+modificarlo lo cambia en todas las variables que tengan la referencia.
+</p>
+<pre class="example">
+class Wrapper {
+
+    public Object obj;
+}
+
+public class TestSwap3 {
+
+    public static void swap(Wrapper x, Wrapper y) {
+        Object temp = x.obj;
+        x.obj = y.obj;
+        y.obj = temp;
+
+// El punto aquí es que x.obj y y.obj tienen la misma referencia que a y b en el main. Por eso *sí* cambia el valor en el main
+    }
+
+    public static void main(String[] args) {
+        Wrapper a = new Wrapper();
+        a.obj = 4;
+        Wrapper b = new Wrapper();
+        b.obj = 5;
+        swap(a, b);
+        System.out.println("a=" + a.obj);
+        System.out.println("b=" + b.obj);
+    }
+
+}
+</pre>
+</div>
+</div>
+</div>
+</div>
+
+
+<div id="outline-container-sec-2" class="outline-2">
+<h2 id="sec-2"><span class="section-number-2">2</span> <span class="todo TODO">TODO</span> Respuesta a ejercicio de Adivina!</h2>
+<div class="outline-text-2" id="text-2">
+<p>
+Como son enteros, el promedio debe sacarse con +1. No entendí bien por qué
+toca revisar.
+</p>
+</div>
+</div>
+
+
+
+
+<div id="outline-container-sec-3" class="outline-2">
+<h2 id="sec-3"><span class="section-number-2">3</span> Explicación de una lista con clases</h2>
+<div class="outline-text-2" id="text-3">
+<p>
+Aquí es importante entender cómo funcionan las referencias.
+Cada nodo de la lista puede contener a object. Es decir, cualquier cosa. 
+</p>
+
+<div class="org-src-container">
+
+<pre class="src src-ditaa:file">+-----------------+     +-----------------+
+|  Nodo           |     |   Lista         |
+|                 |     |                 |
+| info: object    |&lt;--- |  first: Node    |
+|                 |     |                 |
+| next: Node      |     |                 |
+|                 |     |                 |
+|                 |     |                 |
++-----------------+     +-----------------+
+</pre>
+</div>
+</div>
+</div>
+
+
+<div id="outline-container-sec-4" class="outline-2">
+<h2 id="sec-4"><span class="section-number-2">4</span> Objetos</h2>
+<div class="outline-text-2" id="text-4">
+<p>
+"Una clase es una colección de atributos y métodos".
+</p>
+</div>
+
+<div id="outline-container-sec-4-0-1" class="outline-4">
+<h4 id="sec-4-0-1"><span class="section-number-4">4.0.1</span> herencia: repaso</h4>
+</div>
+
+<div id="outline-container-sec-4-0-2" class="outline-4">
+<h4 id="sec-4-0-2"><span class="section-number-4">4.0.2</span> abstract: repaso</h4>
+</div>
+
+<div id="outline-container-sec-4-0-3" class="outline-4">
+<h4 id="sec-4-0-3"><span class="section-number-4">4.0.3</span> Polimorfismo</h4>
+<div class="outline-text-4" id="text-4-0-3">
+<p>
+Como resuelvo 'el problema fundamental del polimorfismo': toca volver a castear hacia abajo.
+</p>
+<pre class="example">
+</pre>
+</div>
+</div>
+</div>
+<div id="outline-container-sec-5" class="outline-2">
+<h2 id="sec-5"><span class="section-number-2">5</span> Error de netbeans</h2>
+<div class="outline-text-2" id="text-5">
+<p>
+Este error sale en el computador de la universidad, cuando corro Netbeans en Ubuntu:
+</p>
+<pre class="example">
+WARNING: An illegal reflective access operation has occurred
+WARNING: Illegal reflective access by org.netbeans.ProxyURLStreamHandlerFactory (file:/usr/share/netbeans/platform18/lib/boot.jar) to field java.net.URL.handler
+WARNING: Please consider reporting this to the maintainers of org.netbeans.ProxyURLStreamHandlerFactory
+WARNING: Use --illegal-access=warn to enable warnings of further illegal reflective access operations
+WARNING: All illegal access operations will be denied in a future release
+</pre>
+</div>
+</div>
+</div>
+<div id="postamble" class="status">
+<p class="author">Author: Jonathan Ahumada</p>
+<p class="date">Created: 2019-02-17 Sun 18:25</p>
+<p class="creator"><a href="http://www.gnu.org/software/emacs/">Emacs</a> 25.3.1 (<a href="http://orgmode.org">Org</a> mode 8.2.10)</p>
+<p class="validation"><a href="http://validator.w3.org/check?uri=referer">Validate</a></p>
+</div>
+</body>
+</html>

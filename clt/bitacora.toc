@@ -1,0 +1,10 @@
+\contentsline {section}{\numberline {1}Introducci\IeC {\'o}n}{1}{section.1}
+\contentsline {section}{\numberline {2}Entradas}{1}{section.2}
+\contentsline {subsection}{\numberline {2.1}\textit {<2019-02-02 Sat>}}{1}{subsection.2.1}
+\contentsline {subsection}{\numberline {2.2}\textit {<2019-02-07 Thu>}}{3}{subsection.2.2}
+\contentsline {subsection}{\numberline {2.3}\textit {<2019-02-10 Sun>}}{3}{subsection.2.3}
+\contentsline {subsubsection}{\numberline {2.3.1}ancianos}{4}{subsubsection.2.3.1}
+\contentsline {subsubsection}{\numberline {2.3.2}ni\IeC {\~n}os}{4}{subsubsection.2.3.2}
+\contentsline {subsubsection}{\numberline {2.3.3}deportistas}{4}{subsubsection.2.3.3}
+\contentsline {subsubsection}{\numberline {2.3.4}La chica del quisquito de 'libros al viento'}{4}{subsubsection.2.3.4}
+\contentsline {subsubsection}{\numberline {2.3.5}vendedores}{4}{subsubsection.2.3.5}

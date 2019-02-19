@@ -3,15 +3,15 @@
 
 
 ** lenguajes funcionales
-"Más fácil de interpretar por las máquinas." 
-//Se supone que la definción fuerte de recursividad es comprensible así como están.
+"MÃ¡s fÃ¡cil de interpretar por las mÃ¡quinas." 
+//Se supone que la definiciÃ³n fuerte de recursividad es comprensible asÃ­ como estÃ¡n.
 
-//Hay una conexión entre la notación funcional y la sintaxis de Lisp que no logro hacer consciente. 
+//Hay una conexiÃ³n entre la notaciÃ³n funcional y la sintaxis de Lisp que no logro hacer consciente. 
 
-** Sobre la ejecución en la máquina
-La máquina siempre evalúa de izquierda a derecha (según la precedencia usual).
-En las combinaciónes, es interesante notar que primero el término izquierdo de la 
-expresión se evalúa recursivamente hasta llegar al caso base y luego pasa al derecho: 
+** Sobre la ejecuciÃ³n en la mÃ¡quina
+La mÃ¡quina siempre evalÃºa de izquierda a derecha (segÃºn la precedencia usual).
+En las combinaciones, es interesante notar que primero el tÃ©rmino izquierdo de la 
+expresiÃ³n se evalÃºa recursivamente hasta llegar al caso base y luego pasa al derecho: 
 
 #+BEGIN_SRC 
 C(4,2)= C(3,1) + C(3,2)
@@ -19,23 +19,23 @@ C(4,2)= C(3,1) + C(3,2)
      = (1 + C()) + C(3,2)   //etc. 
 #+END_SRC
 ** Ordenamientos
-La estrategía general de los ordenamientos
+La estrategia general de los ordenamientos
 es escoger uno de los elementos del conjunto.
-Luego, dibujar un árbol de posibilidades de
+Luego, dibujar un Ã¡rbol de posibilidades de
 ordenamiento.
-Nótese que:
+NÃ³tese que:
 
- 1) solo un llamado recursivo (producto)
- 2) no es un árbol "per se", aunque se representa como àrbol // Aclarar esto
+ 1) solo un llamado recursivo (producto).
+ 2) no es un Ã¡rbol "per se", aunque se representa como Ã¡rbol // Aclarar esto
 
 ** Ejemplo
-Suponga que selecciona cuatro cartas distintas de una baraja de póker, que se van a
-representar por los símboloes (T,D,C,P). ¿De cuántas formas puedo ordenar estas 4 cartas?
+Suponga que selecciona cuatro cartas distintas de una baraja de pÃ³ker, que se van a
+representar por los sÃ­mboloes (T,D,C,P). Â¿De cuÃ¡ntas formas puedo ordenar estas 4 cartas?
 
 *** Procedimiento
 1) selecciona un elemento
 
-2) Dibuja ur arbol de posibilidades a partir de ese elemento.
+2) Dibuja ur Ã¡rbol de posibilidades a partir de ese elemento.
  #+BEGIN_SRC ditaa :file ordenamiento.png
 		 C------P  
        D+--------|     
@@ -49,7 +49,7 @@ representar por los símboloes (T,D,C,P). ¿De cuántas formas puedo ordenar estas 
 	 	 C-----D
 #+END_SRC
 
-3) Repite el arbol de posibidades  por cada elemento
+3) Repite el Ã¡rbol de posibilidades  por cada elemento.
 
  #+BEGIN_SRC ditaa :file ordenamiento2.png
 
@@ -67,10 +67,10 @@ representar por los símboloes (T,D,C,P). ¿De cuántas formas puedo ordenar estas 
 
 
 
-4) Expresion matemática = n!
+4) ExpresiÃ³n matemÃ¡tica = n!
 
 
-*** Solucion
+*** SoluciÃ³n
 
 hay 24 ordenamientos 4!.
 
@@ -79,28 +79,28 @@ hay 24 ordenamientos 4!.
 ordenar(x) = x ordenar(x-1)
 #+END_SRC
 
-** Combinaciónes 
+** Combinaciones 
 La estrategia general de las combinaciones es similar al de las listas, 
-pero como el orden no importa habrá menos. Nótese lo siguiente:
+pero como el orden no importa habrÃ¡ menos. NÃ³tese lo siguiente:
 
-1) Solo habrá un árbol.
-2) recursivamente, una combinación implica una suma (ver ejemplo)
-3) Hay que saber de qué tamaño sera el subconjunto que se debe formar.
-4) Cada nodo del árbol se divide en si sí o no usar un elemento dentro de los subconjuntos.
+1) Solo habrÃ¡ un Ã¡rbol.
+2) recursivamente, una combinaciÃ³n implica una suma (ver ejemplo)
+3) Hay que saber de quÃ© tamaÃ±o sera el subconjunto que se debe formar.
+4) Cada nodo del Ã¡rbol se divide en si sÃ­ o no usar un elemento dentro de los subconjuntos.
 5) ordenar elementos es a factorial, como escoger subconjuntos a combinatorias
 
 *** Ejemplo
 
-¿De cuantas formas se pueden formar parejas de la familia
-Simpson para que suban al vag´on de la montaña rusa?
+Â¿De cuantas formas se pueden formar parejas de la familia
+Simpson para que suban al vagÃ³n de la montaÃ±a rusa?
 
 
 *** Prodecimiento
 
 1) Se escoge un elemento arbitrario del conjunto.
-2) Se bifurcan dos ramas de esa escogencia, dependiendo de si se escogió o no.
+2) Se bifurcan dos ramas de esa escogencia, dependiendo de si se escogiÃ³ o no.
 3) En un lado el numero de elementos del subconjunto disminuye.
-4) En cada fila el número de elementos del conjunto disminuye. 
+4) En cada fila el nÃºmero de elementos del conjunto disminuye. 
 
 
 
@@ -130,6 +130,6 @@ Simpson para que suban al vag´on de la montaña rusa?
 #+END_SRC
    
 				      
-*** Solución
+*** SoluciÃ³n
 
-Son 6 combinaciónes. 
+Son 6 combinaciones. 

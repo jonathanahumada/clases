@@ -1,0 +1,52 @@
+* Terminar conceptos
+** Concepto de proceso
+La mayoría de os está basado en procesos. Para definirlo:
+1) Una actividad que se está desarrollando: 
+*** asociado a programa ejecutable 
+*** datos asociados o variables 
+debe haber un recurso de memoria asignado a ese proceso.
+*** contexto de ejecución 
+
+Normalmente los procesos se encuentran en determinado estado:
+1) ejecución
+2) espera
+3) terminado
+4) esperando recursos
+
+El concepto 'proceso' ha venido evolucionando:
+1) lotes multiprogramación
+2) interrupciones
+hasta que ese nuevo evento deje de suceder, no va a cambiar de estado.
+Si no exitirera las eventualidades, tocaría esperar a que terminara el programa.
+1) sincronización incorrecta
+2) fallos de exclusión mutua: 
+que un usuario o un programa trate de usar un recurso compartido de forma simultánea.
+Ej: 2 personas compran la misma silla en el mismo tiempo. 
+El so tiene que estar en capacidad de reservar ese espacio a uno de los 2. 
+3) Funcionamiento no determinista del programa.
+Cuando los programas comparten memoria pueden sobreescribirse sin previo avisa.
+El sistema operativo debe estar en capacidad de manejar colas. 
+4) interbloqueo de operaciones
+Tengo aplicacion a y b y van a guardar información a memoria y unidad de cd, respectivamente.
+Ambas podrían quedar esperando a la otra a que termine.
+
+** memoria virtual 
+Hace uso del almacenamiento primario y secundario. 
+*** paginación
+cada proceso hace uso de la memoria y podría haber sobreescritura. La paginación
+impide esto. 
+
+* Herramientas de supervisión de recursos	
+** tipos
+*** tiempo real
+*** registrada
+1) Estadística. Ej: servidores. 
+** Qué se supervisa
+1) Memoria 
+2) Disco 
+3) CPU
+4) Red
+
+** windows 
+1) administrador de tareas 
+2) monitor de rendimiento

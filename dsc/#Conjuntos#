@@ -1,0 +1,59 @@
+* Conjuntos
+Su definición no debe ser ambigua.
+** Elementos 
+Letras minúsculas. También llamados miembros.
+\[ a \in A\]
+\[ a \notin A\]
+** Conjuntos especiales
+\N = {1,2,3,4,5,6, \dots}, los numeros *naturales*.
+\Z = números enteros, positivos, cero o negaticos.
+\Q = números racionales, de la forma \(\frac_{m}{n}\ | m,n\ \in \Z\ y\ n \neq 0)
+\R =  números reales, contiene a \Q y muchos números más, como \pi, \sqrt{3}, etc.
+
+** Finitos
+Son enumerables usando llaves {}. El etcétera matemático se puede 
+usar cuando no hay ambiguedad. No obstante, muchas veces es imposible evitarla.
+Por eso se deben describir los conjuntos por sus propiedades. 
+
+** Descripción intensional
+Se utiliza la notación:
+\[\{\  :\ \} \]
+
+Antes de los dos puntos, se indica la variable (por ejemplo x o n ) y después 
+se dan sus propiedades. 
+\[\{n : n \in \N y\ n\ es\ par\}\]
+
+** Mediante la manera de obtener sus elementos 
+
+\[\{ n^2:\ n\ \in\ \N\}\]
+
+
+
+** Son iguales
+Si comparten los mismos elementos. 
+Orden de enunmeracion es irrelevante.
+
+** Subconjuntos
+T es un subconjunto de S si *todo* elemento de T pertenece a S. 
+Así que dos conjuntos son iguales si \( T \subseteq S y S \subseteq T\).
+
+*** Subconjunto de sí mismo 
+
+Como x \in S implica que x \in S, S \subseteq S. Un conjunto 
+es subconjunto de sí mismo. Por eso la nooación \subseteq  en lugar de \subset.
+
+Luego, decir \subset es lo mismo que de decir que algo es un subconjunto de otro conjunto y que no es el mismo.
+Si T \subset S, decimos que T es *subconjunto propio* de S. 
+
+El símbolo \subseteq es similar al \leq
+
+** Intervalos
+Son subconjuntos especiales de \R.
+*** [ , ]
+Los extremos estan incluidos --> *cerrados*.
+*** ( , )
+Los extremos estan excluidos --> *abiertos*.
+
+** Conjunto vacío
+\emptyset
+

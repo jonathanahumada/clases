@@ -22,19 +22,14 @@ p {
 p a {
   text-decoration: underline;
 }
-.title{
-     color: #cf8e6b;
-
-}
 h1,
 h2,
 h3,
 h4,
 h5,
 h6 {
-  font-family: 'Cinzel', serif;
+  
   font-weight: 800;
-    color:#f5b43c;
 }
 a {
   color:#f5b43c;

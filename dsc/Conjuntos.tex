@@ -1,0 +1,106 @@
+% Created 2019-02-18 Mon 15:05
+\documentclass[11pt]{article}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{fixltx2e}
+\usepackage{graphicx}
+\usepackage{longtable}
+\usepackage{float}
+\usepackage{wrapfig}
+\usepackage{rotating}
+\usepackage[normalem]{ulem}
+\usepackage{amsmath}
+\usepackage{textcomp}
+\usepackage{marvosym}
+\usepackage{wasysym}
+\usepackage{amssymb}
+\usepackage{hyperref}
+\usepackage{amssymb}
+\usepackage{amsfonts}
+\usepackage{math}
+\tolerance=1000
+\author{Jonathan Ahumada}
+\date{\today}
+\title{Conjuntos}
+\hypersetup{
+  pdfkeywords={},
+  pdfsubject={},
+  pdfcreator={Emacs 25.3.1 (Org mode 8.2.10)}}
+\begin{document}
+
+\maketitle
+\tableofcontents
+
+\section{Conjuntos}
+\label{sec-1}
+Su definición no debe ser ambigua.
+\subsection{Elementos}
+\label{sec-1-1}
+Letras minúsculas. También llamados miembros.
+\[ a \in A\]
+\[ a \notin A\]
+\subsection{Conjuntos especiales}
+\label{sec-1-2}
+\[ \N = \{1,2,3,4,5,6, \dots{}\} \], los numeros naturales.
+\Z = números enteros, positivos, cero o negaticos.
+\Q = números racionales, de la forma $\backslash$(\frac$_{\text{m}}$\{n\}$\backslash$ | m,n$\backslash$ $\in$ \Z$\backslash$ y$\backslash$ n $\neq$ 0)
+\R =  números reales, contiene a \Q y muchos números más, como $\pi$, \sqrt{3}, etc.
+
+\subsection{Finitos}
+\label{sec-1-3}
+Son enumerables usando llaves \{\}. El etcétera matemático se puede 
+usar cuando no hay ambiguedad. No obstante, muchas veces es imposible evitarla.
+Por eso se deben describir los conjuntos por sus propiedades. 
+
+\subsection{Descripción intensional}
+\label{sec-1-4}
+Se utiliza la notación:
+\[\{\  :\ \} \]
+
+Antes de los dos puntos, se indica la variable (por ejemplo x o n ) y después 
+se dan sus propiedades. 
+\[\{n : n \in \N y\ n\ es\ par\}\]
+
+\subsection{Mediante la manera de obtener sus elementos}
+\label{sec-1-5}
+
+\[\{ n^2:\ n\ \in\ \N\}\]
+
+
+
+\subsection{Son iguales}
+\label{sec-1-6}
+Si comparten los mismos elementos. 
+Orden de enunmeracion es irrelevante.
+
+\subsection{Subconjuntos}
+\label{sec-1-7}
+T es un subconjunto de S si \textbf{todo} elemento de T pertenece a S. 
+Así que dos conjuntos son iguales si \( T \subseteq S y S \subseteq T\).
+
+\subsubsection{Subconjunto de sí mismo}
+\label{sec-1-7-1}
+
+Como x $\in$ S implica que x $\in$ S, S \subseteq S. Un conjunto 
+es subconjunto de sí mismo. Por eso la nooación \subseteq  en lugar de $\subset$.
+
+Luego, decir $\subset$ es lo mismo que de decir que algo es un subconjunto de otro conjunto y que no es el mismo.
+Si T $\subset$ S, decimos que T es \textbf{subconjunto propio} de S. 
+
+El símbolo \subseteq es similar al $\le$
+
+\subsection{Intervalos}
+\label{sec-1-8}
+Son subconjuntos especiales de \R.
+\subsubsection{[ , ]}
+\label{sec-1-8-1}
+Los extremos estan incluidos --> \textbf{cerrados}.
+\subsubsection{( , )}
+\label{sec-1-8-2}
+Los extremos estan excluidos --> \textbf{abiertos}.
+
+\subsection{Conjunto vacío}
+\label{sec-1-9}
+$\emptyset$
+% Emacs 25.3.1 (Org mode 8.2.10)
+\end{document}
