@@ -1,0 +1,12 @@
+<form>
+  <input id="a" type="text" value="Mickey">
+  <input  id="x" type="text" value="Mickey">
+   <input id= "c"type="text" value="Mickey">
+</form>
+<script>
+
+ var a = document.getElementById("a").value;
+ var x = document.getElementById("x").value;
+ var a = document.getElementById("c").value;
+ window.alert("ax*x+x+c=" (a*x*x)+x+c);
+</script>
