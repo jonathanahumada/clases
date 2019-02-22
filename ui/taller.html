@@ -1,0 +1,63 @@
+<html>
+  <head>
+
+    <meta name="language" content="Spanish">
+    <meta content="text/html; charset=utf-8" http-equiv="Content-Type"/>
+    <script>
+
+
+      function respuesta(){
+      
+   
+
+
+      
+   var a = parseInt(document.getElementById("a").value);
+     var b = parseInt(document.getElementById("b").value);
+      var c = parseInt(document.getElementById("c").value);
+      var xi = parseInt(document.getElementById("xi").value);
+        var xf = parseInt(document.getElementById("xf").value);
+ document.getElementById("res").innerHTML="prueba";
+
+
+ 
+   
+      
+ var string = "";
+
+      
+      for(i=xi; i<= xf; i++){
+		   
+		 
+	 string+= "para x="+ i+ ", y="+(a*i*i + b*i * c) + "</br>";
+
+		}
+
+		    	 document.getElementById("res").innerHTML=string ;
+		
+		
+		
+}
+
+</script>
+    </head>
+<form>
+  <fieldset>
+    <legend>Valores</legend>
+ a: <input id="a" type="number" value="2"></input><br>
+ b: <input  id="b" type="number" value="2"></input><br>
+    c: <input  id="c" type="number " value="2"></input><br>
+    xi: <input  id="xi" type="number" value="1"></input><br>
+    xf:  <input  id="xf" type="number" value="10"></input><br>
+ 
+ </fieldset>
+
+ Respuesta: <p id="res">Aquí irá la respuesta a la expresión: a*x^2 + bx + c</p>
+
+  <button type="button" onclick="respuesta()">Calcular!</button>
+  
+</form>
+
+
+</script>
+</html>

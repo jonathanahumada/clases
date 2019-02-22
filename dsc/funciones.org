@@ -1,0 +1,99 @@
+* Funciones
+Caso particular de una relacion donde cada elemento en el conjunto de imagen le corresponde máximo (0 se puede) un elemento del dominio.
+** Inyectiva
+funciones uno a uno. Tiene la condicion que \(f(x_{1})=f(x_{2}) \ entonces\ x_{1}=x_{2}\).
+Esto es, si dos elementos tienen la misma imagen, deben ser el mismo.
+
+Determine si la funcion \(f(x) = x + 2\) es inyectiva.
+
+\begin{equation}
+\begin{split}
+x_{1} + 2 & = x_{2} + 2 \\
+x_{1} & = x_{2} +2 - 2 \\
+x_{1} & = x_{2} \\
+\end{split}
+
+\end{equation}
+
+Esto es una forma de mostrar que es inyectiva.
+
+
+Determine si la funcion \(f(x) = x^2 + 1\) es inyectiva.
+
+\begin{equation}
+\begin{split}
+{x_{1}}^2 + 1 & = {x_{2}}^{2} + 1 \\
+{x_{1}}^2 - {x_{2}}^2 & = 1 - 1 \\
+{x_{1}}^2 - {x_{2}}^2 & = 0 \\
+(x_{1} -x_{2})(x_{1} +x_{2}) & = 0
+\end{split}
+
+\end{equation}
+Esta ecuacio no es inyectiva.
+
+Con esto aprecen dos respuestas. Hay una de esas respuestas que no satisface la condición.
+*** prueba de la linea horizontal
+En la gráfica de una funcion f, una linea horizontal solo puede tocar máximo un solo punto.
+
+** ¿Y si no mme dan los conjuntos de partida y llegada?
+Asumimos que son los reales. R x R.
+
+** Sobreyectiva
+rango no es lo mismo que codominio.
+1) rango = conjunto de llegada
+2) codominio = todas las posibles imágenes.
+
+Una función es sobreyectiva si el *rango es igual al codominio*.
+#+BEGIN_SRC ditaa:file sobreyectiva.png
+
+
+     Dominio   			    +------------------+
+  +------------+		    |  +------+        |   Codominio
+  |    	       |         /----------+--+> 4   | Rango  |
+  |    1 <-----+---------           |  |      |        |
+  |            |	  /---------+--+->5   |        |
+  |     2 -----+----------          |  |      |        |
+  |            |                 /--+--+> 6   |        |
+  |            |  /--------------   |  |      |        |
+  |    3  -----+--   		    |  +------+        |
+  +------------+		    |                  |
+				    |          7       |
+    				    |                  |
+				    +------------------+
+#+END_SRC
+
+
+Aquí, \(rango = \{4,5,6\}\) y \(codominio = \{4,5,6,7\}\), luego \(rango \neq codominio\).
+
+
+Determine si la funcion \(f(x) = x + 2\) es sobreyectiva.
+\begin{equation}
+\begin{split}
+ y  & = x + 2 \\
+ y - 2 & = x \\
+ y & = x - 2 \\
+\end{split}
+
+\end{equation}
+
+Hay alguna restricción para y?:
+1) raiz
+2) división
+
+Entences y puede tomar todos los reales. 
+La función es sobreyectiva.
+
+** Biyectiva
+Debe ser :
+1) Inyectiva
+2) Sobreyectiva
+
+* Función inversa
+
+Para hallar f^{-1}. La función f debe ser:
+1) real (esto es, contenida en los reales)
+2) biyectiva
+
+La funcion inversa de a invierte el dominio con el codominio:
+
+\[f(x) = y \ luego\ f^{-1}(y)= x\]

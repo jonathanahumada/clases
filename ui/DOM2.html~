@@ -1,0 +1,21 @@
+<html>
+  <head>
+    <title>hola</title>
+  </head>
+  <body>
+    <input type="text" id="nombre" value="hola"></input>
+
+    <button onclick="mostrar()">ver</button>
+    <p id="doto"></p>
+    
+  
+    
+  </body>
+    <script>
+      function mostrar(){
+      x = document.getElementById("nombre").value;
+      document.getElementById("doto").innerHTML=x;
+
+      }
+	</script>
+  <html>

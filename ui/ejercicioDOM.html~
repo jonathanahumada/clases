@@ -1,0 +1,29 @@
+html>
+  <head>
+    <title>hola</title>
+  </head>
+  <body>
+    Digite un numero  >0  <input type="number" id="nombre" value="hola"></input>
+    <br>
+
+    <button onclick="validar()">validar</button>
+    <p id="doto"> Aqui debería mostrar si es correcto</p>
+    
+  
+    
+  </body>
+    <script>
+
+      function mostrar(){
+      x = Number(document.getElementById("nombre").value);
+      <!-- sin el .value me pasa el objeto -->
+
+      if(x>10){
+      document.getElementById("doto").innerHTML= "Es correcto";
+      
+
+      }else{
+   document.getElementById("doto").innerHTML= "Es falso";
+      }
+	</script>
+  <html>

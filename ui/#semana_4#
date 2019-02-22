@@ -1,0 +1,39 @@
+* DOM
+Es la representación en una estructura de arbol de todos los elementos dle html.
+
+
+
+
+
+
+
+				 HTML
+				 /\
+			        /  \
+			       /    \
+			      /	     \
+			     /	      \
+			    /	       \
+			   /	        \
+
+			 HEAD		BODY-
+			  |		  |
+			  |		  |
+			  |		  |
+
+			 TITLE		  P
+					 / \
+					/   \
+				       /     \
+				      /	      \
+				    BODY              
+					       STRONG
+
+** Document
+es el objeto que permite acceder al dom.
+
+** Meyodos
+getElementById("[id]")
+getElementsByTag("[clase de tag]")
+getElementsByClassName("[campo]")
+
