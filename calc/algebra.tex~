@@ -1,0 +1,139 @@
+% Created 2019-02-23 Sat 18:19
+\documentclass[11pt]{article}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{fixltx2e}
+\usepackage{graphicx}
+\usepackage{longtable}
+\usepackage{float}
+\usepackage{wrapfig}
+\usepackage{rotating}
+\usepackage[normalem]{ulem}
+\usepackage{amsmath}
+\usepackage{textcomp}
+\usepackage{marvosym}
+\usepackage{wasysym}
+\usepackage{amssymb}
+\usepackage{hyperref}
+\tolerance=1000
+\author{Jonatan Ahumada Fernández}
+\date{\textit{<2019-02-23 Sat>}}
+\title{Cálculo Integral: Repaso}
+\hypersetup{
+  pdfkeywords={},
+  pdfsubject={},
+  pdfcreator={Emacs 25.3.1 (Org mode 8.2.10)}}
+\begin{document}
+
+\maketitle
+\tableofcontents
+
+\section{Álgebra}
+\label{sec-1}
+
+\subsection{Teorema del binomio}
+\label{sec-1-1}
+Para el binomio \( (a + b)^n\), su expansión tiene las sigientes características
+\begin{enumerate}
+\item En total habrá n+1 términos
+\item Por cada término, el poder de a decremente y el de a incrementa.
+\item Cada término tiene la forma \((c)a^{n-k}{b^k}\), donde c es un entero y \(k = 0,1,2, \dots n\)
+\item La siguiente fórmula se cumple para cada uno de los n términos de la expansión se cumple que: \(\frac{coeficiente\ de\ término\ x\ potencia\ de\ término}{número\ término} = coeficiente\ del\ siguiente\ término\)
+\end{enumerate}
+
+\subsection{Resta al cuadrado}
+\label{sec-1-2}
+El último término siempre da positivo y el del medio negativo:
+
+\[(a-b)^2 = a^2 -2ab + b^2\]   
+
+
+\section{Sustitución}
+\label{sec-2}
+\subsection{Guías para sustitución simple}
+\label{sec-2-1}
+\begin{enumerate}
+\item Identifica si \(u\) y \(du\) aparecen en la misma expresión (salvo una diferencia de constantes).
+\item Sustituye lo más complejo. Después integrar y derivar sus exponentes será más fácil.
+\item Identifica qué identidad trigonométrica usarás.
+\end{enumerate}
+
+\subsection{Guías para sustitución por partes}
+\label{sec-2-2}
+\begin{enumerate}
+\item Se usa cuando las funciones implicadas no tienen relación en términios de sus derivadas (no hay \(u\) y \(du\))
+\item Ten claro el acrónimo ALPES antes de seleccionar \(u\) y \(dv\).
+\item Como aquí toca integrar, no olvides regla de la cadena.
+\item Aquí se tienen en cuenta las potencias al reemplazar.
+\end{enumerate}
+
+
+\begin{verbatim}
++--------------------------+
+|                          |
+|         derivar          |
+|    u  --------->    du   |
+|        integrar          |
+|    dv -------->     v    |
+|                          |
+|\int[funcion]dx=u-\intdu*v|   
++--------------------------+
+\end{verbatim}
+\section{Trigonometría}
+\label{sec-3}
+\subsection{Identidad fundamental (potencias impares)}
+\label{sec-3-1}
+\[\sin^2(x) + \cos^2(x) = 1\]
+
+Consistirá en expresar una expresión trigonometrica impar en términos de una par.
+Luego, se reemplazará una función trigonometrica al cuadrado por su identidad.
+
+Luego, de sustituir, \(u\) y \(du\), se resolverá un binomio cuadrado.
+
+
+
+
+
+
+
+\subsection{Ángulo Medio (potencias pares)}
+\label{sec-3-2}
+
+Tener cuidado con los signos.
+
+\[\sin^2(x) = \frac{1 - \cos(2x)}{2}  \]
+El coeficiente de x se duplica.
+
+\[\cos^2(x) = \frac{1 + \cos(2x)}{2}  \]
+
+\subsubsection{Variación}
+\label{sec-3-2-1}
+
+\[2\cos^2(x) = 1 + \cos(2x) \]
+
+Es lo mismo, solamente pasa el dos al otro lado.
+Como es el proceso inverso, el coeficiente de x se divide 
+y crece la potencia. 
+
+\subsection{Eliminación de raíces}
+\label{sec-3-3}
+\subsubsection{Con ángulo medio}
+\label{sec-3-3-1}
+
+\[\int \sqrt{\frac{1 - \cos(2x)}{2}} dx = \int \sqrt{\sin^2(x)}dx \]
+
+\subsubsection{Con variación}
+\label{sec-3-3-2}
+\[\int \sqrt{1 - \cos(2x)} dx = \int \sqrt{2\cos^2(x)}dx \]
+\subsection{Integrales capciosas}
+\label{sec-3-4}
+
+\begin{verbatim}
+| u          | integral         |
+|------------+------------------|
+| \(\ln(x)\) | \frac{1}{x}      |
+| \(e^{cx}\) | \frac{e^{2x}}{2} |
+|            |                  |
+\end{verbatim}
+% Emacs 25.3.1 (Org mode 8.2.10)
+\end{document}

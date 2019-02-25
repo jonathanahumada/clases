@@ -1,0 +1,15 @@
+\contentsline {section}{\numberline {1}\IeC {\'A}lgebra}{1}{section.1}
+\contentsline {subsection}{\numberline {1.1}Teorema del binomio}{1}{subsection.1.1}
+\contentsline {subsection}{\numberline {1.2}Resta al cuadrado}{2}{subsection.1.2}
+\contentsline {section}{\numberline {2}Sustituci\IeC {\'o}n}{2}{section.2}
+\contentsline {subsection}{\numberline {2.1}Gu\IeC {\'\i }as para sustituci\IeC {\'o}n simple}{2}{subsection.2.1}
+\contentsline {subsection}{\numberline {2.2}Gu\IeC {\'\i }as para sustituci\IeC {\'o}n por partes}{2}{subsection.2.2}
+\contentsline {section}{\numberline {3}Trigonometr\IeC {\'\i }a}{3}{section.3}
+\contentsline {subsection}{\numberline {3.1}Integrales fundamentales}{3}{subsection.3.1}
+\contentsline {subsection}{\numberline {3.2}Identidad fundamental (potencias impares)}{3}{subsection.3.2}
+\contentsline {subsection}{\numberline {3.3}\IeC {\'A}ngulo Medio (potencias pares)}{3}{subsection.3.3}
+\contentsline {subsubsection}{\numberline {3.3.1}Variaci\IeC {\'o}n}{3}{subsubsection.3.3.1}
+\contentsline {subsection}{\numberline {3.4}Eliminaci\IeC {\'o}n de ra\IeC {\'\i }ces}{4}{subsection.3.4}
+\contentsline {subsubsection}{\numberline {3.4.1}Con \IeC {\'a}ngulo medio}{4}{subsubsection.3.4.1}
+\contentsline {subsubsection}{\numberline {3.4.2}Con variaci\IeC {\'o}n}{4}{subsubsection.3.4.2}
+\contentsline {subsection}{\numberline {3.5}Integrales capciosas}{4}{subsection.3.5}

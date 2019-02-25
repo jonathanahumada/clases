@@ -45,8 +45,8 @@ El último término siempre da positivo y el del medio negativo:
 #+END_SRC
 * Trigonometría
 ** Integrales fundamentales
-\[\int \cos(mx)dx = \ƒrac{1}{m}\cos(mx)\]
-\[\int \sin(mx)dx = -\ƒrac{1}{m}\cos(mx)\]
+\[\int \cos(mx)dx =  \frac{1}{m} \sin(mx)\]
+\[\int \sin(mx)dx = - \frac{1}{m} \cos(mx)\]
 ** Identidad fundamental (potencias impares)
 \[\sin^2(x) + \cos^2(x) = 1\]
 
@@ -87,12 +87,13 @@ y crece la potencia.
 \[\int \sqrt{1 - \cos(2x)} dx = \int \sqrt{2\cos^2(x)}dx \]
 ** Integrales capciosas
 
-#+BEGIN_SRC 
-| u          | integral         |
-|------------+------------------|
-| \(\ln(x)\) | \frac{1}{x}      |
-| \(e^{cx}\) | \frac{e^{2x}}{2} |
-|            |                  |
 
-#+END_SRC
+| Integral       | Expresión          |
+|----------------+--------------------|
+| \int \ln(x) dx | $\frac{1}{x}$      |
+| \int e^{cx} dx | $\frac{e^{cx}}{c}$ |
+| \int tan(x) dx | $\sec^2(x)$        |
+| \int sec(x) dx | $sec(x)tan(x)$     |
+
+
 

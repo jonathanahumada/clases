@@ -14,8 +14,6 @@ A. La referencia siempre denota la posición en memoria.
 Para ilustrar el paso de referencias por valores, Arles nos muestra varios casos de un swap.
 Primero con primitivos y luego con objetos. 
 
-
-
 *** Primitivos
 
 #+BEGIN_SRC 
@@ -49,7 +47,6 @@ Como se pasan parámetros por valor, los enteros 4 y 5 se copian y luego se asig
 dentro del bloque del método. Las variables `a`y `b` permanecen con su valor original.
 
 *** Con los wrappers Integer()
-
 No entendí muy bien por qué esto no funciona. 
 *** TODO preguntar 
 
