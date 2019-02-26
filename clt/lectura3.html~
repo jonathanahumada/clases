@@ -1,0 +1,854 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+<head>
+<title>Una bebida fermentada a través de la historia</title>
+<!-- 2019-02-25 Mon 23:42 -->
+<meta  http-equiv="Content-Type" content="text/html;charset=utf-8" />
+<meta  name="generator" content="Org-mode" />
+<meta  name="author" content="Jonathan Ahumada" />
+<style type="text/css">
+ <!--/*--><![CDATA[/*><!--*/
+  .title  { text-align: center; }
+  .todo   { font-family: monospace; color: red; }
+  .done   { color: green; }
+  .tag    { background-color: #eee; font-family: monospace;
+            padding: 2px; font-size: 80%; font-weight: normal; }
+  .timestamp { color: #bebebe; }
+  .timestamp-kwd { color: #5f9ea0; }
+  .right  { margin-left: auto; margin-right: 0px;  text-align: right; }
+  .left   { margin-left: 0px;  margin-right: auto; text-align: left; }
+  .center { margin-left: auto; margin-right: auto; text-align: center; }
+  .underline { text-decoration: underline; }
+  #postamble p, #preamble p { font-size: 90%; margin: .2em; }
+  p.verse { margin-left: 3%; }
+  pre {
+    border: 1px solid #ccc;
+    box-shadow: 3px 3px 3px #eee;
+    padding: 8pt;
+    font-family: monospace;
+    overflow: auto;
+    margin: 1.2em;
+  }
+  pre.src {
+    position: relative;
+    overflow: visible;
+    padding-top: 1.2em;
+  }
+  pre.src:before {
+    display: none;
+    position: absolute;
+    background-color: white;
+    top: -10px;
+    right: 10px;
+    padding: 3px;
+    border: 1px solid black;
+  }
+  pre.src:hover:before { display: inline;}
+  pre.src-sh:before    { content: 'sh'; }
+  pre.src-bash:before  { content: 'sh'; }
+  pre.src-emacs-lisp:before { content: 'Emacs Lisp'; }
+  pre.src-R:before     { content: 'R'; }
+  pre.src-perl:before  { content: 'Perl'; }
+  pre.src-java:before  { content: 'Java'; }
+  pre.src-sql:before   { content: 'SQL'; }
+
+  table { border-collapse:collapse; }
+  caption.t-above { caption-side: top; }
+  caption.t-bottom { caption-side: bottom; }
+  td, th { vertical-align:top;  }
+  th.right  { text-align: center;  }
+  th.left   { text-align: center;   }
+  th.center { text-align: center; }
+  td.right  { text-align: right;  }
+  td.left   { text-align: left;   }
+  td.center { text-align: center; }
+  dt { font-weight: bold; }
+  .footpara:nth-child(2) { display: inline; }
+  .footpara { display: block; }
+  .footdef  { margin-bottom: 1em; }
+  .figure { padding: 1em; }
+  .figure p { text-align: center; }
+  .inlinetask {
+    padding: 10px;
+    border: 2px solid gray;
+    margin: 10px;
+    background: #ffffcc;
+  }
+  #org-div-home-and-up
+   { text-align: right; font-size: 70%; white-space: nowrap; }
+  textarea { overflow-x: auto; }
+  .linenr { font-size: smaller }
+  .code-highlighted { background-color: #ffff00; }
+  .org-info-js_info-navigation { border-style: none; }
+  #org-info-js_console-label
+    { font-size: 10px; font-weight: bold; white-space: nowrap; }
+  .org-info-js_search-highlight
+    { background-color: #ffff00; color: #000000; font-weight: bold; }
+  /*]]>*/-->
+</style>
+<link rel="stylesheet" type="text/css" href="clean-blog.css" />
+<link href="https://fonts.googleapis.com/css?family=Cinzel|Crimson+Text" rel="stylesheet">
+<script type="text/javascript">
+/*
+@licstart  The following is the entire license notice for the
+JavaScript code in this tag.
+
+Copyright (C) 2012-2013 Free Software Foundation, Inc.
+
+The JavaScript code in this tag is free software: you can
+redistribute it and/or modify it under the terms of the GNU
+General Public License (GNU GPL) as published by the Free Software
+Foundation, either version 3 of the License, or (at your option)
+any later version.  The code is distributed WITHOUT ANY WARRANTY;
+without even the implied warranty of MERCHANTABILITY or FITNESS
+FOR A PARTICULAR PURPOSE.  See the GNU GPL for more details.
+
+As additional permission under GNU GPL version 3 section 7, you
+may distribute non-source (e.g., minimized or compacted) forms of
+that code without the copy of the GNU GPL normally required by
+section 4, provided you include this license notice and a URL
+through which recipients can access the Corresponding Source.
+
+
+@licend  The above is the entire license notice
+for the JavaScript code in this tag.
+*/
+<!--/*--><![CDATA[/*><!--*/
+ function CodeHighlightOn(elem, id)
+ {
+   var target = document.getElementById(id);
+   if(null != target) {
+     elem.cacheClassElem = elem.className;
+     elem.cacheClassTarget = target.className;
+     target.className = "code-highlighted";
+     elem.className   = "code-highlighted";
+   }
+ }
+ function CodeHighlightOff(elem, id)
+ {
+   var target = document.getElementById(id);
+   if(elem.cacheClassElem)
+     elem.className = elem.cacheClassElem;
+   if(elem.cacheClassTarget)
+     target.className = elem.cacheClassTarget;
+ }
+/*]]>*///-->
+</script>
+</head>
+<body>
+<div id="content">
+<h1 class="title">Una bebida fermentada a través de la historia</h1>
+<div id="table-of-contents">
+<h2>Table of Contents</h2>
+<div id="text-table-of-contents">
+<ul>
+<li><a href="#sec-1">1. Objetivo</a></li>
+<li><a href="#sec-2">2. dicotmia alta sociedad /plebe</a></li>
+<li><a href="#sec-3">3. Chicherias en bogota</a></li>
+<li><a href="#sec-4">4. Maiz entre los indios</a></li>
+<li><a href="#sec-5">5. falta de fuentes</a></li>
+<li><a href="#sec-6">6. Preparacion</a></li>
+<li><a href="#sec-7">7. Ritos</a></li>
+<li><a href="#sec-8">8. Fiesta d Huan</a></li>
+<li><a href="#sec-9">9. Indios</a></li>
+<li><a href="#sec-10">10. eal audiencia</a></li>
+<li><a href="#sec-11">11. tolerancia</a></li>
+<li><a href="#sec-12">12. ritos religiosos</a></li>
+<li><a href="#sec-13">13. Edicto Arzobisp Urbina 1687</a></li>
+<li><a href="#sec-14">14. Tiendas</a>
+<ul>
+<li><a href="#sec-14-1">14.1. barrios propicios</a></li>
+<li><a href="#sec-14-2">14.2. alberges de indios</a></li>
+</ul>
+</li>
+<li><a href="#sec-15">15. aqtuiectua</a></li>
+<li><a href="#sec-16">16. Cambios (Colonia)</a>
+<ul>
+<li><a href="#sec-16-1">16.1. TESIS</a></li>
+</ul>
+</li>
+<li><a href="#sec-17">17. Época Republicana</a></li>
+<li><a href="#sec-18">18. Termina Hegemonía liberal 1945</a></li>
+<li><a href="#sec-19">19. Ciudad</a></li>
+<li><a href="#sec-20">20. Hábitos de consumo, fabricacion y venta de chicha</a></li>
+<li><a href="#sec-21">21. Chicherías</a></li>
+<li><a href="#sec-22">22. significado</a></li>
+<li><a href="#sec-23">23. Obstáculo moderiacion</a></li>
+<li><a href="#sec-24">24. argumentos en contra</a>
+<ul>
+<li><a href="#sec-24-1">24.1. urbanísticos</a></li>
+</ul>
+</li>
+<li><a href="#sec-25">25. Cerveza</a></li>
+<li><a href="#sec-26">26. Gremio Medico</a></li>
+<li><a href="#sec-27">27. Reglamentacion</a></li>
+<li><a href="#sec-28">28. Contradiccion</a></li>
+<li><a href="#sec-29">29. Otras medidas contra alcoholismo</a></li>
+<li><a href="#sec-30">30. Ley 34 de 1948</a></li>
+<li><a href="#sec-31">31. Conclusion</a></li>
+</ul>
+</div>
+</div>
+
+<div id="outline-container-sec-1" class="outline-2">
+<h2 id="sec-1"><span class="section-number-2">1</span> Objetivo</h2>
+<div class="outline-text-2" id="text-1">
+<p>
+Síntesis de cambios en el uso de la chicha.
+</p>
+<ol class="org-ol">
+<li>colectivos
+</li>
+<li>rituales
+</li>
+<li>cotidianos
+</li>
+</ol>
+
+<p>
+Cambiaron de connotacion en la Colonia &#x2014;&gt; idolatria, perdicion
+</p>
+</div>
+</div>
+
+<div id="outline-container-sec-2" class="outline-2">
+<h2 id="sec-2"><span class="section-number-2">2</span> dicotmia alta sociedad /plebe</h2>
+<div class="outline-text-2" id="text-2">
+<p>
+estudios científicos e idieales de modernización
+</p>
+</div>
+</div>
+<div id="outline-container-sec-3" class="outline-2">
+<h2 id="sec-3"><span class="section-number-2">3</span> Chicherias en bogota</h2>
+<div class="outline-text-2" id="text-3">
+<ol class="org-ol">
+<li>Fuertemente arraigadas desde la Colonia.
+</li>
+<li>actualmente lugares marginales.
+</li>
+</ol>
+</div>
+</div>
+
+<div id="outline-container-sec-4" class="outline-2">
+<h2 id="sec-4"><span class="section-number-2">4</span> Maiz entre los indios</h2>
+<div class="outline-text-2" id="text-4">
+<ol class="org-ol">
+<li>gran variedad &#x2014;&gt; comun
+</li>
+<li>Muiscas: consumo cotidiano / Incas: consumo fstivo
+</li>
+<li>"tributos", formas de intercambio. Eduardo Londoño 
+</li>
+</ol>
+</div>
+</div>
+
+<div id="outline-container-sec-5" class="outline-2">
+<h2 id="sec-5"><span class="section-number-2">5</span> falta de fuentes</h2>
+<div class="outline-text-2" id="text-5">
+<ol class="org-ol">
+<li>Escasa documentación de uso cotidiano
+</li>
+<li>fundamentalmente ritual
+</li>
+<li>principal producto a base de maíz
+</li>
+<li>aparece en cronistas
+</li>
+</ol>
+</div>
+</div>
+
+<div id="outline-container-sec-6" class="outline-2">
+<h2 id="sec-6"><span class="section-number-2">6</span> Preparacion</h2>
+<div class="outline-text-2" id="text-6">
+<ol class="org-ol">
+<li>no hay destilación
+</li>
+<li>fermentacion
+</li>
+<li>chichas de varias fuentes (corozo, cachipay, hibias, habas, arracacha
+</li>
+<li>+- 7 dias. Al quinto ya es 'gentil brevaje'
+</li>
+</ol>
+</div>
+</div>
+
+<div id="outline-container-sec-7" class="outline-2">
+<h2 id="sec-7"><span class="section-number-2">7</span> Ritos</h2>
+<div class="outline-text-2" id="text-7">
+<p>
+funcion cataizadora, facilitan las "transformaciones del ritual".
+</p>
+<ol class="org-ol">
+<li>de paso
+</li>
+<li>celebraciones religiosas
+</li>
+<li>Fiesta de Huan
+</li>
+<li>reconocimiento del jeque 
+</li>
+<li>ritos de fertilidad.
+</li>
+</ol>
+
+<p>
+Cierre de ceremonia &#x2013;&gt; borrachera
+</p>
+</div>
+</div>
+<div id="outline-container-sec-8" class="outline-2">
+<h2 id="sec-8"><span class="section-number-2">8</span> Fiesta d Huan</h2>
+<div class="outline-text-2" id="text-8">
+<p>
+conmemora el paso de las estaciones de la vida y recuerda la muerta.
+La chica exacerba la alegria de la vida y hace olvidar la muerte.
+Simbología de las aves &#x2013;&gt; dioses muiscas (Chiminigagua)
+</p>
+
+<p>
+muerte (Chihicha) 
+bienaventuranza (chichacun)
+</p>
+
+<p>
+ay personajes especiales que están presentes durante la borrachera.
+</p>
+
+<p>
+No se regulaba la cantidad de bebida. No era mal visto socialmente.
+</p>
+</div>
+</div>
+
+<div id="outline-container-sec-9" class="outline-2">
+<h2 id="sec-9"><span class="section-number-2">9</span> Indios</h2>
+<div class="outline-text-2" id="text-9">
+<p>
+Al principio segregacion, luego mestizaje por necesidad de mano de obra de los espalos. 
+</p>
+<ul class="org-ul">
+<li>encomenderos/autoridades civiles
+</li>
+<li>guerra concluyo en 1590
+</li>
+<li>mita urbna o alguiler general 
+</li>
+<li>1641. construccion de arrablaes y tambos.
+</li>
+</ul>
+</div>
+</div>
+
+<div id="outline-container-sec-10" class="outline-2">
+<h2 id="sec-10"><span class="section-number-2">10</span> eal audiencia</h2>
+<div class="outline-text-2" id="text-10">
+<ul class="org-ul">
+<li>control sobre juegos, borracheros, areitos, ritos, vicios
+</li>
+<li>trasquilarlos y quitarles la manta
+</li>
+<li>rondas nocturanas
+</li>
+<li>los Austrias ??
+</li>
+<li>Viene de la Legislacion de Castilla &#x2013;&gt; Legislacion de la sIndias (Leyes de Toro. Fuero Juzgo 
+Ejemplo. 1591 documento que data la captura de indios bebiendo
+</li>
+<li>asociacion con ritos paganos/ idolatría
+</li>
+</ul>
+</div>
+</div>
+
+<div id="outline-container-sec-11" class="outline-2">
+<h2 id="sec-11"><span class="section-number-2">11</span> tolerancia</h2>
+<div class="outline-text-2" id="text-11">
+<ul class="org-ul">
+<li>durante conversion baja
+</li>
+<li>luego algun grado de tolerancia
+</li>
+</ul>
+<p>
+. luego cofradías &#x2013;&gt; sincretismo religioso, indigenas aceptan simbología religiosa
+</p>
+</div>
+</div>
+
+<div id="outline-container-sec-12" class="outline-2">
+<h2 id="sec-12"><span class="section-number-2">12</span> ritos religiosos</h2>
+<div class="outline-text-2" id="text-12">
+<ul class="org-ul">
+<li>indios particiban a traves de borrachera / lo hacias incluso durante dias de guardar, ir a misa
+</li>
+<li>bautismo, preceptos formales / falta de idioma españoz &#x2013;&gt; `bozales`, `choantales`
+</li>
+<li>no participaban abirtamente
+</li>
+</ul>
+
+<p>
+Siglo XVIII
+</p>
+<ul class="org-ul">
+<li>limosnas cofradías
+</li>
+<li>asistian procesiones
+</li>
+<li>santo patrón 
+</li>
+<li>cargadas de propio bagaje cultural 
+</li>
+</ul>
+</div>
+</div>
+
+<div id="outline-container-sec-13" class="outline-2">
+<h2 id="sec-13"><span class="section-number-2">13</span> Edicto Arzobisp Urbina 1687</h2>
+<div class="outline-text-2" id="text-13">
+<ul class="org-ul">
+<li>pena de excomunion no fue util
+</li>
+<li>todavía no conversos 
+</li>
+</ul>
+</div>
+</div>
+
+<div id="outline-container-sec-14" class="outline-2">
+<h2 id="sec-14"><span class="section-number-2">14</span> Tiendas</h2>
+<div class="outline-text-2" id="text-14">
+<ul class="org-ul">
+<li>origen mezclado con abarrotes
+</li>
+<li>especializacion: misiá Dolores, india Juana
+</li>
+<li>hata s XX había tiendas mezclados 
+</li>
+</ul>
+</div>
+
+<div id="outline-container-sec-14-1" class="outline-3">
+<h3 id="sec-14-1"><span class="section-number-3">14.1</span> barrios propicios</h3>
+<div class="outline-text-3" id="text-14-1">
+<ul class="org-ul">
+<li>San Victorino
+</li>
+<li>Santa Bárbara 
+</li>
+<li>Nieves Oriental 
+</li>
+</ul>
+</div>
+</div>
+
+<div id="outline-container-sec-14-2" class="outline-3">
+<h3 id="sec-14-2"><span class="section-number-3">14.2</span> alberges de indios</h3>
+<div class="outline-text-3" id="text-14-2">
+<ul class="org-ul">
+<li>s. VXIII
+</li>
+<li>servían como posada
+</li>
+<li>asociados a conductas escsndalosas desde XVII
+</li>
+<li>amancebamiento
+</li>
+<li>lenocinio
+</li>
+</ul>
+</div>
+</div>
+</div>
+
+<div id="outline-container-sec-15" class="outline-2">
+<h2 id="sec-15"><span class="section-number-2">15</span> aqtuiectua</h2>
+<div class="outline-text-2" id="text-15">
+<ul class="org-ul">
+<li>lugares cerrados
+</li>
+<li>piso de tierra 
+</li>
+<li>costales de maiz
+</li>
+<li>asiento en costales
+</li>
+<li>múcura o vasija de barro contenía chichs
+</li>
+<li>atendidas por mujeres
+</li>
+</ul>
+</div>
+</div>
+
+<div id="outline-container-sec-16" class="outline-2">
+<h2 id="sec-16"><span class="section-number-2">16</span> Cambios (Colonia)</h2>
+<div class="outline-text-2" id="text-16">
+<ul class="org-ul">
+<li>producido por la caña de azucar
+</li>
+<li>en un principio muchos indios
+</li>
+<li>luego mestizos y españoles
+</li>
+<li>licores 'espirituosos' &#x2013;&gt; agurdiente y chica por dificultades de transporte
+</li>
+<li>empezo a necesitr regulacion fiscal
+</li>
+</ul>
+</div>
+<div id="outline-container-sec-16-1" class="outline-3">
+<h3 id="sec-16-1"><span class="section-number-3">16.1</span> TESIS</h3>
+<div class="outline-text-3" id="text-16-1">
+<p>
+<b>NO</b> logaron restringir la vebida de la chicha y los espacios que la expenden.
+</p>
+
+
+<p>
+otra teis
+_ Pedro María Ibañes 
+</p>
+<ul class="org-ul">
+<li>asegura dsde la Conquista
+</li>
+<li>Causó desdnen por vinos traids de españa
+</li>
+</ul>
+</div>
+</div>
+</div>
+
+<div id="outline-container-sec-17" class="outline-2">
+<h2 id="sec-17"><span class="section-number-2">17</span> Época Republicana</h2>
+<div class="outline-text-2" id="text-17">
+<p>
+_ 1180 a 1948 
+</p>
+<ul class="org-ul">
+<li>ley 34 rglamenta produccion, vnta consumo .
+</li>
+<li>hizo parte de transformaciones de la sociedad colombiano 
+</li>
+<li>preecapitlista, agraria, traciional -&gt; capitalista, industrial, urbana y moderna. 
+</li>
+<li>influencia extranjera
+</li>
+<li>habitos del pueblo &#x2014;&gt; principales obstáculos a la modernizacion
+</li>
+</ul>
+</div>
+</div>
+
+<div id="outline-container-sec-18" class="outline-2">
+<h2 id="sec-18"><span class="section-number-2">18</span> Termina Hegemonía liberal 1945</h2>
+<div class="outline-text-2" id="text-18">
+<ul class="org-ul">
+<li>1948 asesinato Jorge Eliecer Gaitán
+</li>
+<li>incorporacion a las masas en la política
+</li>
+<li>identificacion de clase, posibilidades de protesta.
+</li>
+<li>consolidación del capitalismo salvaje y modernización avasallante.
+</li>
+</ul>
+</div>
+</div>
+
+<div id="outline-container-sec-19" class="outline-2">
+<h2 id="sec-19"><span class="section-number-2">19</span> Ciudad</h2>
+<div class="outline-text-2" id="text-19">
+<ul class="org-ul">
+<li>1880 infraesctructura comienxa modernisarse:
+</li>
+<li>finales de los 40'  agua , luz teléfono y tranvia. 
+</li>
+<li>fuerte immigracion: densificacion
+</li>
+<li>finales del XIX escaces del agua, problemas higienicos hasta entrando el XX
+</li>
+<li>BOGOTA SE ALEJABA DEL IDEAL EUROPEO 
+</li>
+<li>Centro densamente poblado. habitaban ricos y pobres
+</li>
+<li>Años 30 en adelante: Teusaquillo, Chaponero, fueron albergando grupos favorecidos. 
+</li>
+</ul>
+</div>
+</div>
+
+<div id="outline-container-sec-20" class="outline-2">
+<h2 id="sec-20"><span class="section-number-2">20</span> Hábitos de consumo, fabricacion y venta de chicha</h2>
+<div class="outline-text-2" id="text-20">
+<ul class="org-ul">
+<li>tres litros diarios por cabeza. media botella agurdiente equivalente
+</li>
+<li>175 chicherías en Bogotá 
+</li>
+<li>estadísticas no confiables 
+</li>
+
+<li>más confiable a partid de especializacion de los años 10' 
+</li>
+<li>nacen fabricas de chica 
+</li>
+<li>chicherías no dejaron de existir 
+</li>
+
+<li>distribucion a a chicherias, tiendas, restaurantes, casas d efamilia
+</li>
+<li>Las Múcuras, la Campana, Los Patos, La Victria, EL aerolita, la Triunfadora, La Union. DIamante, Consorcio de Fermentadas
+</li>
+<li>1930 sociedades de productores y gremios 
+</li>
+<li>exigenias del gobierno por higiene 
+</li>
+</ul>
+</div>
+</div>
+
+<div id="outline-container-sec-21" class="outline-2">
+<h2 id="sec-21"><span class="section-number-2">21</span> Chicherías</h2>
+<div class="outline-text-2" id="text-21">
+<ul class="org-ul">
+<li>ventas de articulos hogar, alimentos, comidas tipicas del altiplano
+</li>
+<li>no homogeneas
+</li>
+<li>juegos de turmequé, boliche, bolos 
+</li>
+<li>espacios de socializacion y diversion del PUEBLO
+</li>
+<li>Belén. Egipto, las Aguas, Germania 
+</li>
+<li>BARRIOS POPULARES DEL XX: San Cristóbal, las Cruces, Paseo Bolivar 
+</li>
+
+<li>cuartos de casonas viejas
+</li>
+<li>casas de paha y bahareque
+</li>
+<li>"EL Día del Odio, Osoria Lisaraza
+</li>
+<li>A la entrada se hacian personas parhar (hablar, insultar, rodar totuma??)
+</li>
+<li>única entrada de aire 
+</li>
+</ul>
+</div>
+</div>
+
+<div id="outline-container-sec-22" class="outline-2">
+<h2 id="sec-22"><span class="section-number-2">22</span> significado</h2>
+<div class="outline-text-2" id="text-22">
+<ul class="org-ul">
+<li>poderes curativos cuerpo espiritu
+</li>
+<li>enfuerta la sangre
+</li>
+<li>vigoria el cuerpo 
+</li>
+<li>arregla el espiritu
+</li>
+<li>da don de la palabra
+</li>
+
+<li>es producto de la tierra natural
+</li>
+<li>nativo y milenario 
+</li>
+<li>es nutritivo/ el aguardiente es malo para la salud
+</li>
+
+<li>origen indigena-&gt; brujeria, hehizos
+</li>
+<li>huesos de merto
+</li>
+<li>calzones
+</li>
+<li>mujeres se bañaban en toneles
+</li>
+</ul>
+</div>
+</div>
+
+<div id="outline-container-sec-23" class="outline-2">
+<h2 id="sec-23"><span class="section-number-2">23</span> Obstáculo moderiacion</h2>
+<div class="outline-text-2" id="text-23">
+<ul class="org-ul">
+<li>gremio médico
+</li>
+<li>criolles creían ser ingeses.
+</li>
+<li>pensamiendo de clases populares no aparece en la prensa
+</li>
+<li>¿qué llevó al pueblo a abandonar su bebida
+</li>
+<li>obreros católicos, una plaga
+</li>
+<li>obreros socialista y anarquistas antialcolicos
+</li>
+</ul>
+</div>
+</div>
+
+<div id="outline-container-sec-24" class="outline-2">
+<h2 id="sec-24"><span class="section-number-2">24</span> argumentos en contra</h2>
+<div class="outline-text-2" id="text-24">
+</div><div id="outline-container-sec-24-1" class="outline-3">
+<h3 id="sec-24-1"><span class="section-number-3">24.1</span> urbanísticos</h3>
+<div class="outline-text-3" id="text-24-1">
+<ul class="org-ul">
+<li>ubicacion de ls chicherias
+</li>
+<li>estorbo de los consumidores en las calles
+</li>
+<li>focos de desaseo e infeccion
+</li>
+<li>gente pobre reunida
+</li>
+
+<li>abandono de hohares
+</li>
+<li>desintegracion familiar
+</li>
+<li>criminalidad
+</li>
+<li>riñas hurtos 
+</li>
+</ul>
+</div>
+</div>
+</div>
+
+<div id="outline-container-sec-25" class="outline-2">
+<h2 id="sec-25"><span class="section-number-2">25</span> Cerveza</h2>
+<div class="outline-text-2" id="text-25">
+<ul class="org-ul">
+<li>tmbien fermentada pero moderna
+</li>
+<li>simbolo grandes capitales
+</li>
+<li>indusrial
+</li>
+<li>bavaria -&gt; alemania
+</li>
+<li>descuentos, ventas al por mayor
+</li>
+<li>publicidad en periodosc
+</li>
+</ul>
+</div>
+</div>
+
+<div id="outline-container-sec-26" class="outline-2">
+<h2 id="sec-26"><span class="section-number-2">26</span> Gremio Medico</h2>
+<div class="outline-text-2" id="text-26">
+<ul class="org-ul">
+<li>1886
+</li>
+<li>tomaínia, tóxico gluten de maiz
+</li>
+<li>producido por tecnicaa s XIX: barriles en vez de vasijas 
+</li>
+<li>chichismo
+</li>
+<li>coalicion con CERVECERAS
+</li>
+</ul>
+</div>
+</div>
+
+<div id="outline-container-sec-27" class="outline-2">
+<h2 id="sec-27"><span class="section-number-2">27</span> Reglamentacion</h2>
+<div class="outline-text-2" id="text-27">
+<p>
+-1899 Corporacion municipal
+-XX Alcaldia Bogota prohibicion en cuadrilátero
+</p>
+<ul class="org-ul">
+<li>impuestos a chichros Acuero 14 1916
+</li>
+<li>1923 impuesto de a centavo por litro Asamblea cundinamarca &#x2013;&gt; levantamientos populares
+</li>
+</ul>
+</div>
+</div>
+
+<div id="outline-container-sec-28" class="outline-2">
+<h2 id="sec-28"><span class="section-number-2">28</span> Contradiccion</h2>
+<div class="outline-text-2" id="text-28">
+<p>
+Al mismo tiempo que los obreros se levantan contra el alza en los precios, se pide que 
+elimine el hábito al gobierno. 
+</p>
+</div>
+</div>
+
+<div id="outline-container-sec-29" class="outline-2">
+<h2 id="sec-29"><span class="section-number-2">29</span> Otras medidas contra alcoholismo</h2>
+<div class="outline-text-2" id="text-29">
+<ul class="org-ul">
+<li>no mas de 4% alcohol 
+</li>
+<li>Maizola -&gt; Director nacional de la higiene 
+</li>
+<li>conferencias teatro municipal
+</li>
+<li>prohibicion a todo tipo de expendios desde las 8 de la noche 
+</li>
+
+<li>incidente billar Nicolasito
+</li>
+</ul>
+</div>
+</div>
+
+<div id="outline-container-sec-30" class="outline-2">
+<h2 id="sec-30"><span class="section-number-2">30</span> Ley 34 de 1948</h2>
+<div class="outline-text-2" id="text-30">
+<ul class="org-ul">
+<li>Jorge Ramiro Bejarano Ministro de Higiene
+</li>
+<li>se regula su produccion y consumo 
+</li>
+<li>tecnologías importadas
+</li>
+<li>el consumo de chicha se volvió clandestino
+</li>
+</ul>
+</div>
+</div>
+
+<div id="outline-container-sec-31" class="outline-2">
+<h2 id="sec-31"><span class="section-number-2">31</span> Conclusion</h2>
+<div class="outline-text-2" id="text-31">
+<ul class="org-ul">
+<li>hoy clandestino
+</li>
+<li>primera mitad siglo XX más bebida
+</li>
+<li>triunfo de la cultura europea sobre prehispanica
+</li>
+<li>trunfo de bavaria sobre fabricas 
+</li>
+</ul>
+</div>
+</div>
+</div>
+<div id="postamble" class="status">
+<p class="author">Author: Jonathan Ahumada</p>
+<p class="date">Created: 2019-02-25 Mon 23:42</p>
+<p class="creator"><a href="http://www.gnu.org/software/emacs/">Emacs</a> 25.3.1 (<a href="http://orgmode.org">Org</a> mode 8.2.10)</p>
+<p class="validation"><a href="http://validator.w3.org/check?uri=referer">Validate</a></p>
+</div>
+</body>
+</html>
