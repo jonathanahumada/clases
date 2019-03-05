@@ -19,12 +19,12 @@ Esta página constituirá la bitácora para el curso "Bogotá y sus Historias", 
 
 * Propuesta de proyecto final
 Para mi proyecto final me gustaría estudiar el tema de las catedrales o en general las iglesias que existen en Bogotá.
-Más allá de ir a visitarlas me gustaria investigar qué información existe respecto a su estilo arquitectónico, sus funciones 
+Más allá de ir a visitarlas, me gustaria investigar qué información existe respecto a su estilo arquitectónico, sus funciones 
 en la ciudad, y quiénes las contruyeron. Por ejemplo, ¿qué iglesias fueron construidas por jesuítas? ¿Cuáles fueron construidas
 por dominicos? ¿Existen leyendas sobre algunas de estas? ¿Quién las construyó y cómo tenían el conocimiento sobre su construcción?
 ¿Cuánto tardaron en construirse? etc.
 
-Me gustaría ahondar en este tema porque me impactan estéticamente y me parece que la calidad de su construcción contrasta 
+Me gustaría ahondar en este tema porque me impactan estéticamente. Me parece que su construcción contrasta 
 bastante con la arquitectura de las casas que hemos visto en el curso (por ejemplo, las que fueron hechas con ladrillos de barro).
 Además, me interesaría conectar esto, en la medida de lo posible, con el mito fundacional de la ciudad. Según lo visto en clase, 
 hay una clara simbología religiosa imbuida en el mito de las 12 casas.
@@ -36,6 +36,14 @@ Se me ocurren dos opciones:
 
 1) leer bibliografía existente y presentar una síntesis (si es que existe y es accesible).
 2) simplemente hacer visitas, tomar fotos y hacer comentarios comparativos entre varias iglesias (probablemente sea lo más fácil).
+
+** retroalimentación
+Delimité el trabajo a una muestra fotográfica con breves apuntes históricos. Aún debo escogér cuáles y cuántas
+iglesias son suficientes. 
+
+
+
+- medio: página web
 #+CAPTION: Iglesia de Lourdes
 [[./img/catedral_silueta.jpg]]
 
@@ -199,5 +207,54 @@ Conclusion: el gobierno no solo esta dirigido por corruptos, sino que es altamen
 ¿Es normal tener que ir dos veces (y contando) para hacer una dilegencia tan elemental? ¿Quién tiene el tiempo de ir tantas veces a perder el tiempo? 
 Recordemos que hay que coger Transmilenio o trancón para ir a perder el tiempo. Podríamos también ir en bicicleta, pero es muy arriesgado dada la crisis ambiental.
 
+** <2019-02-28 Thu>
 
- 
+Tomé el bus M86 desde la estación CAN, para llegar a la parada
+de la séptima con 63. Lo tomé a las 8 AM, así que estaba lleno, 
+pero no bajo las condiciones inhumanas que se viven en hora pico 
+(por ejemplo, 7:00AM). Durante todo el trayecto estuve *directamente*
+al frente de un asiento rojo. Digamos que estuve 20 minutos en esa posición.
+Aforturnadamente, la persona que ocupaba el asiento se levantó para bajarse. 
+Naturalmente, al estar lleno, la persona duro de pié a la salida de su asiento
+(directamente al frente mio, una posición incómoda para los dos) un buen tiempo,
+esperando que las otras personas bajaran del bus. Fueron cerca de unos 2 minutos. Ahora viene
+lo importante.
+
+Cuando la persona pudo por fin quitarse de al frente mío, me dispuse a sentarme en mi legitimo puesto, 
+pero justo antes de sentarme veo *una cartera* resbalarse desde el espaldar del asiento hasta la silla 
+propiamente dicha. Una mujer que estaba al lado mío *impidió que tomara mi puesto* sin ningún asco por su propia persona.
+Estuve al punto de amonestarla, pero decidí que no valía la pena, porque ellos *son legión*.
+
+
+
+
+
+#+BEGIN_SRC
+	      +-------------> Puesto libre
+	      |				  
+  +--+ +--+ +--+ +--+			  
+  |xx| |xx| |  | |xx|			  
+  +--+ +--+ +--+ +--+  	       	       	  
+      Mujer  Yo        	     	    
+	     
+#+END_SRC
+
+Algunas otras cosas sobre el Transmilenio:
+
+1) los policias no hacen nada (dejan que a gente se vuele)
+2) los vendedores poseen mayor estatus moral que uno 
+3) los coordinadores no hacen nada cuando la gente no hace fila 
+4) las personas son incapaces de organizarse para entrar al Transmilenio
+5) las mujeres creen que los hombres están para servirles (¿es esto antifeminista o feminista?: depende por completo de la conveniencia del observador)
+6) nadie pregunta si se va a bajar en esta parada también, simplemente empujan de una vez
+7) los que entran no dejan que la gente salga
+8) la gente que espera un bus no se quita del frente aun cuando no necesita entrar al bus que llega
+9) la gente que quiere a entrar al bus que llega y no alcanza no se quita de al frente cuando el bus se va. Es decir, se vuelan y se repite 8)
+
+
+* Notas lecturas
+** [[./lectura_1.html][Chorro]]
+** [[./lectura_2.html][LeMoyne]]
+** [[./lectura3.html][Chicha]]
+** [[./plazas.html][Plazas]]
+** [[./plazas_yerbateras.html][Plazas2]]

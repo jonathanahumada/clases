@@ -1,0 +1,301 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+<head>
+<title>"Viaje de Auguste Le Moyne"</title>
+<!-- 2019-03-04 Mon 12:39 -->
+<meta  http-equiv="Content-Type" content="text/html;charset=utf-8" />
+<meta  name="generator" content="Org-mode" />
+<meta  name="author" content="Jonathan Ahumada" />
+<style type="text/css">
+ <!--/*--><![CDATA[/*><!--*/
+  .title  { text-align: center; }
+  .todo   { font-family: monospace; color: red; }
+  .done   { color: green; }
+  .tag    { background-color: #eee; font-family: monospace;
+            padding: 2px; font-size: 80%; font-weight: normal; }
+  .timestamp { color: #bebebe; }
+  .timestamp-kwd { color: #5f9ea0; }
+  .right  { margin-left: auto; margin-right: 0px;  text-align: right; }
+  .left   { margin-left: 0px;  margin-right: auto; text-align: left; }
+  .center { margin-left: auto; margin-right: auto; text-align: center; }
+  .underline { text-decoration: underline; }
+  #postamble p, #preamble p { font-size: 90%; margin: .2em; }
+  p.verse { margin-left: 3%; }
+  pre {
+    border: 1px solid #ccc;
+    box-shadow: 3px 3px 3px #eee;
+    padding: 8pt;
+    font-family: monospace;
+    overflow: auto;
+    margin: 1.2em;
+  }
+  pre.src {
+    position: relative;
+    overflow: visible;
+    padding-top: 1.2em;
+  }
+  pre.src:before {
+    display: none;
+    position: absolute;
+    background-color: white;
+    top: -10px;
+    right: 10px;
+    padding: 3px;
+    border: 1px solid black;
+  }
+  pre.src:hover:before { display: inline;}
+  pre.src-sh:before    { content: 'sh'; }
+  pre.src-bash:before  { content: 'sh'; }
+  pre.src-emacs-lisp:before { content: 'Emacs Lisp'; }
+  pre.src-R:before     { content: 'R'; }
+  pre.src-perl:before  { content: 'Perl'; }
+  pre.src-java:before  { content: 'Java'; }
+  pre.src-sql:before   { content: 'SQL'; }
+
+  table { border-collapse:collapse; }
+  caption.t-above { caption-side: top; }
+  caption.t-bottom { caption-side: bottom; }
+  td, th { vertical-align:top;  }
+  th.right  { text-align: center;  }
+  th.left   { text-align: center;   }
+  th.center { text-align: center; }
+  td.right  { text-align: right;  }
+  td.left   { text-align: left;   }
+  td.center { text-align: center; }
+  dt { font-weight: bold; }
+  .footpara:nth-child(2) { display: inline; }
+  .footpara { display: block; }
+  .footdef  { margin-bottom: 1em; }
+  .figure { padding: 1em; }
+  .figure p { text-align: center; }
+  .inlinetask {
+    padding: 10px;
+    border: 2px solid gray;
+    margin: 10px;
+    background: #ffffcc;
+  }
+  #org-div-home-and-up
+   { text-align: right; font-size: 70%; white-space: nowrap; }
+  textarea { overflow-x: auto; }
+  .linenr { font-size: smaller }
+  .code-highlighted { background-color: #ffff00; }
+  .org-info-js_info-navigation { border-style: none; }
+  #org-info-js_console-label
+    { font-size: 10px; font-weight: bold; white-space: nowrap; }
+  .org-info-js_search-highlight
+    { background-color: #ffff00; color: #000000; font-weight: bold; }
+  /*]]>*/-->
+</style>
+<script type="text/javascript">
+/*
+@licstart  The following is the entire license notice for the
+JavaScript code in this tag.
+
+Copyright (C) 2012-2013 Free Software Foundation, Inc.
+
+The JavaScript code in this tag is free software: you can
+redistribute it and/or modify it under the terms of the GNU
+General Public License (GNU GPL) as published by the Free Software
+Foundation, either version 3 of the License, or (at your option)
+any later version.  The code is distributed WITHOUT ANY WARRANTY;
+without even the implied warranty of MERCHANTABILITY or FITNESS
+FOR A PARTICULAR PURPOSE.  See the GNU GPL for more details.
+
+As additional permission under GNU GPL version 3 section 7, you
+may distribute non-source (e.g., minimized or compacted) forms of
+that code without the copy of the GNU GPL normally required by
+section 4, provided you include this license notice and a URL
+through which recipients can access the Corresponding Source.
+
+
+@licend  The above is the entire license notice
+for the JavaScript code in this tag.
+*/
+<!--/*--><![CDATA[/*><!--*/
+ function CodeHighlightOn(elem, id)
+ {
+   var target = document.getElementById(id);
+   if(null != target) {
+     elem.cacheClassElem = elem.className;
+     elem.cacheClassTarget = target.className;
+     target.className = "code-highlighted";
+     elem.className   = "code-highlighted";
+   }
+ }
+ function CodeHighlightOff(elem, id)
+ {
+   var target = document.getElementById(id);
+   if(elem.cacheClassElem)
+     elem.className = elem.cacheClassElem;
+   if(elem.cacheClassTarget)
+     target.className = elem.cacheClassTarget;
+ }
+/*]]>*///-->
+</script>
+</head>
+<body>
+<div id="content">
+<h1 class="title">"Viaje de Auguste Le Moyne"</h1>
+<div id="table-of-contents">
+<h2>Table of Contents</h2>
+<div id="text-table-of-contents">
+<ul>
+<li><a href="#sec-1">1. Sobre Le Moyne</a></li>
+<li><a href="#sec-2">2. Facatativá</a></li>
+<li><a href="#sec-3">3. Bogotá</a>
+<ul>
+<li><a href="#sec-3-1">3.1. Sobre el nombre</a></li>
+<li><a href="#sec-3-2">3.2. Sobre su locación</a></li>
+<li><a href="#sec-3-3">3.3. sobre su aspecto</a></li>
+<li><a href="#sec-3-4">3.4. pisos térmicos</a></li>
+<li><a href="#sec-3-5">3.5. estaciones se susceden de tres a tres meses</a></li>
+<li><a href="#sec-3-6">3.6. arquitectura</a></li>
+<li><a href="#sec-3-7">3.7. hitos curiosos</a></li>
+<li><a href="#sec-3-8">3.8. mito del francés</a></li>
+</ul>
+</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-sec-1" class="outline-2">
+<h2 id="sec-1"><span class="section-number-2">1</span> Sobre Le Moyne</h2>
+<div class="outline-text-2" id="text-1">
+<blockquote>
+<p>
+
+</p>
+
+<p>
+Auguste Le Moyne nació en Paris en 1800 y murió en 1880. Fue reconocido como entomólogo, dibujante y escritor francés, que permaneció en Colombia entre 1829 y 1839 vinculado a la misión diplomática de su país. En sus memorias, escritas muchos años después, consignó aspectos del país relacionados con la gente, las costumbres y el paisaje, como consta en la vista de Bogotá en la que aparece la antigua Ermita de Nuestra Señora del Destierro y Huida de Egipto iniciada en 1651 y demolida en 1915 para dar paso a la construcción actual sobre los cerros orientales. Desde el siglo XIX la literatura da cuenta de las celebraciones de la fiesta de Reyes el 6 de enero, que se siguen realizando en torno a esta Iglesia.
+</p>
+</blockquote>
+</div>
+</div>
+
+<div id="outline-container-sec-2" class="outline-2">
+<h2 id="sec-2"><span class="section-number-2">2</span> Facatativá</h2>
+<div class="outline-text-2" id="text-2">
+<blockquote>
+<p>
+Estos síntomas que yo experimentaba suelen
+ser frecuentes en los extranjeros y hasta en los mismos colombianos originarios de las tierras
+calientes, cuando llegan por vez primera a la meseta de Bogotá y muchos de ellos suelen verse
+atacados de Tercianas que persisten hasta que se aclimatan.
+</p>
+</blockquote>
+
+<blockquote>
+<p>
+"&#x2026;lo único que me llamó la atención fue la suciedad
+y el gentío, pues esta ciudad es punto obligado de detención de los viajeros y de las recuas de
+mulas que transportan las mercancías desde el Magdalena hasta Bogotá […]"
+</p>
+</blockquote>
+</div>
+</div>
+
+
+<div id="outline-container-sec-3" class="outline-2">
+<h2 id="sec-3"><span class="section-number-2">3</span> Bogotá</h2>
+<div class="outline-text-2" id="text-3">
+</div><div id="outline-container-sec-3-1" class="outline-3">
+<h3 id="sec-3-1"><span class="section-number-3">3.1</span> Sobre el nombre</h3>
+<div class="outline-text-3" id="text-3-1">
+<blockquote>
+<p>
+  " También en recuerdo de la provincia de Granada, donde nació, el mismo
+Ximénez de Quesada dio el nombre de Nuevo Reino de Granada a todas las regiones del país
+que conquistaron sus soldados."
+</p>
+</blockquote>
+</div>
+</div>
+<div id="outline-container-sec-3-2" class="outline-3">
+<h3 id="sec-3-2"><span class="section-number-3">3.2</span> Sobre su locación</h3>
+<div class="outline-text-3" id="text-3-2">
+<blockquote>
+<p>
+"Este emplazamiento de la capital estuvo
+admirablemente escogido, tanto desde el punto de vista de interés momentáneo, como para
+el porvenir, pues el fundador encontraba en él a la vez que una buena posición estratégica
+contra el enemigo y un vasto territorio, apto para la producción de todo lo que constituye la
+principal alimentación de los europeos, un clima también bueno para ellos y finalmente el
+punto central de un inmenso imperio bañado por un lado por el océano Atlántico y por el otro
+por el océano Pacífico."
+</p>
+</blockquote>
+</div>
+</div>
+
+<div id="outline-container-sec-3-3" class="outline-3">
+<h3 id="sec-3-3"><span class="section-number-3">3.3</span> sobre su aspecto</h3>
+<div class="outline-text-3" id="text-3-3">
+<blockquote>
+<p>
+"&#x2026; el aspecto de Bogotá es triste lo mismo de lejos que de cerca, pues sus alrededores están
+desprovistos de árboles que pudieran velar, hermoseándola, la monotonía de las laderas
+desnudas de las montañas que la enmarcan."
+</p>
+</blockquote>
+</div>
+</div>
+
+
+<div id="outline-container-sec-3-4" class="outline-3">
+<h3 id="sec-3-4"><span class="section-number-3">3.4</span> pisos térmicos</h3>
+</div>
+<div id="outline-container-sec-3-5" class="outline-3">
+<h3 id="sec-3-5"><span class="section-number-3">3.5</span> estaciones se susceden de tres a tres meses</h3>
+</div>
+
+<div id="outline-container-sec-3-6" class="outline-3">
+<h3 id="sec-3-6"><span class="section-number-3">3.6</span> arquitectura</h3>
+<div class="outline-text-3" id="text-3-6">
+<blockquote>
+<p>
+" En la época en que estuve en Bogotá, los edificios destinados a oficinas del Gobierno o a servicios públicos, como les ministerios, la aduana, el correo, los tribunales, la casa de la moneda, el museo, la biblioteca, las cárceles y lo que se llamaba el palacio del presidente no se diferenciaban interiormente en nada de las casas de los particulares a no ser por los escudos que había encima de la puertas de entrada o por la garita de los soldados que montaban la guardia."
+</p>
+</blockquote>
+</div>
+</div>
+<div id="outline-container-sec-3-7" class="outline-3">
+<h3 id="sec-3-7"><span class="section-number-3">3.7</span> hitos curiosos</h3>
+<div class="outline-text-3" id="text-3-7">
+<blockquote>
+<p>
+
+"la biblioteca estaba. constituida por unos 6 o 7.000 volúmenes; de los objetos reunidos en el museo, en una sola habitación, los más curiosos eran ejemplares de minerales, armas, fetiches y cacharros de los primitivos indios, algunos cuadros de Vásquez el pintor de más fama del país y finalmente el estandarte del conquistador Pizarro donado por el Perú a Bolívar; la torre del Observatorio donde Humboldt hizo algunas experiencias años antes, estaba casi en ruinas y desprovista por completo de instrumentos; en cuanto al jardín botánico estaba absolutamente abandonado o mejor dicho parecía un terreno baldío."
+</p>
+</blockquote>
+</div>
+</div>
+
+<div id="outline-container-sec-3-8" class="outline-3">
+<h3 id="sec-3-8"><span class="section-number-3">3.8</span> mito del francés</h3>
+<div class="outline-text-3" id="text-3-8">
+<ul class="org-ul">
+<li>habia un frances que vino a buscar fortuna
+</li>
+<li>montó una farmacia en la calle mas concurrida de bogota
+</li>
+<li>vino un terremoto y rompió todos sus utensilios y frascos
+</li>
+<li>entro a la casa para ahorcarse de una viga en el techo
+</li>
+<li>cuando lo intentó la soga se cayó del techo y llovieron monedas de oro 
+</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+<div id="postamble" class="status">
+<p class="author">Author: Jonathan Ahumada</p>
+<p class="date">Created: 2019-03-04 Mon 12:39</p>
+<p class="creator"><a href="http://www.gnu.org/software/emacs/">Emacs</a> 25.3.1 (<a href="http://orgmode.org">Org</a> mode 8.2.10)</p>
+<p class="validation"><a href="http://validator.w3.org/check?uri=referer">Validate</a></p>
+</div>
+</body>
+</html>
