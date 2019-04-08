@@ -1,0 +1,113 @@
+* Formularios
+
+  Sirven para coleccionar entrada del usuario:
+
+  #+BEGIN_SRC 
+<form>
+.
+form elements
+.
+</form>
+  
+  #+END_SRC
+
+** elementos 
+*** <input>
+se despliega distinto dependiendo del attributo `type`:
+1) "text"    one line input field
+2) "radio"   defines a radio button
+3) "submit" defines a submit button
+
+
+Cada tag de <input> DEBE especificar  un atributo `name` para que sea enviado 
+como un key/value pair con el submit. Si no se especifica `name`. No se manda. 
+
+Tambien puedes especificar de una el `value`de la dupla en el tag. 
+
+De estos, el servidor solo recibira  la dupla lastname=Mouse 
+
+#+BEGIN_SRC 
+<form action="/action_page.php">
+  First name:<br>
+  <input type="text" value="Mickey">
+  <br>
+  Last name:<br>
+  <input type="text" name="lastname" value="Mouse">
+  <br><br>
+  <input type="submit" value="Submit">
+</form> 
+
+
+#+END_SRC
+*** action attribute
+defines the action to be performed when the form is submitted.
+#+BEGIN_SRC 
+<form action="/action_page.php">
+#+END_SRC
+
+Esto ejecuta el script ubicado en esa URL. 
+%% preguntar si lo vamosa utilizar. 
+
+
+*** target Attribute
+The target attribute specifies if the submitted result will open in a new browser tab, a frame, or in the current window.
+
+The default value is "_self" which means the form will be submitted in the current window.
+
+To make the form result open in a new browser tab, use the value "_blank":
+
+#+BEGIN_SRC 
+<form action="/action_page.php" target="_blank">
+#+END_SRC
+
+
+*** The Method Attribute
+The method attribute specifies the HTTP method (GET or POST) to be used when submitting the form data:
+
+#+BEGIN_SRC 
+
+<form action="/action_page.php" method="get"> // o "post" 
+#+END_SRC
+
+*** <fieldset>
+The fieldset element is used to group related data in a form, and the legend element defines a caption for the fieldset element.
+
+#+BEGIN_SRC 
+<form action="/action_page.php">
+  <fieldset>
+    <legend>Personal information:</legend>
+    First name:<br>
+    <input type="text" name="firstname" value="Mickey">
+    <br>
+    Last name:<br>
+    <input type="text" name="lastname" value="Mouse">
+    <br><br>
+    <input type="submit" value="Submit">
+  </fieldset>
+</form>
+
+#+END_SRC
+
+
+** ¿Cuándo se usa GET?
+The default method when submitting form data is GET.
+
+However, when GET is used, the submitted form data will be visible in the page address field.
+
+#+BEGIN_SRC 
+/action_page.php?firstname=Mickey&lastname=Mouse
+
+#+END_SRC
+***** Appends form-data into the URL in name/value pairs
+***** The length of a URL is limited (about 3000 characters)
+***** Never use GET to send sensitive data! (will be visible in the URL)
+***** Useful for form submissions where a user wants to bookmark the result
+***** GET is better for non-secure data, like query strings in Google
+
+** ¿Cuándo se usa POST?
+Always use POST if the form data contains sensitive or personal information. The POST method does not display the submitted form data in the page address field.
+
+Notes on POST:
+
+***** POST has no size limitations, and can be used to send large amounts of data.
+***** Form submissions with POST cannot be bookmarked

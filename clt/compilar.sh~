@@ -1,0 +1,8 @@
+#!/bin/bash
+
+mv ~/Downloads/*.pdf ~/Libros
+mv ~/Downloads/*.djvu ~/Libros
+mv ~/Downloads/*.chm ~/Libros
+mv ~/Downloads/*.cbr ~/Libros/Comics
+mv ~/Downloads/*.cbz ~/Libros/Comics
+mv ~/Downloads/*.epub ~/Libros

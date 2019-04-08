@@ -1,0 +1,31 @@
+#+TITLE: Trabajo en bases de datos 1
+
+#+SUBTITLE: Los sistemas POSIX y la memoria NVM/SCM
+#+AUTHOR: Jonatan Ahumada Fernández
+
+El diseño de sistemas operativos estuvo, en gran medida, constreñido al hardware disponible. En particular, 
+se señala el hecho de que, si hubiera sido posible el acceso a disposiivos de memoria rápidos, persistentes y /byte addressable/,
+ los sistemas operativos  hubieran sido dramaticamente distintos. Hoy en día, las nuevas tecnologías disponibles en cuanto dispositivos de memorias evidencian 
+estas "profundas" ineficiencias, las cuales no eran evidentes bajo el paradigma que imponía el /hardware/ anterior.
+La problemática fundamental se estudia en torno al funcionamiento de los sistemas POSIX en conjunto con la memoria NVM/SCM. Puntualmente, se estudia el hecho 
+de que, si un controlador de POSIX intenta gestionar memoria NVM/SCM, le es imposible usar su cualidad más benéfica: que es /byte addressable/.
+El motivo de esta contradicción radica en el funcionamiento del *sistema de archivos* y los *bloques*  según el estándar POSIX. 
+Para comprobar esto, el artículo comparó la ejecución de diferentes aplicaciones en diferentes procesadores utilizando la misma plataforma:
+ Ubuntu Linux (3.13.0-24, 3.13.0- 95, 4.2.0-42 kernel versions), utilizando
+distintos distintos dispositivos de memoria y distintos sistemas de archivos. Se encontró que un conjunto específico de *llamadas al sistema* (las relacionadas a la gestión de /metadata/)
+ ocasionaban el mayor desperdicio de recursos. Por último, se concluyó que el estandar POSIX no puede aprovechar las ventajas que ofrece la memoria NVM y que, por lo tanto, este subconjunto 
+de llamadas al sistema se deben optimizar.
+
+El artículo relacionó muchos temas del marco conceptual de la clase y fue posible, a grandes rasgos, comprenderlo gracias a eso. Los temas de intersección con el
+curso fueron concretamente: a) dispositivos y gestión de memoria), b) concepto de /kernel/ c) servicios del kernel y *system calls*, d) gestión de archivos y, por último,
+e) historia y evolución de los sistemas operativos. La distinción entre /byte addresable/ y /word adressable/, aunque se refieren a temas de gestión de memoria a bajo nivel,
+ también fue comprensible, sobre todo si se complementa con los 
+capítulos sobre jerarquía de memoria y migración de la información que se encuentran en la bibliografía principal del curso. Personalmente, el artículo capturó mi atención
+porque cuestionó, a la luz del surgimiento de nuevas tecnologías, la eficacia del POSIX, un estándar muy reverenciado (pienso, por ejemplo, en los movimientos  GNU, Un*x y FreeBSD) entre los programadores "de pura cepa".
+
+
+
+
+bibliography:./basesDeDatos1.bib
+
+

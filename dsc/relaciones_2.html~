@@ -4,7 +4,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
 <head>
 <title>relaciones_2</title>
-<!-- 2019-02-07 Thu 23:43 -->
+<!-- 2019-02-07 Thu 23:44 -->
 <meta  http-equiv="Content-Type" content="text/html;charset=utf-8" />
 <meta  name="generator" content="Org-mode" />
 <meta  name="author" content="Jonathan Ahumada" />
@@ -210,21 +210,29 @@ for the JavaScript code in this tag.
 <li><a href="#sec-4-1-3">4.1.3. Rando y dominio</a></li>
 </ul>
 </li>
-<li><a href="#sec-4-2">4.2. Forma implicita</a></li>
-<li><a href="#sec-4-3">4.3. Matriz de relación</a></li>
-<li><a href="#sec-4-4">4.4. Operaciones entre relaciones</a>
+<li><a href="#sec-4-2">4.2. Sagital</a></li>
+<li><a href="#sec-4-3">4.3. Forma implicita</a></li>
+<li><a href="#sec-4-4">4.4. Matriz de relación</a></li>
+</ul>
+</li>
+<li><a href="#sec-5">5. Operaciones entre relaciones</a>
 <ul>
-<li><a href="#sec-4-4-1">4.4.1. Union (&cup;)</a></li>
-<li><a href="#sec-4-4-2">4.4.2. Interseccion (&cap;)</a></li>
-<li><a href="#sec-4-4-3">4.4.3. Diferencia (-)</a></li>
-<li><a href="#sec-4-4-4">4.4.4. Complementario (<sup>c</sup>)</a></li>
+<li>
+<ul>
+<li><a href="#sec-5-0-1">5.0.1. Union (&cup;)</a></li>
+<li><a href="#sec-5-0-2">5.0.2. Interseccion (&cap;)</a></li>
+<li><a href="#sec-5-0-3">5.0.3. Diferencia (-)</a></li>
+<li><a href="#sec-5-0-4">5.0.4. Complementario (<sup>c</sup>)</a></li>
 </ul>
 </li>
-<li><a href="#sec-4-5">4.5. Composición de relaciones</a></li>
-<li><a href="#sec-4-6">4.6. Solucion</a></li>
-<li><a href="#sec-4-7">4.7. Relaciones n-arias</a></li>
 </ul>
 </li>
+<li><a href="#sec-6">6. Composición de relaciones</a>
+<ul>
+<li><a href="#sec-6-1">6.1. Solucion</a></li>
+</ul>
+</li>
+<li><a href="#sec-7">7. Relaciones n-arias</a></li>
 </ul>
 </div>
 </div>
@@ -438,10 +446,18 @@ son conjuntos y se notan como.
 </div>
 </div>
 
-
 <div id="outline-container-sec-4-2" class="outline-3">
-<h3 id="sec-4-2"><span class="section-number-3">4.2</span> Forma implicita</h3>
+<h3 id="sec-4-2"><span class="section-number-3">4.2</span> Sagital</h3>
 <div class="outline-text-3" id="text-4-2">
+<p>
+Con diagramas ovaloides clásicos (diagramas de Venn).
+</p>
+</div>
+</div>
+
+<div id="outline-container-sec-4-3" class="outline-3">
+<h3 id="sec-4-3"><span class="section-number-3">4.3</span> Forma implicita</h3>
+<div class="outline-text-3" id="text-4-3">
 <p>
 En vez de decir cuáles son los pares. Decir una propiedad si el par ij esta en el subconjunto.
 </p>
@@ -463,9 +479,9 @@ Se define la siguiente relacion en AxA.
 </div>
 
 
-<div id="outline-container-sec-4-3" class="outline-3">
-<h3 id="sec-4-3"><span class="section-number-3">4.3</span> Matriz de relación</h3>
-<div class="outline-text-3" id="text-4-3">
+<div id="outline-container-sec-4-4" class="outline-3">
+<h3 id="sec-4-4"><span class="section-number-3">4.4</span> Matriz de relación</h3>
+<div class="outline-text-3" id="text-4-4">
 <p>
 Si A = {1,4,5}
 </p>
@@ -499,32 +515,33 @@ del producto cartesiano y en la primera fila el segundo.
 \end{equation}
 </div>
 </div>
+</div>
 
 
-<div id="outline-container-sec-4-4" class="outline-3">
-<h3 id="sec-4-4"><span class="section-number-3">4.4</span> Operaciones entre relaciones</h3>
-<div class="outline-text-3" id="text-4-4">
-</div><div id="outline-container-sec-4-4-1" class="outline-4">
-<h4 id="sec-4-4-1"><span class="section-number-4">4.4.1</span> Union (&cup;)</h4>
-<div class="outline-text-4" id="text-4-4-1">
+<div id="outline-container-sec-5" class="outline-2">
+<h2 id="sec-5"><span class="section-number-2">5</span> Operaciones entre relaciones</h2>
+<div class="outline-text-2" id="text-5">
+</div><div id="outline-container-sec-5-0-1" class="outline-4">
+<h4 id="sec-5-0-1"><span class="section-number-4">5.0.1</span> Union (&cup;)</h4>
+<div class="outline-text-4" id="text-5-0-1">
 <p>
 Se suman las matrices de relaciones.  Como son matrices
 de relaciones. La suma de dos 1 da 1 (suma booleana).
 </p>
 </div>
 </div>
-<div id="outline-container-sec-4-4-2" class="outline-4">
-<h4 id="sec-4-4-2"><span class="section-number-4">4.4.2</span> Interseccion (&cap;)</h4>
-<div class="outline-text-4" id="text-4-4-2">
+<div id="outline-container-sec-5-0-2" class="outline-4">
+<h4 id="sec-5-0-2"><span class="section-number-4">5.0.2</span> Interseccion (&cap;)</h4>
+<div class="outline-text-4" id="text-5-0-2">
 <p>
 Producto booleano (&otimes;) elemento a elemento.
 Solamennte quedan los 1 que estan en la misma posición.
 </p>
 </div>
 </div>
-<div id="outline-container-sec-4-4-3" class="outline-4">
-<h4 id="sec-4-4-3"><span class="section-number-4">4.4.3</span> Diferencia (-)</h4>
-<div class="outline-text-4" id="text-4-4-3">
+<div id="outline-container-sec-5-0-3" class="outline-4">
+<h4 id="sec-5-0-3"><span class="section-number-4">5.0.3</span> Diferencia (-)</h4>
+<div class="outline-text-4" id="text-5-0-3">
 <p>
 Se restan elemento a elemento. En la resta
 booleana 0-1 = 0. Luego, se quitan los unos que estén 
@@ -532,9 +549,9 @@ en ambos.
 </p>
 </div>
 </div>
-<div id="outline-container-sec-4-4-4" class="outline-4">
-<h4 id="sec-4-4-4"><span class="section-number-4">4.4.4</span> Complementario (<sup>c</sup>)</h4>
-<div class="outline-text-4" id="text-4-4-4">
+<div id="outline-container-sec-5-0-4" class="outline-4">
+<h4 id="sec-5-0-4"><span class="section-number-4">5.0.4</span> Complementario (<sup>c</sup>)</h4>
+<div class="outline-text-4" id="text-5-0-4">
 <p>
 Los que no están en la relación.
 Es lo mismo que cambiar los 1 por 0 y viceversa.
@@ -544,9 +561,9 @@ Se puede hacer restandole a todo el producto cartesiano la relacion (R<sup>c</su
 </div>
 </div>
 
-<div id="outline-container-sec-4-5" class="outline-3">
-<h3 id="sec-4-5"><span class="section-number-3">4.5</span> Composición de relaciones</h3>
-<div class="outline-text-3" id="text-4-5">
+<div id="outline-container-sec-6" class="outline-2">
+<h2 id="sec-6"><span class="section-number-2">6</span> Composición de relaciones</h2>
+<div class="outline-text-2" id="text-6">
 <p>
 Primero, recordar que 
 </p>
@@ -555,10 +572,9 @@ Primero, recordar que
 (SoR)(x)\ = S(R(x))
 \end{equation}
 </div>
-</div>
-<div id="outline-container-sec-4-6" class="outline-3">
-<h3 id="sec-4-6"><span class="section-number-3">4.6</span> Solucion</h3>
-<div class="outline-text-3" id="text-4-6">
+<div id="outline-container-sec-6-1" class="outline-3">
+<h3 id="sec-6-1"><span class="section-number-3">6.1</span> Solucion</h3>
+<div class="outline-text-3" id="text-6-1">
 <ol class="org-ol">
 <li>Calcular primero la función interna (R(x)).
 </li>
@@ -579,20 +595,20 @@ hay intrrupciones o similares, no pertenece a la composición.
 </p>
 </div>
 </div>
+</div>
 
-<div id="outline-container-sec-4-7" class="outline-3">
-<h3 id="sec-4-7"><span class="section-number-3">4.7</span> Relaciones n-arias</h3>
-<div class="outline-text-3" id="text-4-7">
+<div id="outline-container-sec-7" class="outline-2">
+<h2 id="sec-7"><span class="section-number-2">7</span> Relaciones n-arias</h2>
+<div class="outline-text-2" id="text-7">
 <p>
 Son relaciones entre más de dos conjuntos.
 </p>
 </div>
 </div>
 </div>
-</div>
 <div id="postamble" class="status">
 <p class="author">Author: Jonathan Ahumada</p>
-<p class="date">Created: 2019-02-07 Thu 23:43</p>
+<p class="date">Created: 2019-02-07 Thu 23:44</p>
 <p class="creator"><a href="http://www.gnu.org/software/emacs/">Emacs</a> 25.3.1 (<a href="http://orgmode.org">Org</a> mode 8.2.10)</p>
 <p class="validation"><a href="http://validator.w3.org/check?uri=referer">Validate</a></p>
 </div>

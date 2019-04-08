@@ -1,0 +1,44 @@
+<html>
+<head>
+    <script>
+       
+        var quemado = 3;
+        var vidas = 3;
+      function adivinar(){
+       num1 = Number(document.getElementById("entrada").value);
+       console.log("entró")
+
+       console.log("numero ingresado:" + num1); 
+       if(num1 != quemado && vidas != 0){
+        vidas--;
+        document.getElementById("salida").innerHTML = "no adivinó, numero de intentos: "+ vidas;
+        
+       }else if(num1 = quemado && vidas != 0){
+        document.getElementById("salida").innerHTML= "adivinó";
+
+       }else if(vidas <= 0){
+        document.getElementById("salida").innerHTML= "Game over";
+
+
+       }
+
+      
+
+
+      }
+       
+        </script>
+
+</head> 
+<body>
+
+<table>
+    <tr> <td><input id="entrada" type="number"></td><td><button type="data" onclick="adivinar()">adivinar</button> </td></tr>
+    <tr><td colspan="2"><p id="salida"></p></td></tr>
+</table>
+
+
+
+</body></body>
+
+</html>

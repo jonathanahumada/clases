@@ -1,12 +1,20 @@
 #+DATE:<2019-02-05 Tue>
 #+TITLE: Recursividad, segunda parte
+#+AUTHOR: Jonatan Ahumada Fernández
+#+HTML_HEAD:<style>body { font-family: 'Crimson Text', serif;   font-size: 20px; color: #cf8e6b;  background-color: #273b49;} </style>
+#+HTML_HEAD:<style> #content{    width: 60%;    position: center;    margin-left: auto; margin-right: auto;} </style>
+#+HTML_HEAD: <style> a {  color:#f5b43c;}</style>
 
-
+* Recursividad (continuación)
 ** lenguajes funcionales
-"Más fácil de interpretar por las máquinas." 
-//Se supone que la definición fuerte de recursividad es comprensible así como están.
 
-//Hay una conexión entre la notación funcional y la sintaxis de Lisp que no logro hacer consciente. 
+Comencemos, pues, por un enigma:
+ #+BEGIN_QUOTE
+"El lenguaje funcional es más fácil de interpretar por las máquinas." --Arles Rodríguez
+#+END_QUOTE
+
+- Se supone que la definición fuerte de recursividad es comprensible así como están.
+- Hay una conexión entre la notación funcional y la sintaxis de Lisp (que no logro hacer consciente). 
 
 ** Sobre la ejecución en la máquina
 La máquina siempre evalúa de izquierda a derecha (según la precedencia usual).

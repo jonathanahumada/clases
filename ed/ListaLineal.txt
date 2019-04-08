@@ -1,0 +1,619 @@
+	   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+	    RECURSIVIDAD, INTRODUCCIÓN RECURSIVIDAD, SEGUNDA
+		    PARTE REFERENCIAS, SEGUNDA PARTE
+
+
+		       Jonatan Ahumada Fernández
+	   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+
+			    <2019-02-05 Tue>
+
+
+Table of Contents
+─────────────────
+
+1 Recursividad
+.. 1.1 Definición débil
+.. 1.2 Ejemplos
+..... 1.2.1 listas
+..... 1.2.2 combinaciones
+2 ¿Qué es una lista q?
+3 Implementación del ADT
+.. 3.1 Linked List
+..... 3.1.1 Código
+..... 3.1.2 Comentario
+
+
+
+
+
+1 Recursividad
+══════════════
+
+1.1 Definición débil
+────────────────────
+
+  1) se define por casos.
+  2) f se debe usar en su definición.
+  3) al menos uno de los otros casos se define usando los argumentos a
+     f.
+
+
+1.2 Ejemplos
+────────────
+
+  Para resolver los ejemplos. Según lo que es usual, se tiene que:
+  1) identificar variables.
+  2) expresar la función en términos de dominio y rango.
+  3) identificar los casos no recursivos. Es decir, donde da un valor
+     fijo.
+  4) encontrar la expresión recursiva. (usualmente implica un
+     decremento)
+
+
+1.2.1 listas
+╌╌╌╌╌╌╌╌╌╌╌╌
+
+  "Como se van a listar todas las formas posibles en que se pueden
+  organizar las cartas, el orden sí importa".
+
+  La expresión general de las listas es n!.
+
+
+1.2.2 combinaciones
+╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌
+
+  "Como se van a formar parejas, el orden no importa".  La notacion
+  `C(n, k) = c' quiere decir `n = elementos del conjunto` y `k = numero
+  de elementos de la combinación` y `c = numero de conjuntos e k
+  elementos.
+
+
+◊ 1.2.2.1 Recursicidad (continuación)
+
+  ◊ 1.2.2.1.1 lenguajes funcionales
+
+    Comencemos, pues, por un enigma:
+          "El lenguaje funcional es más fácil de interpretar por
+          las máquinas." –Arles Rodríguez
+
+    • Se supone que la definición fuerte de recursividad es comprensible
+      así como están.
+    • Hay una conexión entre la notación funcional y la sintaxis de Lisp
+      (que no logro hacer consciente).
+
+
+  ◊ 1.2.2.1.2 Sobre la ejecución en la máquina
+
+    La máquina siempre evalúa de izquierda a derecha (según la
+    precedencia usual).  En las combinaciones, es interesante notar que
+    primero el término izquierdo de la expresión se evalúa
+    recursivamente hasta llegar al caso base y luego pasa al derecho:
+
+    ┌────
+    │ C(4,2)= C(3,1) + C(3,2)
+    │      =  (C()+ C() ) + C(3,2)
+    │      = (1 + C()) + C(3,2)   //etc.
+    └────
+
+
+  ◊ 1.2.2.1.3 Ordenamientos
+
+    La estrategia general de los ordenamientos es escoger uno de los
+    elementos del conjunto.  Luego, dibujar un árbol de posibilidades de
+    ordenamiento.  Nótese que:
+
+    1) solo un llamado recursivo (producto).
+    2) no es un árbol "per se", aunque se representa como árbol //
+       Aclarar esto
+
+
+  ◊ 1.2.2.1.4 Ejemplo
+
+    Suponga que selecciona cuatro cartas distintas de una baraja de
+    póker, que se van a representar por los símboloes (T,D,C,P). ¿De
+    cuántas formas puedo ordenar estas 4 cartas?
+
+
+    ◊ 1.2.2.1.4.1 Procedimiento
+
+      1) selecciona un elemento
+
+      2) Dibuja ur árbol de posibilidades a partir de ese elemento.
+         ┌────
+         │ 		C------P  
+         │       D+--------|     
+         │       |         P------C
+         │       |          D------P  
+         │ T ----C+--------|      
+         │       |         P------D   
+         │       |               
+         │       |         D-----C 
+         │       P+--------|  
+         │ 		C-----D
+         └────
+
+      3) Repite el árbol de posibilidades por cada elemento.
+
+         ┌────
+         │ 		C------P  
+         │       D+--------|     
+         │       |         P------C
+         │       |         D------P  
+         │ T ----C+--------|      
+         │       |         P------D   
+         │       |               
+         │       |         D-----C 
+         │       P+--------|  
+         │ 		C-----D          x n veces, donde n es la norma del conjunto
+         └────
+
+
+
+      1) Expresión matemática = n!
+
+
+    ◊ 1.2.2.1.4.2 Solución
+
+      hay 24 ordenamientos 4!.
+
+
+      ┌────
+      │ ordenar(x) = x ordenar(x-1)
+      └────
+
+
+  ◊ 1.2.2.1.5 Combinaciones
+
+    La estrategia general de las combinaciones es similar al de las
+    listas, pero como el orden no importa habrá menos. Nótese lo
+    siguiente:
+
+    1) Solo habrá un árbol.
+    2) recursivamente, una combinación implica una suma (ver ejemplo)
+    3) Hay que saber de qué tamaño sera el subconjunto que se debe
+       formar.
+    4) Cada nodo del árbol se divide en si sí o no usar un elemento
+       dentro de los subconjuntos.
+    5) ordenar elementos es a factorial, como escoger subconjuntos a
+       combinatorias
+
+
+    ◊ 1.2.2.1.5.1 Ejemplo
+
+      ¿De cuantas formas se pueden formar parejas de la familia Simpson
+      para que suban al vagón de la montaña rusa?
+
+
+    ◊ 1.2.2.1.5.2 Prodecimiento
+
+      1) Se escoge un elemento arbitrario del conjunto.
+      2) Se bifurcan dos ramas de esa escogencia, dependiendo de si se
+         escogió o no.
+      3) En un lado el numero de elementos del subconjunto disminuye.
+      4) En cada fila el número de elementos del conjunto disminuye.
+
+
+
+      ┌────
+      │ 		C(4,2)
+      │ 	       /  \
+      │ 	      /    \
+      │ 	     /      \
+      │ 	    /        \
+      │ 	   /          \
+      │ 	  /            \
+      │ 	 /              \
+      │ 	C(3,1)           C(3,2)
+      │  +-----------+     +------------+
+      │  |           |     |            |
+      │  |           |     |            |
+      │  |           |     |            |
+      │  |           |     |            |
+      │ C(2,0)  C(2,1)    C(2,1)       C(2,2)|
+      │ 	  +---+   +--+
+      │ 	  |   |   |  |
+      │ 	  |   |C(1,0)C(1,1) 
+      │      C(1,0) C(1,1)
+      └────
+
+
+    ◊ 1.2.2.1.5.3 Solución
+
+      Son 6 combinaciones.
+
+
+      ◊ 1.2.2.1.5.3.1 Referencias
+
+        ◊ 1.2.2.1.5.3.1.1 Repaso: Paso de parámetros
+
+          En Java, el paso de parámetros SIEMPRE es por valor, a menos
+          de que se esté tratando con tipos de datos primitivos.  Por
+          eso, los data types se dividen en:
+          1) Primitive types;
+          2) Reference types;
+
+
+        ◊ 1.2.2.1.5.3.1.2 Los valores son referencias
+
+          El valor de un reference type *es* la referencia. Por eso,
+          *aunque se pasa por valor, lo que se pasa es la referencia*.
+
+
+          ◊ 1.2.2.1.5.3.1.2.1 ¿Qué son referencias?
+
+            Q. ¿Qué se entiende pr referencia?
+
+            A. La referencia siempre denota la posición en memoria.
+
+
+        ◊ 1.2.2.1.5.3.1.3 Ejemplo
+
+          Para ilustrar el paso de referencias por valores, Arles nos
+          muestra varios casos de un swap.  Primero con primitivos y
+          luego con objetos.
+
+
+          ◊ 1.2.2.1.5.3.1.3.1 Primitivos
+
+            ┌────
+            │ /**
+            │  * This example pretends to show that Arguments passed to Java methods are passed by value. 
+            │  * That is, a copy of the arguments is made and passed to the corresponding parameters.
+            │  * @author Arles
+            │  */
+            │ public class TestSwap {
+            │ 
+            │     public static void swap(int x, int y) {
+            │ 	int temp; 
+            │ 	temp = x;
+            │ 	x = y;
+            │ 	y = temp;
+            │     }
+            │ 
+            │ public static void main(String[] args) {
+            │ 	int a=4;
+            │ 	int b=5;
+            │ 	swap(a, b);
+            │ 	System.out.println("a=" + a); // 4
+            │ 	System.out.println("b=" + b); // 5
+            │     }
+            └────
+
+            Como se pasan parámetros por valor, los enteros 4 y 5 se
+            copian y luego se asignan a variables temporales, solo
+            existentes dentro del bloque del método. Las variables `a`y
+            `b` permanecen con su valor original.
+
+
+          ◊ 1.2.2.1.5.3.1.3.2 Con los wrappers Integer()
+
+            No entendí muy bien por qué esto no funciona.
+
+
+          ◊ 1.2.2.1.5.3.1.3.3 TODO preguntar
+
+            ┌────
+            │ public class TestSwap2 {
+            │ 
+            │     public static void swap(Object x, Object y) {
+            │ 	Object temp;
+            │ 	temp = x; // entra referencia a `a`
+            │ 	x = y; // entra referencia a `y`
+            │ 	y = temp; // pasa referencia a `a`
+            │ 
+            │     }
+            │ 
+            │     public static void main(String[] args) {
+            │ 	Integer a = new Integer(4);
+            │ 	Integer b = new Integer(5);
+            │ 	swap(a, b);
+            │ 	System.out.println("a=" + a); // 4
+            │ 	System.out.println("b=" + b); // 5
+            │     }
+            │ }
+            └────
+
+
+          ◊ 1.2.2.1.5.3.1.3.4 Este sí sirve
+
+            Puedo crear estructuras de dato de clase objeto.  Si pasamos
+            propiedades de objetos, estamos pasando referencias. Por lo
+            tanto, modificarlo lo cambia en todas las variables que
+            tengan la referencia.
+            ┌────
+            │ class Wrapper {
+            │ 
+            │     public Object obj;
+            │ }
+            │ 
+            │ public class TestSwap3 {
+            │ 
+            │     public static void swap(Wrapper x, Wrapper y) {
+            │ 	Object temp = x.obj;
+            │ 	x.obj = y.obj;
+            │ 	y.obj = temp;
+            │ 
+            │ // El punto aquí es que x.obj y y.obj tienen la misma referencia que a y b en el main. Por eso *sí* cambia el valor en el main
+            │     }
+            │ 
+            │     public static void main(String[] args) {
+            │ 	Wrapper a = new Wrapper();
+            │ 	a.obj = 4;
+            │ 	Wrapper b = new Wrapper();
+            │ 	b.obj = 5;
+            │ 	swap(a, b);
+            │ 	System.out.println("a=" + a.obj);
+            │ 	System.out.println("b=" + b.obj);
+            │     }
+            │ 
+            │ }
+            └────
+
+
+        ◊ 1.2.2.1.5.3.1.4 Explicación de una lista con clases
+
+          Aquí es importante entender cómo funcionan las referencias.
+          Cada nodo de la lista puede contener a object. Es decir,
+          cualquier cosa.
+
+          ┌────
+          │ +-----------------+     +-----------------+
+          │ |  Nodo           |     |   Lista         |
+          │ |                 |     |                 |
+          │ | info: object    |<--- |  first: Node    |
+          │ |                 |     |                 |
+          │ | next: Node      |     |                 |
+          │ |                 |     |                 |
+          │ |                 |     |                 |
+          │ +-----------------+     +-----------------+
+          └────
+
+
+        ◊ 1.2.2.1.5.3.1.5 Objetos
+
+                "Una clase es una colección de atributos y
+                métodos". –Arles Rodríguez
+
+
+          ◊ 1.2.2.1.5.3.1.5.1 herencia: repaso
+
+
+          ◊ 1.2.2.1.5.3.1.5.2 abstract: repaso
+
+
+          ◊ 1.2.2.1.5.3.1.5.3 Polimorfismo
+
+            Como resuelvo 'el problema fundamental del polimorfismo':
+            toca volver a castear hacia abajo.
+
+
+2 ¿Qué es una lista lineal?
+═══════════════════════════
+
+  Primero que todo,
+  • es un ADT (abstract data structure), es decir, su definición está
+    separada de su implementación.
+  • se define matematicamenta como una secuencia de elementos finitos
+  • finitos = tiene length
+  • tienen posición y esta se denota mediante un subindice
+
+
+3 Implementación del ADT
+════════════════════════
+
+  La implementación más abstracta del linear list dentro de Java viene
+  en la forma de una interfaz:
+
+  ┌────
+  │ public interface LinearList {
+  │ 
+  │     public boolean isEmpty();
+  │ 
+  │     public int size();
+  │ 
+  │     public Object get(int index);
+  │ 
+  │     public int indexOf(Object theElement);
+  │ 
+  │     public Object remove(int index);
+  │ 
+  │     public void add(int index, Object theElement);
+  │ 
+  │     public String toString();
+  │ }
+  └────
+
+  Este contrato satisface la definición según el ADT de una linear list.
+
+  Ahora bien, la linear list se puede implementar:
+  1) Como arreglo
+  2) Como lista enlazada (linked list)
+
+
+3.1 Linked List
+───────────────
+
+3.1.1 Código
+╌╌╌╌╌╌╌╌╌╌╌╌
+
+  ┌────
+  │ package tallerlinearlist;
+  │ 
+  │ import utilities.ChangeArrayLength;
+  │ 
+  │ 
+  │ 
+  │ /**
+  │  *
+  │  * @author Arles
+  │  */
+  │ public class ArrayLinearList implements LinearList {
+  │ 
+  │     // data members
+  │     protected Object[] element; // array of elements
+  │     protected int size; // number of elements in array
+  │ 
+  │     /**
+  │      * create a list with initial capacity initialCapacity
+  │      *
+  │      * @throws IllegalArgumentException when initialCapacity < 1
+  │      */
+  │     public ArrayLinearList(int initialCapacity) {
+  │ 	if (initialCapacity < 1) {
+  │ 	    throw new IllegalArgumentException("initialCapacity must be >= 1");
+  │ 	}
+  │ 	element = new Object[initialCapacity];
+  │     }
+  │ 
+  │     /**
+  │      * create a list with initial capacity 10
+  │      */
+  │     public ArrayLinearList() {// use default capacity of 10
+  │ 	this(10);
+  │     }
+  │ 
+  │     @Override
+  │     public boolean isEmpty() {
+  │ 	return size == 0;
+  │     }
+  │ 
+  │     @Override
+  │     public int size() {
+  │ 	return size;
+  │     }
+  │ 
+  │     /**
+  │      * @throws IndexOutOfBoundsException when index is not between 0 and size -
+  │      * 1
+  │      */
+  │     void checkIndex(int index) {
+  │ 	if (index < 0 || index >= size) {
+  │ 	    throw new IndexOutOfBoundsException("index = " + index + " size = " + size);
+  │ 	}
+  │     }
+  │ 
+  │     /**
+  │      * @return element with specified index
+  │      * @throws IndexOutOfBoundsException when index is not between 0 and size -
+  │      * 1
+  │      */
+  │     @Override
+  │     public Object get(int index) {
+  │ 	checkIndex(index);
+  │ 	return element[index];
+  │     }
+  │ 
+  │     /**
+  │      * @return index of first occurrence of theElement, return -1 if theElement
+  │      * not in list
+  │      */
+  │     @Override
+  │     public int indexOf(Object theElement) {
+  │ 	// search element[] for theElement
+  │ 	for (int i = 0; i < size; i++) {
+  │ 	    if (element[i].equals(theElement)) {
+  │ 		return i;
+  │ 	    }
+  │ 	}
+  │ 	// theElement not found
+  │ 	return -1;
+  │     }
+  │ 
+  │     /**
+  │      * Remove the element with specified index. All elements with higher index
+  │      * have their index reduced by 1.
+  │      *
+  │      * @throws IndexOutOfBoundsException when index is not between 0 and size -
+  │      * 1
+  │      * @return removed element
+  │      */
+  │     public Object remove(int index) {
+  │ 	checkIndex(index);
+  │ 	// valid index, shift elements with higher index
+  │ 	Object removedElement = element[index];
+  │ 	for (int i = index + 1; i < size; i++) {
+  │ 	    element[i - 1] = element[i];
+  │ 	}
+  │ 	element[--size] = null;
+  │ 	return removedElement;
+  │     }
+  │ 
+  │     /**
+  │      * All elements with equal or higher index have their index increased by 1.
+  │      *
+  │      * @param index
+  │      * @param theElement
+  │      * @throws IndexOutOfBoundsException when index is not between 0 and size
+  │      */
+  │     @Override
+  │     public void add(int index, Object theElement) {
+  │ 	if (index < 0 || index > size) {
+  │ 	    throw new IndexOutOfBoundsException("index = " + index + " size = " + size);
+  │ 	}
+  │ 	if (size == element.length) // no space, double capacity
+  │ 	{
+  │ 	    element = ChangeArrayLength.changeLength1D(element, 2 * size);
+  │ 	}
+  │ 	// shift elements right one position
+  │ 	for (int i = size - 1; i >= index; i--) {
+  │ 	    element[i + 1] = element[i];
+  │ 	}
+  │ 	element[index] = theElement;
+  │ 	size++;
+  │     }
+  │ 
+  │     /**
+  │      * convert to a string
+  │      */
+  │     @Override
+  │     public String toString() {
+  │ 	StringBuffer s = new StringBuffer("[");
+  │ 	// put elements into the buffer
+  │ 	for (int i = 0; i < size; i++) {
+  │ 	    if (element[i] == null) {
+  │ 		s.append("null, ");
+  │ 	    } else {
+  │ 		s.append(element[i].toString() + ", ");
+  │ 	    }
+  │ 	}
+  │ 	if (size > 0) {
+  │ 	    s.delete(s.length() - 2, s.length());
+  │ 	}
+  │ 	s.append("]");
+  │ 	// create equivalent String
+  │ 	return new String(s);
+  │     }
+  └────
+
+
+3.1.2 Comentario
+╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌
+
+  • hay una distinción entre size y length
+  • size = numero de elementos el arreglo
+  • size es un contador que se incrementa con cada llamada a add()
+  • length es el 'initial capacity', según lo dictamina la definición de
+    un arreglo. (hay que saber de qué tamaño es el arreglo antes de
+    inicializarlo)
+  • el length solo se toca 1) en el constructor,
+  • por defecto es 10 según la política de java,
+  • y 2) cuando size = length al agregar más elementos que los que
+    permite su capacidad inicial
+  • En ese caso se llama changeArraylength(), que duplica su capacidad
+    (O(n^2))
+  • Dentro de changeArrayLength() se hace una llamada al sistema con
+    *arrayCopy()*
+  • Lo que hace array copy es qu directamente copia los bytes desde una
+    posición en memoria a otra
+  • es mucho más rápido que trabajar con las abstracciones de un
+    lenguaje de programación
+  • se hace un shift de todos los elementos para ingresarlo en el indez
+  • curiosidad: checkindex se abstrae porque es más cómodo
+  • muchos métodos retornan -1, según lo estipula el ADT
+  • el toString() hace append una string "null" si es nulo. (Soluciona
+    lo de null pointer exception)
+  • se usa el StringBuffer para concatenar cómodamente
+  • Se cuenta con el hecho de que cada elemento tenga su correspondiente
+    toString(),

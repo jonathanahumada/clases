@@ -1,0 +1,394 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+<head>
+<title>Procesos</title>
+<!-- 2019-03-11 Mon 14:24 -->
+<meta  http-equiv="Content-Type" content="text/html;charset=utf-8" />
+<meta  name="generator" content="Org-mode" />
+<meta  name="author" content="Jonatan Ahumada Fernández" />
+<style type="text/css">
+ <!--/*--><![CDATA[/*><!--*/
+  .title  { text-align: center; }
+  .todo   { font-family: monospace; color: red; }
+  .done   { color: green; }
+  .tag    { background-color: #eee; font-family: monospace;
+            padding: 2px; font-size: 80%; font-weight: normal; }
+  .timestamp { color: #bebebe; }
+  .timestamp-kwd { color: #5f9ea0; }
+  .right  { margin-left: auto; margin-right: 0px;  text-align: right; }
+  .left   { margin-left: 0px;  margin-right: auto; text-align: left; }
+  .center { margin-left: auto; margin-right: auto; text-align: center; }
+  .underline { text-decoration: underline; }
+  #postamble p, #preamble p { font-size: 90%; margin: .2em; }
+  p.verse { margin-left: 3%; }
+  pre {
+    border: 1px solid #ccc;
+    box-shadow: 3px 3px 3px #eee;
+    padding: 8pt;
+    font-family: monospace;
+    overflow: auto;
+    margin: 1.2em;
+  }
+  pre.src {
+    position: relative;
+    overflow: visible;
+    padding-top: 1.2em;
+  }
+  pre.src:before {
+    display: none;
+    position: absolute;
+    background-color: white;
+    top: -10px;
+    right: 10px;
+    padding: 3px;
+    border: 1px solid black;
+  }
+  pre.src:hover:before { display: inline;}
+  pre.src-sh:before    { content: 'sh'; }
+  pre.src-bash:before  { content: 'sh'; }
+  pre.src-emacs-lisp:before { content: 'Emacs Lisp'; }
+  pre.src-R:before     { content: 'R'; }
+  pre.src-perl:before  { content: 'Perl'; }
+  pre.src-java:before  { content: 'Java'; }
+  pre.src-sql:before   { content: 'SQL'; }
+
+  table { border-collapse:collapse; }
+  caption.t-above { caption-side: top; }
+  caption.t-bottom { caption-side: bottom; }
+  td, th { vertical-align:top;  }
+  th.right  { text-align: center;  }
+  th.left   { text-align: center;   }
+  th.center { text-align: center; }
+  td.right  { text-align: right;  }
+  td.left   { text-align: left;   }
+  td.center { text-align: center; }
+  dt { font-weight: bold; }
+  .footpara:nth-child(2) { display: inline; }
+  .footpara { display: block; }
+  .footdef  { margin-bottom: 1em; }
+  .figure { padding: 1em; }
+  .figure p { text-align: center; }
+  .inlinetask {
+    padding: 10px;
+    border: 2px solid gray;
+    margin: 10px;
+    background: #ffffcc;
+  }
+  #org-div-home-and-up
+   { text-align: right; font-size: 70%; white-space: nowrap; }
+  textarea { overflow-x: auto; }
+  .linenr { font-size: smaller }
+  .code-highlighted { background-color: #ffff00; }
+  .org-info-js_info-navigation { border-style: none; }
+  #org-info-js_console-label
+    { font-size: 10px; font-weight: bold; white-space: nowrap; }
+  .org-info-js_search-highlight
+    { background-color: #ffff00; color: #000000; font-weight: bold; }
+  /*]]>*/-->
+</style>
+<style>body { font-family: 'Crimson Text', serif;   font-size: 20px; color: #cf8e6b;  background-color: #273b49;} </style>
+<style> #content{    width: 60%;    position: center;    margin-left: auto; margin-right: auto;} </style>
+<style> a {  color:#f5b43c;}</style>
+<script type="text/javascript">
+/*
+@licstart  The following is the entire license notice for the
+JavaScript code in this tag.
+
+Copyright (C) 2012-2013 Free Software Foundation, Inc.
+
+The JavaScript code in this tag is free software: you can
+redistribute it and/or modify it under the terms of the GNU
+General Public License (GNU GPL) as published by the Free Software
+Foundation, either version 3 of the License, or (at your option)
+any later version.  The code is distributed WITHOUT ANY WARRANTY;
+without even the implied warranty of MERCHANTABILITY or FITNESS
+FOR A PARTICULAR PURPOSE.  See the GNU GPL for more details.
+
+As additional permission under GNU GPL version 3 section 7, you
+may distribute non-source (e.g., minimized or compacted) forms of
+that code without the copy of the GNU GPL normally required by
+section 4, provided you include this license notice and a URL
+through which recipients can access the Corresponding Source.
+
+
+@licend  The above is the entire license notice
+for the JavaScript code in this tag.
+*/
+<!--/*--><![CDATA[/*><!--*/
+ function CodeHighlightOn(elem, id)
+ {
+   var target = document.getElementById(id);
+   if(null != target) {
+     elem.cacheClassElem = elem.className;
+     elem.cacheClassTarget = target.className;
+     target.className = "code-highlighted";
+     elem.className   = "code-highlighted";
+   }
+ }
+ function CodeHighlightOff(elem, id)
+ {
+   var target = document.getElementById(id);
+   if(elem.cacheClassElem)
+     elem.className = elem.cacheClassElem;
+   if(elem.cacheClassTarget)
+     target.className = elem.cacheClassTarget;
+ }
+/*]]>*///-->
+</script>
+</head>
+<body>
+<div id="content">
+<h1 class="title">Procesos</h1>
+<div id="table-of-contents">
+<h2>Table of Contents</h2>
+<div id="text-table-of-contents">
+<ul>
+<li><a href="#sec-1">1. Terminar conceptos</a>
+<ul>
+<li><a href="#sec-1-1">1.1. Concepto de proceso</a></li>
+<li><a href="#sec-1-2">1.2. ¿Qué datos están asociados al proceso?</a></li>
+<li><a href="#sec-1-3">1.3. ¿Qué es un entorno de ejecución?</a></li>
+<li><a href="#sec-1-4">1.4. Estados</a></li>
+<li><a href="#sec-1-5">1.5. Historia</a></li>
+<li><a href="#sec-1-6">1.6. Características</a></li>
+<li><a href="#sec-1-7">1.7. memoria virtual</a>
+<ul>
+<li><a href="#sec-1-7-1">1.7.1. paginación</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a href="#sec-2">2. Herramientas de supervisión de recursos</a>
+<ul>
+<li><a href="#sec-2-1">2.1. tipos</a>
+<ul>
+<li><a href="#sec-2-1-1">2.1.1. tiempo real</a></li>
+<li><a href="#sec-2-1-2">2.1.2. registrada</a></li>
+</ul>
+</li>
+<li><a href="#sec-2-2">2.2. Qué se supervisa</a></li>
+<li><a href="#sec-2-3">2.3. windows</a></li>
+</ul>
+</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-sec-1" class="outline-2">
+<h2 id="sec-1"><span class="section-number-2">1</span> Terminar conceptos</h2>
+<div class="outline-text-2" id="text-1">
+</div><div id="outline-container-sec-1-1" class="outline-3">
+<h3 id="sec-1-1"><span class="section-number-3">1.1</span> Concepto de proceso</h3>
+<div class="outline-text-3" id="text-1-1">
+<blockquote>
+<p>
+"el proceso se puede definir como un programa en ejecución y, de una forma un poco más precisa, como la unidad de procesamiento gestionada por el sistema operativo."
+&#x2013; Jesús Carretero
+</p>
+</blockquote>
+<p>
+   La mayoría de os está basado en procesos. Para definirlo:
+Una actividad que se está desarrollando: 
+</p>
+<ol class="org-ol">
+<li>asociado a programa ejecutable 
+</li>
+<li>datos asociados o variables: debe haber un recurso de memoria asignado a ese proceso.
+</li>
+<li>contexto de ejecución 
+</li>
+</ol>
+</div>
+</div>
+<div id="outline-container-sec-1-2" class="outline-3">
+<h3 id="sec-1-2"><span class="section-number-3">1.2</span> ¿Qué datos están asociados al proceso?</h3>
+<div class="outline-text-3" id="text-1-2">
+<blockquote>
+<p>
+"Una parte muy importante de estas informaciones se encuentra en el llamado bloque de control del proceso (BCP). El sistema operativo mantiene una tabla de procesos con todos los BCP de los procesos. Por razones de eficiencia, la tabla de procesos se construye normalmente como una estructura estática, que tiene un determinado número de BCP, todos ellos del mismo tamaño. El contenido del BCP se analizará con más detalle en secciones posteriores; sin embargo, de manera introductoria se puede decir que la información que compone un proceso es la siguiente:
+</p>
+<ul class="org-ul">
+<li>Contenido de los segmentos de memoria en los que residen el código y los datos del proceso. A esta información se le denomina imagen de memoria o core image.
+</li>
+<li>Contenido de los registros del modelo de programación.
+</li>
+<li>Contenido del BCP."
+</li>
+</ul>
+<p>
+&#x2013; Jesus Carretero
+</p>
+</blockquote>
+</div>
+</div>
+<div id="outline-container-sec-1-3" class="outline-3">
+<h3 id="sec-1-3"><span class="section-number-3">1.3</span> ¿Qué es un entorno de ejecución?</h3>
+<div class="outline-text-3" id="text-1-3">
+<blockquote>
+<p>
+"El entorno del proceso consiste en un conjunto de variables que se le pasan al proceso en el momento de su creación.
+El entorno está formado por una tabla NOMBRE-VALOR que se incluye en la pila del proceso. El NOMBRE especifica el nombre de la variable y el VALOR su valor. Un ejemplo de entorno en UNIX es el siguiente:
+</p>
+
+<p>
+PATH=/ USR/ bin: / home / pepe / bin TERM= vt 100
+HOME= /home/pepe
+PWD= / home /pepe /libros / primero
+</p>
+
+
+<p>
+En este ejemplo, PATH indica la lista de directorios en los que el sistema operativo busca los programas ejecutables, TERM el tipo de terminal, HOME el directorio inicial asociado al usuario y PWD cl directorio de trabajo actual.
+Los procesos pueden utilizar las variables del entorno para definir su comportamiento. Por ejemplo, un programa de edición responderá a las teclas de acuerdo al tipo de terminal que esté utilizando el usuario, que viene definido en la variable TERM.
+"
+</p>
+</blockquote>
+</div>
+</div>
+<div id="outline-container-sec-1-4" class="outline-3">
+<h3 id="sec-1-4"><span class="section-number-3">1.4</span> Estados</h3>
+<div class="outline-text-3" id="text-1-4">
+<p>
+Normalmente los procesos se encuentran en determinado estado:
+</p>
+<ol class="org-ol">
+<li>ejecución
+</li>
+<li>espera
+</li>
+<li>terminado
+</li>
+<li>esperando recursos
+</li>
+</ol>
+</div>
+</div>
+
+<div id="outline-container-sec-1-5" class="outline-3">
+<h3 id="sec-1-5"><span class="section-number-3">1.5</span> Historia</h3>
+<div class="outline-text-3" id="text-1-5">
+<p>
+El concepto 'proceso' ha venido evolucionando:
+</p>
+<ol class="org-ol">
+<li>lotes multiprogramación
+</li>
+<li>interrupciones
+</li>
+</ol>
+</div>
+</div>
+<div id="outline-container-sec-1-6" class="outline-3">
+<h3 id="sec-1-6"><span class="section-number-3">1.6</span> Características</h3>
+<div class="outline-text-3" id="text-1-6">
+<p>
+Hasta que ese nuevo evento deje de suceder, no va a cambiar de estado.
+Si no exitirera las eventualidades, tocaría esperar a que terminara el programa.
+</p>
+<ol class="org-ol">
+<li>sincronización incorrecta
+</li>
+<li>fallos de exclusión mutua: 
+</li>
+</ol>
+<p>
+que un usuario o un programa trate de usar un recurso compartido de forma simultánea.
+Ej: 2 personas compran la misma silla en el mismo tiempo. 
+El so tiene que estar en capacidad de reservar ese espacio a uno de los 2. 
+</p>
+<ol class="org-ol">
+<li>Funcionamiento no determinista del programa.
+</li>
+</ol>
+<p>
+Cuando los programas comparten memoria pueden sobreescribirse sin previo avisa.
+El sistema operativo debe estar en capacidad de manejar colas. 
+</p>
+<ol class="org-ol">
+<li>interbloqueo de operaciones
+</li>
+</ol>
+<p>
+Tengo aplicacion a y b y van a guardar información a memoria y unidad de cd, respectivamente.
+Ambas podrían quedar esperando a la otra a que termine.
+</p>
+</div>
+</div>
+
+<div id="outline-container-sec-1-7" class="outline-3">
+<h3 id="sec-1-7"><span class="section-number-3">1.7</span> memoria virtual</h3>
+<div class="outline-text-3" id="text-1-7">
+<p>
+Hace uso del almacenamiento primario y secundario. 
+</p>
+</div>
+<div id="outline-container-sec-1-7-1" class="outline-4">
+<h4 id="sec-1-7-1"><span class="section-number-4">1.7.1</span> paginación</h4>
+<div class="outline-text-4" id="text-1-7-1">
+<p>
+Cada proceso hace uso de la memoria y podría haber sobreescritura. La paginación
+impide esto. 
+</p>
+</div>
+</div>
+</div>
+</div>
+
+<div id="outline-container-sec-2" class="outline-2">
+<h2 id="sec-2"><span class="section-number-2">2</span> Herramientas de supervisión de recursos</h2>
+<div class="outline-text-2" id="text-2">
+</div><div id="outline-container-sec-2-1" class="outline-3">
+<h3 id="sec-2-1"><span class="section-number-3">2.1</span> tipos</h3>
+<div class="outline-text-3" id="text-2-1">
+</div><div id="outline-container-sec-2-1-1" class="outline-4">
+<h4 id="sec-2-1-1"><span class="section-number-4">2.1.1</span> tiempo real</h4>
+</div>
+<div id="outline-container-sec-2-1-2" class="outline-4">
+<h4 id="sec-2-1-2"><span class="section-number-4">2.1.2</span> registrada</h4>
+<div class="outline-text-4" id="text-2-1-2">
+<ol class="org-ol">
+<li>Estadística. Ej: servidores. 
+</li>
+</ol>
+</div>
+</div>
+</div>
+<div id="outline-container-sec-2-2" class="outline-3">
+<h3 id="sec-2-2"><span class="section-number-3">2.2</span> Qué se supervisa</h3>
+<div class="outline-text-3" id="text-2-2">
+<ol class="org-ol">
+<li>Memoria 
+</li>
+<li>Disco 
+</li>
+<li>CPU
+</li>
+<li>Red
+</li>
+</ol>
+</div>
+</div>
+
+<div id="outline-container-sec-2-3" class="outline-3">
+<h3 id="sec-2-3"><span class="section-number-3">2.3</span> windows</h3>
+<div class="outline-text-3" id="text-2-3">
+<ol class="org-ol">
+<li>administrador de tareas 
+</li>
+<li>monitor de rendimiento
+</li>
+</ol>
+</div>
+</div>
+</div>
+</div>
+<div id="postamble" class="status">
+<p class="date">Date: <span class="timestamp-wrapper"><span class="timestamp">&lt;2019-02-17 Sun&gt;</span></span></p>
+<p class="author">Author: Jonatan Ahumada Fernández</p>
+<p class="date">Created: 2019-03-11 Mon 14:24</p>
+<p class="creator"><a href="http://www.gnu.org/software/emacs/">Emacs</a> 25.3.1 (<a href="http://orgmode.org">Org</a> mode 8.2.10)</p>
+<p class="validation"><a href="http://validator.w3.org/check?uri=referer">Validate</a></p>
+</div>
+</body>
+</html>

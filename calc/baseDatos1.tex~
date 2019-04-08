@@ -1,0 +1,92 @@
+% Created 2019-03-17 Sun 19:46
+\documentclass[11pt]{article}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{fixltx2e}
+\usepackage{graphicx}
+\usepackage{longtable}
+\usepackage{float}
+\usepackage{wrapfig}
+\usepackage{rotating}
+\usepackage[normalem]{ulem}
+\usepackage{amsmath}
+\usepackage{textcomp}
+\usepackage{marvosym}
+\usepackage{wasysym}
+\usepackage{amssymb}
+\usepackage{hyperref}
+\tolerance=1000
+\author{Jonatan Ahumada Fernández}
+\date{\today}
+\title{Trabajo en bases de datos I}
+\hypersetup{
+  pdfkeywords={},
+  pdfsubject={},
+  pdfcreator={Emacs 25.3.1 (Org mode 8.2.10)}}
+\begin{document}
+
+\maketitle
+\tableofcontents
+
+
+\section{1. Código asignado en el MSC para “integral calculus”}
+\label{sec-1}
+97I50 
+
+
+\section{Artículos preseleccionados}
+\label{sec-2}
+Los artículos seleccionados fueron \emph{Cutting Against the Grain: Volumes of Solids of Revolution via Cross-Sections Parallel to the Rotation Axis},
+\emph{Using origami boxes to explore concepts of geometry and calculus} y \emph{Some remarks about flux time derivative}. 
+
+\section{a. Resumen del artículo}
+\label{sec-3}
+
+El artículo explica un caso especial para calcular el volúmen de un sólido de revolución.
+Normalmente, este se calcula sumando el área de las secciones perpendiculares al 
+eje de rotación. No obstante,  en el caso estudiado, se suman las secciones paralelas al plano xy, en vez de las secciones 
+perpendiculares a él. El ejemplo escogido para explicar este caso es el "Cuerno de Gabriel" (la gráfica 
+de la función \(y = 1/x\)).
+\section{Secciones del artículo}
+\label{sec-4}
+\subsection{Sólidos de revolución}
+\label{sec-4-1}
+En esta sección se explica cómo parametrizar la superficie del sólido suponiendo que 
+lo seccionamos en el plano \(z=c\). Desde esta perspectiva, cada sección del Cuerno se ve 
+como una área delimitada por la curva de la función. Así que, conociendo la ecuación de la
+curva, podemos calcuar el área de la sección como una integral. 
+
+\subsection{El volumen de un cono}
+\label{sec-4-2}
+En esta sección se explica cómo utilizar el resultado de la sección anterior para determinar el volumen
+de un sólido básico: el cono. Los resultados anteriores lograban expresar el área de una sección 
+en términos de una integral, pero los límites de esta integral eran indefinidos. Para hallar 
+exactamente los límites de esta integral se estudia el comportamiento de los límites de una curva muy
+familiar: la hiperbola. 
+
+\subsection{Una integral impropia}
+\label{sec-4-3}
+Antes de aplicar finalmente los resultados al caso en cuestión, se hace un último paréntesis
+y se considera el cálculo del volumen del gráfico de la función \(y= e^{-x}\). El problema estudiado aquí, 
+en términos muy llanos, es cómo lograr integrar la rotación de las áreas de las hipérbolas obtenidas previamente. 
+
+\subsection{El Cuerno de Gabriel}
+\label{sec-4-4}
+En esta parte se juntan todos los resultados anteriores para efectivante calcular 
+el volumen del Cuerno de Gabriel. La sección consiste en aplicar formulas anteriores
+al valor particular estudiado. Un breve resumen podría ser: 1) parametrización, 2)  hallar 
+los límites de la curva, 3) hacer las sustituciones necesarias para encontrar la forma de 
+rotar la integral. 
+
+El autor concluye que estudiar este problema de esta forma "no convencional" es muy útil
+para comprender una "paradoja" conceptual. Según el autor, si se secciona el Cuerno de esta forma
+vemos que su area superficial es infinita (porque estamos viendo el cono como muchas hiperbolas, en vez 
+de verlo como si fuera muchos cilindros), y, a pesar de eso, logramos obtener un volumen finito. 
+Así, el autor le atribuye a este hecho gran valor didáctico. 
+
+\subsection{Sugerencias para estudios posteriores}
+\label{sec-4-5}
+En esta sección el autor menciona otros posibles ejemplos donde aplicar 
+esta técnica. Entre ellos, menciona las funciones \(y= sqrt{x}\)  \(y= sqrt[4]{x}\)  \(y = sqrt{ln x}\).
+% Emacs 25.3.1 (Org mode 8.2.10)
+\end{document}

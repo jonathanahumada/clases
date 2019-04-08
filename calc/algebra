@@ -1,8 +1,11 @@
 #+TITLE: Cálculo Integral: Repaso
 #+AUTHOR: Jonatan Ahumada Fernández
 #+DATE: <2019-02-23 Sat>
-#+HTML_HEAD: <link rel="stylesheet" type="text/css" href="../clt/clean-blog.css" />
-#+HTML_HEAD: <link href="https://fonts.googleapis.com/css?family=rCinzel|Crimson+Text" rel="stylesheet">
+#+HTML_HEAD:<style>body { font-family: 'Crimson Text', serif;   font-size: 20px; color: #cf8e6b;  background-color: #273b49;} </style>
+#+HTML_HEAD:<style> #content{    width: 60%;    position: center;    margin-left: auto; margin-right: auto;} </style>
+#+HTML_HEAD: <style> a {  color:#f5b43c;}</style>
+
+
 
 * Álgebra
 
@@ -32,11 +35,11 @@ El último término siempre da positivo y el del medio negativo:
 4) Aquí se tienen en cuenta las potencias al reemplazar.
 
 
-#+BEGIN_SRC ditaa:file sustitucionPorPartes.png
+#+BEGIN_SRC 
 		   +--------------------------+
 		   |                          |
 		   |         derivar          |
-		   |   	u  --------->    du   |
+		   |   	u  --------->   du    |
 		   |        integrar          |
 		   |    dv -------->     v    |
 		   |                          |

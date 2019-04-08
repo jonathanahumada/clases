@@ -1,0 +1,144 @@
+#+DATE:<2019-02-05 Tue>
+#+TITLE: Recursividad, segunda parte
+#+AUTHOR: Jonatan Ahumada Fernández
+#+HTML_HEAD:<style>body { font-family: 'Crimson Text', serif;   font-size: 20px; color: #cf8e6b;  background-color: #273b49;} </style>
+#+HTML_HEAD:<style> #content{    width: 60%;    position: center;    margin-left: auto; margin-right: auto;} </style>
+#+HTML_HEAD: <style> a {  color:#f5b43c;}</style>
+#+INCLUDE: "./ed_recursividad.org"
+
+*  Recursividad (continuación)
+** lenguajes funcionales
+
+Comencemos, pues, por un enigma:
+ #+BEGIN_QUOTE
+"El lenguaje funcional es más fácil de interpretar por las máquinas." --Arles Rodríguez
+#+END_QUOTE
+
+- Se supone que la definición fuerte de recursividad es comprensible así como están.
+- Hay una conexión entre la notación funcional y la sintaxis de Lisp (que no logro hacer consciente). 
+
+** Sobre la ejecución en la máquina
+La máquina siempre evalúa de izquierda a derecha (según la precedencia usual).
+En las combinaciones, es interesante notar que primero el término izquierdo de la 
+expresión se evalúa recursivamente hasta llegar al caso base y luego pasa al derecho: 
+
+#+BEGIN_SRC 
+C(4,2)= C(3,1) + C(3,2)
+     =  (C()+ C() ) + C(3,2)
+     = (1 + C()) + C(3,2)   //etc. 
+#+END_SRC
+** Ordenamientos
+La estrategia general de los ordenamientos
+es escoger uno de los elementos del conjunto.
+Luego, dibujar un árbol de posibilidades de
+ordenamiento.
+Nótese que:
+
+ 1) solo un llamado recursivo (producto).
+ 2) no es un árbol "per se", aunque se representa como árbol // Aclarar esto
+
+** Ejemplo
+Suponga que selecciona cuatro cartas distintas de una baraja de póker, que se van a
+representar por los símboloes (T,D,C,P). ¿De cuántas formas puedo ordenar estas 4 cartas?
+
+*** Procedimiento
+1) selecciona un elemento
+
+2) Dibuja ur árbol de posibilidades a partir de ese elemento.
+ #+BEGIN_SRC ditaa :file ordenamiento.png
+		 C------P  
+       D+--------|     
+       |	 P------C
+       |	  D------P  
+ T ----C+--------|     	
+       |	 P------D   
+       |	       
+       |         D-----C 
+       P+--------|  
+	 	 C-----D
+#+END_SRC
+
+3) Repite el árbol de posibilidades  por cada elemento.
+
+ #+BEGIN_SRC ditaa :file ordenamiento2.png
+
+		 C------P  
+       D+--------|     
+       | 	 P------C
+       |	 D------P  
+ T ----C+--------|     	
+       |	 P------D   
+       |	       
+       |         D-----C 
+       P+--------|  
+	 	 C-----D          x n veces, donde n es la norma del conjunto 
+#+END_SRC
+
+
+
+4) Expresión matemática = n!
+
+
+*** Solución
+
+hay 24 ordenamientos 4!.
+
+
+#+BEGIN_SRC 
+ordenar(x) = x ordenar(x-1)
+#+END_SRC
+
+** Combinaciones 
+La estrategia general de las combinaciones es similar al de las listas, 
+pero como el orden no importa habrá menos. Nótese lo siguiente:
+
+1) Solo habrá un árbol.
+2) recursivamente, una combinación implica una suma (ver ejemplo)
+3) Hay que saber de qué tamaño sera el subconjunto que se debe formar.
+4) Cada nodo del árbol se divide en si sí o no usar un elemento dentro de los subconjuntos.
+5) ordenar elementos es a factorial, como escoger subconjuntos a combinatorias
+
+*** Ejemplo
+
+¿De cuantas formas se pueden formar parejas de la familia
+Simpson para que suban al vagón de la montaña rusa?
+
+
+*** Prodecimiento
+
+1) Se escoge un elemento arbitrario del conjunto.
+2) Se bifurcan dos ramas de esa escogencia, dependiendo de si se escogió o no.
+3) En un lado el numero de elementos del subconjunto disminuye.
+4) En cada fila el número de elementos del conjunto disminuye. 
+
+
+
+  #+BEGIN_SRC ditaa :file combinacion.png
+
+      
+
+						 C(4,2)
+						/  \
+					       /    \
+					      /	     \
+					     /	      \
+					    /	       \
+					   /	        \
+					  /		 \
+					 C(3,1)		  C(3,2)
+				  +-----------+	    +------------+
+				  |	      |	    |		 |
+				  |	      |     | 		 |
+				  |	      |     | 		 |
+				  |	      |     | 		 |
+				 C(2,0)	 C(2,1)    C(2,1) 	C(2,2)|
+				  	   +---+   +--+
+					   |   |   |  |
+					   |   |C(1,0)C(1,1) 
+				      C(1,0) C(1,1)
+#+END_SRC
+   
+				      
+*** Solución
+
+Son 6 combinaciones. 

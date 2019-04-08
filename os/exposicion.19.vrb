@@ -1,0 +1,4 @@
+\frametitle{Iniciar Proyecto con Docker}
+\begin{verbatim}
+da create python django --name MyAppName --docker
+\end{verbatim}

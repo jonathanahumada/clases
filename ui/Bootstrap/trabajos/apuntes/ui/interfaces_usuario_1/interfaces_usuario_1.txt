@@ -1,0 +1,29 @@
+* Interfaces de usuario 
+
+** Cliente-servidor
+*** En el equipo
+*** En equipos diferentes
+*** En aplicaciones web 
+**** Aplicacion
+**** Navegador
+***** HTML
+***** Javasript
+***** JQuery
+**** Formulario
+**** Servidor  
+
+* Principios básicos e usabilidad
+No es lenguaje de programación, no tiene ciclos ni esttrcutras de dontrol, ni se definen variables.
+Es un lenguaje de etiquetas
+** HTML
+*** Tags y atributos son case insensitive.
+*** attributos dentro de attributos son key-value pairs 
+** XML
+** Resumen 
+	<a>
+	<img>
+	<table>
+	<ul>
+** Tarea
+*** practicar lo visto. 
+*** leer formularios html.

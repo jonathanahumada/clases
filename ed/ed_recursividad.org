@@ -1,0 +1,27 @@
+#+DATE:<2019-01-31 Thu>
+#+TITLE: Recursividad, introducción
+#+AUTHOR: Jonatan Ahumada Fernández
+* Recursividad
+** Definición débil
+1) se define por casos.
+2) f se debe usar en su definición.
+3) al menos uno de los otros casos se define usando los argumentos a f.
+
+** Ejemplos
+Para resolver los ejemplos. Según lo que es usual, se tiene que:
+1) identificar variables.
+2) expresar la función en términos de dominio y rango.
+3) identificar los casos no recursivos. Es decir, donde da un valor fijo.
+4) encontrar la expresión recursiva. (usualmente implica un decremento)
+
+*** listas 
+"Como se van a listar todas las formas posibles en que se pueden organizar las cartas, el
+orden sí importa".
+
+La expresión general de las listas es n!. 
+
+*** combinaciones
+"Como se van a formar parejas, el orden no importa".
+La notacion `C(n, k) = c' quiere decir `n = elementos  del conjunto`
+y `k = numero de elementos de la combinación` y `c = numero de conjuntos
+e k elementos.

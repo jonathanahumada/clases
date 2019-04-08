@@ -1,3 +1,7 @@
+#+TITLE: Relaciones
+#+HTML_HEAD:<style>body { font-family: 'Crimson Text', serif;   font-size: 20px; color: #cf8e6b;  background-color: #273b49;} </style>
+#+HTML_HEAD:<style> #content{    width: 60%;    position: center;    margin-left: auto; margin-right: auto;} </style>
+#+HTML_HEAD: <style> a {  color:#f5b43c;}</style>
 * Relacion Binaria
 
 Una relación binaria en AxB es un subconjunto de AxB.

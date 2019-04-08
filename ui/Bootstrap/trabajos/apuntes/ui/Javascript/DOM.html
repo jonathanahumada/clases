@@ -1,0 +1,30 @@
+<html>
+  <head>
+    <title>DOM 1: Referenciando objetos en scripts</title>
+    <meta charset="UTF-8">
+  </head>
+  <body>
+    <fieldset>
+    <p id="demo"> Hola <strong>bold </strong> </p>
+      <legend>Imprimirá el atributo 'valor'
+        de ambas etiquetas internas a consola
+      </legend>
+      <a> Valor 1 </a>
+      <br>
+      <input type="text" class="campo" value="valor 2"></input>
+      </fieldset>
+    <ul>
+    <li>El script está después del body para que se ejecute después</li>
+    <li>Si el código no está anclado a ningún evento, por lo general quieres es script abajo</li>
+    <li>Si el script modifica un elemento HTML, ese elemento previamente tiene que existir!</li>
+    </ul>
+    </body>
+    <script>
+    document.getElementById("demo").innerHTML="Este valor ha sido sobrescrito con javascript";
+	  x = document.getElementsByTagName("a");
+	  console.log(x[0].innerHTML);
+
+	  y = document.getElementsByClassName("campo");
+	  console.log(y[0].value);
+	</script>
+  <html>

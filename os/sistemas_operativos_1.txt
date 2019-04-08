@@ -1,27 +1,34 @@
-* Sistemas Operativos
+#+TITLE: Introducción a Sistemas Operativos
+#+AUTHOR: Jonatan Ahumada Fernández
+#+HTML_HEAD:<style>body { font-family: 'Crimson Text', serif;   font-size: 20px; color: #cf8e6b;  background-color: #273b49;} </style>
+#+HTML_HEAD:<style> #content{    width: 60%;    position: center;    margin-left: auto; margin-right: auto;} </style>
+#+HTML_HEAD: <style> a {  color:#f5b43c;}</style>
+
 
 * Temas
 ** Arquitectura Computador
 ** Funciones y objetivos de los S.O
-** Descripción y control de los procesos
-** Procesos, subprocesos e hilos de procesos
+- Descripción y control de los procesos
+- Procesos, subprocesos e hilos de procesos
 * Contenido Temático
-** Concurrencia
-** Gestión de memoria.
-** Planificación en sistemas operativos
-** Gestión de entrada/salida y planificacion de disco
-** Gestion de archivos
-** Introduccion a la Seguridad en S.O
-** Introducción a las redes 
+- Concurrencia
+- Gestión de memoria.
+- Planificación en sistemas operativos
+- Gestión de entrada/salida y planificacion de disco
+- Gestion de archivos
+- Introduccion a la Seguridad en S.O
+- Introducción a las redes 
 * Notas 
-Taller/Lab 60%
-Parcial 40%
+- Taller/Lab 60%
+- Parcial 40%
 
 *Introduccion a los sistemas operativos
 ** Cómo se definiría un sistema operativo?
 Es un software que se encarga de tres(?) funciones:
-*** Admin. recursos de la computador
-*** Correr los programas
-*** Interactuar con el usuio. 
-*** Es una intrerfaz doble, con el  usuario y con el hardware. 
-*** Oculta al programador los detalles de hardware. 
+1) Admin. recursos de la computador
+2) Correr los programas
+3) Interactuar con el usuario.
+
+Algunos detalles interesantes: 
+- Es una intrerfaz doble, con el  usuario y con el hardware. 
+- Oculta al programador los detalles de hardware. 

@@ -1,0 +1,9 @@
+html>
+	  <head>
+		<title>Mi documento</title>
+		<link rel="stylesheet" type="text/css" href=“style.css" />
+	  </head>
+	  <body>
+		<p>Texto</p>
+	  </body>
+</html>

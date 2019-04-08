@@ -1,0 +1,6 @@
+@boe{posix,
+  title={POSIX-based Operating System in the environment of NVM/SCM memory},
+  author={Dubeyko, Vyacheslav and Guyot, Cyril and Cargnini, Luis and Manzanares, Adam},
+  journal={arXiv preprint arXiv:1712.07759},
+  year={2017}
+}

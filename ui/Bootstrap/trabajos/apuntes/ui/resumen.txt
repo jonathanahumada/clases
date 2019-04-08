@@ -1,0 +1,8 @@
+- ejercicio 1: tablas, input, colspan
+-  ejercicio 2: funciones, innerhtml, 
+-  ejercicio 3: calculadora
+- ejercicio 4: factorial
+- ejercicio 5: adivinar
+* Problemas
+- no cierras brackets 
+

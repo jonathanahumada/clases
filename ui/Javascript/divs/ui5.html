@@ -1,0 +1,40 @@
+<html>
+<head>
+
+    <script>
+
+        function cambiarcolor(){
+        document.getElementById("texto").style.color=document.getElementById("color").value;
+        
+        }
+
+        function cambiarcolorAzul(){
+        document.getElementById("texto").style.color="blue";
+        
+        }
+
+        function negritas(){
+            document.getElementById("texto").style.fontWeight="bold";
+
+        }
+        function prenderBombilla(){
+            document.getElementById("imagen").src="pic_bulbon.gif";
+
+        }
+        function apagarBombilla(){
+            document.getElementById("imagen").src="pic_bulboff.gif";
+
+        }
+        
+        
+        </script>
+</head>
+<p id="texto">Esto cambIa color</p>
+<button onclick="cambiarcolor()">cambiar color!</button>
+<button onclick="negritas()">poner negritas!</button>
+<img src="" id="imagen">
+
+<input type="color" id="color">
+<button onclick="prenderBombilla()">On</button>
+<button onclick="apagarBombilla()">Off</button>
+</html>

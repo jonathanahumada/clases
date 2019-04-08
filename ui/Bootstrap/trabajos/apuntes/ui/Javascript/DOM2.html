@@ -1,0 +1,34 @@
+<html>
+  <head>
+    <title>DOM 2: Validar innerHTML de un input</title>
+    <meta charset="utf-8">
+  </head>
+  <body>
+    <fieldset>
+      <legend> Evaluar x > 10</legend>
+    <input type="text" id="nombre" value="Ingrese digito"></input>
+
+    <button onclick="mostrar()">ver</button>
+    <p id="doto"> Aquí debería mostrar si el número es correcto</p>
+    </fieldset>
+  
+    
+  </body>
+    <script>
+
+      function mostrar(){
+      x = Number(document.getElementById("nombre").value);
+   
+
+      if(x>10){
+        console.log("Cumplió x>10");
+      document.getElementById("doto").innerHTML= "Es correcto";
+      
+
+      }else{
+        console.log("no cumplió x>10");
+   document.getElementById("doto").innerHTML= "Es falso";
+      }
+    }
+	</script>
+  </html>

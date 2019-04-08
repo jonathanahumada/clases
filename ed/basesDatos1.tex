@@ -1,0 +1,70 @@
+% Created 2019-03-17 Sun 22:07
+\documentclass[11pt]{article}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{fixltx2e}
+\usepackage{graphicx}
+\usepackage{longtable}
+\usepackage{float}
+\usepackage{wrapfig}
+\usepackage{rotating}
+\usepackage[normalem]{ulem}
+\usepackage{amsmath}
+\usepackage{textcomp}
+\usepackage{marvosym}
+\usepackage{wasysym}
+\usepackage{amssymb}
+\usepackage{hyperref}
+\usepackage{apacite}
+\tolerance=1000
+\author{Jonatan Ahumada Fernández\\
+Fundación Universitaria Konrad Lorenz}
+\date{\today}
+\title{Trabajo en bases de datos I:\\
+Una nueva estructura de datos para operaciones con palíndromos}
+\hypersetup{
+  pdfkeywords={},
+  pdfsubject={},
+  pdfcreator={Emacs 25.3.1 (Org mode 8.2.10)}}
+\begin{document}
+
+\maketitle
+
+\bibliographystyle{apa}
+\section{Idea principal del artículo}
+\label{sec-1}
+El objetivo del artículo es presentar una nueva estructura de datos en forma de árbol llamada EERTREE. La utilidad
+de esta nueva estructura radica en que simplifica y acelera las operaciones relacionadas con palíndromos
+en las cadenas de caracteres (\emph{strings}). Entre las operaciones con palíndromos se encuentran: 1) búsqueda, 2) conteo, 3) listado 
+y 4) factorización de una cadena en sus palíndromos. 
+
+Estructuralmente, cada nodo del dígrafo de esta nueva estructura del EERTREE corresponde 
+a un factor palindrómico de la cadena que representa. Esto da a entender que es una estructura altamente especializada en resolver  este tipo 
+de problemas algoritmicos. El artículo presenta como \emph{benchmark} que el "mantenimiento" de un EERTREE para una cadena de longitud \(n\)
+con $\sigma$ símbolos distintos es de tiempo  \(O(n\ log\sigma)\)y de espacio \(O(n)\).
+
+
+
+\section{ Relación del artículo con estructuras de datos}
+\label{sec-2}
+Según el artículo, los palíndromos son una de las estructuras más recurrentes dentro de las cadenas de caracteres. 
+Esto ya de por sí enmarca el tema dentro del objetivo general de las estructuras de datos mencionado en la
+apertura del presente curso: "el mundo está desordenado, las estructuras de datos permiten ordenarlo".
+
+Además, el estudio de los palíndromos es un tema de bastante interés
+en área de las combinatorias, la teoría de los lenguajes formales y la \emph{stringology}. Por lo tanto, 
+vemos que podría tener diversas aplicaciones. La aplicación más importante mencionada en el artículo, a mi parecer,
+fue el estudio del RNA (ácido ribonucleico).  
+
+\section{Uso de temas de estructuras de datos en el artículo.}
+\label{sec-3}
+El artículo tiene muchos puntos de encuentro con los temas del plan analítico del curso. Para empezar por lo obvio, se 
+trata de una estructura de datos. Además, el EERTREE es un árbol, estructura que abordamos para resolver los problemas de 
+combinatorias. Implícitamente, el artículo describe el EERTREE como un ADT (el \emph{paper} es de hecho una especificación para el ADT), pues describe esta estructura en términos matemáticos y 
+además especifíca qué operaciones debe tener su implementación y cómo deberían funcionar. Por último, las mediciones de la eficiencia 
+del EERTREE se hacen con notacón \emph{Big O}.
+
+\bibliography{S0195669817301294}
+\nocite{*}
+% Emacs 25.3.1 (Org mode 8.2.10)
+\end{document}

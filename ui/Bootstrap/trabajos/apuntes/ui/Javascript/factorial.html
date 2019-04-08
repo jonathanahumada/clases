@@ -1,0 +1,39 @@
+<html>
+<head>
+    <script>
+       
+   
+      function factorial(){
+       num1 = Number(document.getElementById("entrada").value);
+       console.log("el numero es: " + num1)
+        var fact = 1;
+        for(i= 1; i<=num1; i++){
+            console.log(fact + "*" + num1)
+            fact = (fact * i);
+
+
+        } 
+
+        console.log(fact)
+        document.getElementById("salida").innerHTML= fact;
+
+      
+
+
+      }
+       
+        </script>
+
+</head> 
+<body>
+
+<table>
+    <tr> <td><input id="entrada" type="number"></td><td><button type="data" onclick="factorial()">click</button> </td></tr>
+    <tr><td colspan="2"><p id="salida"></p></td></tr>
+</table>
+
+
+
+</body></body>
+
+</html>

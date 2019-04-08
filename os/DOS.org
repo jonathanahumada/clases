@@ -1,0 +1,14 @@
+#+TITLE: Repaso: Comandos DOS
+
+* Comandos usados en la actividad
+- CD
+- COPY [PATH1 + PATH2 + FILENAME]
+- MOVE
+- DIR
+- RD [/S: recursiva]  *En principio solo elimine dir vacios
+- DELTREE
+- TREE
+- MKDIR
+- ECHO
+- > ('redirect')
+- >> ('append')

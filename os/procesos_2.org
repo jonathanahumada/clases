@@ -1,0 +1,49 @@
+#+TITLE: Procesos_2
+#+AUTHOR: Jonatan Ahumada Fernández
+#+DATE:<2019-02-9 Sun>
+#+HTML_HEAD:<style>body { font-family: 'Crimson Text', serif;   font-size: 20px; color: #cf8e6b;  background-color: #273b49;} </style>
+#+HTML_HEAD:<style> #content{    width: 60%;    position: center;    margin-left: auto; margin-right: auto;} </style>
+#+HTML_HEAD: <style> a {  color:#f5b43c;}</style>
+#+HTML_HEAD:<style>blockquote {font-family:Courier New; color:#dd9104;}</style>
+
+* Recordar: 3 elementos
+- ejecutable
+- datos asociados
+- contexto de ejecución
+*   Repaso: características
+funcionamiento no determinista
+- interbloqueo
+- concurrencia
+- etc.
+
+Estas características se ven plasmadas en los modelos de gestión de procesos. 
+El aspecto práctico de esto será visto en el ejercicio de más abajo. 
+
+* Modelos
+1) de dos estados 
+2) de cinco estados (el que es )
+* Anotaciones:
+- no es lo mismo un proceso que sale, que uno interumpido. el interrumpido queda con variables asociadas. El de salida libera memoria.
+- un proceso puede pasar de liso a terminado sin pasar por ejecución. 
+* colas o hilos
+* Ejercicio de ejemplo 
+
+| proceso | accion que solicita       | memoria requerida | resultado/efecto de solicitud                          | memoria restante |
+|         |                           |                   |                                                        |                  |
+| p1      | ejecución                 | 128 mb            | p1 -> ejecucion                                        | 256 -128=128mb   |
+| p2      | ejecucion                 | 128  mb           | p1->listo no puede ejecutar,porque p1 no ha finalizado | 0 mb             |
+| p3      | ejecucion                 | 64 mb             | p3-> nuevo, no hay recursos que asignarle              | 0mb              |
+| p1      | terminar                  | -                 | p1->terminado , p2->ejecucion p3 ->listo               | 64 mb            |
+| p2      | lectura de datos en disco | -                 | p2->bloqueado, p3->ejecución                           | 64 mb            |
+| p4      | ejecucion                 | 128               | p4 ->nuevo                                             | 64 mb            |
+| p2      | fin lectura datos         | -                 | p2 ->listo                                             | 64 mb            |
+| p3      | terminado                 | -                 | p3->terminado, p4->listo,p2->ejecucion                 | 0                |
+| p5      | ejecucion                 | 64                | p5->nuevo                                              | 0                |
+
+
+
+
+| p. nuevo | p. ejecucion | cola de listos | bloqueados | terminados | memoria |
+| p5       | p2           | p4             |          0 | p1 p3      |       0 |
+
+

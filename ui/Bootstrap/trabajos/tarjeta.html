@@ -1,0 +1,143 @@
+<html>
+<head>
+        <style>
+ 
+                .rojo{
+                   color:red;
+               
+              
+              
+                }
+                </style>
+    <script>
+    //declaro variables como strings
+    var nombres  = "";
+    var identificacion = "";
+    var tarjeta = "";
+    var seguridad = "";
+    var anio = "";
+    var mes = "";
+
+    //declaro funcion validar
+
+    function validar(){
+      //nombre
+      nombres = document.getElementById("nombres").value;
+      identificacion = document.getElementById("identificacion").value ;
+      tarjeta = document.getElementById("tarjeta").value;
+      seguridad = document.getElementById("seguridad").value;
+      anio = document.getElementById("anio").value; 
+      mes = document.getElementById("mes").value;
+
+      console.log("funcion validar()");
+      console.log(nombres);
+
+      if(nombres == "" || nombres == "ingrese nombres") {
+        console.log("entro al if")
+          document.getElementById("salida_nombre").innerHTML = "Falta este campo";
+         
+      }
+      if(tarjeta == "" || tarjeta == "ingrese tarjeta") {
+        console.log("entro al if")
+          document.getElementById("salida_tarjeta").innerHTML = "Falta este campo";
+         
+      }else if(isNaN(Number(tarjeta))){
+
+        document.getElementById("salida_tarjeta").innerHTML = "El campo debe ser numérico";
+
+      }
+      if(identificacion == "" || identificacion == "ingrese identificacion") {
+        console.log("entro al if")
+          document.getElementById("salida_identificacion").innerHTML = "Falta este campo";
+         
+      }else if(isNaN(Number(identificacion))){
+
+document.getElementById("salida_identificacion").innerHTML = "El campo debe ser numérico";
+
+}
+      if(seguridad == "" || seguridad == "ingrese cod. seguridad") {
+        console.log("entro al if")
+          document.getElementById("salida_seguridad").innerHTML = "Falta este campo";
+         
+      }else if(isNaN(Number(identificacion))){
+
+document.getElementById("salida_seguridad").innerHTML = "El campo debe ser numérico";
+
+}
+      if(anio == "" || anio == "ingrese anio de vencimiento") {
+        console.log("entro al if")
+          document.getElementById("salida_anio").innerHTML = "Falta este campo";
+         
+      }else if(Number(anio)< 2019){
+        document.getElementById("salida_anio").innerHTML = "vencimiento debe ser mayor o igual a 2019";
+
+
+      }else if(isNaN(Number(anio))){
+
+document.getElementById("salida_anio").innerHTML = "El campo debe ser numérico";
+
+}
+     
+      if(mes == "" || mes == "ingrese mes de vencimiento") {
+        console.log("entro al if")
+          document.getElementById("salida_mes").innerHTML = "Falta este campo";
+         
+      }else if(Number(anio) <= 2019 && (mes == "enero" || mes == "febrero" || mes == "marzo" || mes == "Enero" || mes == "Febrero" || mes == "Marzo")){
+          console.log("entro a else if de mes")
+        document.getElementById("salida_mes").innerHTML = "vencimiento debe ser después  de marzo del 2019";
+
+
+      }
+
+
+
+
+
+    }
+
+
+
+
+    
+    </script>
+
+    </head>
+    <!-- <link href="css/bootstrap.min.css" rel="stylesheet"> -->
+    <meta charset="UTf-8">
+    <body>
+      <div class="container">
+        
+        <div class="col-sm-8">
+<fieldset>
+  <form>
+<legend>Datos del formulario</legend>
+<div class="form-group"><input id="nombres" class= "form-control" value="ingrese nombres"></div>
+ <p class="rojo" id="salida_nombre"></p>
+<br>
+<input id="identificacion" value= "ingrese identificacion"><p class="rojo" id="salida_identificacion"></p>
+<br>
+<input id= "tarjeta" value="ingrese tarjeta"><p class="rojo" id="salida_tarjeta"></p>
+<br>
+<input id="seguridad" value= "ingrese cod. seguridad"><p class="rojo" id="salida_seguridad"></p>
+<br>
+<input id="anio" value= "ingrese anio de vencimiento"><p class="rojo" id="salida_anio"></p>
+<br>
+<input id="mes" value= "ingrese mes de vencimiento"><p class="rojo" id="salida_mes"></p>
+<br>
+
+<button type="data" onclick="validar()">validar</button>
+</form>
+</div>
+
+
+</fieldset>
+
+</div>
+
+<div class="col-sm-4">
+    <p class="rojo" id="salida_nombre"></p>
+</div>
+</body>
+
+
+</html>

@@ -3,11 +3,11 @@
 "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
 <head>
-<title>Referencias</title>
-<!-- 2019-02-17 Sun 18:25 -->
+<title>Referencias, segunda parte</title>
+<!-- 2019-03-02 Sat 21:37 -->
 <meta  http-equiv="Content-Type" content="text/html;charset=utf-8" />
 <meta  name="generator" content="Org-mode" />
-<meta  name="author" content="Jonathan Ahumada" />
+<meta  name="author" content="Jonatan Ahumada Fernández" />
 <style type="text/css">
  <!--/*--><![CDATA[/*><!--*/
   .title  { text-align: center; }
@@ -88,6 +88,9 @@
     { background-color: #ffff00; color: #000000; font-weight: bold; }
   /*]]>*/-->
 </style>
+<style>body { font-family: 'Crimson Text', serif;   font-size: 20px; color: #cf8e6b;  background-color: #273b49;} </style>
+<style> #content{    width: 60%;    position: center;    margin-left: auto; margin-right: auto;} </style>
+<style> a {  color:#f5b43c;}</style>
 <script type="text/javascript">
 /*
 @licstart  The following is the entire license notice for the
@@ -137,7 +140,7 @@ for the JavaScript code in this tag.
 </head>
 <body>
 <div id="content">
-<h1 class="title">Referencias</h1>
+<h1 class="title">Referencias, segunda parte</h1>
 <div id="table-of-contents">
 <h2>Table of Contents</h2>
 <div id="text-table-of-contents">
@@ -159,20 +162,19 @@ for the JavaScript code in this tag.
 </li>
 </ul>
 </li>
-<li><a href="#sec-2">2. <span class="todo TODO">TODO</span> Respuesta a ejercicio de Adivina!</a></li>
-<li><a href="#sec-3">3. Explicación de una lista con clases</a></li>
-<li><a href="#sec-4">4. Objetos</a>
+<li><a href="#sec-2">2. Explicación de una lista con clases</a></li>
+<li><a href="#sec-3">3. Objetos</a>
 <ul>
 <li>
 <ul>
-<li><a href="#sec-4-0-1">4.0.1. herencia: repaso</a></li>
-<li><a href="#sec-4-0-2">4.0.2. abstract: repaso</a></li>
-<li><a href="#sec-4-0-3">4.0.3. Polimorfismo</a></li>
+<li><a href="#sec-3-0-1">3.0.1. herencia: repaso</a></li>
+<li><a href="#sec-3-0-2">3.0.2. abstract: repaso</a></li>
+<li><a href="#sec-3-0-3">3.0.3. Polimorfismo</a></li>
 </ul>
 </li>
 </ul>
 </li>
-<li><a href="#sec-5">5. Error de netbeans</a></li>
+<li><a href="#sec-4">4. Error de netbeans</a></li>
 </ul>
 </div>
 </div>
@@ -220,34 +222,34 @@ Primero con primitivos y luego con objetos.
 </p>
 </div>
 
-
-
 <div id="outline-container-sec-1-2-1" class="outline-4">
 <h4 id="sec-1-2-1"><span class="section-number-4">1.2.1</span> Primitivos</h4>
 <div class="outline-text-4" id="text-1-2-1">
-<pre class="example">
-/**
- * This example pretends to show that Arguments passed to Java methods are passed by value. 
- * That is, a copy of the arguments is made and passed to the corresponding parameters.
- * @author Arles
- */
-public class TestSwap {
-    
-    public static void swap(int x, int y) {
-        int temp; 
+<div class="org-src-container">
+
+<pre class="src src-java"><span style="color: #95e454;">/**</span>
+<span style="color: #95e454;"> * This example pretends to show that Arguments passed to Java methods are passed by value. </span>
+<span style="color: #95e454;"> * That is, a copy of the arguments is made and passed to the corresponding parameters.</span>
+<span style="color: #95e454;"> * </span><span style="color: #e5786d;">@author</span><span style="color: #95e454;"> Arles</span>
+<span style="color: #95e454;"> */</span>
+<span style="color: #8ac6f2; font-weight: bold;">public</span> <span style="color: #8ac6f2; font-weight: bold;">class</span> <span style="color: #92a65e; font-weight: bold;">TestSwap</span> {
+
+    <span style="color: #8ac6f2; font-weight: bold;">public</span> <span style="color: #8ac6f2; font-weight: bold;">static</span> <span style="color: #92a65e; font-weight: bold;">void</span> <span style="color: #cae682;">swap</span>(<span style="color: #92a65e; font-weight: bold;">int</span> <span style="color: #cae682;">x</span>, <span style="color: #92a65e; font-weight: bold;">int</span> <span style="color: #cae682;">y</span>) {
+        <span style="color: #92a65e; font-weight: bold;">int</span> <span style="color: #cae682;">temp</span>; 
         temp = x;
         x = y;
         y = temp;
     }
 
-public static void main(String[] args) {
-        int a=4;
-        int b=5;
+<span style="color: #8ac6f2; font-weight: bold;">public</span> <span style="color: #8ac6f2; font-weight: bold;">static</span> <span style="color: #92a65e; font-weight: bold;">void</span> <span style="color: #cae682;">main</span>(<span style="color: #92a65e; font-weight: bold;">String</span>[] <span style="color: #cae682;">args</span>) {
+        <span style="color: #92a65e; font-weight: bold;">int</span> <span style="color: #cae682;">a</span>=4;
+        <span style="color: #92a65e; font-weight: bold;">int</span> <span style="color: #cae682;">b</span>=5;
         swap(a, b);
-        System.out.println("a=" + a); // 4
-        System.out.println("b=" + b); // 5
+        System.out.println(<span style="color: #95e454;">"a="</span> + a); <span style="color: #99968b;">// </span><span style="color: #99968b;">4</span>
+        System.out.println(<span style="color: #95e454;">"b="</span> + b); <span style="color: #99968b;">// </span><span style="color: #99968b;">5</span>
     }
 </pre>
+</div>
 
 <p>
 Como se pasan parámetros por valor, los enteros 4 y 5 se copian y luego se asignan a variables temporales, solo existentes
@@ -267,26 +269,28 @@ No entendí muy bien por qué esto no funciona.
 <div id="outline-container-sec-1-2-3" class="outline-4">
 <h4 id="sec-1-2-3"><span class="section-number-4">1.2.3</span> <span class="todo TODO">TODO</span> preguntar</h4>
 <div class="outline-text-4" id="text-1-2-3">
-<pre class="example">
-public class TestSwap2 {
+<div class="org-src-container">
 
-    public static void swap(Object x, Object y) {
-        Object temp;
-        temp = x; // entra referencia a `a`
-        x = y; // entra referencia a `y`
-        y = temp; // pasa referencia a `a`
+<pre class="src src-java"><span style="color: #8ac6f2; font-weight: bold;">public</span> <span style="color: #8ac6f2; font-weight: bold;">class</span> <span style="color: #92a65e; font-weight: bold;">TestSwap2</span> {
+
+    <span style="color: #8ac6f2; font-weight: bold;">public</span> <span style="color: #8ac6f2; font-weight: bold;">static</span> <span style="color: #92a65e; font-weight: bold;">void</span> <span style="color: #cae682;">swap</span>(<span style="color: #92a65e; font-weight: bold;">Object</span> <span style="color: #cae682;">x</span>, <span style="color: #92a65e; font-weight: bold;">Object</span> <span style="color: #cae682;">y</span>) {
+        <span style="color: #92a65e; font-weight: bold;">Object</span> <span style="color: #cae682;">temp</span>;
+        temp = x; <span style="color: #99968b;">// </span><span style="color: #99968b;">entra referencia a `a`</span>
+        x = y; <span style="color: #99968b;">// </span><span style="color: #99968b;">entra referencia a `y`</span>
+        y = temp; <span style="color: #99968b;">// </span><span style="color: #99968b;">pasa referencia a `a`</span>
 
     }
 
-    public static void main(String[] args) {
-        Integer a = new Integer(4);
-        Integer b = new Integer(5);
+    <span style="color: #8ac6f2; font-weight: bold;">public</span> <span style="color: #8ac6f2; font-weight: bold;">static</span> <span style="color: #92a65e; font-weight: bold;">void</span> <span style="color: #cae682;">main</span>(<span style="color: #92a65e; font-weight: bold;">String</span>[] <span style="color: #cae682;">args</span>) {
+        <span style="color: #92a65e; font-weight: bold;">Integer</span> <span style="color: #cae682;">a</span> = <span style="color: #8ac6f2; font-weight: bold;">new</span> <span style="color: #92a65e; font-weight: bold;">Integer</span>(4);
+        <span style="color: #92a65e; font-weight: bold;">Integer</span> <span style="color: #cae682;">b</span> = <span style="color: #8ac6f2; font-weight: bold;">new</span> <span style="color: #92a65e; font-weight: bold;">Integer</span>(5);
         swap(a, b);
-        System.out.println("a=" + a); // 4
-        System.out.println("b=" + b); // 5
+        System.out.println(<span style="color: #95e454;">"a="</span> + a); <span style="color: #99968b;">// </span><span style="color: #99968b;">4</span>
+        System.out.println(<span style="color: #95e454;">"b="</span> + b); <span style="color: #99968b;">// </span><span style="color: #99968b;">5</span>
     }
 }
 </pre>
+</div>
 </div>
 </div>
 
@@ -298,30 +302,31 @@ Puedo crear estructuras de dato de clase objeto.
 Si pasamos propiedades de objetos, estamos pasando referencias. Por lo tanto,
 modificarlo lo cambia en todas las variables que tengan la referencia.
 </p>
-<pre class="example">
-class Wrapper {
+<div class="org-src-container">
 
-    public Object obj;
+<pre class="src src-java"><span style="color: #8ac6f2; font-weight: bold;">class</span> <span style="color: #92a65e; font-weight: bold;">Wrapper</span> {
+
+    <span style="color: #8ac6f2; font-weight: bold;">public</span> <span style="color: #92a65e; font-weight: bold;">Object</span> <span style="color: #cae682;">obj</span>;
 }
 
-public class TestSwap3 {
+<span style="color: #8ac6f2; font-weight: bold;">public</span> <span style="color: #8ac6f2; font-weight: bold;">class</span> <span style="color: #92a65e; font-weight: bold;">TestSwap3</span> {
 
-    public static void swap(Wrapper x, Wrapper y) {
-        Object temp = x.obj;
+    <span style="color: #8ac6f2; font-weight: bold;">public</span> <span style="color: #8ac6f2; font-weight: bold;">static</span> <span style="color: #92a65e; font-weight: bold;">void</span> <span style="color: #cae682;">swap</span>(<span style="color: #92a65e; font-weight: bold;">Wrapper</span> <span style="color: #cae682;">x</span>, <span style="color: #92a65e; font-weight: bold;">Wrapper</span> <span style="color: #cae682;">y</span>) {
+        <span style="color: #92a65e; font-weight: bold;">Object</span> <span style="color: #cae682;">temp</span> = x.obj;
         x.obj = y.obj;
         y.obj = temp;
 
-// El punto aquí es que x.obj y y.obj tienen la misma referencia que a y b en el main. Por eso *sí* cambia el valor en el main
+<span style="color: #99968b;">// </span><span style="color: #99968b;">El punto aqu&#237; es que x.obj y y.obj tienen la misma referencia que a y b en el main. Por eso *s&#237;* cambia el valor en el main</span>
     }
 
-    public static void main(String[] args) {
-        Wrapper a = new Wrapper();
+    <span style="color: #8ac6f2; font-weight: bold;">public</span> <span style="color: #8ac6f2; font-weight: bold;">static</span> <span style="color: #92a65e; font-weight: bold;">void</span> <span style="color: #cae682;">main</span>(<span style="color: #92a65e; font-weight: bold;">String</span>[] <span style="color: #cae682;">args</span>) {
+        <span style="color: #92a65e; font-weight: bold;">Wrapper</span> <span style="color: #cae682;">a</span> = <span style="color: #8ac6f2; font-weight: bold;">new</span> <span style="color: #92a65e; font-weight: bold;">Wrapper</span>();
         a.obj = 4;
-        Wrapper b = new Wrapper();
+        <span style="color: #92a65e; font-weight: bold;">Wrapper</span> <span style="color: #cae682;">b</span> = <span style="color: #8ac6f2; font-weight: bold;">new</span> <span style="color: #92a65e; font-weight: bold;">Wrapper</span>();
         b.obj = 5;
         swap(a, b);
-        System.out.println("a=" + a.obj);
-        System.out.println("b=" + b.obj);
+        System.out.println(<span style="color: #95e454;">"a="</span> + a.obj);
+        System.out.println(<span style="color: #95e454;">"b="</span> + b.obj);
     }
 
 }
@@ -330,24 +335,14 @@ public class TestSwap3 {
 </div>
 </div>
 </div>
+</div>
+
+
 
 
 <div id="outline-container-sec-2" class="outline-2">
-<h2 id="sec-2"><span class="section-number-2">2</span> <span class="todo TODO">TODO</span> Respuesta a ejercicio de Adivina!</h2>
+<h2 id="sec-2"><span class="section-number-2">2</span> Explicación de una lista con clases</h2>
 <div class="outline-text-2" id="text-2">
-<p>
-Como son enteros, el promedio debe sacarse con +1. No entendí bien por qué
-toca revisar.
-</p>
-</div>
-</div>
-
-
-
-
-<div id="outline-container-sec-3" class="outline-2">
-<h2 id="sec-3"><span class="section-number-2">3</span> Explicación de una lista con clases</h2>
-<div class="outline-text-2" id="text-3">
 <p>
 Aquí es importante entender cómo funcionan las referencias.
 Cada nodo de la lista puede contener a object. Es decir, cualquier cosa. 
@@ -370,25 +365,28 @@ Cada nodo de la lista puede contener a object. Es decir, cualquier cosa.
 </div>
 
 
-<div id="outline-container-sec-4" class="outline-2">
-<h2 id="sec-4"><span class="section-number-2">4</span> Objetos</h2>
-<div class="outline-text-2" id="text-4">
+<div id="outline-container-sec-3" class="outline-2">
+<h2 id="sec-3"><span class="section-number-2">3</span> Objetos</h2>
+<div class="outline-text-2" id="text-3">
+<blockquote>
 <p>
-"Una clase es una colección de atributos y métodos".
+"Una clase es una colección de atributos y métodos". &#x2013;Arles Rodríguez
 </p>
+</blockquote>
 </div>
 
-<div id="outline-container-sec-4-0-1" class="outline-4">
-<h4 id="sec-4-0-1"><span class="section-number-4">4.0.1</span> herencia: repaso</h4>
+
+<div id="outline-container-sec-3-0-1" class="outline-4">
+<h4 id="sec-3-0-1"><span class="section-number-4">3.0.1</span> herencia: repaso</h4>
 </div>
 
-<div id="outline-container-sec-4-0-2" class="outline-4">
-<h4 id="sec-4-0-2"><span class="section-number-4">4.0.2</span> abstract: repaso</h4>
+<div id="outline-container-sec-3-0-2" class="outline-4">
+<h4 id="sec-3-0-2"><span class="section-number-4">3.0.2</span> abstract: repaso</h4>
 </div>
 
-<div id="outline-container-sec-4-0-3" class="outline-4">
-<h4 id="sec-4-0-3"><span class="section-number-4">4.0.3</span> Polimorfismo</h4>
-<div class="outline-text-4" id="text-4-0-3">
+<div id="outline-container-sec-3-0-3" class="outline-4">
+<h4 id="sec-3-0-3"><span class="section-number-4">3.0.3</span> Polimorfismo</h4>
+<div class="outline-text-4" id="text-3-0-3">
 <p>
 Como resuelvo 'el problema fundamental del polimorfismo': toca volver a castear hacia abajo.
 </p>
@@ -397,9 +395,9 @@ Como resuelvo 'el problema fundamental del polimorfismo': toca volver a castear 
 </div>
 </div>
 </div>
-<div id="outline-container-sec-5" class="outline-2">
-<h2 id="sec-5"><span class="section-number-2">5</span> Error de netbeans</h2>
-<div class="outline-text-2" id="text-5">
+<div id="outline-container-sec-4" class="outline-2">
+<h2 id="sec-4"><span class="section-number-2">4</span> Error de netbeans</h2>
+<div class="outline-text-2" id="text-4">
 <p>
 Este error sale en el computador de la universidad, cuando corro Netbeans en Ubuntu:
 </p>
@@ -414,8 +412,8 @@ WARNING: All illegal access operations will be denied in a future release
 </div>
 </div>
 <div id="postamble" class="status">
-<p class="author">Author: Jonathan Ahumada</p>
-<p class="date">Created: 2019-02-17 Sun 18:25</p>
+<p class="author">Author: Jonatan Ahumada Fernández</p>
+<p class="date">Created: 2019-03-02 Sat 21:37</p>
 <p class="creator"><a href="http://www.gnu.org/software/emacs/">Emacs</a> 25.3.1 (<a href="http://orgmode.org">Org</a> mode 8.2.10)</p>
 <p class="validation"><a href="http://validator.w3.org/check?uri=referer">Validate</a></p>
 </div>

@@ -1,0 +1,75 @@
+<html>
+<head>
+    <script>
+        var numero1;
+        var numero2;
+        var contador = true;
+        var operacion;
+    function evaluar(){
+        switch (operacion) {
+  case "+":
+  document.getElementById("salida").value= numero1 + numero2;
+  console.log("operacion efectuada")
+    break;
+  case "-":
+  document.getElementById("salida").value= numero1 - numero2;
+  console.log("operacion efectuada")
+    break;
+
+  case "/":
+  document.getElementById("salida").value= numero1 / numero2;
+  console.log("operacion efectuada")
+    break;
+
+  case "*":
+  document.getElementById("salida").value= numero1 * numero2;
+  console.log("operacion efectuada")
+  
+  break;
+  default:
+    //Sentencias_def ejecutadas cuando no ocurre una coincidencia con los anteriores casos
+    break;
+}
+
+    }
+      function registrarOperacion(string){
+          operacion = string
+          console.log("Se registró la operacion: " + operacion);
+
+      }  
+      function registrarValor(numero){
+        
+        if(contador == true){ 
+            numero1= numero;
+            console.log("Se registró numero1: " + numero1);
+            contador = false;
+
+        }else{
+            numero2= numero;
+            console.log("Se registró numero2: " + numero2);
+            contador = true;
+
+        }
+        
+     
+
+      }
+       
+        </script>
+
+</head> 
+<body>
+
+<table>
+    <tr> <input id="salida" type="number"></tr>
+    <tr> <td><button type="data" onclick="registrarValor(1)">1</button></td> <td><button type="data" onclick="registrarValor(2)">2</button></td> <td><button type="data" onclick="registrarValor(3)">3</button></td> <td><button type="data" onclick="registrarOperacion('+')">+</button></td> </tr>
+    <tr><td><button type="data" onclick="registrarValor(4)">4</button></td> <td><button type="data" onclick="registrarValor(5)">5</button></td> <td><button type="data" onclick="registrarValor(6)">6</button></td> <td><button type="data" onclick="registrarOperacion('-')">-</button></td></tr>
+    <tr><td><button type="data" onclick="registrarValor(7)">7</button></td><td><button type="data" onclick="registrarValor(8)">8</button></td><td><button type="data" onclick="registrarValor(9)">9</button></td><td><button type="data" onclick="registrarOperacion('/')">/</button></td></tr>
+    <tr><td><button type="data" onclick="registrarValor(0)">0</button></td><td><button type="data" onclick="evaluar()">enter</button></td><td><button type="data" value=""></button></td><td><button type="data" onclick="registrarOperacion('*')">*</button></td></tr>
+</table>
+
+
+
+</body></body>
+
+</html>

@@ -3,23 +3,30 @@
 "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
 <head>
+<!-- 2019-04-01 Mon 19:51 -->
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
 <title>Bitácora: Bogotá y sus historias</title>
-<!-- 2019-03-04 Mon 21:22 -->
-<meta  http-equiv="Content-Type" content="text/html;charset=utf-8" />
-<meta  name="generator" content="Org-mode" />
-<meta  name="author" content="Jonathan Ahumada" />
+<meta name="generator" content="Org mode" />
+<meta name="author" content="Jonathan Ahumada" />
 <style type="text/css">
  <!--/*--><![CDATA[/*><!--*/
-  .title  { text-align: center; }
+  .title  { text-align: center;
+             margin-bottom: .2em; }
+  .subtitle { text-align: center;
+              font-size: medium;
+              font-weight: bold;
+              margin-top:0; }
   .todo   { font-family: monospace; color: red; }
-  .done   { color: green; }
+  .done   { font-family: monospace; color: green; }
+  .priority { font-family: monospace; color: orange; }
   .tag    { background-color: #eee; font-family: monospace;
             padding: 2px; font-size: 80%; font-weight: normal; }
   .timestamp { color: #bebebe; }
   .timestamp-kwd { color: #5f9ea0; }
-  .right  { margin-left: auto; margin-right: 0px;  text-align: right; }
-  .left   { margin-left: 0px;  margin-right: auto; text-align: left; }
-  .center { margin-left: auto; margin-right: auto; text-align: center; }
+  .org-right  { margin-left: auto; margin-right: 0px;  text-align: right; }
+  .org-left   { margin-left: 0px;  margin-right: auto; text-align: left; }
+  .org-center { margin-left: auto; margin-right: auto; text-align: center; }
   .underline { text-decoration: underline; }
   #postamble p, #preamble p { font-size: 90%; margin: .2em; }
   p.verse { margin-left: 3%; }
@@ -46,27 +53,111 @@
     border: 1px solid black;
   }
   pre.src:hover:before { display: inline;}
-  pre.src-sh:before    { content: 'sh'; }
-  pre.src-bash:before  { content: 'sh'; }
+  /* Languages per Org manual */
+  pre.src-asymptote:before { content: 'Asymptote'; }
+  pre.src-awk:before { content: 'Awk'; }
+  pre.src-C:before { content: 'C'; }
+  /* pre.src-C++ doesn't work in CSS */
+  pre.src-clojure:before { content: 'Clojure'; }
+  pre.src-css:before { content: 'CSS'; }
+  pre.src-D:before { content: 'D'; }
+  pre.src-ditaa:before { content: 'ditaa'; }
+  pre.src-dot:before { content: 'Graphviz'; }
+  pre.src-calc:before { content: 'Emacs Calc'; }
   pre.src-emacs-lisp:before { content: 'Emacs Lisp'; }
-  pre.src-R:before     { content: 'R'; }
-  pre.src-perl:before  { content: 'Perl'; }
-  pre.src-java:before  { content: 'Java'; }
-  pre.src-sql:before   { content: 'SQL'; }
+  pre.src-fortran:before { content: 'Fortran'; }
+  pre.src-gnuplot:before { content: 'gnuplot'; }
+  pre.src-haskell:before { content: 'Haskell'; }
+  pre.src-hledger:before { content: 'hledger'; }
+  pre.src-java:before { content: 'Java'; }
+  pre.src-js:before { content: 'Javascript'; }
+  pre.src-latex:before { content: 'LaTeX'; }
+  pre.src-ledger:before { content: 'Ledger'; }
+  pre.src-lisp:before { content: 'Lisp'; }
+  pre.src-lilypond:before { content: 'Lilypond'; }
+  pre.src-lua:before { content: 'Lua'; }
+  pre.src-matlab:before { content: 'MATLAB'; }
+  pre.src-mscgen:before { content: 'Mscgen'; }
+  pre.src-ocaml:before { content: 'Objective Caml'; }
+  pre.src-octave:before { content: 'Octave'; }
+  pre.src-org:before { content: 'Org mode'; }
+  pre.src-oz:before { content: 'OZ'; }
+  pre.src-plantuml:before { content: 'Plantuml'; }
+  pre.src-processing:before { content: 'Processing.js'; }
+  pre.src-python:before { content: 'Python'; }
+  pre.src-R:before { content: 'R'; }
+  pre.src-ruby:before { content: 'Ruby'; }
+  pre.src-sass:before { content: 'Sass'; }
+  pre.src-scheme:before { content: 'Scheme'; }
+  pre.src-screen:before { content: 'Gnu Screen'; }
+  pre.src-sed:before { content: 'Sed'; }
+  pre.src-sh:before { content: 'shell'; }
+  pre.src-sql:before { content: 'SQL'; }
+  pre.src-sqlite:before { content: 'SQLite'; }
+  /* additional languages in org.el's org-babel-load-languages alist */
+  pre.src-forth:before { content: 'Forth'; }
+  pre.src-io:before { content: 'IO'; }
+  pre.src-J:before { content: 'J'; }
+  pre.src-makefile:before { content: 'Makefile'; }
+  pre.src-maxima:before { content: 'Maxima'; }
+  pre.src-perl:before { content: 'Perl'; }
+  pre.src-picolisp:before { content: 'Pico Lisp'; }
+  pre.src-scala:before { content: 'Scala'; }
+  pre.src-shell:before { content: 'Shell Script'; }
+  pre.src-ebnf2ps:before { content: 'ebfn2ps'; }
+  /* additional language identifiers per "defun org-babel-execute"
+       in ob-*.el */
+  pre.src-cpp:before  { content: 'C++'; }
+  pre.src-abc:before  { content: 'ABC'; }
+  pre.src-coq:before  { content: 'Coq'; }
+  pre.src-groovy:before  { content: 'Groovy'; }
+  /* additional language identifiers from org-babel-shell-names in
+     ob-shell.el: ob-shell is the only babel language using a lambda to put
+     the execution function name together. */
+  pre.src-bash:before  { content: 'bash'; }
+  pre.src-csh:before  { content: 'csh'; }
+  pre.src-ash:before  { content: 'ash'; }
+  pre.src-dash:before  { content: 'dash'; }
+  pre.src-ksh:before  { content: 'ksh'; }
+  pre.src-mksh:before  { content: 'mksh'; }
+  pre.src-posh:before  { content: 'posh'; }
+  /* Additional Emacs modes also supported by the LaTeX listings package */
+  pre.src-ada:before { content: 'Ada'; }
+  pre.src-asm:before { content: 'Assembler'; }
+  pre.src-caml:before { content: 'Caml'; }
+  pre.src-delphi:before { content: 'Delphi'; }
+  pre.src-html:before { content: 'HTML'; }
+  pre.src-idl:before { content: 'IDL'; }
+  pre.src-mercury:before { content: 'Mercury'; }
+  pre.src-metapost:before { content: 'MetaPost'; }
+  pre.src-modula-2:before { content: 'Modula-2'; }
+  pre.src-pascal:before { content: 'Pascal'; }
+  pre.src-ps:before { content: 'PostScript'; }
+  pre.src-prolog:before { content: 'Prolog'; }
+  pre.src-simula:before { content: 'Simula'; }
+  pre.src-tcl:before { content: 'tcl'; }
+  pre.src-tex:before { content: 'TeX'; }
+  pre.src-plain-tex:before { content: 'Plain TeX'; }
+  pre.src-verilog:before { content: 'Verilog'; }
+  pre.src-vhdl:before { content: 'VHDL'; }
+  pre.src-xml:before { content: 'XML'; }
+  pre.src-nxml:before { content: 'XML'; }
+  /* add a generic configuration mode; LaTeX export needs an additional
+     (add-to-list 'org-latex-listings-langs '(conf " ")) in .emacs */
+  pre.src-conf:before { content: 'Configuration File'; }
 
   table { border-collapse:collapse; }
   caption.t-above { caption-side: top; }
   caption.t-bottom { caption-side: bottom; }
   td, th { vertical-align:top;  }
-  th.right  { text-align: center;  }
-  th.left   { text-align: center;   }
-  th.center { text-align: center; }
-  td.right  { text-align: right;  }
-  td.left   { text-align: left;   }
-  td.center { text-align: center; }
+  th.org-right  { text-align: center;  }
+  th.org-left   { text-align: center;   }
+  th.org-center { text-align: center; }
+  td.org-right  { text-align: right;  }
+  td.org-left   { text-align: left;   }
+  td.org-center { text-align: center; }
   dt { font-weight: bold; }
-  .footpara:nth-child(2) { display: inline; }
-  .footpara { display: block; }
+  .footpara { display: inline; }
   .footdef  { margin-bottom: 1em; }
   .figure { padding: 1em; }
   .figure p { text-align: center; }
@@ -86,6 +177,7 @@
     { font-size: 10px; font-weight: bold; white-space: nowrap; }
   .org-info-js_search-highlight
     { background-color: #ffff00; color: #000000; font-weight: bold; }
+  .org-svg { width: 90%; }
   /*]]>*/-->
 </style>
 <link rel="stylesheet" type="text/css" href="clean-blog.css" />
@@ -95,7 +187,7 @@
 @licstart  The following is the entire license notice for the
 JavaScript code in this tag.
 
-Copyright (C) 2012-2013 Free Software Foundation, Inc.
+Copyright (C) 2012-2018 Free Software Foundation, Inc.
 
 The JavaScript code in this tag is free software: you can
 redistribute it and/or modify it under the terms of the GNU
@@ -144,38 +236,39 @@ for the JavaScript code in this tag.
 <h2>Table of Contents</h2>
 <div id="text-table-of-contents">
 <ul>
-<li><a href="#sec-1">1. Introducción</a></li>
-<li><a href="#sec-2">2. Propuesta de proyecto final</a>
+<li><a href="#orgdd7dec9">1. Introducción</a></li>
+<li><a href="#orgd39a7b4">2. Propuesta de proyecto final</a>
 <ul>
-<li><a href="#sec-2-1">2.1. retroalimentación</a></li>
+<li><a href="#org0b8c2e9">2.1. retroalimentación</a></li>
 </ul>
 </li>
-<li><a href="#sec-3">3. Entradas</a>
+<li><a href="#orga71e4d4">3. Entradas</a>
 <ul>
-<li><a href="#sec-3-1">3.1. <span class="timestamp-wrapper"><span class="timestamp">&lt;2019-02-02 Sat&gt;</span></span></a></li>
-<li><a href="#sec-3-2">3.2. <span class="timestamp-wrapper"><span class="timestamp">&lt;2019-02-07 Thu&gt;</span></span></a></li>
-<li><a href="#sec-3-3">3.3. <span class="timestamp-wrapper"><span class="timestamp">&lt;2019-02-10 Sun&gt;</span></span></a>
+<li><a href="#org9f9acc4">3.1. <span class="timestamp-wrapper"><span class="timestamp">&lt;2019-02-02 Sat&gt;</span></span></a></li>
+<li><a href="#org8558b6e">3.2. <span class="timestamp-wrapper"><span class="timestamp">&lt;2019-02-07 Thu&gt;</span></span></a></li>
+<li><a href="#orgbd4f5d0">3.3. <span class="timestamp-wrapper"><span class="timestamp">&lt;2019-02-10 Sun&gt;</span></span></a>
 <ul>
-<li><a href="#sec-3-3-1">3.3.1. ancianos</a></li>
-<li><a href="#sec-3-3-2">3.3.2. niños</a></li>
-<li><a href="#sec-3-3-3">3.3.3. deportistas</a></li>
-<li><a href="#sec-3-3-4">3.3.4. chica de 'libros al viento'</a></li>
-<li><a href="#sec-3-3-5">3.3.5. vendedores</a></li>
+<li><a href="#org51dfa4f">3.3.1. ancianos</a></li>
+<li><a href="#org20e8f9a">3.3.2. niños</a></li>
+<li><a href="#orgc6106f1">3.3.3. deportistas</a></li>
+<li><a href="#orgc1924d7">3.3.4. chica de 'libros al viento'</a></li>
+<li><a href="#org1384e0e">3.3.5. vendedores</a></li>
 </ul>
 </li>
-<li><a href="#sec-3-4">3.4. <span class="timestamp-wrapper"><span class="timestamp">&lt;2019-02-15 Fri&gt;</span></span></a></li>
-<li><a href="#sec-3-5">3.5. <span class="timestamp-wrapper"><span class="timestamp">&lt;2019-02-17 Sun&gt;</span></span></a></li>
-<li><a href="#sec-3-6">3.6. <span class="timestamp-wrapper"><span class="timestamp">&lt;2019-02-23 Sat&gt;</span></span></a></li>
-<li><a href="#sec-3-7">3.7. <span class="timestamp-wrapper"><span class="timestamp">&lt;2019-02-28 Thu&gt;</span></span></a></li>
+<li><a href="#org1abc983">3.4. <span class="timestamp-wrapper"><span class="timestamp">&lt;2019-02-15 Fri&gt;</span></span></a></li>
+<li><a href="#org6320674">3.5. <span class="timestamp-wrapper"><span class="timestamp">&lt;2019-02-17 Sun&gt;</span></span></a></li>
+<li><a href="#orgf5f0b64">3.6. <span class="timestamp-wrapper"><span class="timestamp">&lt;2019-02-23 Sat&gt;</span></span></a></li>
+<li><a href="#org70f2a19">3.7. <span class="timestamp-wrapper"><span class="timestamp">&lt;2019-02-28 Thu&gt;</span></span></a></li>
+<li><a href="#orgc0ab979">3.8. <span class="timestamp-wrapper"><span class="timestamp">&lt;2019-03-19 Tue&gt;</span></span></a></li>
 </ul>
 </li>
-<li><a href="#sec-4">4. Notas lecturas</a>
+<li><a href="#org7ea88c9">4. Notas lecturas</a>
 <ul>
-<li><a href="#sec-4-1">4.1. Chorro</a></li>
-<li><a href="#sec-4-2">4.2. LeMoyne</a></li>
-<li><a href="#sec-4-3">4.3. Chicha</a></li>
-<li><a href="#sec-4-4">4.4. Plazas</a></li>
-<li><a href="#sec-4-5">4.5. Plazas2</a></li>
+<li><a href="#org76be8a8">4.1. Chorro</a></li>
+<li><a href="#org9002a56">4.2. LeMoyne</a></li>
+<li><a href="#orgd0bbb53">4.3. Chicha</a></li>
+<li><a href="#org3d792d1">4.4. Plazas</a></li>
+<li><a href="#org073b4b3">4.5. Plazas2</a></li>
 </ul>
 </li>
 </ul>
@@ -185,46 +278,46 @@ for the JavaScript code in this tag.
 +AUTHOR: Jonatan A. Ahumada Fernández
 </p>
 
-<div id="outline-container-sec-1" class="outline-2">
-<h2 id="sec-1"><span class="section-number-2">1</span> Introducción</h2>
+<div id="outline-container-orgdd7dec9" class="outline-2">
+<h2 id="orgdd7dec9"><span class="section-number-2">1</span> Introducción</h2>
 <div class="outline-text-2" id="text-1">
 <p>
 Esta página constituirá la bitácora para el curso "Bogotá y sus Historias", cursado en la Fundación Universitaria Konrad Lorenz.
 </p>
 
-<hr  />
+<hr />
 <table border="2" cellspacing="0" cellpadding="6" rules="groups" frame="hsides">
 
 
 <colgroup>
-<col  class="left" />
+<col  class="org-left" />
 </colgroup>
 <tbody>
 <tr>
-<td class="left">Estudiante: Jonatan Adolfo Ahumada</td>
+<td class="org-left">Estudiante: Jonatan Adolfo Ahumada</td>
 </tr>
 </tbody>
 </table>
-<hr  />
-<hr  />
+<hr />
+<hr />
 <table border="2" cellspacing="0" cellpadding="6" rules="groups" frame="hsides">
 
 
 <colgroup>
-<col  class="left" />
+<col  class="org-left" />
 </colgroup>
 <tbody>
 <tr>
-<td class="left">Docente: Estefanía Vanegas</td>
+<td class="org-left">Docente: Estefanía Vanegas</td>
 </tr>
 </tbody>
 </table>
-<hr  />
+<hr />
 </div>
 </div>
 
-<div id="outline-container-sec-2" class="outline-2">
-<h2 id="sec-2"><span class="section-number-2">2</span> Propuesta de proyecto final</h2>
+<div id="outline-container-orgd39a7b4" class="outline-2">
+<h2 id="orgd39a7b4"><span class="section-number-2">2</span> Propuesta de proyecto final</h2>
 <div class="outline-text-2" id="text-2">
 <p>
 Para mi proyecto final me gustaría estudiar el tema de las catedrales o en general las iglesias que existen en Bogotá.
@@ -251,15 +344,13 @@ Se me ocurren dos opciones:
 </p>
 
 <ol class="org-ol">
-<li>leer bibliografía existente y presentar una síntesis (si es que existe y es accesible).
-</li>
-<li>simplemente hacer visitas, tomar fotos y hacer comentarios comparativos entre varias iglesias (probablemente sea lo más fácil).
-</li>
+<li>leer bibliografía existente y presentar una síntesis (si es que existe y es accesible).</li>
+<li>simplemente hacer visitas, tomar fotos y hacer comentarios comparativos entre varias iglesias (probablemente sea lo más fácil).</li>
 </ol>
 </div>
 
-<div id="outline-container-sec-2-1" class="outline-3">
-<h3 id="sec-2-1"><span class="section-number-3">2.1</span> retroalimentación</h3>
+<div id="outline-container-org0b8c2e9" class="outline-3">
+<h3 id="org0b8c2e9"><span class="section-number-3">2.1</span> retroalimentación</h3>
 <div class="outline-text-3" id="text-2-1">
 <p>
 Delimité el trabajo a una muestra fotográfica con breves apuntes históricos. Aún debo escogér cuáles y cuántas
@@ -269,25 +360,25 @@ iglesias son suficientes.
 
 
 <ul class="org-ul">
-<li>medio: página web
-</li>
+<li>medio: página web</li>
 </ul>
 
 <div class="figure">
 <p><img src="./img/catedral_silueta.jpg" alt="catedral_silueta.jpg" />
 </p>
-<p><span class="figure-number">Figure 1:</span> Iglesia de Lourdes</p>
+<p><span class="figure-number">Figure 1: </span>Iglesia de Lourdes</p>
 </div>
 </div>
 </div>
 </div>
 
 
-<div id="outline-container-sec-3" class="outline-2">
-<h2 id="sec-3"><span class="section-number-2">3</span> Entradas</h2>
+<div id="outline-container-orga71e4d4" class="outline-2">
+<h2 id="orga71e4d4"><span class="section-number-2">3</span> Entradas</h2>
 <div class="outline-text-2" id="text-3">
-</div><div id="outline-container-sec-3-1" class="outline-3">
-<h3 id="sec-3-1"><span class="section-number-3">3.1</span> <span class="timestamp-wrapper"><span class="timestamp">&lt;2019-02-02 Sat&gt;</span></span></h3>
+</div>
+<div id="outline-container-org9f9acc4" class="outline-3">
+<h3 id="org9f9acc4"><span class="section-number-3">3.1</span> <span class="timestamp-wrapper"><span class="timestamp">&lt;2019-02-02 Sat&gt;</span></span></h3>
 <div class="outline-text-3" id="text-3-1">
 <p>
 Visité el centro de la ciudad por ir a la librería Lerner. Me parece auspicioso que esta Libreria esté
@@ -311,40 +402,40 @@ el cruce con la 26.
 <div class="figure">
 <p><img src="./img/eje-ambiental.jpg" alt="eje-ambiental.jpg" />
 </p>
-<p><span class="figure-number">Figure 2:</span> Eje ambiental</p>
+<p><span class="figure-number">Figure 2: </span>Eje ambiental</p>
 </div>
 
 
 <div class="figure">
 <p><img src="./img/salida-lerner.jpg" alt="salida-lerner.jpg" />
 </p>
-<p><span class="figure-number">Figure 3:</span> A la salida de la Librería Lerner</p>
+<p><span class="figure-number">Figure 3: </span>A la salida de la Librería Lerner</p>
 </div>
 
 
 <div class="figure">
 <p><img src="./img/iglesia.jpg" alt="iglesia.jpg" />
 </p>
-<p><span class="figure-number">Figure 4:</span> En una de tantas iglesias del área</p>
+<p><span class="figure-number">Figure 4: </span>En una de tantas iglesias del área</p>
 </div>
 
 
 <div class="figure">
 <p><img src="./img/septima-peatonal.jpg" alt="septima-peatonal.jpg" />
 </p>
-<p><span class="figure-number">Figure 5:</span> La séptima, tramo relativamente nuevo</p>
+<p><span class="figure-number">Figure 5: </span>La séptima, tramo relativamente nuevo</p>
 </div>
 
 
 <div class="figure">
 <p><img src="./img/septima-26.jpg" alt="septima-26.jpg" />
 </p>
-<p><span class="figure-number">Figure 6:</span> Fin del recorrido, al pie del Observatorio</p>
+<p><span class="figure-number">Figure 6: </span>Fin del recorrido, al pie del Observatorio</p>
 </div>
 </div>
 </div>
-<div id="outline-container-sec-3-2" class="outline-3">
-<h3 id="sec-3-2"><span class="section-number-3">3.2</span> <span class="timestamp-wrapper"><span class="timestamp">&lt;2019-02-07 Thu&gt;</span></span></h3>
+<div id="outline-container-org8558b6e" class="outline-3">
+<h3 id="org8558b6e"><span class="section-number-3">3.2</span> <span class="timestamp-wrapper"><span class="timestamp">&lt;2019-02-07 Thu&gt;</span></span></h3>
 <div class="outline-text-3" id="text-3-2">
 <p>
 Hoy pude levantarme "tarde" porque contaba con el carro para ir a la Universidad, o eso creía.
@@ -393,17 +484,15 @@ La 'ola verde' ataca nuevamente. Su voz es legión, y es ley.
 
 
 
-<div id="outline-container-sec-3-3" class="outline-3">
-<h3 id="sec-3-3"><span class="section-number-3">3.3</span> <span class="timestamp-wrapper"><span class="timestamp">&lt;2019-02-10 Sun&gt;</span></span></h3>
+<div id="outline-container-orgbd4f5d0" class="outline-3">
+<h3 id="orgbd4f5d0"><span class="section-number-3">3.3</span> <span class="timestamp-wrapper"><span class="timestamp">&lt;2019-02-10 Sun&gt;</span></span></h3>
 <div class="outline-text-3" id="text-3-3">
 <p>
 Visité el Parque Sauzalito, al lado de la Teminal de Transporte. Este tipo de espacio es muy interesante por dos motivos.
 </p>
 <ol class="org-ol">
-<li>Conserva recursos naturales en medio del cemento de la ciudad.
-</li>
-<li>Es un espacio recreativo para diversos segmentos poblacionales.
-</li>
+<li>Conserva recursos naturales en medio del cemento de la ciudad.</li>
+<li>Es un espacio recreativo para diversos segmentos poblacionales.</li>
 </ol>
 
 <p>
@@ -412,8 +501,8 @@ Hagamos un breve inventario.
 </p>
 </div>
 
-<div id="outline-container-sec-3-3-1" class="outline-4">
-<h4 id="sec-3-3-1"><span class="section-number-4">3.3.1</span> ancianos</h4>
+<div id="outline-container-org51dfa4f" class="outline-4">
+<h4 id="org51dfa4f"><span class="section-number-4">3.3.1</span> ancianos</h4>
 <div class="outline-text-4" id="text-3-3-1">
 <p>
 Montados en las "máquinas de ejercicio" que la gobernación ha venido
@@ -427,8 +516,8 @@ realidad es nulo.
 </div>
 </div>
 
-<div id="outline-container-sec-3-3-2" class="outline-4">
-<h4 id="sec-3-3-2"><span class="section-number-4">3.3.2</span> niños</h4>
+<div id="outline-container-org20e8f9a" class="outline-4">
+<h4 id="org20e8f9a"><span class="section-number-4">3.3.2</span> niños</h4>
 <div class="outline-text-4" id="text-3-3-2">
 <p>
 El parque está lleno de cursos de natación, patinaje, artes marciales, tenis, basketbol, etc. No me es muy claro 
@@ -439,8 +528,8 @@ supervisa los hijos de otras personas por dinero.
 </div>
 </div>
 
-<div id="outline-container-sec-3-3-3" class="outline-4">
-<h4 id="sec-3-3-3"><span class="section-number-4">3.3.3</span> deportistas</h4>
+<div id="outline-container-orgc6106f1" class="outline-4">
+<h4 id="orgc6106f1"><span class="section-number-4">3.3.3</span> deportistas</h4>
 <div class="outline-text-4" id="text-3-3-3">
 <p>
 En Bogotá hay una cultura de calistenia. Hoy había algunos tipos utilizando las barras del Sauzalito, pero  no es mucho en comparación con el parque Simón Bolívar.
@@ -448,8 +537,8 @@ En Bogotá hay una cultura de calistenia. Hoy había algunos tipos utilizando la
 </div>
 </div>
 
-<div id="outline-container-sec-3-3-4" class="outline-4">
-<h4 id="sec-3-3-4"><span class="section-number-4">3.3.4</span> chica de 'libros al viento'</h4>
+<div id="outline-container-orgc1924d7" class="outline-4">
+<h4 id="orgc1924d7"><span class="section-number-4">3.3.4</span> chica de 'libros al viento'</h4>
 <div class="outline-text-4" id="text-3-3-4">
 <p>
 Me gusta esta idea, pero creo que nadie la usa. También noto ahí un problema y es que, si eres lector, no vas a recurrir a un quisco arbitrariamente
@@ -461,8 +550,8 @@ he visto que esas cosas pasen.
 </div>
 
 
-<div id="outline-container-sec-3-3-5" class="outline-4">
-<h4 id="sec-3-3-5"><span class="section-number-4">3.3.5</span> vendedores</h4>
+<div id="outline-container-org1384e0e" class="outline-4">
+<h4 id="org1384e0e"><span class="section-number-4">3.3.5</span> vendedores</h4>
 <div class="outline-text-4" id="text-3-3-5">
 <p>
 La mayoría de vendedores ambulantes se postran en el suelo a disfrutar el ambiente. Dan una aura de pasividad.  
@@ -471,8 +560,8 @@ La mayoría de vendedores ambulantes se postran en el suelo a disfrutar el ambie
 </div>
 </div>
 
-<div id="outline-container-sec-3-4" class="outline-3">
-<h3 id="sec-3-4"><span class="section-number-3">3.4</span> <span class="timestamp-wrapper"><span class="timestamp">&lt;2019-02-15 Fri&gt;</span></span></h3>
+<div id="outline-container-org1abc983" class="outline-3">
+<h3 id="org1abc983"><span class="section-number-3">3.4</span> <span class="timestamp-wrapper"><span class="timestamp">&lt;2019-02-15 Fri&gt;</span></span></h3>
 <div class="outline-text-3" id="text-3-4">
 <p>
 Hoy declararon que el pico y placa se extiende hasta el fin de semana y durante todo el día. Lo hacen para "preservar la
@@ -497,8 +586,8 @@ ser el beneficiado de tal medida? ¿Están probando a ver qué tan pusilánimes 
 
 
 
-<div id="outline-container-sec-3-5" class="outline-3">
-<h3 id="sec-3-5"><span class="section-number-3">3.5</span> <span class="timestamp-wrapper"><span class="timestamp">&lt;2019-02-17 Sun&gt;</span></span></h3>
+<div id="outline-container-org6320674" class="outline-3">
+<h3 id="org6320674"><span class="section-number-3">3.5</span> <span class="timestamp-wrapper"><span class="timestamp">&lt;2019-02-17 Sun&gt;</span></span></h3>
 <div class="outline-text-3" id="text-3-5">
 <p>
 Según las noticias, tendríamos que usar tapabocas al salir a la calle. La crisis ambiental es demasiado crítica. No obstante, salgo a la calle un domingo, el único día 
@@ -514,8 +603,8 @@ Me convenzo más de que la medida es solo para comodidad de quienes pueden finan
 </div>
 
 
-<div id="outline-container-sec-3-6" class="outline-3">
-<h3 id="sec-3-6"><span class="section-number-3">3.6</span> <span class="timestamp-wrapper"><span class="timestamp">&lt;2019-02-23 Sat&gt;</span></span></h3>
+<div id="outline-container-orgf5f0b64" class="outline-3">
+<h3 id="orgf5f0b64"><span class="section-number-3">3.6</span> <span class="timestamp-wrapper"><span class="timestamp">&lt;2019-02-23 Sat&gt;</span></span></h3>
 <div class="outline-text-3" id="text-3-6">
 <p>
 Por segunda vez a la semana voy al SuperCADE de la calle 26 con carrera 30.
@@ -542,25 +631,18 @@ hace difícil cuestionar. Por ejemplo, este SuperCADE tiene las siguientes falla
 </p>
 
 <ol class="org-ol">
-<li>Hay solo 2 personas (y como 5 sillas) agendando los turnos de la entrada. Téngase en cuenta que la fila es larguísima. 
-</li>
-<li><b>Antes</b> de hacer la fila <b>para sacar el turno</b> uno debe entrevistarse con las personas de información. Por regla general, le exigirán a uno documentos innecesarios (mucha gente se devolverá solo por eso).
-</li>
-<li>Casi todo lo importante (pagar impuestos antes de que le hagan algo a uno) requiere agendar una cita telefónica.
-</li>
-<li>Los menús telefonicos son infernalmente tediosos y una vez uno los termina lo someten a una espera sin fin, despuúes de la cual muchas veces te cuelgan.
-</li>
-<li>El lugar es sucio. 
-</li>
-<li>Las señas de la instalación están en desuso (por ejemplo, una cartelera aérea aferrada al cielo raso), en vez de eso se montan quioscos improvisadas con señas
-</li>
+<li>Hay solo 2 personas (y como 5 sillas) agendando los turnos de la entrada. Téngase en cuenta que la fila es larguísima.</li>
+<li><b>Antes</b> de hacer la fila <b>para sacar el turno</b> uno debe entrevistarse con las personas de información. Por regla general, le exigirán a uno documentos innecesarios (mucha gente se devolverá solo por eso).</li>
+<li>Casi todo lo importante (pagar impuestos antes de que le hagan algo a uno) requiere agendar una cita telefónica.</li>
+<li>Los menús telefonicos son infernalmente tediosos y una vez uno los termina lo someten a una espera sin fin, despuúes de la cual muchas veces te cuelgan.</li>
+<li>El lugar es sucio.</li>
+<li>Las señas de la instalación están en desuso (por ejemplo, una cartelera aérea aferrada al cielo raso), en vez de eso se montan quioscos improvisadas con señas</li>
 </ol>
 <p>
 impresas en lotes y mal cortadas.
 </p>
 <ol class="org-ol">
-<li>A la entrada hay gente desconocida que ofrece los servicios de 'predial' y 'vehículo'. Eso ya de por sí indica claramente qué es lo que le espera a uno.
-</li>
+<li>A la entrada hay gente desconocida que ofrece los servicios de 'predial' y 'vehículo'. Eso ya de por sí indica claramente qué es lo que le espera a uno.</li>
 </ol>
 
 <p>
@@ -571,8 +653,8 @@ Recordemos que hay que coger Transmilenio o trancón para ir a perder el tiempo.
 </div>
 </div>
 
-<div id="outline-container-sec-3-7" class="outline-3">
-<h3 id="sec-3-7"><span class="section-number-3">3.7</span> <span class="timestamp-wrapper"><span class="timestamp">&lt;2019-02-28 Thu&gt;</span></span></h3>
+<div id="outline-container-org70f2a19" class="outline-3">
+<h3 id="org70f2a19"><span class="section-number-3">3.7</span> <span class="timestamp-wrapper"><span class="timestamp">&lt;2019-02-28 Thu&gt;</span></span></h3>
 <div class="outline-text-3" id="text-3-7">
 <p>
 Tomé el bus M86 desde la estación CAN, para llegar a la parada
@@ -604,7 +686,8 @@ Estuve al punto de amonestarla, pero decidí que no valía la pena, porque ellos
 +--+ +--+ +--+ +--+			  
 |xx| |xx| |  | |xx|			  
 +--+ +--+ +--+ +--+  	       	       	  
-    Mujer  Yo
+    Mujer  Yo        	     	    
+
 </pre>
 
 <p>
@@ -612,55 +695,81 @@ Algunas otras cosas sobre el Transmilenio:
 </p>
 
 <ol class="org-ol">
-<li>los policias no hacen nada (dejan que a gente se vuele)
-</li>
-<li>los vendedores poseen mayor estatus moral que uno 
-</li>
-<li>los coordinadores no hacen nada cuando la gente no hace fila 
-</li>
-<li>las personas son incapaces de organizarse para entrar al Transmilenio
-</li>
-<li>las mujeres creen que los hombres están para servirles (¿es esto antifeminista o feminista?: depende por completo de la conveniencia del observador)
-</li>
-<li>nadie pregunta si se va a bajar en esta parada también, simplemente empujan de una vez
-</li>
-<li>los que entran no dejan que la gente salga
-</li>
-<li>la gente que espera un bus no se quita del frente aun cuando no necesita entrar al bus que llega
-</li>
-<li>la gente que quiere a entrar al bus que llega y no alcanza no se quita de al frente cuando el bus se va. Es decir, se vuelan y se repite 8)
-</li>
+<li>los policias no hacen nada (dejan que a gente se vuele)</li>
+<li>los vendedores poseen mayor estatus moral que uno</li>
+<li>los coordinadores no hacen nada cuando la gente no hace fila</li>
+<li>las personas son incapaces de organizarse para entrar al Transmilenio</li>
+<li>las mujeres creen que los hombres están para servirles (¿es esto antifeminista o feminista?: depende por completo de la conveniencia del observador)</li>
+<li>nadie pregunta si se va a bajar en esta parada también, simplemente empujan de una vez</li>
+<li>los que entran no dejan que la gente salga</li>
+<li>la gente que espera un bus no se quita del frente aun cuando no necesita entrar al bus que llega</li>
+<li>la gente que quiere a entrar al bus que llega y no alcanza no se quita de al frente cuando el bus se va. Es decir, se vuelan y se repite 8)</li>
 </ol>
 </div>
 </div>
+
+<div id="outline-container-orgc0ab979" class="outline-3">
+<h3 id="orgc0ab979"><span class="section-number-3">3.8</span> <span class="timestamp-wrapper"><span class="timestamp">&lt;2019-03-19 Tue&gt;</span></span></h3>
+<div class="outline-text-3" id="text-3-8">
+<p>
+Sobre la carrera 13 con 63 presencié un fenómeno social muy extraño. Es una política de la ciudad muy parecida a la de los 
+"conos rojos" que abochornan a los conductores mal parqueados. Lo que vi fue 
+lo siguiente: mientras el semáforo estaba en rojo, unas 5 personas vestidas
+con chalecos verdes y con signos de "pare" se ponían en la zebra y hacían un baile.
+Mientras bailaban, en coro cantaban una propaganda sobre movilidad. El objetivo 
+de la propaganda era (creo, no tengo modo de comprobarlo) hacer que los 
+conductores respetaran el pare y, simultáneamente, hacer que los peatones
+cruzaran únicamente por la zebra.
+</p>
+
+<p>
+Racionalmente, supongo que uno debería aprobar que la ciudad tome esas medidas.
+Sin embargo, en términos pragmáticos, la escena proyecta una vaho de ridiculez 
+que es difícil de obviar. ¿Por qué tiene que haber un baile? ¿Los ciudadanos
+son niños con quienes sólo se puede comunicar a través de juegos y diversión?
+</p>
+
+<p>
+En mi opinion, la mayoría de la gente no respeta las normas porque nadie
+les llama la atención al respecto. Y nadie les llama la atención porque, como 
+es natural, uno quiere evitar ser apuñalado o que lo golpeen con una cruzeta en plena calle.
+Cuando, en respuesta a esto, la ciudad empieza a utilizar esas estrategias infantilizantes, al 
+agravio se le añade insulto. 
+</p>
+</div>
+</div>
 </div>
 
 
-<div id="outline-container-sec-4" class="outline-2">
-<h2 id="sec-4"><span class="section-number-2">4</span> Notas lecturas</h2>
+
+
+
+
+<div id="outline-container-org7ea88c9" class="outline-2">
+<h2 id="org7ea88c9"><span class="section-number-2">4</span> Notas lecturas</h2>
 <div class="outline-text-2" id="text-4">
-</div><div id="outline-container-sec-4-1" class="outline-3">
-<h3 id="sec-4-1"><span class="section-number-3">4.1</span> <a href="./lectura_1.html">Chorro</a></h3>
 </div>
-<div id="outline-container-sec-4-2" class="outline-3">
-<h3 id="sec-4-2"><span class="section-number-3">4.2</span> <a href="./lectura_2.html">LeMoyne</a></h3>
+<div id="outline-container-org76be8a8" class="outline-3">
+<h3 id="org76be8a8"><span class="section-number-3">4.1</span> <a href="./lectura_1.html">Chorro</a></h3>
 </div>
-<div id="outline-container-sec-4-3" class="outline-3">
-<h3 id="sec-4-3"><span class="section-number-3">4.3</span> <a href="./lectura3.html">Chicha</a></h3>
+<div id="outline-container-org9002a56" class="outline-3">
+<h3 id="org9002a56"><span class="section-number-3">4.2</span> <a href="./lectura_2.html">LeMoyne</a></h3>
 </div>
-<div id="outline-container-sec-4-4" class="outline-3">
-<h3 id="sec-4-4"><span class="section-number-3">4.4</span> <a href="./plazas.html">Plazas</a></h3>
+<div id="outline-container-orgd0bbb53" class="outline-3">
+<h3 id="orgd0bbb53"><span class="section-number-3">4.3</span> <a href="./lectura3.html">Chicha</a></h3>
 </div>
-<div id="outline-container-sec-4-5" class="outline-3">
-<h3 id="sec-4-5"><span class="section-number-3">4.5</span> <a href="./plazas_yerbateras.html">Plazas2</a></h3>
+<div id="outline-container-org3d792d1" class="outline-3">
+<h3 id="org3d792d1"><span class="section-number-3">4.4</span> <a href="./plazas.html">Plazas</a></h3>
+</div>
+<div id="outline-container-org073b4b3" class="outline-3">
+<h3 id="org073b4b3"><span class="section-number-3">4.5</span> <a href="./plazas_yerbateras.html">Plazas2</a></h3>
 </div>
 </div>
 </div>
 <div id="postamble" class="status">
 <p class="date">Date: 2019-1</p>
 <p class="author">Author: Jonathan Ahumada</p>
-<p class="date">Created: 2019-03-04 Mon 21:22</p>
-<p class="creator"><a href="http://www.gnu.org/software/emacs/">Emacs</a> 25.3.1 (<a href="http://orgmode.org">Org</a> mode 8.2.10)</p>
+<p class="date">Created: 2019-04-01 Mon 19:51</p>
 <p class="validation"><a href="http://validator.w3.org/check?uri=referer">Validate</a></p>
 </div>
 </body>

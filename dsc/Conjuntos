@@ -1,3 +1,8 @@
+#+TITLE: Conjuntos
+#+HTML_HEAD:<style>body { font-family: 'Crimson Text', serif;   font-size: 20px; color: #cf8e6b;  background-color: #273b49;} </style>
+#+HTML_HEAD:<style> #content{    width: 60%;    position: center;    margin-left: auto; margin-right: auto;} </style>
+#+HTML_HEAD: <style> a {  color:#f5b43c;}</style>
+
 * Conjuntos
 Su definición no debe ser ambigua.
 ** Elementos 
@@ -5,11 +10,12 @@ Letras minúsculas. También llamados miembros.
 \[ a \in A\]
 \[ a \notin A\]
 ** Conjuntos especiales
+\[
 \N = {1,2,3,4,5,6, \dots}, los numeros *naturales*.
 \Z = números enteros, positivos, cero o negaticos.
 \Q = números racionales, de la forma \(\frac_{m}{n}\ | m,n\ \in \Z\ y\ n \neq 0)
 \R =  números reales, contiene a \Q y muchos números más, como \pi, \sqrt{3}, etc.
-
+\]
 ** Finitos
 Son enumerables usando llaves {}. El etcétera matemático se puede 
 usar cuando no hay ambiguedad. No obstante, muchas veces es imposible evitarla.
@@ -45,7 +51,7 @@ es subconjunto de sí mismo. Por eso la nooación \subseteq  en lugar de \subset
 Luego, decir \subset es lo mismo que de decir que algo es un subconjunto de otro conjunto y que no es el mismo.
 Si T \subset S, decimos que T es *subconjunto propio* de S. 
 
-El símbolo \subseteq es similar al \leq
+El símbolo \( \subseteq \) es similar al \leq
 
 ** Intervalos
 Son subconjuntos especiales de \R.

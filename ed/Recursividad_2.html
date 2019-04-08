@@ -4,10 +4,10 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
 <head>
 <title>Recursividad, segunda parte</title>
-<!-- 2019-02-06 Wed 23:25 -->
+<!-- 2019-03-13 Wed 18:18 -->
 <meta  http-equiv="Content-Type" content="text/html;charset=utf-8" />
 <meta  name="generator" content="Org-mode" />
-<meta  name="author" content="Jonathan Ahumada" />
+<meta  name="author" content="Jonatan Ahumada Fernández" />
 <style type="text/css">
  <!--/*--><![CDATA[/*><!--*/
   .title  { text-align: center; }
@@ -88,6 +88,9 @@
     { background-color: #ffff00; color: #000000; font-weight: bold; }
   /*]]>*/-->
 </style>
+<style>body { font-family: 'Crimson Text', serif;   font-size: 20px; color: #cf8e6b;  background-color: #273b49;} </style>
+<style> #content{    width: 60%;    position: center;    margin-left: auto; margin-right: auto;} </style>
+<style> a {  color:#f5b43c;}</style>
 <script type="text/javascript">
 /*
 @licstart  The following is the entire license notice for the
@@ -142,47 +145,60 @@ for the JavaScript code in this tag.
 <h2>Table of Contents</h2>
 <div id="text-table-of-contents">
 <ul>
-<li><a href="#sec-1">1. lenguajes funcionales</a></li>
-<li><a href="#sec-2">2. Sobre la ejecución en la máquina</a></li>
-<li><a href="#sec-3">3. Ordenamientos</a></li>
-<li><a href="#sec-4">4. Ejemplo</a>
+<li><a href="#sec-1">1. Recursividad (continuación)</a>
 <ul>
-<li><a href="#sec-4-1">4.1. Procedimiento</a></li>
-<li><a href="#sec-4-2">4.2. Solucion</a></li>
+<li><a href="#sec-1-1">1.1. lenguajes funcionales</a></li>
+<li><a href="#sec-1-2">1.2. Sobre la ejecución en la máquina</a></li>
+<li><a href="#sec-1-3">1.3. Ordenamientos</a></li>
+<li><a href="#sec-1-4">1.4. Ejemplo</a>
+<ul>
+<li><a href="#sec-1-4-1">1.4.1. Procedimiento</a></li>
+<li><a href="#sec-1-4-2">1.4.2. Solución</a></li>
 </ul>
 </li>
-<li><a href="#sec-5">5. Combinaciónes</a>
+<li><a href="#sec-1-5">1.5. Combinaciones</a>
 <ul>
-<li><a href="#sec-5-1">5.1. Ejemplo</a></li>
-<li><a href="#sec-5-2">5.2. Prodecimiento</a></li>
-<li><a href="#sec-5-3">5.3. Solución</a></li>
+<li><a href="#sec-1-5-1">1.5.1. Ejemplo</a></li>
+<li><a href="#sec-1-5-2">1.5.2. Prodecimiento</a></li>
+<li><a href="#sec-1-5-3">1.5.3. Solución</a></li>
+</ul>
+</li>
 </ul>
 </li>
 </ul>
 </div>
 </div>
-
 
 <div id="outline-container-sec-1" class="outline-2">
-<h2 id="sec-1"><span class="section-number-2">1</span> lenguajes funcionales</h2>
+<h2 id="sec-1"><span class="section-number-2">1</span> Recursividad (continuación)</h2>
 <div class="outline-text-2" id="text-1">
+</div><div id="outline-container-sec-1-1" class="outline-3">
+<h3 id="sec-1-1"><span class="section-number-3">1.1</span> lenguajes funcionales</h3>
+<div class="outline-text-3" id="text-1-1">
 <p>
-"Más fácil de interpretar por las máquinas." 
-//Se supone que la definción fuerte de recursividad es comprensible así como están.
+Comencemos, pues, por un enigma:
 </p>
+<blockquote>
+<p>
+"El lenguaje funcional es más fácil de interpretar por las máquinas." &#x2013;Arles Rodríguez
+</p>
+</blockquote>
 
-<p>
-//Hay una conexión entre la notación funcional y la sintaxis de Lisp que no logro hacer consciente. 
-</p>
+<ul class="org-ul">
+<li>Se supone que la definición fuerte de recursividad es comprensible así como están.
+</li>
+<li>Hay una conexión entre la notación funcional y la sintaxis de Lisp (que no logro hacer consciente). 
+</li>
+</ul>
 </div>
 </div>
 
-<div id="outline-container-sec-2" class="outline-2">
-<h2 id="sec-2"><span class="section-number-2">2</span> Sobre la ejecución en la máquina</h2>
-<div class="outline-text-2" id="text-2">
+<div id="outline-container-sec-1-2" class="outline-3">
+<h3 id="sec-1-2"><span class="section-number-3">1.2</span> Sobre la ejecución en la máquina</h3>
+<div class="outline-text-3" id="text-1-2">
 <p>
 La máquina siempre evalúa de izquierda a derecha (según la precedencia usual).
-En las combinaciónes, es interesante notar que primero el término izquierdo de la 
+En las combinaciones, es interesante notar que primero el término izquierdo de la 
 expresión se evalúa recursivamente hasta llegar al caso base y luego pasa al derecho: 
 </p>
 
@@ -193,11 +209,11 @@ C(4,2)= C(3,1) + C(3,2)
 </pre>
 </div>
 </div>
-<div id="outline-container-sec-3" class="outline-2">
-<h2 id="sec-3"><span class="section-number-2">3</span> Ordenamientos</h2>
-<div class="outline-text-2" id="text-3">
+<div id="outline-container-sec-1-3" class="outline-3">
+<h3 id="sec-1-3"><span class="section-number-3">1.3</span> Ordenamientos</h3>
+<div class="outline-text-3" id="text-1-3">
 <p>
-La estrategía general de los ordenamientos
+La estrategia general de los ordenamientos
 es escoger uno de los elementos del conjunto.
 Luego, dibujar un árbol de posibilidades de
 ordenamiento.
@@ -205,34 +221,34 @@ Nótese que:
 </p>
 
 <ol class="org-ol">
-<li>solo un llamado recursivo (producto)
+<li>solo un llamado recursivo (producto).
 </li>
-<li>no es un árbol "per se", aunque se representa como àrbol // Aclarar esto
+<li>no es un árbol "per se", aunque se representa como árbol // Aclarar esto
 </li>
 </ol>
 </div>
 </div>
 
-<div id="outline-container-sec-4" class="outline-2">
-<h2 id="sec-4"><span class="section-number-2">4</span> Ejemplo</h2>
-<div class="outline-text-2" id="text-4">
+<div id="outline-container-sec-1-4" class="outline-3">
+<h3 id="sec-1-4"><span class="section-number-3">1.4</span> Ejemplo</h3>
+<div class="outline-text-3" id="text-1-4">
 <p>
 Suponga que selecciona cuatro cartas distintas de una baraja de póker, que se van a
 representar por los símboloes (T,D,C,P). ¿De cuántas formas puedo ordenar estas 4 cartas?
 </p>
 </div>
 
-<div id="outline-container-sec-4-1" class="outline-3">
-<h3 id="sec-4-1"><span class="section-number-3">4.1</span> Procedimiento</h3>
-<div class="outline-text-3" id="text-4-1">
+<div id="outline-container-sec-1-4-1" class="outline-4">
+<h4 id="sec-1-4-1"><span class="section-number-4">1.4.1</span> Procedimiento</h4>
+<div class="outline-text-4" id="text-1-4-1">
 <ol class="org-ol">
 <li>selecciona un elemento
 </li>
 
-<li>Dibuja ur arbol de posibilidades a partir de ese elemento.
+<li>Dibuja ur árbol de posibilidades a partir de ese elemento.
 <div class="org-src-container">
 
-<pre class="src src-ditaa">		C------P  
+<pre class="src src-ditaa">                C------P  
       D+--------|     
       |         P------C
       |          D------P  
@@ -241,16 +257,16 @@ T ----C+--------|
       |               
       |         D-----C 
       P+--------|  
-		C-----D
+                C-----D
 </pre>
 </div>
 </li>
 
-<li>Repite el arbol de posibidades  por cada elemento
+<li>Repite el árbol de posibilidades  por cada elemento.
 
 <div class="org-src-container">
 
-<pre class="src src-ditaa">		C------P  
+<pre class="src src-ditaa">                C------P  
       D+--------|     
       |         P------C
       |         D------P  
@@ -259,7 +275,7 @@ T ----C+--------|
       |               
       |         D-----C 
       P+--------|  
-		C-----D          x n veces, donde n es la norma del conjunto
+                C-----D          x n veces, donde n es la norma del conjunto
 </pre>
 </div>
 </li>
@@ -268,16 +284,16 @@ T ----C+--------|
 
 
 <ol class="org-ol">
-<li>Expresion matemática = n!
+<li>Expresión matemática = n!
 </li>
 </ol>
 </div>
 </div>
 
 
-<div id="outline-container-sec-4-2" class="outline-3">
-<h3 id="sec-4-2"><span class="section-number-3">4.2</span> Solucion</h3>
-<div class="outline-text-3" id="text-4-2">
+<div id="outline-container-sec-1-4-2" class="outline-4">
+<h4 id="sec-1-4-2"><span class="section-number-4">1.4.2</span> Solución</h4>
+<div class="outline-text-4" id="text-1-4-2">
 <p>
 hay 24 ordenamientos 4!.
 </p>
@@ -290,9 +306,9 @@ ordenar(x) = x ordenar(x-1)
 </div>
 </div>
 
-<div id="outline-container-sec-5" class="outline-2">
-<h2 id="sec-5"><span class="section-number-2">5</span> Combinaciónes</h2>
-<div class="outline-text-2" id="text-5">
+<div id="outline-container-sec-1-5" class="outline-3">
+<h3 id="sec-1-5"><span class="section-number-3">1.5</span> Combinaciones</h3>
+<div class="outline-text-3" id="text-1-5">
 <p>
 La estrategia general de las combinaciones es similar al de las listas, 
 pero como el orden no importa habrá menos. Nótese lo siguiente:
@@ -312,20 +328,20 @@ pero como el orden no importa habrá menos. Nótese lo siguiente:
 </ol>
 </div>
 
-<div id="outline-container-sec-5-1" class="outline-3">
-<h3 id="sec-5-1"><span class="section-number-3">5.1</span> Ejemplo</h3>
-<div class="outline-text-3" id="text-5-1">
+<div id="outline-container-sec-1-5-1" class="outline-4">
+<h4 id="sec-1-5-1"><span class="section-number-4">1.5.1</span> Ejemplo</h4>
+<div class="outline-text-4" id="text-1-5-1">
 <p>
 ¿De cuantas formas se pueden formar parejas de la familia
-Simpson para que suban al vag´on de la montaña rusa?
+Simpson para que suban al vagón de la montaña rusa?
 </p>
 </div>
 </div>
 
 
-<div id="outline-container-sec-5-2" class="outline-3">
-<h3 id="sec-5-2"><span class="section-number-3">5.2</span> Prodecimiento</h3>
-<div class="outline-text-3" id="text-5-2">
+<div id="outline-container-sec-1-5-2" class="outline-4">
+<h4 id="sec-1-5-2"><span class="section-number-4">1.5.2</span> Prodecimiento</h4>
+<div class="outline-text-4" id="text-1-5-2">
 <ol class="org-ol">
 <li>Se escoge un elemento arbitrario del conjunto.
 </li>
@@ -341,24 +357,24 @@ Simpson para que suban al vag´on de la montaña rusa?
 
 <div class="org-src-container">
 
-<pre class="src src-ditaa">		C(4,2)
-	       /  \
-	      /    \
-	     /      \
-	    /        \
-	   /          \
-	  /            \
-	 /              \
-	C(3,1)           C(3,2)
+<pre class="src src-ditaa">                C(4,2)
+               /  \
+              /    \
+             /      \
+            /        \
+           /          \
+          /            \
+         /              \
+        C(3,1)           C(3,2)
  +-----------+     +------------+
  |           |     |            |
  |           |     |            |
  |           |     |            |
  |           |     |            |
 C(2,0)  C(2,1)    C(2,1)       C(2,2)|
-	  +---+   +--+
-	  |   |   |  |
-	  |   |C(1,0)C(1,1) 
+          +---+   +--+
+          |   |   |  |
+          |   |C(1,0)C(1,1) 
      C(1,0) C(1,1)
 </pre>
 </div>
@@ -366,20 +382,21 @@ C(2,0)  C(2,1)    C(2,1)       C(2,2)|
 </div>
 
 
-<div id="outline-container-sec-5-3" class="outline-3">
-<h3 id="sec-5-3"><span class="section-number-3">5.3</span> Solución</h3>
-<div class="outline-text-3" id="text-5-3">
+<div id="outline-container-sec-1-5-3" class="outline-4">
+<h4 id="sec-1-5-3"><span class="section-number-4">1.5.3</span> Solución</h4>
+<div class="outline-text-4" id="text-1-5-3">
 <p>
-Son 6 combinaciónes. 
+Son 6 combinaciones. 
 </p>
+</div>
 </div>
 </div>
 </div>
 </div>
 <div id="postamble" class="status">
 <p class="date">Date: <span class="timestamp-wrapper"><span class="timestamp">&lt;2019-02-05 Tue&gt;</span></span></p>
-<p class="author">Author: Jonathan Ahumada</p>
-<p class="date">Created: 2019-02-06 Wed 23:25</p>
+<p class="author">Author: Jonatan Ahumada Fernández</p>
+<p class="date">Created: 2019-03-13 Wed 18:18</p>
 <p class="creator"><a href="http://www.gnu.org/software/emacs/">Emacs</a> 25.3.1 (<a href="http://orgmode.org">Org</a> mode 8.2.10)</p>
 <p class="validation"><a href="http://validator.w3.org/check?uri=referer">Validate</a></p>
 </div>

@@ -1,0 +1,63 @@
+#+Title: Un modelo discreto para modelar la compra compulsiva
+#+Author: Jonatan Ahumada 
+
+* Detalles de la publicación
+
+El artículo "A discrete mathematical model for addictive buying: Predicting
+the affected population evolution" fue publicado en la revista /Mathematical and
+Computing Modelling/, en los números 7 y 8 de su volúmen 54 (publicado en el 2011).
+Sus autores son I. García , L. Jódar, P. Merello, F. -J. Santonja, todos provenientes
+de distintas universidades de España. El artículo ha sido citado en otros 10 trabajos según
+el índice Scopus, aunque solo se han registrado 9 lecturas según PlumX Metrics.
+
+* Resumen del artículo
+
+El artículo se divide en dos partes. En la primera, se busca determinar la "prevalencia 
+de los compradores compulsivos" en España para el año 2010. Para poder determinar esto,
+ se realizaron dos encuestas distintas (una en el 2001 y otra en el 2010) en Vizcaya (España) sobre los hábitos de compra de los encuestados. En esta primera parte, fue crítico 
+extraer una muestra representativa de estas dos encuestas utilizando un *muestreo stratificado*, para 
+asegurar la representación de diversos grupos de edades y según el sexo. Una vez determinada la muestra, 
+se clasificó a los individuos utilizando una "escala de compra compulsiva" que categoriza a los individuos
+en 1) compradores racionales, 2) compradores excesivos y 3) compradores adictos. 
+
+En la segunda parte, luego de encontrar los valores para estas 3 variables, el artículo propuso un modelo matemático
+que las relacionaba en función de la población total. Se señala que el modelo propuesto
+es discreto porque los autores consideran que el comportamiento del consumidor puede ser considerado como una sucesión
+de /steady states/ que ocasionalmente presentan saltos de un estado a otro. Gracias a este modelo matemático, se hace una predicción
+para los tres años siguientes. Además, el modelo permite hacer predicciones según los tipos de escenarios planteados, ya que solo 
+se deben cambiar los valores de ciertas variables en la "dinámica" del modelo (por ejemplo, el porcentaje de la población que tiene una opinión
+optimista sobre la situación). El estudio consideró 
+4 escenarios distintos de proyección, en todos ellos la prevalencia de compradores compulsivos aumenta.
+ 
+
+* Discusión
+El artículo propone una herramienta matemática para analizar el aumento en compradores compulsivos en España, la cual es 
+considerada una "epidemia". El artículo menciona que su motivacion ha sido la dificultad de predecir el 
+comportamiento de los compradores, un fenómeno que involucra muchas variables psicológicas y sociales. Según los autores, nunca se 
+ha hecho modelo que permita establecer concretamente la "prevalencia" de ese comportamiento para años venideros, a pesar de que se han hecho trabajos 
+desde otros enfoques. A mi entender, el hecho de que el problema se plantea de manera discreta, es decir, bajo el supuesto de que el comportamiento 
+de un comprador súbitamente cambia de un estado a otro, ayudó mucho a plantear y desarrollar este nuevo enfoque.
+
+La conclusión del artículo puede parecer un poco obvia: que la prevalencia de compradores compulsivos en España, en los 3 años posteriores a la 
+muestra (hasta el 2013), crecerá sin importar los 4 escenarios donde se proyecte. No obstante, más allá de eso, los autores recalcan que es un logro 
+poder aplicar un modelo matemático para estudiar las epidemias sociales, pues permiten conocer sus dinámicas y simular distintos resultados según 
+los escenarios que se quieran considerar. 
+
+El punto de encuentro con el curso se dió en el tema de sucesiones. El modelo matemático propuesto fue expresado como una
+sucesión muy elemental \(P_{n}= N_{n} + S_{n} + A_{n}\), donde n es el tiempo en meses, N es el número de compradores racionales, S, el de exesivos y 
+A, el de compulsivos.  Luego, la *dinámica* de la población fue descrita en términos de un sistema de ecuaciónes, que me pareció muy 
+familiar el método para resolver relaciones de recurrencia lineales homogéneas (ambos utilizan sistemas de ecuaciones). No obstante, el concepto de *dinámica*
+no me fue muy claro, a pesar de que noto esta similaridad. 
+
+Mi opinión sobre el artículo está mezclada. Por un lado, fue muy ilustrativo ver el proceso de cómo formular un modelo matemático,
+ utilizando las herramientas vistas en clase para analizar una muestra
+estadística. Esa fue mi mayor motivación al seleccionarlo. 
+Desafortunadamente, supone que el lector
+ ya domina los conceptos empleadosx(por ejemplo, 
+muestro estratificado, /cluster analysis/, /dynamic/). Esto da la impresión de que el artículo no elabora muy bien sobre su marco teórico, simplemente se limita a decir que utilizará una herramienta
+ya desarrollada en una de sus referencias (por ejemplo, la /Compulsive Buying Scale/). Además de esto, me llama la atención de que tenga tan pocas citaciones según el índice Scopus (muchas, si no todas
+en otros artículos de los mismos autores). Esto me produce cierta sospecha sobre la calidad del artículo, pues da la impresión de ser hecho de manera rápida y programática, en especial si se considera
+la importancia que debería tener el método que en él se describe.
+
+
+  

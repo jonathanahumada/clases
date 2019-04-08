@@ -1,0 +1,55 @@
+<html>
+<head>
+    <script>
+        var pos= 0;
+        function avanzar(){
+                console.log(document.getElementById("texto").style.left);
+            
+            if(document.getElementById("texto").style.left === "100px"){
+                console.log("entre");
+                document.getElementById("texto").style.left = "1px";
+                pos = 0;
+
+            }else{
+                    console.log("no entre");
+                    
+            pos += 20;
+            document.getElementById("texto").style.left= pos+"px";
+
+            }
+
+
+            
+        }
+
+        function retroceder(){
+            pos -= 10;
+            document.getElementById("texto").style.left= pos+"px";
+            
+        }
+
+        //intenta hacerlo sin el acomodador
+        // no puedes, porque el string que se asigna a left siempre queda en "-10"
+
+        
+        </script>
+
+</head> 
+
+<div id="texto" style="left:0px; width:100px; height:50px; position:absolute;background-color:red"></div>
+<br>
+<br>
+<br>
+<br>
+
+<div>
+    <button onclick="avanzar()">Avanzar</button>
+        <button onclick="retroceder()">Retroceder</button>
+   
+</div>
+
+
+
+
+
+</html>

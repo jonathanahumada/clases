@@ -1,4 +1,8 @@
-
+#+TITLE: Sistema operativo: Definición
+#+AUTHOR: Jonatan Ahumada Fernández
+#+HTML_HEAD:<style>body { font-family: 'Crimson Text', serif;   font-size: 20px; color: #cf8e6b;  background-color: #273b49;} </style>
+#+HTML_HEAD:<style> #content{    width: 60%;    position: center;    margin-left: auto; margin-right: auto;} </style>
+#+HTML_HEAD: <style> a {  color:#f5b43c;}</style>
 * OS
 ** Como interfaz
 *** Interfaces 
@@ -6,33 +10,35 @@
 2) gráfico
 *** Tareas principales
 1) Creación programas
-2) Ejecucion Prog
+2) Ejecución Prog.
 3) Acceso a disp. de entradas y salidas
 4) Acceso controlado a los archivos
 5) Acceso al sistema (usuario, privilegios, etc)
-6) Detecci{on y respuesta a errores
-7) Estad{isticias de utilización de recursos 
+6) Detección y respuesta a errores
+7) Estadísticias de utilización de recursos 
 ** Como administrador de recursos
-Ofrece una distribucion ordenada y controlado de los procesadores, emorias, disp de i/o entre los diversos
+   Ofrece una distribucion ordenada y controlado de los procesadores, memorias, disp de i/o entre los diversos
 programas que compiten entre ellos. 
 *** Kernel : programa más importante
 
-* TODO diagrama
 
 * Operaciones del SO
 ** Descripción y control de procesos 
-asignar recursos a procesos, permitir el intercambio de inf. entre ellos. , proteger los recursos y sincronizarlos.
-Y describirlos :
+
+Asignar recursos a procesos, permitir el intercambio de inf. entre ellos. , proteger los recursos y sincronizarlos.
+Y describirlos:
 1) darles un id
 2) contexto de ejecución. 
 hardware asociado: procesador
 ** Control de concurrencia
-asegurar los procesos se intercalen exitosamente en el tiempo dando la apariencia  de una ejecución simultánea. 
+
+Asegurar los procesos se intercalen exitosamente en el tiempo dando la apariencia  de una ejecución simultánea. 
 Los que concurren son los procesos. Existen : algoritmos de control de concrureencia
 ** Gestión de Memoria
 1) Des/cargar hacia el almacenamiento secundario.
-2) Paginación (bloques de)= recursos memoria a diferentes aplicaciones.
+2) Paginación (bloques de) = recursos memoria a diferentes aplicaciones.
 ** Planificación
+
 Repartir los recursos del sistema entre  necesidades potencialmente competitiva teniendo en cuenta niveles de prioridad y plazos.
 Ejemplo: 'programa no responde'.  
 para inicio y terminación de procesos.  
@@ -40,11 +46,12 @@ para inicio y terminación de procesos.
 Puertos
 ** Gestion de archivos
 ** Seguridad 
-Firewall
-Privilegios de usuario / lectura /escritura
+- Firewall
+- Privilegios de usuario / lectura /escritura
 ** Gestion de redes
-todo os moderno debe tener esto. 
-la ´nube'' = red de servidores de topología indefinida.
+
+- Todo OS moderno debe tener esto. 
+- la ´nube'' = red de servidores de topología indefinida.
 
 * Llamadas al sistema
 * Evolución del OS
@@ -57,3 +64,5 @@ la ´nube'' = red de servidores de topología indefinida.
 * Tarea : hacer mapa conceptual de todo lo visto hasta hora
 Mindomo 
 Cmaptools
+
+[[./mapa_conceptual.png]]

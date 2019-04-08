@@ -1,0 +1,34 @@
+
+  <head>
+    <title>hola</title>
+  </head>
+  <body>
+    Digite un numero  >0  <input type="number" id="usuario">digite numero</input>
+    <br>
+
+    <button onclick="validar()">validar</button>
+    
+    <p id="doto"> Aqui debería mostrar si es correcto</p>
+    
+ 
+    
+  </body>
+    <script>
+
+      function validar(){
+      
+      var x = parseInt(document.getElementById("usuario").value);
+      
+      document.getElementById("doto").innerHTML= x;
+
+      if(isNan(x)){
+      document.getElementById("doto").innerHTML= "Es correcto";
+      console.log( "Es correcto")
+      }
+      else{
+      document.getElementById("doto").innerHTML= "Es falso";
+        console.log( "Es falso")
+      }
+      }
+	</script>
+  <html>

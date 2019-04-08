@@ -1,0 +1,10 @@
+\frametitle{Iniciar proyecto con dev assistant}
+\begin{verbatim}
+da create java maven --name MyJavaApp --github
+\end{verbatim}
+
+Al parecer este paquete ya no está en uso, pero inició solo como un paquete de Fedora, luego
+se generalizó a un paquete de Python que se puede instalar con
+\begin{quote}
+pip3 install devassistant --user
+\end{quote}

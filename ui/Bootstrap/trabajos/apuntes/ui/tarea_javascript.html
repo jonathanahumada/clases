@@ -1,0 +1,35 @@
+<html>
+  <head>
+
+    <meta name="language" content="Spanish">
+    <meta content="text/html; charset=utf-8" http-equiv="Content-Type"/>
+    </head>
+<form>
+  <fieldset>
+    <legend>Valores</legend>
+ a: <input id="a" type="number" value="Mickey"><br>
+ x: <input  id="x" type="number" value="Mickey"><br>
+ c: <input  id="c" type="number" value="Mickey"><br>
+ </fieldset>
+
+ Respuesta: <p id="res">Aquí irá la respuesta a la expresión a*x^2 + x + c</p>
+
+  <button type="button" onclick= respuesta()>Calcular!</button>
+  
+</form>
+<script>
+
+
+
+  function respuesta(){
+   var a = Number(document.getElementById("a").value);
+ var x = Number(document.getElementById("x").value);
+  var c = Number(document.getElementById("c").value);
+
+  document.getElementById("res").innerHTML= ((a*(x*x))+x+c)
+  var res = eval("(a*(x*x))+x+c");
+window.alert(res);
+ }
+
+</script>
+</html>

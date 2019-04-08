@@ -1,0 +1,36 @@
+\begin{thebibliography}{}
+
+\bibitem [\protect \citeauthoryear {%
+Dubeyko%
+, Guyot%
+, Cargnini%
+\BCBL {}\ \BBA {} Manzanares%
+}{%
+Dubeyko%
+\ \protect \BOthers {.}}{%
+{\protect \APACyear {2017}}%
+}]{%
+article:posix}
+\APACinsertmetastar {%
+article:posix}%
+\begin{APACrefauthors}%
+Dubeyko, V.%
+, Guyot, C.%
+, Cargnini, L.%
+\BCBL {}\ \BBA {} Manzanares, A.%
+\end{APACrefauthors}%
+\unskip\
+\newblock
+\APACrefYearMonthDay{2017}{}{}.
+\newblock
+{\BBOQ}\APACrefatitle {POSIX-based Operating System in the environment of
+  NVM/SCM memory} {Posix-based operating system in the environment of nvm/scm
+  memory}.{\BBCQ}
+\newblock
+\APACjournalVolNumPages{arXiv preprint arXiv:1712.07759}{}{}{}.
+\newblock
+\APACrefnote{Base de datos utilizada: Cornell Unviversity, en:
+  https://arxiv.org/abs/1712.07759}
+\PrintBackRefs{\CurrentBib}
+
+\end{thebibliography}

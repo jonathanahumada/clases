@@ -1,22 +1,55 @@
+#+TITLE: Procesos
+#+AUTHOR: Jonatan Ahumada Fernández
+#+DATE:<2019-02-17 Sun>
+#+HTML_HEAD:<style>body { font-family: 'Crimson Text', serif;   font-size: 20px; color: #cf8e6b;  background-color: #273b49;} </style>
+#+HTML_HEAD:<style> #content{    width: 60%;    position: center;    margin-left: auto; margin-right: auto;} </style>
+#+HTML_HEAD: <style> a {  color:#f5b43c;}</style>
 * Terminar conceptos
 ** Concepto de proceso
-La mayoría de os está basado en procesos. Para definirlo:
-1) Una actividad que se está desarrollando: 
-*** asociado a programa ejecutable 
-*** datos asociados o variables 
-debe haber un recurso de memoria asignado a ese proceso.
-*** contexto de ejecución 
+#+BEGIN_QUOTE
+"el proceso se puede definir como un programa en ejecución y, de una forma un poco más precisa, como la unidad de procesamiento gestionada por el sistema operativo."
+-- Jesús Carretero
+#+END_QUOTE
+   La mayoría de os está basado en procesos. Para definirlo:
+Una actividad que se está desarrollando: 
+1) asociado a programa ejecutable 
+2) datos asociados o variables: debe haber un recurso de memoria asignado a ese proceso.
+3) contexto de ejecución 
+** ¿Qué datos están asociados al proceso?
+#+BEGIN_QUOTE
+"Una parte muy importante de estas informaciones se encuentra en el llamado bloque de control del proceso (BCP). El sistema operativo mantiene una tabla de procesos con todos los BCP de los procesos. Por razones de eficiencia, la tabla de procesos se construye normalmente como una estructura estática, que tiene un determinado número de BCP, todos ellos del mismo tamaño. El contenido del BCP se analizará con más detalle en secciones posteriores; sin embargo, de manera introductoria se puede decir que la información que compone un proceso es la siguiente:
+- Contenido de los segmentos de memoria en los que residen el código y los datos del proceso. A esta información se le denomina imagen de memoria o core image.
+- Contenido de los registros del modelo de programación.
+- Contenido del BCP."
+-- Jesus Carretero
+#+END_QUOTE
+** ¿Qué es un entorno de ejecución?
+#+BEGIN_QUOTE
+"El entorno del proceso consiste en un conjunto de variables que se le pasan al proceso en el momento de su creación.
+El entorno está formado por una tabla NOMBRE-VALOR que se incluye en la pila del proceso. El NOMBRE especifica el nombre de la variable y el VALOR su valor. Un ejemplo de entorno en UNIX es el siguiente:
 
+- PATH=/ USR/ bin: / home / pepe / bin TERM= vt 100
+- HOME= /home/pepe
+- PWD= / home /pepe /libros / primero
+
+
+En este ejemplo, PATH indica la lista de directorios en los que el sistema operativo busca los programas ejecutables, TERM el tipo de terminal, HOME el directorio inicial asociado al usuario y PWD cl directorio de trabajo actual.
+Los procesos pueden utilizar las variables del entorno para definir su comportamiento. Por ejemplo, un programa de edición responderá a las teclas de acuerdo al tipo de terminal que esté utilizando el usuario, que viene definido en la variable TERM.
+"
+#+END_QUOTE
+** Estados
 Normalmente los procesos se encuentran en determinado estado:
 1) ejecución
 2) espera
 3) terminado
 4) esperando recursos
 
+** Historia
 El concepto 'proceso' ha venido evolucionando:
 1) lotes multiprogramación
 2) interrupciones
-hasta que ese nuevo evento deje de suceder, no va a cambiar de estado.
+** Características
+Hasta que ese nuevo evento deje de suceder, no va a cambiar de estado.
 Si no exitirera las eventualidades, tocaría esperar a que terminara el programa.
 1) sincronización incorrecta
 2) fallos de exclusión mutua: 
@@ -33,7 +66,7 @@ Ambas podrían quedar esperando a la otra a que termine.
 ** memoria virtual 
 Hace uso del almacenamiento primario y secundario. 
 *** paginación
-cada proceso hace uso de la memoria y podría haber sobreescritura. La paginación
+Cada proceso hace uso de la memoria y podría haber sobreescritura. La paginación
 impide esto. 
 
 * Herramientas de supervisión de recursos	

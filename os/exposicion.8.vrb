@@ -1,0 +1,6 @@
+\frametitle{Prueba para montar servidor Apache}
+\begin{verbatim}
+sudo dnf install httpd
+sudo systemctl star httpd.service
+// verificar http//:localhost
+\end{verbatim}
