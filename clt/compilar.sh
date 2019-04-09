@@ -7,4 +7,6 @@
  cat lectura_2.html > ~/.devs/jonathanahumada.github.io/lectura_2.html 
  cat lectura3.html > ~/.devs/jonathanahumada.github.io/lectura3.html 
  cat plazas.html > ~/.devs/jonathanahumada.github.io/plazas.html 
- cat plazas_yerbateras.html > ~/.devs/jonathanahumada.github.io/plazas_yerbateras.html 
+ cat plazas_yerbateras.html > ~/.devs/jonathanahumada.github.io/plazas_yerbateras.html
+ cat encuesta.html > ~/.devs/jonathanahumada.github.io/encuesta.html	
+ cp -R ~/clases/clt/img/ ~/.devs/jonathanahumada.github.io/img/ 
