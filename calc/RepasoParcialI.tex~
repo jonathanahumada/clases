@@ -1,4 +1,4 @@
-% Created 2019-04-21 Sun 15:40
+% Created 2019-04-21 Sun 17:21
 \documentclass[11pt]{article}
 \usepackage[utf8]{inputenc}
 \usepackage[T1]{fontenc}
@@ -18,7 +18,7 @@
 \tolerance=1000
 \author{Jonatan Ahumada Fernández}
 \date{\textit{<2019-02-23 Sat>}}
-\title{Cálculo Integral: Repaso}
+\title{Cálculo Integral: RepasoII}
 \hypersetup{
   pdfkeywords={},
   pdfsubject={},
@@ -126,7 +126,7 @@ $\int$ sec(x) dx & $\sec(x)tan(x)$\\
 \end{center}
 
 
-\subsection{Sustitución trigonométicra}
+\subsection{Sustitución trigonométrica}
 \label{sec-2-6}
 
 
@@ -149,23 +149,105 @@ $\cos(2\theta)$ & $\cos^2\theta - \sin^2\theta$\\
 \end{tabular}
 \end{center}
 
-
-
+\subsection{Tablas trignométricas}
+\label{sec-2-7}
+\begin{center}
+\begin{tabular}{rllll}
+$\theta$ & radianes & $\sin \theta$ & $\cos \theta$ & $\tan \theta$\\
+\hline
+0 & 0 & 0 & 1 & 0\\
+30 & $\frac{\pi}{6}$ & $\frac{1}{2}$ & $\frac{\sqrt{3}}{2}$ & $\frac{\sqrt{3}}{3}$\\
+45 & $\frac{\pi}{4}$ & $\frac{\sqrt{2}}{2}$ & $\frac{\sqrt{2}}{2}$ & 1\\
+60 & $\frac{\pi}{3}$ & $\frac{\sqrt{3}}{2}$ & $\frac{1}{2}$ & $\sqrt{3}$\\
+90 & $\frac{\pi}{2}$ & 1 & 0 & --\\
+\end{tabular}
+\end{center}
 
 \subsection{Fracciones Parciales}
-\label{sec-2-7}
+\label{sec-2-8}
 
+\begin{center}
+\begin{tabular}{ll}
+Caso & Fórmula\\
+\hline
+lineal irrepetible & $\frac{A}{(ax+b)}$\\
+lineal repetible & $\frac{A_{n}}{(ax+b)^n}$\\
+cuadrática irrepetible & $\frac{Ax + B}{(ax+b)}$\\
+cuadrática repetible & $\frac{Ax + B}{(ax+b)^n}$\\
+\end{tabular}
+\end{center}
+
+\subsubsection{Siempre simplifica el denomindador}
+\label{sec-2-8-1}
+
+\subsection{Teorema Fundamental}
+\label{sec-2-9}
+\[ \frac{dF}{dx} = \frac{d}{dx}\int_{a}^{x}f(t)dt=f(x)\]
 
 \subsection{Volúmenes}
-\label{sec-2-8}
+\label{sec-2-10}
 \begin{center}
-\begin{tabular}{lll}
-Caso & Fórmula & Explicación\\
+\begin{tabular}{ll}
+Caso & Fórmula\\
 \hline
-Secciones transverales & $\int_{a}^{b} Base \times Altura dx$ & \\
-Cilindros & $\int_{a}^{b}\pi R^2 dx$ & radio: f(x), $Area_{circulo} = \pi r^2$\\
-Arandelas & $\int_{a}^{b}\pi(R^2 - r^2) dx$ & Restas al solido otro sólido\\
-Casquetes cilíndricos & $\int_{a}^{b}2\pi x f(x)  dx$ & Se integra en un intervalo opuesto al eje respecto al cual integras\\
+S. trans. & $\int_{a}^{b} Base \times Altura dx$\\
+Cilindros & $\int_{a}^{b}\pi R^2 dx$\\
+Arandelas & $\int_{a}^{b}\pi(R^2 - r^2) dx$\\
+C. cilíndr. & $\int_{a}^{b}2\pi x f(x)  dx$\\
+\end{tabular}
+\end{center}
+
+\subsection{Aplicaciones}
+\label{sec-2-11}
+
+\begin{center}
+\begin{tabular}{ll}
+Longitud de arco & $\int_{a}^{b} \sqrt{1 + \frac{dy}{dx}^2}$ dx\\
+A. s. rev. & $\int_{a}^{b} 2\pi f(x) \sqrt{1 + \frac{dy}{dx}^2}$ dx\\
+Resortes & $W = \int_{a}^{b} F(x)dx$, $F(x)=kx$\\
+Momento($M_{0}$) & $\int_{a}^{b}x\delta(x)dx$\\
+Masa ($M$) & $\int_{a}^{b}\delta(x)dx$\\
+Centro masa & $\frac{M_{0}}{M}$\\
+\end{tabular}
+\end{center}
+
+
+
+\subsection{Integración/Sustitución}
+\label{sec-2-12}
+
+\begin{center}
+\begin{tabular}{ll}
+Derivadas & \\
+\hline
+$\sin x$ & $\cos x$\\
+$\cos x$ & $-\sin x$\\
+$\tan x$ & $\sec^2 x$\\
+$\cot x$ & $-\csc^2 x$\\
+$\sec x$ & $\sex x \tan x$\\
+$\csc x$ & $-\csc x \cot x$\\
+\end{tabular}
+\end{center}
+
+\begin{center}
+\begin{tabular}{ll}
+Integrales & \\
+\hline
+$\sin x$ & $- \cos x + x$\\
+$\cos x$ & $\sin x + c$\\
+$\tan x$ & $-\ln(cos x) + c$\\
+$\cot x$ & $\ln(\sin x) + c$\\
+$\sec x$ & $\ln(\sec x + \tan x) + c$\\
+$\csc x$ & $\ln(\csc x - \cot x) + c$\\
+\end{tabular}
+\end{center}
+
+
+\begin{center}
+\begin{tabular}{ll}
+Casos notables & \\
+\hline
+$\int \tan^2 \theta d\theta$ & $\int \sec^2 \theta - 1 d\theta$\\
 \end{tabular}
 \end{center}
 % Emacs 25.3.1 (Org mode 8.2.10)

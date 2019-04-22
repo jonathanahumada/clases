@@ -1,0 +1,19 @@
+\usepackage{titlesec}
+\usepackage[margin=1in]{geometry}
+\titleformat{\section}
+{\huge \bfseries}
+{}
+{0em}
+{}
+
+\titleformat{\subsection}
+{\bfseries}
+{}
+{0em}
+{}[\titlerule]
+
+\titleformat{\subsubsection}
+{\bfseries }
+{$\bullet$}
+{2em}
+{}

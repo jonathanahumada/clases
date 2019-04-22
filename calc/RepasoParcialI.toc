@@ -10,6 +10,12 @@
 \contentsline {subsubsection}{\numberline {2.4.1}Con \IeC {\'a}ngulo medio}{3}{subsubsection.2.4.1}
 \contentsline {subsubsection}{\numberline {2.4.2}Con variaci\IeC {\'o}n}{3}{subsubsection.2.4.2}
 \contentsline {subsection}{\numberline {2.5}Integrales capciosas}{3}{subsection.2.5}
-\contentsline {subsection}{\numberline {2.6}Sustituci\IeC {\'o}n trigonom\IeC {\'e}ticra}{3}{subsection.2.6}
-\contentsline {subsection}{\numberline {2.7}Fracciones Parciales}{4}{subsection.2.7}
-\contentsline {subsection}{\numberline {2.8}Vol\IeC {\'u}menes}{4}{subsection.2.8}
+\contentsline {subsection}{\numberline {2.6}Sustituci\IeC {\'o}n trigonom\IeC {\'e}trica}{3}{subsection.2.6}
+\contentsline {subsection}{\numberline {2.7}Tablas trignom\IeC {\'e}tricas}{4}{subsection.2.7}
+\contentsline {subsection}{\numberline {2.8}Fracciones Parciales}{4}{subsection.2.8}
+\contentsline {subsubsection}{\numberline {2.8.1}Siempre simplifica el denomindador}{4}{subsubsection.2.8.1}
+\contentsline {subsection}{\numberline {2.9}Teorema Fundamental}{4}{subsection.2.9}
+\contentsline {subsection}{\numberline {2.10}Promedio}{4}{subsection.2.10}
+\contentsline {subsection}{\numberline {2.11}Vol\IeC {\'u}menes}{4}{subsection.2.11}
+\contentsline {subsection}{\numberline {2.12}Aplicaciones}{5}{subsection.2.12}
+\contentsline {subsection}{\numberline {2.13}Integraci\IeC {\'o}n/Sustituci\IeC {\'o}n}{5}{subsection.2.13}

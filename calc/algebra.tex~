@@ -1,4 +1,4 @@
-% Created 2019-02-23 Sat 18:19
+% Created 2019-04-21 Sun 14:27
 \documentclass[11pt]{article}
 \usepackage[utf8]{inputenc}
 \usepackage[T1]{fontenc}
@@ -15,6 +15,26 @@
 \usepackage{wasysym}
 \usepackage{amssymb}
 \usepackage{hyperref}
+\usepackage{multicol}
+\usepackage{titlesec}
+\usepackage[margin=1in]{geometry}
+\titleformat{\section}
+{\huge \bfseries}
+{}
+{0em}
+{}
+
+\titleformat{\subsection}
+{\bfseries}
+{}
+{0em}
+{}[\titlerule]
+
+\titleformat{\subsubsection}
+{\bfseries }
+{$\bullet$}
+{2em}
+{}
 \tolerance=1000
 \author{Jonatan Ahumada Fernández}
 \date{\textit{<2019-02-23 Sat>}}
@@ -24,34 +44,16 @@
   pdfsubject={},
   pdfcreator={Emacs 25.3.1 (Org mode 8.2.10)}}
 \begin{document}
+\begin{multicols}{3}
 
 \maketitle
-\tableofcontents
 
-\section{Álgebra}
-\label{sec-1}
-
-\subsection{Teorema del binomio}
-\label{sec-1-1}
-Para el binomio \( (a + b)^n\), su expansión tiene las sigientes características
-\begin{enumerate}
-\item En total habrá n+1 términos
-\item Por cada término, el poder de a decremente y el de a incrementa.
-\item Cada término tiene la forma \((c)a^{n-k}{b^k}\), donde c es un entero y \(k = 0,1,2, \dots n\)
-\item La siguiente fórmula se cumple para cada uno de los n términos de la expansión se cumple que: \(\frac{coeficiente\ de\ término\ x\ potencia\ de\ término}{número\ término} = coeficiente\ del\ siguiente\ término\)
-\end{enumerate}
-
-\subsection{Resta al cuadrado}
-\label{sec-1-2}
-El último término siempre da positivo y el del medio negativo:
-
-\[(a-b)^2 = a^2 -2ab + b^2\]   
 
 
 \section{Sustitución}
-\label{sec-2}
+\label{sec-1}
 \subsection{Guías para sustitución simple}
-\label{sec-2-1}
+\label{sec-1-1}
 \begin{enumerate}
 \item Identifica si \(u\) y \(du\) aparecen en la misma expresión (salvo una diferencia de constantes).
 \item Sustituye lo más complejo. Después integrar y derivar sus exponentes será más fácil.
@@ -59,11 +61,11 @@ El último término siempre da positivo y el del medio negativo:
 \end{enumerate}
 
 \subsection{Guías para sustitución por partes}
-\label{sec-2-2}
+\label{sec-1-2}
 \begin{enumerate}
 \item Se usa cuando las funciones implicadas no tienen relación en términios de sus derivadas (no hay \(u\) y \(du\))
 \item Ten claro el acrónimo ALPES antes de seleccionar \(u\) y \(dv\).
-\item Como aquí toca integrar, no olvides regla de la cadena.
+\item Como aquí toca derivar, no olvides regla de la cadena.
 \item Aquí se tienen en cuenta las potencias al reemplazar.
 \end{enumerate}
 
@@ -72,7 +74,7 @@ El último término siempre da positivo y el del medio negativo:
 +--------------------------+
 |                          |
 |         derivar          |
-|    u  --------->    du   |
+|   	u  --------->   du    |
 |        integrar          |
 |    dv -------->     v    |
 |                          |
@@ -80,9 +82,13 @@ El último término siempre da positivo y el del medio negativo:
 +--------------------------+
 \end{verbatim}
 \section{Trigonometría}
-\label{sec-3}
+\label{sec-2}
+\subsection{Integrales fundamentales}
+\label{sec-2-1}
+\[\int \cos(mx)dx =  \frac{1}{m} \sin(mx)\]
+\[\int \sin(mx)dx = - \frac{1}{m} \cos(mx)\]
 \subsection{Identidad fundamental (potencias impares)}
-\label{sec-3-1}
+\label{sec-2-2}
 \[\sin^2(x) + \cos^2(x) = 1\]
 
 Consistirá en expresar una expresión trigonometrica impar en términos de una par.
@@ -97,7 +103,7 @@ Luego, de sustituir, \(u\) y \(du\), se resolverá un binomio cuadrado.
 
 
 \subsection{Ángulo Medio (potencias pares)}
-\label{sec-3-2}
+\label{sec-2-3}
 
 Tener cuidado con los signos.
 
@@ -107,7 +113,7 @@ El coeficiente de x se duplica.
 \[\cos^2(x) = \frac{1 + \cos(2x)}{2}  \]
 
 \subsubsection{Variación}
-\label{sec-3-2-1}
+\label{sec-2-3-1}
 
 \[2\cos^2(x) = 1 + \cos(2x) \]
 
@@ -116,24 +122,74 @@ Como es el proceso inverso, el coeficiente de x se divide
 y crece la potencia. 
 
 \subsection{Eliminación de raíces}
-\label{sec-3-3}
+\label{sec-2-4}
 \subsubsection{Con ángulo medio}
-\label{sec-3-3-1}
+\label{sec-2-4-1}
 
 \[\int \sqrt{\frac{1 - \cos(2x)}{2}} dx = \int \sqrt{\sin^2(x)}dx \]
 
 \subsubsection{Con variación}
-\label{sec-3-3-2}
+\label{sec-2-4-2}
 \[\int \sqrt{1 - \cos(2x)} dx = \int \sqrt{2\cos^2(x)}dx \]
 \subsection{Integrales capciosas}
-\label{sec-3-4}
+\label{sec-2-5}
 
-\begin{verbatim}
-| u          | integral         |
-|------------+------------------|
-| \(\ln(x)\) | \frac{1}{x}      |
-| \(e^{cx}\) | \frac{e^{2x}}{2} |
-|            |                  |
-\end{verbatim}
+
+\begin{center}
+\begin{tabular}{ll}
+Integral & Expresión\\
+\hline
+$\int$ $\ln$(x) dx & $\frac{1}{x}$\\
+$\int$ e$^{\text{cx}}$ dx & $\frac{e^{cx}}{c}$\\
+$\int$ tan(x) dx & $\sec^2(x)$\\
+$\int$ sec(x) dx & $\sec(x)tan(x)$\\
+\end{tabular}
+\end{center}
+
+
+\subsection{Sustitución trigonométicra}
+\label{sec-2-6}
+
+
+\begin{center}
+\begin{tabular}{ll}
+Caso & Expresión\\
+\hline
+$\int \sqrt{a^2 -x^2} dx$ & $x = a \sin \theta$\\
+$\int \sqrt{a^2 + x^2} dx$ & $x = a \tan \theta$\\
+$\int \sqrt{x^2 -a^2} dx$ & $x = a \sec \theta$\\
+\end{tabular}
+\end{center}
+
+\begin{center}
+\begin{tabular}{ll}
+Identidades específicas & \\
+\hline
+$\sin(2\theta$ & $2 \sin\theta \cos\theta$\\
+$\cos(2\theta)$ & $\cos^2\theta - \sin^2\theta$\\
+\end{tabular}
+\end{center}
+
+
+
+
+\subsection{Fracciones Parciales}
+\label{sec-2-7}
+
+
+\subsection{Volúmenes}
+\label{sec-2-8}
+\begin{center}
+\begin{tabular}{lll}
+Caso & Fórmula & Explicación\\
+\hline
+Secciones transverales & $\int_{a}^{b} Base \times Altura dx$ & \\
+Cilindros & $\int_{a}^{b}\piR^2 dx$ & radio: f(x), $Area_{circulo} = \pi r^2$\\
+Arandelas & $\int_{a}^{b}\pi(R^2 - r^2) dx$ & Restas al solido otro sólido\\
+Casquetes cilíndricos & $\int_{a}^{b}2\pi x f(x)  dx$ & Se integra en un intervalo opuesto al eje respecto al cual integras\\
+\end{tabular}
+
+\end{multicols}
+\end{center}
 % Emacs 25.3.1 (Org mode 8.2.10)
 \end{document}

@@ -1,4 +1,4 @@
-#+TITLE: Cálculo Integral: Repaso
+#+TITLE: Cálculo Integral: RepasoII
 #+AUTHOR: Jonatan Ahumada Fernández
 #+DATE: <2019-02-23 Sat>
 #+HTML_HEAD:<style>body { font-family: 'Crimson Text', serif;   font-size: 20px; color: #cf8e6b;  background-color: #273b49;} </style>
@@ -82,7 +82,7 @@ y crece la potencia.
 | \int sec(x) dx | $\sec(x)tan(x)$    |
 
 
-** Sustitución trigonométicra
+** Sustitución trigonométrica
 
                                                                 
 | Caso                       | Expresión           |
@@ -93,22 +93,79 @@ y crece la potencia.
 
 | Identidades específicas |                               |
 |-------------------------+-------------------------------|
-| $\sin(2\theta$          | $2 \sin\theta \cos\theta$     |
+| $\sin(2\theta)$         | $2 \sin\theta \cos\theta$     |
 | $\cos(2\theta)$         | $\cos^2\theta - \sin^2\theta$ |
 
-
-
+** Tablas trignométricas
+| $\theta$ | radianes        | $\sin \theta$        | $\cos \theta$        | $\tan \theta$        |
+|----------+-----------------+----------------------+----------------------+----------------------|
+|        0 | 0               | 0                    | 1                    | 0                    |
+|       30 | $\frac{\pi}{6}$ | $\frac{1}{2}$        | $\frac{\sqrt{3}}{2}$ | $\frac{\sqrt{3}}{3}$ |
+|       45 | $\frac{\pi}{4}$ | $\frac{\sqrt{2}}{2}$ | $\frac{\sqrt{2}}{2}$ | 1                    |
+|       60 | $\frac{\pi}{3}$ | $\frac{\sqrt{3}}{2}$ | $\frac{1}{2}$        | $\sqrt{3}$           |
+|       90 | $\frac{\pi}{2}$ | 1                    | 0                    | --                   |
 
 ** Fracciones Parciales
 
+| Caso                   | Fórmula                    |
+|------------------------+----------------------------|
+| lineal irrepetible     | $\frac{A}{(ax+b)}$         |
+| lineal repetible       | $\frac{A_{n}}{(ax+b)^n}$   |
+| cuadrática irrepetible | $\frac{Ax + B}{(ax+b)}$    |
+| cuadrática repetible   | $\frac{Ax + B}{(ax+b)^n}$  |
+
+*** Siempre simplifica el denomindador 
+
+** Teorema Fundamental
+\[ \frac{dF}{dx} = \frac{d}{dx}\int_{a}^{x}f(t)dt=f(x)\]
+
+** Promedio
+\[\frac{1}{b-a} \int_{a}{b}f(x)dx\]
+*  Volúmenes  
+| Caso        | Fórmula                              |
+|-------------+--------------------------------------|
+| S. trans.   | $\int_{a}^{b} Base \times Altura dx$ |
+| Cilindros   | $\int_{a}^{b}\pi R^2 dx$             |
+| Arandelas   | $\int_{a}^{b}\pi(R^2 - r^2) dx$      |
+| C. cilíndr. | $\int_{a}^{b}2\pi x f(x)  dx$        | 
+
+** Aplicaciones
+
+| L. arco           | $\int_{a}^{b} \sqrt{1 + \frac{dy}{dx}^2}$ dx           |
+| A. s. rev.       | $\int_{a}^{b} 2\pi f(x) \sqrt{1 + \frac{dy}{dx}^2}$ dx |
+| Resortes         | $W = \int_{a}^{b} F(x)dx$, $F(x)=kx$                   |
+| Momento($M_{0}$) | $\int_{a}^{b}x\delta(x)dx$                             |
+| Masa ($M$)       | $\int_{a}^{b}\delta(x)dx$                              |
+| C. masa          | $\frac{M_{0}}{M}$                                      |
 
 
 
-**  Volúmenes  
-| Caso                   | Fórmula                           | Explicación                                                         |
-|------------------------+-----------------------------------+---------------------------------------------------------------------|
-| Secciones transverales | $\int_{a}^{b} Base \times Altura dx$ |                                                                     |
-| Cilindros              | $\int_{a}^{b}\pi R^2 dx$          | $Area_{circulo} = \pi r^2$                              |
-| Arandelas              | $\int_{a}^{b}\pi(R^2 - r^2) dx$   | Restas al solido otro sólido                                        |
-| Casquetes cilíndricos  | $\int_{a}^{b}2\pi x f(x)  dx$     | No hay que invertir |
+* Tablas
 
+| Derivadas |                  |
+|-----------+------------------|
+| $\sin x$  | $\cos x$         |
+| $\cos x$  | $-\sin x$        |
+| $\tan x$  | $\sec^2 x$       |
+| $\cot x$  | $-\csc^2 x$      |
+| $\sec x$  | $\sex x \tan x$  |
+| $\csc x$  | $-\csc x \cot x$ |
+
+| Integrales |                            |
+|------------+----------------------------|
+| $\sin x$   | $- \cos x + x$             |
+| $\cos x$   | $\sin x + c$               |
+| $\tan x$   | $-\ln(cos x) + c$          |
+| $\cot x$   | $\ln(\sin x) + c$          |
+| $\sec x$   | $\ln(\sec x + \tan x) + c$ |
+| $\csc x$   | $\ln(\csc x - \cot x) + c$ |
+
+
+| Casos notables               |                                  |
+|------------------------------+----------------------------------|
+| $\int \tan^2 \theta d\theta$ | $\int \sec^2 \theta - 1 d\theta$ |
+  
+
+* Polinomios
+Si f(x) y p(x) son polinomios:
+\[ f(x) = p(x) * q(x) + r \]
