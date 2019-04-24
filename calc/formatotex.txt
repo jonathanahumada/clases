@@ -1,7 +1,8 @@
 \usepackage{titlesec}
+\usepackage{titling}
 \usepackage[margin=1in]{geometry}
 \titleformat{\section}
-{\huge \bfseries}
+{\large \bfseries}
 {}
 {0em}
 {}
