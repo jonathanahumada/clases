@@ -1,0 +1,126 @@
+\begin{thebibliography}{}
+
+\bibitem [\protect \citeauthoryear {%
+D{\'\i}az%
+}{%
+D{\'\i}az%
+}{%
+{\protect \APACyear {1924}}%
+}]{%
+diaz1924arquitectura}
+\APACinsertmetastar {%
+diaz1924arquitectura}%
+\begin{APACrefauthors}%
+D{\'\i}az, A\BPBI O.%
+\end{APACrefauthors}%
+\unskip\
+\newblock
+\APACrefYear{1924}.
+\newblock
+\APACrefbtitle {Arquitectura de {B}ogot{\'a}} {Arquitectura de {B}ogot{\'a}}\
+  (\BVOL~1).
+\newblock
+\APACaddressPublisher{}{PROA}.
+\PrintBackRefs{\CurrentBib}
+
+\bibitem [\protect \citeauthoryear {%
+Gomez~Hurtado%
+\ \BBA {} Alvarez~Diaz%
+}{%
+Gomez~Hurtado%
+\ \BBA {} Alvarez~Diaz%
+}{%
+{\protect \APACyear {1970}}%
+}]{%
+gomez1970herencia}
+\APACinsertmetastar {%
+gomez1970herencia}%
+\begin{APACrefauthors}%
+Gomez~Hurtado, A.%
+\BCBT {}\ \BBA {} Alvarez~Diaz, E.%
+\end{APACrefauthors}%
+\unskip\
+\newblock
+\APACrefYearMonthDay{1970}{}{}.
+\newblock
+{\BBOQ}\APACrefatitle {Herencia colonial en la imagineria de las iglesias y
+  museos de {S}anta fe de {B}ogotá} {Herencia colonial en la imagineria de las
+  iglesias y museos de {S}anta fe de {B}ogotá}.{\BBCQ}
+\newblock
+
+\PrintBackRefs{\CurrentBib}
+
+\bibitem [\protect \citeauthoryear {%
+Mejía%
+}{%
+Mejía%
+}{%
+{\protect \APACyear {2012}}%
+}]{%
+video}
+\APACinsertmetastar {%
+video}%
+\begin{APACrefauthors}%
+Mejía, G.%
+\end{APACrefauthors}%
+\unskip\
+\newblock
+\APACrefYearMonthDay{2012}{}{}.
+\newblock
+\APACrefbtitle {La ciudad de los conquistadores} {La ciudad de los
+  conquistadores}\ [Youtube Video].
+\newblock
+\APAChowpublished {\url{https://youtu.be/z02BVQWNdfM}}.
+\newblock
+\APACrefnote{Visto el 29 de abril de 2019}
+\PrintBackRefs{\CurrentBib}
+
+\bibitem [\protect \citeauthoryear {%
+Silva%
+}{%
+Silva%
+}{%
+{\protect \APACyear {2006}}%
+}]{%
+silva2006imaginarios}
+\APACinsertmetastar {%
+silva2006imaginarios}%
+\begin{APACrefauthors}%
+Silva, A.%
+\end{APACrefauthors}%
+\unskip\
+\newblock
+\APACrefYear{2006}.
+\newblock
+\APACrefbtitle {Imaginarios urbanos} {Imaginarios urbanos}.
+\newblock
+\APACaddressPublisher{}{Arango Editores Bogot{\'a}}.
+\PrintBackRefs{\CurrentBib}
+
+\bibitem [\protect \citeauthoryear {%
+Tovar%
+\ \BBA {} Camacho%
+}{%
+Tovar%
+\ \BBA {} Camacho%
+}{%
+{\protect \APACyear {1968}}%
+}]{%
+tovar1968arte}
+\APACinsertmetastar {%
+tovar1968arte}%
+\begin{APACrefauthors}%
+Tovar, F\BPBI G.%
+\BCBT {}\ \BBA {} Camacho, C\BPBI A.%
+\end{APACrefauthors}%
+\unskip\
+\newblock
+\APACrefYear{1968}.
+\newblock
+\APACrefbtitle {El arte colonial en {C}olombia} {El arte colonial en
+  {C}olombia}.
+\newblock
+\APACaddressPublisher{}{Sol y Luna}.
+\PrintBackRefs{\CurrentBib}
+
+\end{thebibliography}

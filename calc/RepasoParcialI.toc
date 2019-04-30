@@ -1,21 +1,23 @@
-\contentsline {section}{\numberline {1}Sustituci\IeC {\'o}n}{1}{section.1}
-\contentsline {subsection}{\numberline {1.1}Sustituci\IeC {\'o}n simple}{1}{subsection.1.1}
+\contentsline {section}{\numberline {1}Sustituci\IeC {\'o}n}{2}{section.1}
+\contentsline {subsection}{\numberline {1.1}Sustituci\IeC {\'o}n simple}{2}{subsection.1.1}
 \contentsline {subsection}{\numberline {1.2}Sustituci\IeC {\'o}n por partes}{2}{subsection.1.2}
 \contentsline {section}{\numberline {2}Trigonometr\IeC {\'\i }a}{2}{section.2}
 \contentsline {subsection}{\numberline {2.1}Integrales fundamentales}{2}{subsection.2.1}
-\contentsline {subsection}{\numberline {2.2}Identidad fundamental (potencias impares)}{2}{subsection.2.2}
+\contentsline {subsection}{\numberline {2.2}Identidad fundamental (potencias impares)}{3}{subsection.2.2}
 \contentsline {subsection}{\numberline {2.3}\IeC {\'A}ngulo Medio (potencias pares)}{3}{subsection.2.3}
 \contentsline {subsubsection}{\numberline {2.3.1}Variaci\IeC {\'o}n}{3}{subsubsection.2.3.1}
 \contentsline {subsection}{\numberline {2.4}Eliminaci\IeC {\'o}n de ra\IeC {\'\i }ces}{3}{subsection.2.4}
 \contentsline {subsubsection}{\numberline {2.4.1}Con \IeC {\'a}ngulo medio}{3}{subsubsection.2.4.1}
 \contentsline {subsubsection}{\numberline {2.4.2}Con variaci\IeC {\'o}n}{3}{subsubsection.2.4.2}
 \contentsline {subsection}{\numberline {2.5}Integrales capciosas}{3}{subsection.2.5}
-\contentsline {subsection}{\numberline {2.6}Sustituci\IeC {\'o}n trigonom\IeC {\'e}trica}{3}{subsection.2.6}
+\contentsline {subsection}{\numberline {2.6}Sustituci\IeC {\'o}n trigonom\IeC {\'e}trica}{4}{subsection.2.6}
 \contentsline {subsection}{\numberline {2.7}Tablas trignom\IeC {\'e}tricas}{4}{subsection.2.7}
 \contentsline {subsection}{\numberline {2.8}Fracciones Parciales}{4}{subsection.2.8}
-\contentsline {subsubsection}{\numberline {2.8.1}Siempre simplifica el denomindador}{4}{subsubsection.2.8.1}
-\contentsline {subsection}{\numberline {2.9}Teorema Fundamental}{4}{subsection.2.9}
-\contentsline {subsection}{\numberline {2.10}Promedio}{4}{subsection.2.10}
-\contentsline {subsection}{\numberline {2.11}Vol\IeC {\'u}menes}{4}{subsection.2.11}
-\contentsline {subsection}{\numberline {2.12}Aplicaciones}{5}{subsection.2.12}
-\contentsline {subsection}{\numberline {2.13}Integraci\IeC {\'o}n/Sustituci\IeC {\'o}n}{5}{subsection.2.13}
+\contentsline {subsubsection}{\numberline {2.8.1}Siempre simplifica el denomindador}{5}{subsubsection.2.8.1}
+\contentsline {subsection}{\numberline {2.9}Teorema Fundamental}{5}{subsection.2.9}
+\contentsline {subsection}{\numberline {2.10}Promedio}{5}{subsection.2.10}
+\contentsline {section}{\numberline {3}Vol\IeC {\'u}menes}{5}{section.3}
+\contentsline {subsection}{\numberline {3.1}Aplicaciones}{5}{subsection.3.1}
+\contentsline {section}{\numberline {4}Tablas}{5}{section.4}
+\contentsline {section}{\numberline {5}Polinomios}{6}{section.5}
+\contentsline {section}{\numberline {6}Gotchas}{6}{section.6}

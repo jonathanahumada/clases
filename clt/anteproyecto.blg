@@ -1,0 +1,58 @@
+This is BibTeX, Version 0.99d (TeX Live 2018)
+Capacity: max_strings=100000, hash_size=100000, hash_prime=85009
+The top-level auxiliary file: anteproyecto.aux
+The style file: apacite.bst
+Reallocated glb_str_ptr (elt_size=4) to 20 items from 10.
+Reallocated global_strs (elt_size=20001) to 20 items from 10.
+Reallocated glb_str_end (elt_size=4) to 20 items from 10.
+Reallocated singl_function (elt_size=4) to 100 items from 50.
+Reallocated wiz_functions (elt_size=4) to 6000 items from 3000.
+Reallocated singl_function (elt_size=4) to 100 items from 50.
+Reallocated singl_function (elt_size=4) to 100 items from 50.
+Reallocated wiz_functions (elt_size=4) to 9000 items from 6000.
+Reallocated singl_function (elt_size=4) to 100 items from 50.
+Database file #1: referencias.bib
+apacite.bst [2013/07/21 v6.03 APA bibliography style]
+Warning--No journal in gomez1970herencia
+You've used 5 entries,
+            6951 wiz_defined-function locations,
+            1295 strings with 11226 characters,
+and the built_in function-call counts, 7450 in all, are:
+= -- 950
+> -- 59
+< -- 280
++ -- 280
+- -- 10
+* -- 406
+:= -- 1284
+add.period$ -- 21
+call.type$ -- 5
+change.case$ -- 85
+chr.to.int$ -- 0
+cite$ -- 11
+duplicate$ -- 190
+empty$ -- 348
+format.name$ -- 90
+if$ -- 1517
+int.to.chr$ -- 0
+int.to.str$ -- 15
+missing$ -- 0
+newline$ -- 121
+num.names$ -- 40
+pop$ -- 216
+preamble$ -- 1
+purify$ -- 20
+quote$ -- 0
+skip$ -- 497
+stack$ -- 0
+substring$ -- 315
+swap$ -- 107
+text.length$ -- 12
+text.prefix$ -- 0
+top$ -- 1
+type$ -- 400
+warning$ -- 1
+while$ -- 30
+width$ -- 0
+write$ -- 138
+(There was 1 warning)

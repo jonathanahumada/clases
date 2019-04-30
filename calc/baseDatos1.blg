@@ -1,56 +1,52 @@
 This is BibTeX, Version 0.99d (TeX Live 2018)
 Capacity: max_strings=100000, hash_size=100000, hash_prime=85009
 The top-level auxiliary file: baseDatos1.aux
-The style file: apacite.bst
-Reallocated glb_str_ptr (elt_size=4) to 20 items from 10.
-Reallocated global_strs (elt_size=20001) to 20 items from 10.
-Reallocated glb_str_end (elt_size=4) to 20 items from 10.
-Reallocated singl_function (elt_size=4) to 100 items from 50.
-Reallocated wiz_functions (elt_size=4) to 6000 items from 3000.
-Reallocated singl_function (elt_size=4) to 100 items from 50.
-Reallocated singl_function (elt_size=4) to 100 items from 50.
-Reallocated wiz_functions (elt_size=4) to 9000 items from 6000.
-Reallocated singl_function (elt_size=4) to 100 items from 50.
-Database file #1: bibliografia.bib
-apacite.bst [2013/07/21 v6.03 APA bibliography style]
+I couldn't open database file bibliografía.bib
+---line 28 of file baseDatos1.aux
+ : \bibdata{bibliografía
+ :                      }
+I'm skipping whatever remains of this command
+I found no database files---while reading file baseDatos1.aux
+I found no \bibstyle command---while reading file baseDatos1.aux
 You've used 3 entries,
-            6951 wiz_defined-function locations,
-            1292 strings with 11123 characters,
-and the built_in function-call counts, 5160 in all, are:
-= -- 629
-> -- 30
-< -- 262
-+ -- 253
-- -- 6
-* -- 341
-:= -- 1038
-add.period$ -- 12
-call.type$ -- 3
-change.case$ -- 51
+            0 wiz_defined-function locations,
+            87 strings with 527 characters,
+and the built_in function-call counts, 0 in all, are:
+= -- 0
+> -- 0
+< -- 0
++ -- 0
+- -- 0
+* -- 0
+:= -- 0
+add.period$ -- 0
+call.type$ -- 0
+change.case$ -- 0
 chr.to.int$ -- 0
-cite$ -- 6
-duplicate$ -- 102
-empty$ -- 205
-format.name$ -- 42
-if$ -- 954
+cite$ -- 0
+duplicate$ -- 0
+empty$ -- 0
+format.name$ -- 0
+if$ -- 0
 int.to.chr$ -- 0
-int.to.str$ -- 9
+int.to.str$ -- 0
 missing$ -- 0
-newline$ -- 69
-num.names$ -- 24
-pop$ -- 64
-preamble$ -- 1
-purify$ -- 12
+newline$ -- 0
+num.names$ -- 0
+pop$ -- 0
+preamble$ -- 0
+purify$ -- 0
 quote$ -- 0
-skip$ -- 363
+skip$ -- 0
 stack$ -- 0
-substring$ -- 270
-swap$ -- 78
-text.length$ -- 6
+substring$ -- 0
+swap$ -- 0
+text.length$ -- 0
 text.prefix$ -- 0
-top$ -- 1
-type$ -- 240
+top$ -- 0
+type$ -- 0
 warning$ -- 0
-while$ -- 15
+while$ -- 0
 width$ -- 0
-write$ -- 74
+write$ -- 0
+(There were 3 error messages)

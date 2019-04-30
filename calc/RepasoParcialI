@@ -18,7 +18,7 @@
 4) Aquí se tienen en cuenta las potencias al reemplazar.
 
 
-#+BEGIN_SRC 
+#+BEGIN_SRC
 		   +--------------------------+
 		   |                          |
 		   |         derivar          |
@@ -26,7 +26,7 @@
 		   |        integrar          |
 		   |    dv -------->     v    |
 		   |                          |
-		   |\int[u*dv]dx=u*v-\intdu*v |   
+		   |\int[u*dv]dx=u*v-\intdu*v |
 		   +--------------------------+
 #+END_SRC
 * Trigonometría
@@ -61,8 +61,8 @@ El coeficiente de x se duplica.
 \[2\cos^2(x) = 1 + \cos(2x) \]
 
 Es lo mismo, solamente pasa el dos al otro lado.
-Como es el proceso inverso, el coeficiente de x se divide 
-y crece la potencia. 
+Como es el proceso inverso, el coeficiente de x se divide
+y crece la potencia.
 
 ** Eliminación de raíces
 *** Con ángulo medio
@@ -84,17 +84,23 @@ y crece la potencia.
 
 ** Sustitución trigonométrica
 
-                                                                
+
 | Caso                       | Expresión           |
 |----------------------------+---------------------|
 | $\int \sqrt{a^2 -x^2} dx$  | $x = a \sin \theta$ |
 | $\int \sqrt{a^2 + x^2} dx$ | $x = a \tan \theta$ |
-| $\int \sqrt{x^2 -a^2} dx$  | $x = a \sec \theta$ | 
+| $\int \sqrt{x^2 -a^2} dx$  | $x = a \sec \theta$ |
 
 | Identidades específicas |                               |
 |-------------------------+-------------------------------|
 | $\sin(2\theta)$         | $2 \sin\theta \cos\theta$     |
 | $\cos(2\theta)$         | $\cos^2\theta - \sin^2\theta$ |
+
+
+
+
+
+
 
 ** Tablas trignométricas
 | $\theta$ | radianes        | $\sin \theta$        | $\cos \theta$        | $\tan \theta$        |
@@ -114,20 +120,20 @@ y crece la potencia.
 | cuadrática irrepetible | $\frac{Ax + B}{(ax+b)}$    |
 | cuadrática repetible   | $\frac{Ax + B}{(ax+b)^n}$  |
 
-*** Siempre simplifica el denomindador 
+*** Siempre simplifica el denomindador
 
 ** Teorema Fundamental
 \[ \frac{dF}{dx} = \frac{d}{dx}\int_{a}^{x}f(t)dt=f(x)\]
 
 ** Promedio
 \[\frac{1}{b-a} \int_{a}{b}f(x)dx\]
-*  Volúmenes  
+*  Volúmenes
 | Caso        | Fórmula                              |
 |-------------+--------------------------------------|
 | S. trans.   | $\int_{a}^{b} Base \times Altura dx$ |
 | Cilindros   | $\int_{a}^{b}\pi R^2 dx$             |
 | Arandelas   | $\int_{a}^{b}\pi(R^2 - r^2) dx$      |
-| C. cilíndr. | $\int_{a}^{b}2\pi x f(x)  dx$        | 
+| C. cilíndr. | $\int_{a}^{b}2\pi x f(x)  dx$        |
 
 ** Aplicaciones
 
@@ -164,8 +170,14 @@ y crece la potencia.
 | Casos notables               |                                  |
 |------------------------------+----------------------------------|
 | $\int \tan^2 \theta d\theta$ | $\int \sec^2 \theta - 1 d\theta$ |
-  
+
 
 * Polinomios
 Si f(x) y p(x) son polinomios:
 \[ f(x) = p(x) * q(x) + r \]
+
+* Gotchas
+- la sustitución simple resuelve problemas
+- desde encima de las x a debajo de las x pasan cosas
+- los signos
+- La integral es también una resta

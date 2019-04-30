@@ -1,4 +1,4 @@
-% Created 2019-04-21 Sun 17:24
+% Created 2019-04-24 Wed 18:29
 \documentclass[11pt]{article}
 \usepackage[utf8]{inputenc}
 \usepackage[T1]{fontenc}
@@ -15,28 +15,6 @@
 \usepackage{wasysym}
 \usepackage{amssymb}
 \usepackage{hyperref}
-\usepackage{multicol}
-\usepackage{titlesec}
-\usepackage[margin=0.5in]{geometry}
-
-
-\titleformat{\section}
-{\huge \bfseries}
-{}
-{0em}
-{}
-
-\titleformat{\subsection}
-{\bfseries}
-{}
-{0em}
-{}[\titlerule]
-
-\titleformat{\subsubsection}
-{\bfseries }
-{$\bullet$}
-{2em}
-{}
 \tolerance=1000
 \author{Jonatan Ahumada Fernández}
 \date{\textit{<2019-02-23 Sat>}}
@@ -46,7 +24,9 @@
   pdfsubject={},
   pdfcreator={Emacs 25.3.1 (Org mode 8.2.10)}}
 \begin{document}
-\begin{multicols}{3}
+
+\maketitle
+\tableofcontents
 
 
 \section{Sustitución}
@@ -77,7 +57,7 @@
 |        integrar          |
 |    dv -------->     v    |
 |                          |
-|\int[u*dv]dx=u*v-\intdu*v |   
+|\int[u*dv]dx=u*v-\intdu*v |
 +--------------------------+
 \end{verbatim}
 \section{Trigonometría}
@@ -117,8 +97,8 @@ El coeficiente de x se duplica.
 \[2\cos^2(x) = 1 + \cos(2x) \]
 
 Es lo mismo, solamente pasa el dos al otro lado.
-Como es el proceso inverso, el coeficiente de x se divide 
-y crece la potencia. 
+Como es el proceso inverso, el coeficiente de x se divide
+y crece la potencia.
 
 \subsection{Eliminación de raíces}
 \label{sec-2-4}
@@ -164,10 +144,28 @@ $\int \sqrt{x^2 -a^2} dx$ & $x = a \sec \theta$\\
 \begin{tabular}{ll}
 Identidades específicas & \\
 \hline
-$\sin(2\theta$) & $2 \sin\theta \cos\theta$\\
+$\sin(2\theta)$ & $2 \sin\theta \cos\theta$\\
 $\cos(2\theta)$ & $\cos^2\theta - \sin^2\theta$\\
 \end{tabular}
 \end{center}
+
+
+
+\begin{verbatim}
+		   +
+sqrt(a^2+x^2)     ++
+		 +++
+		++++
+	       +++++
+	      ++++++  sqrt(x^2-a^2)
+	     +++++++
+	    ++++++++
+	   +++++++++
+	  ++++++++++
+	   sqrt(a^2-x^2)
+\end{verbatim}
+
+
 
 \subsection{Tablas trignométricas}
 \label{sec-2-7}
@@ -197,7 +195,7 @@ cuadrática repetible & $\frac{Ax + B}{(ax+b)^n}$\\
 \end{tabular}
 \end{center}
 
-\subsubsection{Siempre simplifica el denominador}
+\subsubsection{Siempre simplifica el denomindador}
 \label{sec-2-8-1}
 
 \subsection{Teorema Fundamental}
@@ -208,7 +206,7 @@ cuadrática repetible & $\frac{Ax + B}{(ax+b)^n}$\\
 \label{sec-2-10}
 \[\frac{1}{b-a} \int_{a}{b}f(x)dx\]
 \section{Volúmenes}
-\label{sec-2-11}
+\label{sec-3}
 \begin{center}
 \begin{tabular}{ll}
 Caso & Fórmula\\
@@ -221,13 +219,13 @@ C. cilíndr. & $\int_{a}^{b}2\pi x f(x)  dx$\\
 \end{center}
 
 \subsection{Aplicaciones}
-\label{sec-2-12}
+\label{sec-3-1}
 
 \begin{center}
 \begin{tabular}{ll}
 L. arco & $\int_{a}^{b} \sqrt{1 + \frac{dy}{dx}^2}$ dx\\
 A. s. rev. & $\int_{a}^{b} 2\pi f(x) \sqrt{1 + \frac{dy}{dx}^2}$ dx\\
-Hooke & $W=\int_{a}^{b} F(x)dx$, $F(x)=kx$\\
+Resortes & $W = \int_{a}^{b} F(x)dx$, $F(x)=kx$\\
 Momento($M_{0}$) & $\int_{a}^{b}x\delta(x)dx$\\
 Masa ($M$) & $\int_{a}^{b}\delta(x)dx$\\
 C. masa & $\frac{M_{0}}{M}$\\
@@ -237,7 +235,7 @@ C. masa & $\frac{M_{0}}{M}$\\
 
 
 \section{Tablas}
-\label{sec-2-13}
+\label{sec-4}
 
 \begin{center}
 \begin{tabular}{ll}
@@ -273,5 +271,20 @@ Casos notables & \\
 $\int \tan^2 \theta d\theta$ & $\int \sec^2 \theta - 1 d\theta$\\
 \end{tabular}
 \end{center}
-\end{multicols}
+
+
+\section{Polinomios}
+\label{sec-5}
+Si f(x) y p(x) son polinomios:
+\[ f(x) = p(x) * q(x) + r \]
+
+\section{Gotchas}
+\label{sec-6}
+\begin{itemize}
+\item la sustitución simple resuelve problemas
+\item desde encima de las x a debajo de las x pasan cosas
+\item los signos
+\item La integral es también una resta
+\end{itemize}
+% Emacs 25.3.1 (Org mode 8.2.10)
 \end{document}
