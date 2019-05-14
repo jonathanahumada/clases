@@ -1,0 +1,14 @@
+#+AUTHOR: Jonatan Ahumada Fernándes
+#+TITLE: Ordenamientos 
+
+* Merge Sort 
+- la forma más facil es pensarlo recursivamente
+- Se parte la mitad y se unen en orden 
+- .. y así sucesivamente.
+- siempre nos da O( n log n)
+- O(n) en space. Es el downside 
+- se necesita un array temportal para unir los dos.
+
+#+BEGIN_SRC 
+
+#+END_SRC 

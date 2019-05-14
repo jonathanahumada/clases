@@ -1,0 +1,59 @@
+\begin{thebibliography}{}
+
+\bibitem [\protect \citeauthoryear {%
+Knudson%
+}{%
+Knudson%
+}{%
+{\protect \APACyear {2018}}%
+}]{%
+knudson}
+\APACinsertmetastar {%
+knudson}%
+\begin{APACrefauthors}%
+Knudson, K\BPBI P.%
+\end{APACrefauthors}%
+\unskip\
+\newblock
+\APACrefYearMonthDay{2018}{}{}.
+\newblock
+{\BBOQ}\APACrefatitle {Cutting Against the Grain: Volumes of Solids of
+  Revolution via Cross-Sections Parallel to the Rotation Axis} {Cutting against
+  the grain: Volumes of solids of revolution via cross-sections parallel to the
+  rotation axis}.{\BBCQ}
+\newblock
+\APACjournalVolNumPages{The College Mathematics Journal}{49}{2}{114--120}.
+\PrintBackRefs{\CurrentBib}
+
+\bibitem [\protect \citeauthoryear {%
+Serna%
+\ \BBA {} Joshi%
+}{%
+Serna%
+\ \BBA {} Joshi%
+}{%
+{\protect \APACyear {2011}}%
+}]{%
+serna}
+\APACinsertmetastar {%
+serna}%
+\begin{APACrefauthors}%
+Serna, J\BPBI D.%
+\BCBT {}\ \BBA {} Joshi, A.%
+\end{APACrefauthors}%
+\unskip\
+\newblock
+\APACrefYearMonthDay{2011}{}{}.
+\newblock
+{\BBOQ}\APACrefatitle {The Center of Mass of a Soft Spring} {The center of mass
+  of a soft spring}.{\BBCQ}
+\newblock
+\APACjournalVolNumPages{The College Mathematics Journal}{42}{5}{389-394}.
+\newblock
+\begin{APACrefURL} \url{https://doi.org/10.4169/college.math.j.42.5.389}
+  \end{APACrefURL}
+\newblock
+\begin{APACrefDOI} \doi{10.4169/college.math.j.42.5.389} \end{APACrefDOI}
+\PrintBackRefs{\CurrentBib}
+
+\end{thebibliography}

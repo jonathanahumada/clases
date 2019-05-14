@@ -1,0 +1,22 @@
+#+AUTHOR: Jonatan Ahumada
+#+TITLE: Base de Datos II
+
+El artículo seleccionado en esta ocasión es /Center of Mass of a Soft Spring/, el cual 
+se comparará con /Cutting Against the Grain: Volumes of Solids of Revolution via Cross Sections Parallel to the Rotation Axis/.
+Ambos artículos tienen por objetivo mostrar el valor pedagógico, a nivel de pregrado, de una solución poco común a un problema canónico.
+ Para esto, ambos artículos utilizan las herramientas del cálculo. En el artículo de Benedetto, se halla el volúmen de un sólido
+de revolución por secciones paralelas; por su parte, (D.Serna & Amhitab) halla el centro de masa de un resorte "suave" extendido
+verticalmente de forma no uniforme, por medio de conceptos bastante elementales: sumas infinitesimales y longitud de arco. 
+
+Si bien ambos artículos buscan mostrar al estudiante las aplicaciones del cálculo de forma no canónica, el artículo de Benedetto
+tuvo el mayor impacto en mí. En primer lugar, D.Serna & Amhitab delimitan su problema a un caso particular, a saber, el centro de mas
+de un resorte supendido verticalmente que se elonga por acción de su propio peso. Esto contrasta con el problema del Cuerno de Gabriel,
+que consta de mucha mayor elegancia, puesto que aparentemente entraña una antinomia: una figura con una superficie de área infinita, pero con
+volumen finito. En segundo lugar, el Cuerno de Gabriel parte de una función sencilla \[frac{1}{x}\]. Precisamente por esto, resultó interesante
+ver cómo, lo que en principio no era más que una curva en el plano, gradualmente crecía en dificultad al intentar rotarla sobre el eje x.
+Esto requirió retomar temas vistos en cursos anteriores (volumen de un cono, hipérbola, parametrización) de forma aislada y
+ahora utilizarlos de una forma intuitiva. En síntesis, el artículo de Benedetto unió lo visto hasta el momento y luego dejó 
+otras promesas aún más grandes. 
+
+
+

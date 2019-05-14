@@ -5,19 +5,19 @@
 #+HTML_HEAD: <link href="https://fonts.googleapis.com/css?family=Cinzel|Crimson+Text" rel="stylesheet">
 
 
-|---------------------------------------------------------------+--------------------------------------------------------------|
-| Nombre                                                        | Juan Felipe Betancourt Blanco                                |
-| Edad                                                          | 17                                                           |
-| Sexo                                                          | masculino                                                    |
-| Barrio                                                        | Paloquemao                                                   |
-|---------------------------------------------------------------+--------------------------------------------------------------|
-| ¿Cuál es el personaje más representativo de Bogotá y por qué? | Jaime Garzón, por el grafitti de la 26. ¿Ya lo quitaron?     |
-| ¿Cuál es el lugar más representativo de Bogotá y por qué?     | La Plaza de Bolivar, porque la mencionan mucho en los medios |
-| ¿Cuál crees que es el color de Bogotá?                        | Naranja, resume los colores de la bandera de Bogotá.         |
-| ¿Cómo le describirías Bogotá a un extranjero?                 | Como una ciudad que tiene cosas variadas, como museos.       |
-| ¿Qué caracteriza a Bogotá en pocas palabras?                  | El afán.                                                     |
-|                                                               |                                                              |
-|---------------------------------------------------------------+--------------------------------------------------------------|
+|---------------------------------------------------------------+---------------------------------------------------------------|
+| Nombre                                                        | Juan Felipe Betancourt Blanco                                 |
+| Edad                                                          | 17                                                            |
+| Sexo                                                          | masculino                                                     |
+| Barrio                                                        | Paloquemao                                                    |
+|---------------------------------------------------------------+---------------------------------------------------------------|
+| ¿Cuál es el personaje más representativo de Bogotá y por qué? | Jaime Garzón, por el grafitti de la 26. ¿Ya lo quitaron?      |
+| ¿Cuál es el lugar más representativo de Bogotá y por qué?     | La Plaza de Bolivar, porque la mencionan mucho en los medios. |
+| ¿Cuál crees que es el color de Bogotá?                        | Naranja, resume los colores de la bandera de Bogotá.          |
+| ¿Cómo le describirías Bogotá a un extranjero?                 | Como una ciudad que tiene cosas variadas, como museos.        |
+| ¿Qué caracteriza a Bogotá en pocas palabras?                  | El afán.                                                      |
+|                                                               |                                                               |
+|---------------------------------------------------------------+---------------------------------------------------------------|
 
 
 
@@ -28,7 +28,7 @@
 | Sexo                                                          | Femenino                                                                                                     |
 | Barrio                                                        | San Joaquín                                                                                                  |
 |---------------------------------------------------------------+--------------------------------------------------------------------------------------------------------------|
-| ¿Cuál es el personaje más representativo de Bogotá y por qué? | Santiago Rivas. Tiene un programa en el que habla de muchas culturas, y eso es Bogotá. Es multiculuralismo   |
+| ¿Cuál es el personaje más representativo de Bogotá y por qué? | Santiago Rivas. Tiene un programa en el que habla de muchas culturas, y eso es Bogotá. Es multiculuralismo.  |
 | ¿Cuál es el lugar más representativo de Bogotá y por qué?     | Monserrate. Porque queda en el centro y todos lo que viven en Bogotá saben dónde es.                         |
 | ¿Cuál crees que es el color de Bogotá?                        | No sé, es que gris es muy feo.                                                                               |
 | ¿Cómo le describirías Bogotá a un extranjero?                 | Que es una ciudad muy activa, puedes encontrar cualquier cosa. Pero si se va a transportar, que use la bici. |
@@ -36,19 +36,19 @@
 |                                                               |                                                                                                              |
 |---------------------------------------------------------------+--------------------------------------------------------------------------------------------------------------|
 
-|---------------------------------------------------------------+------------------------------------------------------------------------------------------------------------------------|
-| Nombre                                                        | Guillermo Andrés Torres Carreño                                                                                        |
-| Edad                                                          | 32                                                                                                                     |
-| Sexo                                                          | Sexualidad nadaísta                                                                                                    |
-| Barrio                                                        | Cantalejo                                                                                                              |
-|---------------------------------------------------------------+------------------------------------------------------------------------------------------------------------------------|
-| ¿Cuál es el personaje más representativo de Bogotá y por qué? | Pedro el Escamoso, porque es un rebuscador, un charlatán, un miserable y religioso. Representa todo lo que es Bogotá   |
-| ¿Cuál es el lugar más representativo de Bogotá y por qué?     | El Centro Histórico, por los mismos atribitutos del personaje, pero acumulados durante 460 años.                       |
-| ¿Cuál crees que es el color de Bogotá?                        | Gris, por el pavimento, pero tambien por la actitud de la gente.                                                       |
-| ¿Cómo le describirías Bogotá a un extranjero?                 | Un lugar que recibe al extranjero como a un rey, pero que trat los locales como desecho. Es decir, un lugar hipócrita. |
-| ¿Qué caracteriza a Bogotá en pocas palabras?                  | Una inevitable tendencia a repetir el fracaso.                                                                         |
-|                                                               |                                                                                                                        |
-|---------------------------------------------------------------+------------------------------------------------------------------------------------------------------------------------|
+|---------------------------------------------------------------+-------------------------------------------------------------------------------------------------------------------------|
+| Nombre                                                        | Guillermo Andrés Torres Carreño                                                                                         |
+| Edad                                                          | 32                                                                                                                      |
+| Sexo                                                          | Sexualidad nadaísta                                                                                                     |
+| Barrio                                                        | Cantalejo                                                                                                               |
+|---------------------------------------------------------------+-------------------------------------------------------------------------------------------------------------------------|
+| ¿Cuál es el personaje más representativo de Bogotá y por qué? | Pedro el Escamoso, porque es un rebuscador, un charlatán, un miserable y religioso. Representa todo lo que es Bogotá.   |
+| ¿Cuál es el lugar más representativo de Bogotá y por qué?     | El Centro Histórico, por los mismos atribitutos del personaje, pero acumulados durante 460 años.                        |
+| ¿Cuál crees que es el color de Bogotá?                        | Gris, por el pavimento, pero tambien por la actitud de la gente.                                                        |
+| ¿Cómo le describirías Bogotá a un extranjero?                 | Un lugar que recibe al extranjero como a un rey, pero que trata los locales como desecho. Es decir, un lugar hipócrita. |
+| ¿Qué caracteriza a Bogotá en pocas palabras?                  | Una inevitable tendencia a repetir el fracaso.                                                                          |
+|                                                               |                                                                                                                         |
+|---------------------------------------------------------------+-------------------------------------------------------------------------------------------------------------------------|
 
 |---------------------------------------------------------------+-----------------------------------------------------------------------------------------------------|
 | Nombre                                                        | Luisa Fernanda Rua Samaca                                                                           |
@@ -56,8 +56,8 @@
 | Sexo                                                          | femenino                                                                                            |
 | Barrio                                                        | Ciudadela Colsubsidio                                                                               |
 |---------------------------------------------------------------+-----------------------------------------------------------------------------------------------------|
-| ¿Cuál es el personaje más representativo de Bogotá y por qué? | Peñalosa, porque talar árboles cerca de mi casa y hacer un parque que lo una con Suba. Nada que ver |
-| ¿Cuál es el lugar más representativo de Bogotá y por qué?     | La Candelaria. Todo el mundo llega allá. Es bastante turístico                                      |
+| ¿Cuál es el personaje más representativo de Bogotá y por qué? | Peñalosa, porque quiere talar árboles cerca de mi casa y hacer un parque que lo una con Suba. Nada que ver. |
+| ¿Cuál es el lugar más representativo de Bogotá y por qué?     | La Candelaria. Todo el mundo llega allá. Es bastante turístico.                                     |
 | ¿Cuál crees que es el color de Bogotá?                        | Gris, porque es una ciudad triste y sucia.                                                          |
 | ¿Cómo le describirías Bogotá a un extranjero?                 | Como muy sucia, muy gris y muy desorganizada. Tambien muy insegura. La frase es "no dar papaya".    |
 | ¿Qué caracteriza a Bogotá en pocas palabras?                  | El Transmilenio. Eso lo resume todo.                                                                |
@@ -66,13 +66,13 @@
 |                                                               |                                                                                                     |
 
 |---------------------------------------------------------------+-------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Nombre                                                        | Juana Valentina Varón Rodriguez                                                                                                                       |
+| Nombre                                                        | Juana Valentina Varón Rodríguez                                                                                                                       |
 | Edad                                                          | 18 años                                                                                                                                               |
 | Sexo                                                          | femenino                                                                                                                                              |
 | Barrio                                                        | Suba - Salitre                                                                                                                                        |
 |---------------------------------------------------------------+-------------------------------------------------------------------------------------------------------------------------------------------------------|
-| ¿Cuál es el personaje más representativo de Bogotá y por qué? | Simón Bolivar. No sé, fue lo primero que me vino a la mente. (se ríe)                                                                                 |
-| ¿Cuál es el lugar más representativo de Bogotá y por qué?     | Centro Histórico e Internacional. Porque representa cómo fue antes y lo que es ahora. Las dos caras de Bogotá                                         |
+| ¿Cuál es el personaje más representativo de Bogotá y por qué? | Simón Bolivar. No sé, fue lo primero que me vino a la mente (se ríe).                                                                                 |
+| ¿Cuál es el lugar más representativo de Bogotá y por qué?     | Centro Histórico e Internacional. Porque representa cómo fue antes y lo que es ahora. Las dos caras de Bogotá.x                                       |
 | ¿Cual crees que es el color de Bogotá?                        | Verde oscuro. Porque hay parques y vegetación, pero también es contaminante.                                                                          |
 | ¿Cómo le describirías Bogotá a un extranjero?                 | Que es muy bonita. Hay mucha variedad de edificios, pero los de los estratos altos son muy bonitos. Tambien hay mucho tráfico. Mejor decir la verdad. |
 | ¿Qué caracteriza a Bogotá en pocas palabras?                  | Histórica y grande.                                                                                                                                   |
