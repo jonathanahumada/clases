@@ -1,0 +1,171 @@
+<!DOCTYPE HTML>
+<HTML>
+<HEAD>
+<TITLE>Login Bienestar</TITLE>
+<link href="css/bootstrap.min.css" rel="stylesheet">
+    <meta charset="UTf-8">
+
+    <style>
+            .col-sm-6{
+        text-align: center
+
+
+            }
+            .header{
+                background-color: #eeeeee;
+                padding: 5px;
+                
+            }
+            .footer{
+                background-color: #666666;
+                margin-top:20%;
+
+            }
+            .formulario-llamativo{
+                background-color: #e1416a;
+                padding: 20px;
+
+            }
+            .img-padding{
+                padding:2.5%;
+            }
+          .algo{
+            color:brown;
+
+          }
+          .feedback{
+            margin: 5%;
+
+          }
+         
+           
+          
+    
+    </style>
+    <script src="jquery-3.3.1.min.js"></script>
+    <script>
+    
+    function darAyuda(){
+       if($(".div-ayuda").html()=="") {
+
+        $(".div-ayuda").html("<p class=\"alert alert-info\"> <strong>¡Recuerda!:</strong> Tu nombre de usuario es el código estudiantil y tu contraseña es tu cédula de ciudadanía </p>");
+       }else{
+        $(".div-ayuda").html("");
+
+       }
+
+
+    }
+
+    function validar(){
+        if($("#usuario").val() == ""){
+            $(".div-error").html("<p class=\"alert alert-error\"> No has ingresado un nombre de usuario. ¡Intenta acceder nuevamente! </p>");
+
+        }
+
+
+    }
+ 
+    
+$
+    </script>
+</HEAD>
+<BODY>
+    <div class= "container">
+
+        <!-- //HEADER -->
+        <div class="row">
+            <!-- //left border -->
+            <div class="col-sm-1 header rounded"></div>
+            <!-- //img div -->
+            <div class="col-sm-4 header img-padding" ><img src="logo1.png" alt="Smiley face"></div>
+            <!-- //banner title -->
+            <div class="col-sm-6 header"><h1 class="img-padding">Bienestar Universitario</h1></div>
+            <!-- //right border -->
+            <div class="col-sm-1 header rounded"></div>
+
+          </div>
+          <!-- //SECTION HEADER -->
+          <div class="row">
+                <!-- //left border -->
+                <div class="col-sm-2"></div>
+                <!-- //banner title -->
+                <div class="col-sm-8 element"><h2>Accede a tu cuenta</h2></div>
+                <!-- //right border -->
+                <div class="col-sm-2"></div>
+         </div>
+         <!-- //Login Box -->
+         <div class="row">
+                <!-- //left border -->
+                <div class="col-sm-2"></div>
+                <!-- //banner title -->
+                <div class="col-sm-8 element rounded">
+              
+                <form class="formulario-llamativo rounded">
+                        <div class="form-group">
+                          <label for="exampleInputEmail1">Nombre de usuario</label>
+                          <input type="email" class="usuario form-control" id="usuario" aria-describedby="emailHelp">
+                        
+                        </div>
+                        <div class="form-group">
+                          <label for="exampleInputPassword1">Contraseña</label>
+                         
+                          <input type="password" class="form-control" id="contrasena">
+                        </div>
+                        <div>
+                        <button type= "button" class="acceder btn btn-primary" onclick="validar()">Acceder</button>
+                        <button type= "button" class="ayuda btn btn-primary" onclick="darAyuda()">Ayuda</button>
+                        </div>
+                      </form>
+
+                </div>
+                <!-- //right border -->
+                <div class="col-sm-2"></div>
+         </div>
+
+         <!-- //Feedback box -->
+         <div class="row">
+                <!-- //left border -->
+                <div class="col-sm-2"></div>
+                <!-- //banner title -->
+                <div class="col-sm-8 element">
+                <div class="feedback div-ayuda">
+
+
+                </div>
+                <div class="feedback div-error">
+
+
+                    </div>
+
+                </div>
+                <!-- //right border -->
+                <div class="col-sm-2"></div>
+         </div>
+         <!-- //FOOTER -->
+         <div class="row footer rounded">
+                <!-- //left border -->
+                <div class="col-sm-1 rounded"></div>
+            <!-- //img div -->
+             <div class="col-sm-2 element img-padding"><img src="logo2.png" alt="Smiley face"></div>
+            <!-- //banner title -->
+            <div class="col-sm-8 element"></div>
+            <!-- //right border -->
+            <div class="col-sm-1 rounded"></div>
+         </div>
+
+
+
+
+
+
+
+
+            </div>
+
+
+
+
+</div>
+</BODY>
+</HTML>

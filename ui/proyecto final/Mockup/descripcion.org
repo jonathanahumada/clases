@@ -1,0 +1,29 @@
+#+AUTHOR: Jonatan Ahumada Fernández
+#+TITLE: Proyecto final: Mockup
+
+* Descripción General
+La aplicación fue diseñada para ser vista en un computador de escritorio. 
+Se tuvieron en cuenta los siguientes principios:
+
+- cuadrícula de 12 rectángulos ( para que implementar el Bootstrap sea más directo)
+- la cohesión entre las páginas
+- simplicidad en las acciones y en el despliege de información 
+- cada funcionalidad --consulta, registro, eliminación-- fue separada, para tener menos cosas que validar 
+
+* Nota sobre la implementación
+Como no tengo conocimiento sobre Bases de Datos, implementaré todo como páginas estáticas. Los valores estarán 
+guardados en el Javascript. 
+
+
+* resumen de clases
+- div_header
+- div_footer
+- h1 
+- h2
+- formButton
+- BacktoMenuButton
+- confirmationParagraph
+- errorParagraph
+- normalParagrpah
+
+
