@@ -44,11 +44,16 @@
     </style>
     <script src="jquery-3.3.1.min.js"></script>
     <script>
+        console.log("usuario: 506181029, contrasena: 1020773832")
+var user = 506181029;
+var password = 1020773832;
     
     function darAyuda(){
+      
+
        if($(".div-ayuda").html()=="") {
 
-        $(".div-ayuda").html("<p class=\"alert alert-info\"> <strong>¡Recuerda!:</strong> Tu nombre de usuario es el código estudiantil y tu contraseña es tu cédula de ciudadanía </p>");
+        $(".div-ayuda").html("<p class=\"alert alert-info\"> <strong>¡Recuerda!:</strong> Tu nombre de usuario es el código estudiantil y tu contraseña es tu cédula de ciudadanía. Vuelve a presionar el botón para esconder este mensaje. </p>");
        }else{
         $(".div-ayuda").html("");
 
@@ -58,10 +63,32 @@
     }
 
     function validar(){
-        if($("#usuario").val() == ""){
-            $(".div-error").html("<p class=\"alert alert-error\"> No has ingresado un nombre de usuario. ¡Intenta acceder nuevamente! </p>");
+        // primero valida que sea numerico
+        if(isNaN($("#usuario").val())){
+            $(".div-error").html("<p class=\"alert alert-danger\"> El campo nombre de usuario sólo es numérico. </p>");
+
+        }else if(isNaN($("#contrasena").val())){
+            $(".div-error").html("<p class=\"alert alert-danger\"> El campo contraseña sólo es numérico. </p>");
 
         }
+        else if($("#usuario").val() == ""){
+            $(".div-error").html("<p class=\"alert alert-danger\"> No has ingresado un nombre de usuario. ¡Intenta acceder nuevamente! </p>");
+
+        }else if($("#usuario").val() != "" && $("#usuario").val() != user){
+            $(".div-error").html("<p class=\"alert alert-danger\"> Nombre de usuario no identificado. Inténtalo nuevamente.</p>")
+        }
+        else if($("#usuario").val() == user && $("#contrasena").val()==password){
+            $(".div-error").html("<p class=\"alert alert-success\"> ¡Has ingresado correctamente! Pronto serás redirigido al menú de Bienestar Universitario. </p>");
+
+        }else if($("#usuario").val() == user && $("#contrasena").val()!=password){
+            $(".div-error").html("<p class=\"alert alert-danger\"> Nombre de usuario identificado, pero contraseña inocorrecta.  </p>");
+
+
+
+        }
+       
+        
+        
 
 
     }
