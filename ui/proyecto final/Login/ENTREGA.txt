@@ -1,0 +1,15 @@
+Hola, Profe:
+
+* Datos
+- el único usuario disponible es (506181029, 1020773832)
+- también puede revisar la consola de javascript, ahí imprime este mismo login.
+* Tecnologías
+- bootstrap
+- javascript
+- jquery
+
+* Notas
+- los datos están quemados, así trabajaré porque no conozco más. 
+
+Gracias,
+
