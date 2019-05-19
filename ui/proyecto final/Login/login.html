@@ -45,15 +45,131 @@
              padding:0.5%;
 
          }
+
+         .menu-crud{
+            margin: 5%;
+
+
+         }
+         h3{
+            text-align: left;
+
+         }
+         td{
+             text-align: left;
+         }
            
           
     
     </style>
     <script src="jquery-3.3.1.min.js"></script>
     <script>
+
+      // Servicios
+      
+     var servicios = [{"nombre":"ping-pong", "hora":"10:00AM - 11:00AM", "id": 0},
+     {"nombre":"UNO", "hora":"11:00AM - 12:00PM", "id": 1},
+     {"nombre":"Ajedrez", "hora":"8:00AM - 9:00AM", "id": 2},
+     {"nombre":"Salón Música", "hora":"8:00AM - 9:00AM", "id": 3},
+     {"nombre":"Parqués", "hora":"3:00PM - 4:00PM", "id": 4},
+     {"nombre":"Billar", "hora":"10:00AM - 11:00AM", "id": 5 },
+     {"nombre":"Crossfit", "hora":"10:00AM - 11:00AM", "id": 6},
+     {"nombre":"Kickboxing", "hora":"10:00AM - 11:00AM", "id": 7},
+    
+    ]
+
+    var serviciosUsr=   [
+    
+    ]
+    function consulta(){
+        for (i = 0; i < servicios.length; i +=1){
+           
+             
+            $("#servicios-disponibles").append("<tr> <td>"+servicios[i].nombre +"</td>"+"<td>"+servicios[i].hora +"</td></tr>");
+            console.log("entra");
+            
+
+        }
+        for (i = 0; i < serviciosUsr.length; i +=1){
+           
+             
+           $("#servicios-registrados").append("<tr> <td>"+serviciosUsr[i].nombre +"</td>"+"<td>"+servicios[i].hora +"</td></tr>");
+           console.log("entra");
+           
+
+       }
+       
+        
+
+
+    }  
+    function disponibles_mostrar_dropdown(){
+        for (i = 0; i < servicios.length; i +=1){
+            
+             
+            $("#disponibles-dropdown").append("<option value="+servicios[i].id+">"+servicios[i].nombre+" "+ servicios[i].hora+"</option>");
+            console.log("entra");
+            }
+
+        
+    }
+
+       function registrarServicio(){
+
+           var selected = document.getElementById("disponibles-dropdown").value;
+          
+         for(i=0; i<servicios.length; i+=1){
+            if(servicios[i].id == selected){
+                serviciosUsr.push(servicios[i]);
+                console.log("target del splice: " +servicios[i].nombre)
+                servicios.splice(i,1);
+
+            }
+
+         }
+    
+       
+       } 
+        
+
+
+   
+    function cleanTable(){
+                var Parent = document.getElementById("servicios-disponibles");
+                var Parent2 = document.getElementById("servicios-registrados");
+        while(Parent.hasChildNodes())
+        {
+        Parent.removeChild(Parent.firstChild);
+        }
+        while(Parent2.hasChildNodes())
+        {
+        Parent2.removeChild(Parent2.firstChild);
+        }
+
+
+
+
+        }
+        function cleanDropdown(){
+                var Parent = document.getElementById("disponibles-dropdown");
+        while(Parent.hasChildNodes())
+        {
+        Parent.removeChild(Parent.firstChild);
+        }
+        }
+        
+
+      
+    consulta();
         console.log("usuario: 506181029, contrasena: 1020773832")
+
 var user = 506181029;
 var password = 1020773832;
+// esconde todos los containers excepto el login
+$( document ).ready(function() {
+ 
+ $(".menu").hide();
+});
     
     function darAyuda(){
       
@@ -72,23 +188,25 @@ var password = 1020773832;
     function validar(){
         // primero valida que sea numerico
         if(isNaN($("#usuario").val())){
-            $(".div-error").html("<p class=\"alert alert-danger\"> El campo nombre de usuario sólo es numérico. </p>");
+            $("#login-error").html("<p class=\"alert alert-danger\"> El campo nombre de usuario sólo es numérico. </p>");
 
         }else if(isNaN($("#contrasena").val())){
-            $(".div-error").html("<p class=\"alert alert-danger\"> El campo contraseña sólo es numérico. </p>");
+            $("#login-error").html("<p class=\"alert alert-danger\"> El campo contraseña sólo es numérico. </p>");
 
         }
         else if($("#usuario").val() == ""){
-            $(".div-error").html("<p class=\"alert alert-danger\"> No has ingresado un nombre de usuario. ¡Intenta acceder nuevamente! </p>");
+            $("#login-error").html("<p class=\"alert alert-danger\"> No has ingresado un nombre de usuario. ¡Intenta acceder nuevamente! </p>");
 
         }else if($("#usuario").val() != "" && $("#usuario").val() != user){
-            $(".div-error").html("<p class=\"alert alert-danger\"> Nombre de usuario no identificado. Inténtalo nuevamente.</p>")
+            $("#login-error").html("<p class=\"alert alert-danger\"> Nombre de usuario no identificado. Inténtalo nuevamente.</p>")
         }
         else if($("#usuario").val() == user && $("#contrasena").val()==password){
-            $(".div-error").html("<p class=\"alert alert-success\"> ¡Has ingresado correctamente! Pronto serás redirigido al menú de Bienestar Universitario. </p>");
+            $("#login-error").html("<p class=\"alert alert-success\"> ¡Has ingresado correctamente! Pronto serás redirigido al menú de Bienestar Universitario. </p>");
+            
+            login();
 
         }else if($("#usuario").val() == user && $("#contrasena").val()!=password){
-            $(".div-error").html("<p class=\"alert alert-danger\"> Nombre de usuario identificado, pero contraseña inocorrecta.  </p>");
+            $("#login-error").html("<p class=\"alert alert-danger\"> Nombre de usuario identificado, pero contraseña inocorrecta.  </p>");
 
 
 
@@ -99,13 +217,44 @@ var password = 1020773832;
 
 
     }
+
+    function login(){
+        $(".login").fadeOut();
+        $(".menu").fadeIn();
+
+
+    }
+
+    function consultarServicios(){
+        $(".menu").fadeOut();
+        console.log("consulta");
+        $(".consultar").fadeIn();
+        consulta();
+
+    }
+    function registrarServicios(){
+        $(".menu").fadeOut();
+        console.log("dropdown");
+        $(".registrar").fadeIn();
+        disponibles_mostrar_dropdown();
+        consulta();
+
+    }
+    function regresarAMenu(){
+        $(".interno").fadeOut();
+        $(".menu").fadeIn();
+        cleanTable();
+        cleanDropdown();
+
+
+    }
  
     
 
     </script>
 </HEAD>
 <BODY>
-    <div class= "container">
+    <div class= "container login">
 
         <!-- //HEADER -->
         <div class="row">
@@ -138,13 +287,13 @@ var password = 1020773832;
                 <form class="formulario-llamativo rounded">
                         <div class="form-group">
                           <label for="exampleInputEmail1">Nombre de usuario</label>
-                          <input type="email" class="usuario form-control" id="usuario" aria-describedby="emailHelp">
+                          <input type="email" class="usuario form-control" id="usuario" aria-describedby="emailHelp" value="506181029">
                         
                         </div>
                         <div class="form-group">
                           <label for="exampleInputPassword1">Contraseña</label>
                          
-                          <input type="password" class="form-control" id="contrasena">
+                          <input type="password" class="form-control" id="contrasena" value="1020773832">
                         </div>
                         <div>
                         <button type= "button" class="acceder btn btn-primary" onclick="validar()">Acceder</button>
@@ -156,6 +305,8 @@ var password = 1020773832;
                 <!-- //right border -->
                 <div class="col-sm-2"></div>
          </div>
+       
+
 
          <!-- //Feedback box -->
          <div class="row">
@@ -167,7 +318,7 @@ var password = 1020773832;
 
 
                 </div>
-                <div class="feedback div-error">
+                <div class="feedback" id="login-error">
 
 
                     </div>
@@ -210,6 +361,317 @@ var password = 1020773832;
 
             </div>
 
+<!-- //MENU -->
+    <div class= "container menu" style="display:none">
+
+        <!-- //HEADER -->
+        <div class="row">
+            <!-- //left border -->
+            <div class="col-sm-1 header rounded"></div>
+            <!-- //img div -->
+            <div class="col-sm-4 header img-padding" ><img src="logo1.png" href="http://www.konradlorenz.edu.co/es/"></div>
+            <!-- //banner title -->
+            <div class="col-sm-6 header"><h1 class="img-padding">Bienestar Universitario</h1></div>
+            <!-- //right border -->
+            <div class="col-sm-1 header rounded"></div>
+
+            </div>
+            <!-- //SECTION HEADER -->
+            <div class="row">
+                <!-- //left border -->
+                <div class="col-sm-6"><h2>Gestiona tus servicios</h2></div>
+                <!-- //banner title -->
+                <div class="col-sm-4 element"><p class="session-banner">Bienvenido, <strong>Jonatan Ahumada</strong></p></div>
+                <!-- //right border -->
+                <div class="col-sm-2"> </div>
+            </div>
+            <!-- //Menu Box -->
+            <div class="row">
+                <!-- //left border with options -->
+                <div class="col-sm-6">
+
+                        <form class="formulario-llamativo rounded">
+                                <div class="form-group">
+                                    
+                                    
+                                <button type= "button" class="acceder btn btn-primary menu-crud" onclick="consultarServicios()">Consultar Servicios</button>
+                                <br>
+                                <button type= "button" class="ayuda btn btn-primary menu-crud" onclick="registrarServicios()">Reservar Servicios</button>
+                                <br>
+                                <button type= "button" class="ayuda btn btn-primary menu-crud" onclick="cancelarServicios()">Cancelar servicios</button>
+                                <br>
+                                </div>
+                                </form>
+
+
+
+                </div>
+                <!-- //IMAGE -->
+                <div class="col-sm-4 element rounded">
+                <img src="bienestar_menu2.jpg">
+            
+
+                </div>
+                <!-- //right border -->
+                <div class="col-sm-2"></div>
+            </div>
+        
+
+
+            <!-- //Feedback box -->
+            <div class="row">
+                <!-- //left border -->
+                <div class="col-sm-2"></div>
+                <!-- //banner title -->
+                <div class="col-sm-8 element">
+                <div class="feedback div-ayuda">
+
+
+                </div>
+                <div class="feedback div-error">
+
+
+                    </div>
+
+                </div>
+                <!-- //right border -->
+                <div class="col-sm-2"></div>
+            </div>
+            <div class="row">
+        <div class="col-sm-2"></div>
+        <div class="col-sm-8">
+                <a style="position:absolute; right:0%"href="http://www.konradlorenz.edu.co/es/">Regresar a konradlorenz.edu.co</a>
+            </div>
+            <div class="col-sm-2"></div>
+            </div>
+            <!-- //FOOTER -->
+            <div class="row footer rounded">
+                <!-- //left border -->
+                <div class="col-sm-1 rounded"></div>
+            <!-- //img div -->
+                <div class="col-sm-2 element sm-padding"><img src="logo2.png" alt="Smiley face"></div>
+            <!-- //banner title -->
+            <div class="col-sm-8 element footer-text img-padding">
+                <p class="footer-text img-padding">Tel: (+57 1) 347 23 11Carrera 9 Bis No. 62 - 43Bogotá - Colombia
+                        eMail: info@konradlorenz.edu.co</p>
+                    
+                        
+
+            </div>
+            <!-- //right border -->
+            <div class="col-sm-1 rounded"></div>
+            </div>
+
+<!-- // END MENU -->
+    </div>
+
+        <!-- //CONSULTAR -->
+<div class= "container consultar interno" style="display:none">
+
+        <!-- //HEADER -->
+        <div class="row">
+            <!-- //left border -->
+            <div class="col-sm-1 header rounded"></div>
+            <!-- //img div -->
+            <div class="col-sm-4 header img-padding" ><img src="logo1.png" href="http://www.konradlorenz.edu.co/es/"></div>
+            <!-- //banner title -->
+            <div class="col-sm-6 header"><h1 class="img-padding">Bienestar Universitario</h1></div>
+            <!-- //right border -->
+            <div class="col-sm-1 header rounded"></div>
+
+            </div>
+            <!-- //SECTION HEADER -->
+            <div class="row">
+                <!-- //left border -->
+                <div class="col-sm-6"><h2>Consulta tus servicios</h2></div>
+                <!-- //banner title -->
+                <div class="col-sm-4 element"><p class="session-banner">Bienvenido, <strong>Jonatan Ahumada</strong></p></div>
+                <!-- //right border -->
+                <div class="col-sm-2"> </div>
+            </div>
+            <!-- //tables -->
+            <div class="row">
+                <!-- //left border with options -->
+                <div class="col-sm-6">
+                    <h3>Disponibles:</h3>
+                    <table id="servicios-disponibles">
+
+
+
+                    </table>   
+
+
+                </div>
+                <!-- //REGISTRADOS -->
+                <div class="col-sm-4 element rounded">
+                        <h3>Registrados:</h3>
+                        <table id="servicios-registrados">
+
+
+
+                        </table>   
+
+
+            
+            
+
+                </div>
+                <!-- //right border -->
+                <div class="col-sm-2"></div>
+            </div>
+        
+
+
+            <!-- //Feedback box -->
+            <div class="row">
+                <!-- //left border -->
+                <div class="col-sm-2"></div>
+                <!-- //banner title -->
+                <div class="col-sm-8 element">
+                <div class="feedback div-ayuda">
+
+
+                </div>
+                <div class="feedback div-error">
+
+
+                    </div>
+
+                </div>
+                <!-- //right border -->
+                <div class="col-sm-2"></div>
+            </div>
+            <div class="row">
+        <div class="col-sm-2"></div>
+        <div class="col-sm-8">
+                <a style="position:absolute; right:0%" onclick="regresarAMenu()">Regresar a menú principal</a>
+            </div>
+            <div class="col-sm-2"></div>
+            </div>
+            <!-- //FOOTER -->
+            <div class="row footer rounded">
+                <!-- //left border -->
+                <div class="col-sm-1 rounded"></div>
+            <!-- //img div -->
+                <div class="col-sm-2 element sm-padding"><img src="logo2.png" alt="Smiley face"></div>
+            <!-- //banner title -->
+            <div class="col-sm-8 element footer-text img-padding">
+                <p class="footer-text img-padding">Tel: (+57 1) 347 23 11Carrera 9 Bis No. 62 - 43Bogotá - Colombia
+                        eMail: info@konradlorenz.edu.co</p>
+                    
+                        
+
+            </div>
+            <!-- //right border -->
+            <div class="col-sm-1 rounded"></div>
+            </div>
+
+<!-- // END CONSULTAR -->
+    </div>
+        <!-- //REGISTRAR -->
+<div class= "container registrar interno" style="display:none">
+
+    <!-- //HEADER -->
+    <div class="row">
+        <!-- //left border -->
+        <div class="col-sm-1 header rounded"></div>
+        <!-- //img div -->
+        <div class="col-sm-4 header img-padding" ><img src="logo1.png" href="http://www.konradlorenz.edu.co/es/"></div>
+        <!-- //banner title -->
+        <div class="col-sm-6 header"><h1 class="img-padding">Bienestar Universitario</h1></div>
+        <!-- //right border -->
+        <div class="col-sm-1 header rounded"></div>
+
+        </div>
+        <!-- //SECTION HEADER -->
+        <div class="row">
+            <!-- //left border -->
+            <div class="col-sm-2"></div>
+            <!-- //banner title -->
+            <div class="col-sm-8 element"><h2>Registra tus servicios</h2>
+                <p class="session-banner">Bienvenido, <strong>Jonatan Ahumada</strong></p></div>
+            <!-- //right border -->
+            <div class="col-sm-2"> </div>
+        </div>
+        <!-- //Dropdown -->
+        <div class="row">
+            <!-- //left border with options -->
+            <div class="col-sm-2">
+               
+
+
+            </div>
+      
+            <div class="col-sm-8 element rounded">
+                    <h3>Escoge el servicio que quieras:</h3>
+                    <div class = "formulario-llamativo" id="servicios-seleccionar">
+                       <form>
+                        <select id="disponibles-dropdown">
+
+
+                        </select>
+                        
+                        <button type= "button" class="ayuda btn btn-primary menu-crud" onclick="registrarServicio()">registrar</button>
+                    </form>
+                    </div>   
+
+
+        
+        
+
+            </div>
+            <!-- //right border -->
+            <div class="col-sm-2"></div>
+        </div>
+    
+
+
+        <!-- //Feedback box -->
+        <div class="row">
+            <!-- //left border -->
+            <div class="col-sm-2"></div>
+            <!-- //banner title -->
+            <div class="col-sm-8 element">
+            <div class="feedback div-ayuda">
+
+
+            </div>
+            <div class="feedback div-error">
+
+
+                </div>
+
+            </div>
+            <!-- //right border -->
+            <div class="col-sm-2"></div>
+        </div>
+        <div class="row">
+    <div class="col-sm-2"></div>
+    <div class="col-sm-8">
+            <a style="position:absolute; right:0%" onclick="regresarAMenu()">Regresar a menú principal</a>
+        </div>
+        <div class="col-sm-2"></div>
+        </div>
+        <!-- //FOOTER -->
+        <div class="row footer rounded">
+            <!-- //left border -->
+            <div class="col-sm-1 rounded"></div>
+        <!-- //img div -->
+            <div class="col-sm-2 element sm-padding"><img src="logo2.png" alt="Smiley face"></div>
+        <!-- //banner title -->
+        <div class="col-sm-8 element footer-text img-padding">
+            <p class="footer-text img-padding">Tel: (+57 1) 347 23 11Carrera 9 Bis No. 62 - 43Bogotá - Colombia
+                    eMail: info@konradlorenz.edu.co</p>
+                
+                    
+
+        </div>
+        <!-- //right border -->
+        <div class="col-sm-1 rounded"></div>
+        </div>
+
+<!-- // END REGISTRAR-->
+</div>
 
 
 
