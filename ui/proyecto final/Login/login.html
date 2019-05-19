@@ -67,14 +67,14 @@
 
       // Servicios
       
-     var servicios = [{"nombre":"ping-pong", "hora":"10:00AM - 11:00AM", "id": 0},
-     {"nombre":"UNO", "hora":"11:00AM - 12:00PM", "id": 1},
-     {"nombre":"Ajedrez", "hora":"8:00AM - 9:00AM", "id": 2},
-     {"nombre":"Salón Música", "hora":"8:00AM - 9:00AM", "id": 3},
-     {"nombre":"Parqués", "hora":"3:00PM - 4:00PM", "id": 4},
-     {"nombre":"Billar", "hora":"10:00AM - 11:00AM", "id": 5 },
-     {"nombre":"Crossfit", "hora":"10:00AM - 11:00AM", "id": 6},
-     {"nombre":"Kickboxing", "hora":"10:00AM - 11:00AM", "id": 7},
+     var servicios = [{"nombre":"ping-pong", "hora":"10:00AM-11:00AM", "id": 0},
+     {"nombre":"UNO", "hora":"11:00AM-12:00PM", "id": 1},
+     {"nombre":"Ajedrez", "hora":"8:00AM-9:00AM", "id": 2},
+     {"nombre":"Salón Música", "hora":"8:00AM-9:00AM", "id": 3},
+     {"nombre":"Parqués", "hora":"3:00PM-4:00PM", "id": 4},
+     {"nombre":"Billar", "hora":"10:00AM-11:00AM", "id": 5 },
+     {"nombre":"Crossfit", "hora":"10:00AM-11:00AM", "id": 6},
+     {"nombre":"Kickboxing", "hora":"10:00AM-11:00AM", "id": 7},
     
     ]
 
@@ -93,7 +93,7 @@
         for (i = 0; i < serviciosUsr.length; i +=1){
            
              
-           $("#servicios-registrados").append("<tr> <td>"+serviciosUsr[i].nombre +"</td>"+"<td>"+servicios[i].hora +"</td></tr>");
+           $("#servicios-registrados").append("<tr> <td>"+serviciosUsr[i].nombre +"</td>"+"<td>"+serviciosUsr[i].hora +"</td></tr>");
            console.log("entra");
            
 
@@ -114,19 +114,35 @@
         
     }
 
-       function registrarServicio(){
+    function hayColision(serv){
+        for(j=0; j <serviciosUsr.length; j+=1){
+            if(serv.hora == serviciosUsr[j].hora){
+                console.log("COLISION" +"intenta:" +serv.nombre + serv.hora +"registrado:"+ serviciosUsr[j].nombre+serviciosUsr[j].hora);
+                $("#registrar-feedback").html("<p class=\"alert alert-warning\"> Se detectó una colisión con ["+serviciosUsr[j].nombre+"] a las ["+ serviciosUsr[j].hora+"]. <strong>Cancela</strong> primero el servicio previamente reservado antes de intentar este.</p>");  
+                return true;
+            }
+        }
+        return false;
+    }
 
+       function registrarServicio(){
+        var temp = null;
            var selected = document.getElementById("disponibles-dropdown").value;
           
          for(i=0; i<servicios.length; i+=1){
-            if(servicios[i].id == selected){
+             console.log("loop "+ i )
+            if(servicios[i].id == selected && !hayColision(servicios[i])){
+                    
                 serviciosUsr.push(servicios[i]);
+                temp =servicios[i];
                 console.log("target del splice: " +servicios[i].nombre)
                 servicios.splice(i,1);
+                $("#registrar-feedback").html("<p class=\"alert alert-success\"> Se ha registrado correctamente ["+ temp.nombre + " " + temp.hora +"]. Revisa en Consultar Servicios todos tus servicios. </p>");     
 
             }
 
          }
+         
     
        
        } 
@@ -243,6 +259,7 @@ $( document ).ready(function() {
     function regresarAMenu(){
         $(".interno").fadeOut();
         $(".menu").fadeIn();
+        $(".feedback").html("");
         cleanTable();
         cleanDropdown();
 
@@ -632,7 +649,7 @@ $( document ).ready(function() {
             <div class="col-sm-2"></div>
             <!-- //banner title -->
             <div class="col-sm-8 element">
-            <div class="feedback div-ayuda">
+            <div class="feedback div-ayuda" id="registrar-feedback">
 
 
             </div>
