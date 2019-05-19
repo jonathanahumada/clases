@@ -86,7 +86,7 @@
            
              
             $("#servicios-disponibles").append("<tr> <td>"+servicios[i].nombre +"</td>"+"<td>"+servicios[i].hora +"</td></tr>");
-            console.log("entra");
+            console.log("consulta de tabla de servicios disponibles realizada");
             
 
         }
@@ -94,7 +94,7 @@
            
              
            $("#servicios-registrados").append("<tr> <td>"+serviciosUsr[i].nombre +"</td>"+"<td>"+serviciosUsr[i].hora +"</td></tr>");
-           console.log("entra");
+           console.log("consulta de tabla de servicios de usuario realizada");
            
 
        }
@@ -108,7 +108,17 @@
             
              
             $("#disponibles-dropdown").append("<option value="+servicios[i].id+">"+servicios[i].nombre+" "+ servicios[i].hora+"</option>");
-            console.log("entra");
+            console.log("lectura de dropdown:disponibles realizada");
+            }
+
+        
+    }
+    function registrados_mostrar_dropdown(){
+        for (i = 0; i < serviciosUsr.length; i +=1){
+            
+             
+            $("#registrados-dropdown").append("<option value="+serviciosUsr[i].id+">"+serviciosUsr[i].nombre+" "+ serviciosUsr[i].hora+"</option>");
+            console.log("lectura de dropdown:registrados realizada");
             }
 
         
@@ -146,7 +156,28 @@
          cleanDropdown();
          disponibles_mostrar_dropdown();
        
-       } 
+       }
+
+       function cancelarServicio(){
+        var selected = document.getElementById("registrados-dropdown").value;    
+        var temp = null;
+         
+         for(i=0; i<serviciosUsr.length; i+=1){
+            if(serviciosUsr[i].id == selected){
+                temp = serviciosUsr[i]
+                servicios.push(serviciosUsr[i]);    
+                console.log("target del splice: " +serviciosUsr[i].nombre)
+                serviciosUsr.splice(i,1);
+                $("#cancelar-feedback").html("<p class=\"alert alert-success\"> Se ha cancelado correctamente ["+ temp.nombre + " " + temp.hora +"]. Revisa en Consultar Servicios todos tus servicios. ¡Ahora debe estar <strong>disponible</strong>! </p>");     
+
+            }
+
+         }
+         
+         cleanDropdown();
+         registrados_mostrar_dropdown();
+
+       }
         
 
 
@@ -173,6 +204,13 @@
         {
         Parent.removeChild(Parent.firstChild);
         }
+        var Parent = document.getElementById("registrados-dropdown");
+        while(Parent.hasChildNodes())
+        {
+        Parent.removeChild(Parent.firstChild);
+        }
+
+
         }
         
 
@@ -251,9 +289,17 @@ $( document ).ready(function() {
     }
     function registrarServicios(){
         $(".menu").fadeOut();
-        console.log("dropdown");
+        console.log("dropdown: disponibles");
         $(".registrar").fadeIn();
         disponibles_mostrar_dropdown();
+        consulta();
+
+    }
+    function cancelarServicios(){
+        $(".menu").fadeOut();
+        console.log("dropdown: registrados");
+        $(".cancelar").fadeIn();
+        registrados_mostrar_dropdown();
         consulta();
 
     }
@@ -562,7 +608,7 @@ $( document ).ready(function() {
             <div class="row">
         <div class="col-sm-2"></div>
         <div class="col-sm-8">
-                <a style="position:absolute; right:0%" onclick="regresarAMenu()">Regresar a menú principal</a>
+                <button style="position:absolute; right:0%" onclick="regresarAMenu()">Regresar a menú principal</button>
             </div>
             <div class="col-sm-2"></div>
             </div>
@@ -666,7 +712,7 @@ $( document ).ready(function() {
         <div class="row">
     <div class="col-sm-2"></div>
     <div class="col-sm-8">
-            <a style="position:absolute; right:0%" onclick="regresarAMenu()">Regresar a menú principal</a>
+            <button style="position:absolute; right:0%" onclick="regresarAMenu()">Regresar a menú principal</button>
         </div>
         <div class="col-sm-2"></div>
         </div>
@@ -691,6 +737,110 @@ $( document ).ready(function() {
 <!-- // END REGISTRAR-->
 </div>
 
+        <!-- //CANCElAR -->
+        <div class= "container cancelar interno" style="display:none">
+
+                <!-- //HEADER -->
+                <div class="row">
+                    <!-- //left border -->
+                    <div class="col-sm-1 header rounded"></div>
+                    <!-- //img div -->
+                    <div class="col-sm-4 header img-padding" ><img src="logo1.png" href="http://www.konradlorenz.edu.co/es/"></div>
+                    <!-- //banner title -->
+                    <div class="col-sm-6 header"><h1 class="img-padding">Bienestar Universitario</h1></div>
+                    <!-- //right border -->
+                    <div class="col-sm-1 header rounded"></div>
+            
+                    </div>
+                    <!-- //SECTION HEADER -->
+                    <div class="row">
+                        <!-- //left border -->
+                        <div class="col-sm-2"></div>
+                        <!-- //banner title -->
+                        <div class="col-sm-8 element"><h2>Cancela tus servicios</h2>
+                            <p class="session-banner">Bienvenido, <strong>Jonatan Ahumada</strong></p></div>
+                        <!-- //right border -->
+                        <div class="col-sm-2"> </div>
+                    </div>
+                    <!-- //Dropdown -->
+                    <div class="row">
+                        <!-- //left border with options -->
+                        <div class="col-sm-2">
+                           
+            
+            
+                        </div>
+                  
+                        <div class="col-sm-8 element rounded">
+                                <h3>Cancela un servicio:</h3>
+                                <div class = "formulario-llamativo" id="servicios-seleccionar">
+                                   <form>
+                                    <select id="registrados-dropdown">
+            
+            
+                                    </select>
+                                    
+                                    <button type= "button" class="ayuda btn btn-primary menu-crud" onclick="cancelarServicio()">cancelar</button>
+                                </form>
+                                </div>   
+            
+            
+                    
+                    
+            
+                        </div>
+                        <!-- //right border -->
+                        <div class="col-sm-2"></div>
+                    </div>
+                
+            
+            
+                    <!-- //Feedback box -->
+                    <div class="row">
+                        <!-- //left border -->
+                        <div class="col-sm-2"></div>
+                        <!-- //banner title -->
+                        <div class="col-sm-8 element">
+                        <div class="feedback div-ayuda" id="cancelar-feedback">
+            
+            
+                        </div>
+                        <div class="feedback div-error">
+            
+            
+                            </div>
+            
+                        </div>
+                        <!-- //right border -->
+                        <div class="col-sm-2"></div>
+                    </div>
+                    <div class="row">
+                <div class="col-sm-2"></div>
+                <div class="col-sm-8">
+                        <button style="position:absolute; right:0%" onclick="regresarAMenu()">Regresar a menú principal</button>
+                    </div>
+                    <div class="col-sm-2"></div>
+                    </div>
+                    <!-- //FOOTER -->
+                    <div class="row footer rounded">
+                        <!-- //left border -->
+                        <div class="col-sm-1 rounded"></div>
+                    <!-- //img div -->
+                        <div class="col-sm-2 element sm-padding"><img src="logo2.png" alt="Smiley face"></div>
+                    <!-- //banner title -->
+                    <div class="col-sm-8 element footer-text img-padding">
+                        <p class="footer-text img-padding">Tel: (+57 1) 347 23 11Carrera 9 Bis No. 62 - 43Bogotá - Colombia
+                                eMail: info@konradlorenz.edu.co</p>
+                            
+                                
+            
+                    </div>
+                    <!-- //right border -->
+                    <div class="col-sm-1 rounded"></div>
+                    </div>
+            
+            <!-- // END REGISTRAR-->
+            </div>
 
 
 </div>
