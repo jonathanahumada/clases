@@ -1,0 +1,82 @@
+% Created 2019-05-20 Mon 13:15
+\documentclass[11pt]{article}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{fixltx2e}
+\usepackage{graphicx}
+\usepackage{longtable}
+\usepackage{float}
+\usepackage{wrapfig}
+\usepackage{rotating}
+\usepackage[normalem]{ulem}
+\usepackage{amsmath}
+\usepackage{textcomp}
+\usepackage{marvosym}
+\usepackage{wasysym}
+\usepackage{amssymb}
+\usepackage{hyperref}
+\usepackage[spanish]{babel}
+\usepackage{titlesec}
+\usepackage{titling}
+\usepackage[margin=1.5in]{geometry}
+\titleformat{\section}
+{\large \bfseries}
+{}
+{0em}
+{}
+
+\titleformat{\subsection}
+{\bfseries}
+{}
+{0em}
+{}[\titlerule]
+
+\titleformat{\subsubsection}
+{\bfseries }
+{$\bullet$}
+{2em}
+{}
+
+\tolerance=1000
+\author{Jonatan Ahumada Fernández\\
+Fundación Universitaria Konrad Lorenz\\
+Cód. 506181029}
+\date{\today}
+\title{Trabajo en Bases de Datos II}
+\hypersetup{
+  pdfkeywords={},
+  pdfsubject={},
+  pdfcreator={Emacs 25.3.50.1 (Org mode 8.2.10)}}
+\begin{document}
+
+\maketitle
+\noindent
+El objetivo del artículo es proponer un nuevo método para simular un sistema distribuido. La particularidad
+del enfoque de este artículo es que propone hacerlo mediante un concepto denominado "sistemas multi-agente".
+La diferencia de este método, con respecto a otras formas de abordar los sistemas distribuidos, es que en él se implementa
+el concepto de \emph{autoorganización}, el cual se inspira en el comportamiento de algunos insectos sociales. Según los autores, 
+en un sistema multi-agente, cada componente tiene la capacidad de actuar de forma autónoma e independiente, pero de tal manera
+que al interactuar con los otros componentes se cumpla un objetivo global. Esta propiedad es de especial importancia para los autores, 
+puesto que señalan que un posible uso de esta propiedad es generar robustez y auto-recuperación de fallas en un sistema distribuido, 
+en virtud de que cada componente es independiente de los demás. El problema en especifico que se utiliza para demostrar esta simulación es el de explorar un espacio de forma eficiente.
+Más concretamente, un plano bidimensional.
+
+La relación de este artículo con estructuras de datos se evidencia a lo largo de toda la modelación de la simulación. De forma 
+más general, las dos objetos principales dentro de la simulación son los \emph{agentes móviles} y los \emph{agentes estáticos}. Estos objetos
+ se pueden considerar estructuras de datos, puesto que las estructuras de datos que hemos estudiado en el curso 
+se implementan como objetos en Java. No obstante, hay otros momentos cruciales donde se evidencia el uso de estructuras de datos. Por ejemplo, 1)
+en la definición del comportamiento base de los agentes y 2) en la definición de los procesos para que el sistema se repare a sí mismo  en caso de falla.
+En los casos recién mencionados, se brinda una definición en pseudocódigo de los procedimientos, muy similar a los ADT
+estudiados en el curso. 
+
+Por último, la contribución del uso de temas de estructuras de datos en el artículo ayudó a comprender los conceptos de \emph{sistemas distribuidos}, \emph{sistemas multi-agente}  y redes, puesto que estas se definieron en el artículo como una colección de nodos y agentes, una definición formal 
+similar, por ejemplo, a una lista enlazada (Chain, ChainNode). Esto ayudó a formar una comprensión suficiente de lo discutido en el artículo, sin tener que entrar en detalles sobre qué es sistema distribuido. Así mismo, 
+el comportamiento de los agentes con respecto al entorno y sus vecinos fue muy similar al concepto de vecindad utilizado en el ejemplo de búsquedas en profundidad visto en clase. 
+En síntesis, el artículo permitió relacionar lo visto en clase con un posible uso de modelado de un problema real. 
+
+
+\section{Referencias}
+\label{sec-1}
+\ \ Portela, A. R \& Gómez, J. (2019). "Simulación de comportamientos de sistemas distribuidos para obtener robustez y auto-recuperación de fallas": Diálogos sobre investigación: avances científicos Konrad Lorenz. Gustavo Andrés Campos Avendaño, María  Alejandra Castaño Hernández, Mercedes Gaitán Ángulo y Vanessa Sánchez Mendoza (Compiladores); Laura Acelas Russi\ldots{} [et al.]. Bogotá: Fundación Universitaria Konrad Lorenz, 2019, 217-243. 
+% Emacs 25.3.50.1 (Org mode 8.2.10)
+\end{document}
