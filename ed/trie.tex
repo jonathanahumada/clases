@@ -1,0 +1,214 @@
+% Created 2019-05-27 Mon 19:29
+\documentclass[presentation]{beamer}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{fixltx2e}
+\usepackage{graphicx}
+\usepackage{longtable}
+\usepackage{float}
+\usepackage{wrapfig}
+\usepackage{rotating}
+\usepackage[normalem]{ulem}
+\usepackage{amsmath}
+\usepackage{textcomp}
+\usepackage{marvosym}
+\usepackage{wasysym}
+\usepackage{amssymb}
+\usepackage{hyperref}
+\tolerance=1000
+\usetheme{default}
+\author{Jonatan Ahumada Fernández}
+\date{28 de marzo de 2019}
+\title{Tries}
+\logo{\includegraphics[height=0.7cm]{logo1}}
+\hypersetup{
+  pdfkeywords={},
+  pdfsubject={},
+  pdfcreator={Emacs 25.3.50.1 (Org mode 8.2.10)}}
+\begin{document}
+
+\maketitle
+
+\end{frame}
+
+
+
+\begin{frame}[label=sec-1]{Objetivos de la presentación}
+\begin{itemize}
+\item ¿Qué son los tries?
+\item ¿Qué problemas resuelven?
+\item ¿Cómo se podrían representar sus nodos?
+\item Algunos conceptos transversales
+\end{itemize}
+\end{frame}
+
+\begin{frame}[label=sec-2]{Patricinio}
+\begin{itemize}
+\item Eric Demaine del MIT
+\item Erik Demaine. 6.851 Advanced Data Structures. Spring 2012. Massachusetts Institute of Technology: MIT OpenCourseWare, \url{https://ocw.mit.edu}. License: Creative Commons BY-NC-SA.
+\end{itemize}
+\end{frame}
+
+\begin{frame}[label=sec-3]{¿Quién creó los tries?}
+\begin{itemize}
+\item Edward Fredkin
+\item "digital philosophy"
+\item "Trie Memory" 1960. --> no disponible :(
+\item reTRIEval
+\end{itemize}
+\end{frame}
+
+\begin{frame}[label=sec-4]{String matching}
+text T x String P
+ ------strings over $\Sigma$  
+\begin{itemize}
+\item ocurrencias de un patrón en un texto
+\item contarlos, imprimirlos, su posición, etc.
+\end{itemize}
+\end{frame}
+
+
+
+\begin{frame}[label=sec-5]{Tipos de algoritmo}
+\begin{itemize}
+\item Naive
+\item Rabin Karp
+\item Knuth Norris Pratt
+\item etc.
+\end{itemize}
+\end{frame}
+
+\begin{frame}[label=sec-6]{Data Structure version}
+\begin{itemize}
+\item "Static DS"
+\item Nos dan T, "preprocesamos T"
+\item Query P
+\item ::Objetivo: O(P), O(T) space:::
+\end{itemize}
+\end{frame}
+
+\begin{frame}[label=sec-7]{Problema del predecessor}
+\begin{itemize}
+\item T$_{\text{1}}$, T$_{\text{2}}$,..T$_{\text{k}}$
+\item Responde a la pregunta dónde iría mi nueva String P dentro de \{T$_{\text{n}}$\}
+\item "binary search will not work so well if the strings are very long"
+\item Por eso tenemos los Tries!
+\end{itemize}
+
+\begin{block}{En términos más simples}
+\begin{itemize}
+\item insert
+\item delete
+\item predecessor
+\item sucessor
+\end{itemize}
+\end{block}
+\end{frame}
+
+\begin{frame}[label=sec-8]{Derinición}
+\begin{itemize}
+\item Un "rooted tree" con ramas nombradas con una letra del alphabeto
+\item "root to leef paths"
+\item caracter de terminación: "add new letter \$ to end of every string"
+\end{itemize}
+\begin{block}{Qué nos gusta?}
+\begin{itemize}
+\item que tiene precedesor
+
+\item usos: títulos de libros,  etc
+\end{itemize}
+
+\begin{block}{Ejemplo}
+\begin{itemize}
+\item \{ana, ann, anna, anne\}
+\item no tine raiz
+\item el segundo nivel es todo el alphabeto (en este caso: a, e, n)
+\end{itemize}
+\end{block}
+\begin{block}{Problemas}
+\begin{itemize}
+\item ¿Cómo haces predecesor?
+\item min/max de un nodo node
+\item ¿qué pasa cuando el alfabeto es muy grande?
+\end{itemize}
+\end{block}
+\end{block}
+\end{frame}
+\begin{frame}[label=sec-9]{Posibles representaciones de los nodos}
+\begin{itemize}
+\item array
+\item BST
+\item HashTable
+\item Van Emde Boas   **
+\item Weight Balanced BST's
+\item Leaf Trimming **
+\end{itemize}
+\end{frame}
+
+\begin{frame}[label=sec-10]{array}
+\begin{itemize}
+\item serian tamaño $\Sigma$
+\item query rápido
+\item query: O(P)
+\item Space: O(T $\Sigma$)
+\item el espacio puede ser un problema
+\end{itemize}
+// T= \# nodes in a trie
+\end{frame}
+\begin{frame}[label=sec-11]{BST}
+\begin{itemize}
+\item en vez de tener nodos para cada palabra del alphabeto
+\item se hace binario
+\item el tamaño de este arbol sería height: $\log$ $\Sigma$
+\item Query(P  $\log$$\backslash$ Sigma)
+\item space O(T)
+\end{itemize}
+\end{frame}
+
+\begin{frame}[label=sec-12]{hashTable}
+\begin{itemize}
+\item ¡no puedes resolver el problema del predecesor!
+\item Bono: ¿por qué?
+\end{itemize}
+\end{frame}
+
+
+
+\begin{frame}[label=sec-13]{Trays (lewendowsky 2006)}
+\begin{itemize}
+\item portmanteau: tries + arrays
+\item sí predecesoor y sucesor
+\item Query: O(p+$\log$ $\Sigma$)
+\item Space: O(T)
+\item VER Weight-Balanced BST!!
+\end{itemize}
+\end{frame}
+
+\begin{frame}[label=sec-14]{Weight-Balaced BST (Martin Farach Colton)}
+\begin{itemize}
+\item weight: \# descendant leaves
+\item cada dos bordes: a) avancas una letra en P o b) reducimos el número de canditados a 2/3
+\item can only cut in child boundaries
+\item Query: O(P + $\log$ K)
+\end{itemize}
+\end{frame}
+
+
+
+
+\begin{frame}[label=sec-16]{Referencias}
+\begin{itemize}
+\item R. Boyer and J. Moore. A fast string searching algorithm. Communications of the ACM,
+\end{itemize}
+20(10):762772, 1977.
+\begin{itemize}
+\item R. M. Karp and M. O. Rabin. Efficient randomized pattern-matching algorithms. IBM Journal
+\end{itemize}
+of Research and Development, 31:249260, March 1987.
+\begin{itemize}
+\item D. E. Knuth, J. H. Morris, and V. R. Pratt. Fast pattern matching in strings. SIAM Journal of
+\end{itemize}
+Computing, 6(2):323350, 1977.
+\end{frame}
+% Emacs 25.3.50.1 (Org mode 8.2.10)
+\end{document}

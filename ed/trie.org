@@ -1,0 +1,121 @@
+
+* Objetivo de la presentación
+- ¿Qué son los tries?
+- ¿Qué problemas resuelven?
+- ¿Cómo se podrían representar sus nodos?
+- Algunos conceptos transversales
+
+* Patricinio
+- Eric Demaine del MIT
+- Erik Demaine. 6.851 Advanced Data Structures. Spring 2012. Massachusetts Institute of Technology: MIT OpenCourseWare, https://ocw.mit.edu. License: Creative Commons BY-NC-SA.
+
+* ¿Quién creó los tries?
+- Edward Fredkin
+- "digital philosophy"
+- "Trie Memory" 1960. --> no disponible :(
+- reTRIEval
+
+* String matching
+text T x String P
+ ------strings over \Sigma  
+- ocurrencias de un patrón en un texto 
+- contarlos, imprimirlos, su posición, etc.
+
+
+
+* Tipos de algoritmo
+- Naive 
+- Rabin Karp
+- Knuth Norris Pratt
+- etc.
+
+* Data Structure version
+- "Static DS"
+-  Nos dan T, "preprocesamos T"
+- Query P
+- ::Objetivo: O(P), O(T) space:::
+
+* Problema del predecessor 
+- T_{1}, T_{2},..T_{k}
+- Responde a la pregunta dónde iría mi nueva String P dentro de {T_{n}}
+- "binary search will not work so well if the strings are very long"
+- Por eso tenemos los Tries! 
+
+** En términos más simples
+- insert
+- delete
+- predecessor
+- sucessor
+
+* Derinición
+- Un "rooted tree" con ramas nombradas con una letra del alphabeto
+- "root to leef paths"
+- caracter de terminación: "add new letter $ to end of every string"
+** Qué nos gusta?
+- que tiene precedesor
+
+-  usos: títulos de libros,  etc
+
+*** Ejemplo
+- {ana, ann, anna, anne}
+- no tine raiz 
+- el segundo nivel es todo el alphabeto (en este caso: a, e, n)
+*** Problemas
+- ¿Cómo haces predecesor?
+- min/max de un nodo node 
+- ¿qué pasa cuando el alfabeto es muy grande?
+* Posibles representaciones de los nodos
+- array
+- BST
+- HashTable
+- Van Emde Boas   **
+- Weight Balanced BST's
+- Leaf Trimming **
+
+* array 
+- serian tamaño \Sigma 
+- query rápido
+- query: O(P)
+- Space: O(T \Sigma)
+- el espacio puede ser un problema
+// T= # nodes in a trie
+* BST
+- en vez de tener nodos para cada palabra del alphabeto 
+- se hace binario
+- el tamaño de este arbol sería height: \log \Sigma 
+- Query(P  \log\ Sigma)
+- space O(T)
+
+* hashTable
+- ¡no puedes resolver el problema del predecesor! 
+- Bono: ¿por qué?
+
+
+
+* Trays (lewendowsky 2006) 
+- portmanteau: tries + arrays
+- sí predecesoor y sucesor  
+- Query: O(p+\log \Sigma)
+- Space: O(T)
+- VER Weight-Balanced BST!!
+     
+* Weight-Balaced BST (Martin Farach Colton)
+- weight: # descendant leaves
+- cada dos bordes: a) avancas una letra en P o b) reducimos el número de canditados a 2/3 
+- can only cut in child boundaries
+- Query: 0(P + \log K)
+
+
+
+* Aplicaciones
+- String sorting (T x K lg \Sigma)
+
+
+* Referencias
+- R. Boyer and J. Moore. A fast string searching algorithm. Communications of the ACM,
+20(10):762772, 1977.
+- R. M. Karp and M. O. Rabin. Efficient randomized pattern-matching algorithms. IBM Journal
+of Research and Development, 31:249260, March 1987.
+- D. E. Knuth, J. H. Morris, and V. R. Pratt. Fast pattern matching in strings. SIAM Journal of
+Computing, 6(2):323350, 1977.
+
